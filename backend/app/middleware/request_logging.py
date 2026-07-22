@@ -16,7 +16,7 @@ from starlette.responses import Response
 from app.core.logging import get_api_logger
 
 
-class RequestLoggingMiddleware(BaseHTTPMiddleware):  # type: ignore[misc]
+class RequestLoggingMiddleware(BaseHTTPMiddleware):
     """Log method, path, status, and latency to the API logger."""
 
     async def dispatch(

@@ -4,7 +4,7 @@
 #   pip install zcatalyst-sdk
 fastapi>=0.115.0
 uvicorn[standard]>=0.34.0
-pydantic>=2.10.0
+pydantic>=2.10.0,<2.12
 pydantic-settings>=2.7.0
 sqlalchemy>=2.0.36
 alembic>=1.14.0
@@ -13,8 +13,6 @@ python-dotenv>=1.0.1
 httpx>=0.28.0
 redis>=5.2.0
 zcatalyst-sdk>=1.0.0
-# pydantic 2.13+ needs Sentinel; zcatalyst pins ~=4.12.1 but 4.16 works at runtime
-typing-extensions>=4.14.0
 
 # Dev (also listed under [project.optional-dependencies] in pyproject.toml)
 pytest>=8.3.0

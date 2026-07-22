@@ -44,7 +44,7 @@ Source: [`catalyst.txt`](../../catalyst.txt).
 | Cache | Docker Redis | Catalyst Cache |
 | Backend | `uvicorn` | Functions or AppSail |
 | Frontend | Vite dev server | Slate / Web Client Hosting |
-| CI | GitHub Actions | Catalyst Pipelines (+ optional GH) |
+| CI | Local pytest / lint | Catalyst Pipelines |
 
 ## Scaffold folders
 

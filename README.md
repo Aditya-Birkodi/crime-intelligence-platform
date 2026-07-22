@@ -39,7 +39,7 @@ crime-intelligence-platform/
 ├── docs/             # Architecture, API, DB, AI, deployment guides
 ├── scripts/          # Dev setup helpers
 ├── tests/            # Cross-cutting unit / integration tests
-└── .github/          # CI workflows (prod CI also via Catalyst Pipelines)
+└── catalyst/         # Catalyst Functions / AppSail / Gateway stubs
 ```
 
 ### Backend bounded contexts (FIR ER)

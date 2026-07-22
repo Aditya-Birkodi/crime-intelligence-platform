@@ -8,7 +8,7 @@ from __future__ import annotations
 from sqlalchemy.orm import DeclarativeBase
 
 
-class Base(DeclarativeBase):  # type: ignore[misc]
+class Base(DeclarativeBase):
     """Shared declarative base for FIR domain models."""
 
     pass
