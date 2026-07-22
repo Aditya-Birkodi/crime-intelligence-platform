@@ -1,0 +1,20 @@
+{
+  "case_master_id": 1,
+  "crime_no": "104430006202600001",
+  "case_no": "202600001",
+  "police_station_id": 6,
+  "district_id": 443,
+  "case_status_id": 1,
+  "brief_facts": "Complainant reported theft of a two-wheeler near MG Road. Accused fled on foot.",
+  "act_sections": [
+    {
+      "act_code": "IPC",
+      "section_code": "379",
+      "description": "Theft"
+    }
+  ],
+  "latitude": 12.9716,
+  "longitude": 77.5946,
+  "incident_from": "2026-01-15T21:00:00",
+  "incident_to": "2026-01-15T23:00:00"
+}

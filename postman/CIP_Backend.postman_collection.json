@@ -1,0 +1,113 @@
+{
+  "info": {
+    "_postman_id": "cip-backend-001",
+    "name": "CIP Backend",
+    "description": "Crime Intelligence Platform — shared with FE. Import OpenAPI from /openapi.json when routes grow.\n\nDocs: docs/api/frontend_handoff.md",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Infrastructure",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/health",
+            "description": "Liveness probe"
+          }
+        },
+        {
+          "name": "API v1 status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/status",
+            "description": "Versioned API readiness"
+          }
+        },
+        {
+          "name": "OpenAPI JSON",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/openapi.json",
+            "description": "Machine-readable contract for FE / codegen"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cases (B1 — coming)",
+      "item": [
+        {
+          "name": "List cases — placeholder",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/cases",
+            "description": "TODO: implement in B1. Do not rely on this until OpenAPI lists it."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Analytics (B2 — coming)",
+      "item": [
+        {
+          "name": "Geo incidents — placeholder",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/analytics/geo/incidents",
+            "description": "TODO: B2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Network (B3 — coming)",
+      "item": [
+        {
+          "name": "Graph — placeholder",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/network/graph",
+            "description": "TODO: B3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI (B4 — coming)",
+      "item": [
+        {
+          "name": "Chat — placeholder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"Summarize this FIR\",\n  \"case_master_id\": 1,\n  \"top_k\": 5\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/ai/chat",
+            "description": "TODO: B4 — Catalyst QuickML RAG only"
+          }
+        }
+      ]
+    }
+  ]
+}

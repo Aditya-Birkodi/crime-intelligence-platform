@@ -1,0 +1,2362 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "crime-intelligence-platform",
+    "description": "Crime Intelligence Platform API for Karnataka State Police. Frontend contract: use /docs or /openapi.json. AI routes use Catalyst QuickML only.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/cases": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "List Cases",
+        "description": "List FIRs with optional station/status/crime-head/date filters.",
+        "operationId": "list_cases_api_v1_cases_get",
+        "parameters": [
+          {
+            "name": "police_station_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Police Station Id"
+            }
+          },
+          {
+            "name": "case_status_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Case Status Id"
+            }
+          },
+          {
+            "name": "crime_major_head_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Crime Major Head Id"
+            }
+          },
+          {
+            "name": "registered_from",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Registered From"
+            }
+          },
+          {
+            "name": "registered_to",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Registered To"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseMasterListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Create Case",
+        "description": "Create a FIR (CaseMaster) with optional nested parties/sections.",
+        "operationId": "create_case_api_v1_cases_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseMasterCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseMasterDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cases/{case_master_id}": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Get Case",
+        "description": "Get one FIR with victims, accused, and act-sections.",
+        "operationId": "get_case_api_v1_cases__case_master_id__get",
+        "parameters": [
+          {
+            "name": "case_master_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Case Master Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseMasterDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cases/{case_master_id}/victims": {
+      "post": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Add Victim",
+        "operationId": "add_victim_api_v1_cases__case_master_id__victims_post",
+        "parameters": [
+          {
+            "name": "case_master_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Case Master Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VictimCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseMasterDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cases/{case_master_id}/accused": {
+      "post": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Add Accused",
+        "operationId": "add_accused_api_v1_cases__case_master_id__accused_post",
+        "parameters": [
+          {
+            "name": "case_master_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Case Master Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccusedCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseMasterDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cases/{case_master_id}/act-sections": {
+      "post": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Add Act Section",
+        "operationId": "add_act_section_api_v1_cases__case_master_id__act_sections_post",
+        "parameters": [
+          {
+            "name": "case_master_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Case Master Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActSectionCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseMasterDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/lookups/case-statuses": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Case Statuses",
+        "operationId": "case_statuses_api_v1_lookups_case_statuses_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/IdName"
+                  },
+                  "type": "array",
+                  "title": "Response Case Statuses Api V1 Lookups Case Statuses Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/lookups/case-categories": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Case Categories",
+        "operationId": "case_categories_api_v1_lookups_case_categories_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/IdName"
+                  },
+                  "type": "array",
+                  "title": "Response Case Categories Api V1 Lookups Case Categories Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/lookups/gravity-offences": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Gravity Offences",
+        "operationId": "gravity_offences_api_v1_lookups_gravity_offences_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/IdName"
+                  },
+                  "type": "array",
+                  "title": "Response Gravity Offences Api V1 Lookups Gravity Offences Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/lookups/crime-heads": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Crime Heads",
+        "operationId": "crime_heads_api_v1_lookups_crime_heads_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/IdName"
+                  },
+                  "type": "array",
+                  "title": "Response Crime Heads Api V1 Lookups Crime Heads Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/lookups/districts": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Districts",
+        "operationId": "districts_api_v1_lookups_districts_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/IdName"
+                  },
+                  "type": "array",
+                  "title": "Response Districts Api V1 Lookups Districts Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/lookups/stations": {
+      "get": {
+        "tags": [
+          "cases"
+        ],
+        "summary": "Stations",
+        "operationId": "stations_api_v1_lookups_stations_get",
+        "parameters": [
+          {
+            "name": "district_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "District Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IdName"
+                  },
+                  "title": "Response Stations Api V1 Lookups Stations Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analytics/overview": {
+      "get": {
+        "tags": [
+          "analytics"
+        ],
+        "summary": "Analytics Overview",
+        "description": "KPI tiles: totals, status breakdown, crime-head breakdown.",
+        "operationId": "analytics_overview_api_v1_analytics_overview_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsOverview"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analytics/geo/districts": {
+      "get": {
+        "tags": [
+          "analytics"
+        ],
+        "summary": "Geo Districts",
+        "description": "District-level case counts for choropleth / drill-down.",
+        "operationId": "geo_districts_api_v1_analytics_geo_districts_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/DistrictGeoSummary"
+                  },
+                  "type": "array",
+                  "title": "Response Geo Districts Api V1 Analytics Geo Districts Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analytics/geo/incidents": {
+      "get": {
+        "tags": [
+          "analytics"
+        ],
+        "summary": "Geo Incidents",
+        "description": "Lat/long incident pins for the map.",
+        "operationId": "geo_incidents_api_v1_analytics_geo_incidents_get",
+        "parameters": [
+          {
+            "name": "district_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "District Id"
+            }
+          },
+          {
+            "name": "police_station_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Police Station Id"
+            }
+          },
+          {
+            "name": "case_status_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Case Status Id"
+            }
+          },
+          {
+            "name": "crime_major_head_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Crime Major Head Id"
+            }
+          },
+          {
+            "name": "registered_from",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Registered From"
+            }
+          },
+          {
+            "name": "registered_to",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Registered To"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 2000,
+              "minimum": 1,
+              "default": 500,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncidentPointsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analytics/hotspots": {
+      "get": {
+        "tags": [
+          "analytics"
+        ],
+        "summary": "Hotspots",
+        "description": "Spatiotemporal hotspot bins (location \u00d7 optional hour-of-day).",
+        "operationId": "hotspots_api_v1_analytics_hotspots_get",
+        "parameters": [
+          {
+            "name": "cell_size_degrees",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.01,
+              "default": 0.05,
+              "title": "Cell Size Degrees"
+            }
+          },
+          {
+            "name": "grain",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "hour",
+                "day"
+              ],
+              "type": "string",
+              "default": "hour",
+              "title": "Grain"
+            }
+          },
+          {
+            "name": "registered_from",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Registered From"
+            }
+          },
+          {
+            "name": "registered_to",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Registered To"
+            }
+          },
+          {
+            "name": "district_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "District Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotspotsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analytics/alerts/trends": {
+      "get": {
+        "tags": [
+          "analytics"
+        ],
+        "summary": "Trend Alerts",
+        "description": "Emerging trend alerts: recent volume vs baseline by district + crime head.",
+        "operationId": "trend_alerts_api_v1_analytics_alerts_trends_get",
+        "parameters": [
+          {
+            "name": "recent_days",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 90,
+              "minimum": 1,
+              "default": 7,
+              "title": "Recent Days"
+            }
+          },
+          {
+            "name": "baseline_days",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 365,
+              "minimum": 7,
+              "default": 28,
+              "title": "Baseline Days"
+            }
+          },
+          {
+            "name": "threshold",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 10.0,
+              "minimum": 1.0,
+              "default": 1.5,
+              "title": "Threshold"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrendAlertsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/status": {
+      "get": {
+        "tags": [
+          "infrastructure"
+        ],
+        "summary": "Api Status",
+        "description": "Versioned API liveness (not a domain endpoint).",
+        "operationId": "api_status_api_v1_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Api Status Api V1 Status Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "infrastructure"
+        ],
+        "summary": "Health",
+        "description": "Infrastructure liveness probe \u2014 not a domain API.",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccusedCreate": {
+        "properties": {
+          "accused_name": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 1,
+            "title": "Accused Name"
+          },
+          "age_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Age Year"
+          },
+          "gender_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gender Id"
+          },
+          "person_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 10
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Person Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "accused_name"
+        ],
+        "title": "AccusedCreate"
+      },
+      "AccusedRead": {
+        "properties": {
+          "accused_master_id": {
+            "type": "integer",
+            "title": "Accused Master Id"
+          },
+          "case_master_id": {
+            "type": "integer",
+            "title": "Case Master Id"
+          },
+          "accused_name": {
+            "type": "string",
+            "title": "Accused Name"
+          },
+          "age_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Age Year"
+          },
+          "gender_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gender Id"
+          },
+          "person_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Person Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "accused_master_id",
+          "case_master_id",
+          "accused_name"
+        ],
+        "title": "AccusedRead"
+      },
+      "ActSectionCreate": {
+        "properties": {
+          "act_id": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 1,
+            "title": "Act Id"
+          },
+          "section_id": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 1,
+            "title": "Section Id"
+          },
+          "act_order_id": {
+            "type": "integer",
+            "title": "Act Order Id",
+            "default": 1
+          },
+          "section_order_id": {
+            "type": "integer",
+            "title": "Section Order Id",
+            "default": 1
+          }
+        },
+        "type": "object",
+        "required": [
+          "act_id",
+          "section_id"
+        ],
+        "title": "ActSectionCreate"
+      },
+      "ActSectionRead": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "case_master_id": {
+            "type": "integer",
+            "title": "Case Master Id"
+          },
+          "act_id": {
+            "type": "string",
+            "title": "Act Id"
+          },
+          "section_id": {
+            "type": "string",
+            "title": "Section Id"
+          },
+          "act_order_id": {
+            "type": "integer",
+            "title": "Act Order Id"
+          },
+          "section_order_id": {
+            "type": "integer",
+            "title": "Section Order Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "case_master_id",
+          "act_id",
+          "section_id",
+          "act_order_id",
+          "section_order_id"
+        ],
+        "title": "ActSectionRead"
+      },
+      "AnalyticsOverview": {
+        "properties": {
+          "total_cases": {
+            "type": "integer",
+            "title": "Total Cases"
+          },
+          "cases_with_coordinates": {
+            "type": "integer",
+            "title": "Cases With Coordinates"
+          },
+          "by_status": {
+            "items": {
+              "$ref": "#/components/schemas/StatusCount"
+            },
+            "type": "array",
+            "title": "By Status"
+          },
+          "by_crime_head": {
+            "items": {
+              "$ref": "#/components/schemas/CrimeHeadCount"
+            },
+            "type": "array",
+            "title": "By Crime Head"
+          },
+          "districts_covered": {
+            "type": "integer",
+            "title": "Districts Covered"
+          },
+          "stations_covered": {
+            "type": "integer",
+            "title": "Stations Covered"
+          }
+        },
+        "type": "object",
+        "required": [
+          "total_cases",
+          "cases_with_coordinates",
+          "by_status",
+          "by_crime_head",
+          "districts_covered",
+          "stations_covered"
+        ],
+        "title": "AnalyticsOverview"
+      },
+      "CaseMasterCreate": {
+        "properties": {
+          "crime_no": {
+            "type": "string",
+            "maxLength": 18,
+            "minLength": 18,
+            "title": "Crime No"
+          },
+          "case_no": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 1,
+            "title": "Case No"
+          },
+          "crime_registered_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Registered Date"
+          },
+          "police_station_id": {
+            "type": "integer",
+            "title": "Police Station Id"
+          },
+          "case_category_id": {
+            "type": "integer",
+            "title": "Case Category Id"
+          },
+          "gravity_offence_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gravity Offence Id"
+          },
+          "crime_major_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Major Head Id"
+          },
+          "crime_minor_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Minor Head Id"
+          },
+          "case_status_id": {
+            "type": "integer",
+            "title": "Case Status Id"
+          },
+          "court_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Court Id"
+          },
+          "incident_from_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident From Date"
+          },
+          "incident_to_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident To Date"
+          },
+          "info_received_ps_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Info Received Ps Date"
+          },
+          "latitude": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latitude"
+          },
+          "longitude": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longitude"
+          },
+          "brief_facts": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brief Facts"
+          },
+          "victims": {
+            "items": {
+              "$ref": "#/components/schemas/VictimCreate"
+            },
+            "type": "array",
+            "title": "Victims"
+          },
+          "accused": {
+            "items": {
+              "$ref": "#/components/schemas/AccusedCreate"
+            },
+            "type": "array",
+            "title": "Accused"
+          },
+          "act_sections": {
+            "items": {
+              "$ref": "#/components/schemas/ActSectionCreate"
+            },
+            "type": "array",
+            "title": "Act Sections"
+          }
+        },
+        "type": "object",
+        "required": [
+          "crime_no",
+          "case_no",
+          "police_station_id",
+          "case_category_id",
+          "case_status_id"
+        ],
+        "title": "CaseMasterCreate"
+      },
+      "CaseMasterDetail": {
+        "properties": {
+          "crime_no": {
+            "type": "string",
+            "maxLength": 18,
+            "minLength": 18,
+            "title": "Crime No"
+          },
+          "case_no": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 1,
+            "title": "Case No"
+          },
+          "crime_registered_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Registered Date"
+          },
+          "police_station_id": {
+            "type": "integer",
+            "title": "Police Station Id"
+          },
+          "case_category_id": {
+            "type": "integer",
+            "title": "Case Category Id"
+          },
+          "gravity_offence_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gravity Offence Id"
+          },
+          "crime_major_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Major Head Id"
+          },
+          "crime_minor_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Minor Head Id"
+          },
+          "case_status_id": {
+            "type": "integer",
+            "title": "Case Status Id"
+          },
+          "court_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Court Id"
+          },
+          "incident_from_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident From Date"
+          },
+          "incident_to_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident To Date"
+          },
+          "info_received_ps_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Info Received Ps Date"
+          },
+          "latitude": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latitude"
+          },
+          "longitude": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longitude"
+          },
+          "brief_facts": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brief Facts"
+          },
+          "case_master_id": {
+            "type": "integer",
+            "title": "Case Master Id"
+          },
+          "victims": {
+            "items": {
+              "$ref": "#/components/schemas/VictimRead"
+            },
+            "type": "array",
+            "title": "Victims"
+          },
+          "accused": {
+            "items": {
+              "$ref": "#/components/schemas/AccusedRead"
+            },
+            "type": "array",
+            "title": "Accused"
+          },
+          "act_sections": {
+            "items": {
+              "$ref": "#/components/schemas/ActSectionRead"
+            },
+            "type": "array",
+            "title": "Act Sections"
+          }
+        },
+        "type": "object",
+        "required": [
+          "crime_no",
+          "case_no",
+          "police_station_id",
+          "case_category_id",
+          "case_status_id",
+          "case_master_id"
+        ],
+        "title": "CaseMasterDetail"
+      },
+      "CaseMasterListResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CaseMasterRead"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "total",
+          "limit",
+          "offset"
+        ],
+        "title": "CaseMasterListResponse"
+      },
+      "CaseMasterRead": {
+        "properties": {
+          "crime_no": {
+            "type": "string",
+            "maxLength": 18,
+            "minLength": 18,
+            "title": "Crime No"
+          },
+          "case_no": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 1,
+            "title": "Case No"
+          },
+          "crime_registered_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Registered Date"
+          },
+          "police_station_id": {
+            "type": "integer",
+            "title": "Police Station Id"
+          },
+          "case_category_id": {
+            "type": "integer",
+            "title": "Case Category Id"
+          },
+          "gravity_offence_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gravity Offence Id"
+          },
+          "crime_major_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Major Head Id"
+          },
+          "crime_minor_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Minor Head Id"
+          },
+          "case_status_id": {
+            "type": "integer",
+            "title": "Case Status Id"
+          },
+          "court_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Court Id"
+          },
+          "incident_from_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident From Date"
+          },
+          "incident_to_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident To Date"
+          },
+          "info_received_ps_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Info Received Ps Date"
+          },
+          "latitude": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latitude"
+          },
+          "longitude": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longitude"
+          },
+          "brief_facts": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brief Facts"
+          },
+          "case_master_id": {
+            "type": "integer",
+            "title": "Case Master Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "crime_no",
+          "case_no",
+          "police_station_id",
+          "case_category_id",
+          "case_status_id",
+          "case_master_id"
+        ],
+        "title": "CaseMasterRead"
+      },
+      "CrimeHeadCount": {
+        "properties": {
+          "crime_major_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Major Head Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "count": {
+            "type": "integer",
+            "title": "Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "crime_major_head_id",
+          "name",
+          "count"
+        ],
+        "title": "CrimeHeadCount"
+      },
+      "DistrictGeoSummary": {
+        "properties": {
+          "district_id": {
+            "type": "integer",
+            "title": "District Id"
+          },
+          "district_name": {
+            "type": "string",
+            "title": "District Name"
+          },
+          "case_count": {
+            "type": "integer",
+            "title": "Case Count"
+          },
+          "avg_latitude": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Latitude"
+          },
+          "avg_longitude": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Longitude"
+          }
+        },
+        "type": "object",
+        "required": [
+          "district_id",
+          "district_name",
+          "case_count"
+        ],
+        "title": "DistrictGeoSummary"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HotspotBin": {
+        "properties": {
+          "lat_bin": {
+            "type": "number",
+            "title": "Lat Bin"
+          },
+          "lon_bin": {
+            "type": "number",
+            "title": "Lon Bin"
+          },
+          "hour_of_day": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hour Of Day",
+            "description": "0-23 when grain includes hour; null if day-only"
+          },
+          "case_count": {
+            "type": "integer",
+            "title": "Case Count"
+          },
+          "sample_case_ids": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Sample Case Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "lat_bin",
+          "lon_bin",
+          "case_count"
+        ],
+        "title": "HotspotBin",
+        "description": "Spatiotemporal cluster cell."
+      },
+      "HotspotsResponse": {
+        "properties": {
+          "grain": {
+            "type": "string",
+            "title": "Grain"
+          },
+          "cell_size_degrees": {
+            "type": "number",
+            "title": "Cell Size Degrees"
+          },
+          "bins": {
+            "items": {
+              "$ref": "#/components/schemas/HotspotBin"
+            },
+            "type": "array",
+            "title": "Bins"
+          }
+        },
+        "type": "object",
+        "required": [
+          "grain",
+          "cell_size_degrees",
+          "bins"
+        ],
+        "title": "HotspotsResponse"
+      },
+      "IdName": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "IdName"
+      },
+      "IncidentPoint": {
+        "properties": {
+          "case_master_id": {
+            "type": "integer",
+            "title": "Case Master Id"
+          },
+          "crime_no": {
+            "type": "string",
+            "title": "Crime No"
+          },
+          "case_no": {
+            "type": "string",
+            "title": "Case No"
+          },
+          "police_station_id": {
+            "type": "integer",
+            "title": "Police Station Id"
+          },
+          "district_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "District Id"
+          },
+          "case_status_id": {
+            "type": "integer",
+            "title": "Case Status Id"
+          },
+          "crime_major_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Major Head Id"
+          },
+          "latitude": {
+            "type": "string",
+            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "string",
+            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+            "title": "Longitude"
+          },
+          "incident_from_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident From Date"
+          },
+          "crime_registered_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Registered Date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "case_master_id",
+          "crime_no",
+          "case_no",
+          "police_station_id",
+          "case_status_id",
+          "latitude",
+          "longitude"
+        ],
+        "title": "IncidentPoint"
+      },
+      "IncidentPointsResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/IncidentPoint"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "total"
+        ],
+        "title": "IncidentPointsResponse"
+      },
+      "StatusCount": {
+        "properties": {
+          "case_status_id": {
+            "type": "integer",
+            "title": "Case Status Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "count": {
+            "type": "integer",
+            "title": "Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "case_status_id",
+          "name",
+          "count"
+        ],
+        "title": "StatusCount"
+      },
+      "TrendAlert": {
+        "properties": {
+          "district_id": {
+            "type": "integer",
+            "title": "District Id"
+          },
+          "district_name": {
+            "type": "string",
+            "title": "District Name"
+          },
+          "crime_major_head_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crime Major Head Id"
+          },
+          "crime_head_name": {
+            "type": "string",
+            "title": "Crime Head Name"
+          },
+          "recent_count": {
+            "type": "integer",
+            "title": "Recent Count"
+          },
+          "baseline_avg": {
+            "type": "number",
+            "title": "Baseline Avg"
+          },
+          "spike_ratio": {
+            "type": "number",
+            "title": "Spike Ratio"
+          },
+          "is_alert": {
+            "type": "boolean",
+            "title": "Is Alert"
+          }
+        },
+        "type": "object",
+        "required": [
+          "district_id",
+          "district_name",
+          "crime_major_head_id",
+          "crime_head_name",
+          "recent_count",
+          "baseline_avg",
+          "spike_ratio",
+          "is_alert"
+        ],
+        "title": "TrendAlert"
+      },
+      "TrendAlertsResponse": {
+        "properties": {
+          "recent_days": {
+            "type": "integer",
+            "title": "Recent Days"
+          },
+          "baseline_days": {
+            "type": "integer",
+            "title": "Baseline Days"
+          },
+          "threshold": {
+            "type": "number",
+            "title": "Threshold"
+          },
+          "alerts": {
+            "items": {
+              "$ref": "#/components/schemas/TrendAlert"
+            },
+            "type": "array",
+            "title": "Alerts"
+          }
+        },
+        "type": "object",
+        "required": [
+          "recent_days",
+          "baseline_days",
+          "threshold",
+          "alerts"
+        ],
+        "title": "TrendAlertsResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VictimCreate": {
+        "properties": {
+          "victim_name": {
+            "type": "string",
+            "maxLength": 150,
+            "minLength": 1,
+            "title": "Victim Name"
+          },
+          "age_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Age Year"
+          },
+          "gender_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gender Id"
+          },
+          "victim_police": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Victim Police",
+            "default": "0"
+          }
+        },
+        "type": "object",
+        "required": [
+          "victim_name"
+        ],
+        "title": "VictimCreate"
+      },
+      "VictimRead": {
+        "properties": {
+          "victim_master_id": {
+            "type": "integer",
+            "title": "Victim Master Id"
+          },
+          "case_master_id": {
+            "type": "integer",
+            "title": "Case Master Id"
+          },
+          "victim_name": {
+            "type": "string",
+            "title": "Victim Name"
+          },
+          "age_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Age Year"
+          },
+          "gender_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gender Id"
+          },
+          "victim_police": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Victim Police"
+          }
+        },
+        "type": "object",
+        "required": [
+          "victim_master_id",
+          "case_master_id",
+          "victim_name"
+        ],
+        "title": "VictimRead"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "infrastructure",
+      "description": "Health and readiness"
+    },
+    {
+      "name": "cases",
+      "description": "FIR / CaseMaster (B1)"
+    },
+    {
+      "name": "analytics",
+      "description": "Geo, hotspots, trends (B2)"
+    },
+    {
+      "name": "network",
+      "description": "Link analysis graphs (B3)"
+    },
+    {
+      "name": "ai",
+      "description": "QuickML RAG, risk, anomalies (B4)"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+# =============================================================================
+# Crime Intelligence Platform — .dockerignore
+# Keeps image builds small (AppSail / local Docker).
+# =============================================================================
+
+# Git / VCS
+.git
+.gitignore
+.gitattributes
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# Virtualenvs
+.venv
+venv
+env
+ENV
+.virtualenv
+
+# Python junk
+**/__pycache__
+**/*.py[cod]
+**/*.egg-info
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.coverage
+htmlcov
+.tox
+.nox
+.hypothesis
+.cache
+
+# Node (frontend build separately or copy only dist if needed)
+**/node_modules
+frontend/node_modules
+frontend/dist
+frontend/.vite
+npm-debug.log*
+yarn-error.log*
+
+# Catalyst local / mock
+.catalyst
+.zcapp
+.data
+**/catalyst_datastore.json
+
+# Logs & temp
+logs
+backend/logs
+*.log
+tmp
+temp
+*.tmp
+*.bak
+
+# IDE / OS
+.idea
+.vscode
+.cursor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Docs / tests / heavy local-only (not needed in runtime image)
+docs
+tests
+**/tests
+.postman
+postman
+openapi
+Police_FIR_ER_Diagram.pdf
+*.md
+!README.md
+.github
+.pre-commit-config.yaml
+.editorconfig
+uv.lock
+docker-compose.yml
+docker-compose.override.yml
+
+# Frontend source if image is backend-only (AppSail)
+# Comment these out if building a fullstack image that needs frontend/
+frontend/src
+frontend/index.html
+frontend/vite.config.ts
+frontend/tsconfig*.json
+frontend/package-lock.json

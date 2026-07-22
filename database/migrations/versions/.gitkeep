@@ -1,0 +1,2 @@
+# Alembic version scripts live here.
+# TODO: Generate initial FIR schema migration from SQLAlchemy models.

@@ -1,0 +1,40 @@
+# Local development only.
+# Production MUST use Catalyst Data Store + Catalyst Cache (see catalyst.txt).
+# Do not treat these containers as the production data plane.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cip-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: cip
+      POSTGRES_PASSWORD: cip_dev_password
+      POSTGRES_DB: crime_intelligence
+    ports:
+      - "5432:5432"
+    volumes:
+      - cip_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cip -d crime_intelligence"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: cip-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - cip_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  cip_pg_data:
+  cip_redis_data:

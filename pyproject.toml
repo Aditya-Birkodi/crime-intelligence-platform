@@ -1,0 +1,115 @@
+[project]
+name = "crime-intelligence-platform"
+version = "0.1.0"
+description = "Enterprise AI Crime Intelligence & Analytics Platform for Karnataka State Police"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "CIP Team" },
+]
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.34.0",
+  "pydantic>=2.10.0",
+  "pydantic-settings>=2.7.0",
+  "sqlalchemy>=2.0.36",
+  "alembic>=1.14.0",
+  "psycopg2-binary>=2.9.10",
+  "python-dotenv>=1.0.1",
+  "httpx>=0.28.0",
+  "redis>=5.2.0",
+  "zcatalyst-sdk>=1.0.0",
+  "typing-extensions>=4.14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "pytest-asyncio>=0.25.0",
+  "pytest-cov>=6.0.0",
+  "ruff>=0.9.0",
+  "black>=25.1.0",
+  "isort>=6.0.0",
+  "mypy>=1.15.0",
+  "pre-commit>=4.1.0",
+  "types-redis>=4.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["etl"]
+
+# Backend is run via PYTHONPATH/backend; keep app as a path package for uvicorn.
+[tool.hatch.build.targets.wheel.force-include]
+"backend/app" = "app"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  \.venv
+  | frontend
+  | node_modules
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["app", "etl", "backend"]
+src_paths = ["backend", "etl", "tests"]
+skip_gitignore = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["backend", "etl", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["E402"]
+"database/migrations/**/*.py" = ["E402"]
+"database/seed/**/*.py" = ["E402"]
+"database/migrations/env.py" = ["E402"]
+"scripts/**/*.py" = ["E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "etl", "backend"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+packages = ["app", "etl"]
+mypy_path = "backend"
+
+[[tool.mypy.overrides]]
+module = ["app.api.*", "app.exceptions.handlers"]
+disallow_untyped_decorators = false
+
+[[tool.mypy.overrides]]
+module = [
+  "app.database.base",
+  "app.middleware.request_logging",
+  "app.repositories.case.case_master",
+  "app.integrations.catalyst.datastore",
+]
+disable_error_code = ["misc", "no-any-return"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "backend/tests"]
+asyncio_mode = "auto"
+pythonpath = ["backend", "."]
+addopts = "-q --strict-markers"
+filterwarnings = ["ignore::DeprecationWarning"]
