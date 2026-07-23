@@ -82,9 +82,9 @@ Do these in order — each unblocks frontend.
 
 ### B3 — Network APIs (link analysis)
 
-- [ ] `GET /api/v1/network/graph?case_id=` / `?accused_id=` → `{ nodes, edges }`
-- [ ] `GET /api/v1/network/offenders/{id}` — repeat offender + cases + MO fields
-- [ ] Optional association score field on edges
+- [x] `GET /api/v1/network/graph?case_id=` / `?accused_id=` → `{ nodes, edges }`
+- [x] `GET /api/v1/network/offenders/{id}` — repeat offender + cases + MO fields
+- [x] Optional association score field on edges
 
 **FE can start:** Network page + offender profile.
 
@@ -106,7 +106,7 @@ Do these in order — each unblocks frontend.
 - [x] Data Store strategy + mock path documented (`docs/database/datastore_strategy.md`)
 - [ ] Create Data Store tables in Catalyst console (cip_case_master, …)
 - [ ] NoSQL + Stratus + Cache clients real (not NotImplemented)
-- [ ] Functions or AppSail entry for FastAPI
+- [x] Functions or AppSail entry for FastAPI
 - [ ] API Gateway route list for FE-2
 - [ ] Circuits ETL orchestration (stretch)
 

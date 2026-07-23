@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/lookups/case-categories"
+method: GET
+order: 2000

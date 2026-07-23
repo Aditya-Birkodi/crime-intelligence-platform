@@ -1,0 +1,5 @@
+$kind: http-request
+description: KPI tiles. Analytics currently need Postgres (not Catalyst Data Store).
+url: "{{baseUrl}}/api/v1/analytics/overview"
+method: GET
+order: 1000

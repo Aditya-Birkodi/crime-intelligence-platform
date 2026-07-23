@@ -1,0 +1,35 @@
+$kind: http-request
+description: List FIRs. Saves first case_master_id to collection variable.
+url: "{{baseUrl}}/api/v1/cases?limit=50&offset=0"
+method: GET
+queryParams:
+  - key: police_station_id
+    value: "{{policeStationId}}"
+    disabled: true
+  - key: case_status_id
+    value: "1"
+    disabled: true
+  - key: crime_major_head_id
+    value: "1"
+    disabled: true
+  - key: registered_from
+    value: 2026-01-01
+    disabled: true
+  - key: registered_to
+    value: 2026-12-31
+    disabled: true
+  - key: limit
+    value: "50"
+  - key: offset
+    value: "0"
+scripts:
+  - type: afterResponse
+    code: |-
+      if (pm.response.code === 200) {
+        const body = pm.response.json();
+        if (body.items && body.items.length) {
+          pm.collectionVariables.set('caseMasterId', String(body.items[0].case_master_id));
+        }
+      }
+    language: text/javascript
+order: 1000

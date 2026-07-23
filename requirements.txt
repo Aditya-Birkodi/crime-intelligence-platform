@@ -1,5 +1,4 @@
-# Production / CI dependency pin list (mirror of pyproject.toml).
-# Prefer: pip install -r requirements.txt
+# Runtime deps for AppSail / production (no pytest/ruff).
 # Catalyst Python SDK: https://docs.catalyst.zoho.com/en/sdk/python/v1/setup/
 #   pip install zcatalyst-sdk
 fastapi>=0.115.0
@@ -13,14 +12,3 @@ python-dotenv>=1.0.1
 httpx>=0.28.0
 redis>=5.2.0
 zcatalyst-sdk>=1.0.0
-
-# Dev (also listed under [project.optional-dependencies] in pyproject.toml)
-pytest>=8.3.0
-pytest-asyncio>=0.25.0
-pytest-cov>=6.0.0
-ruff>=0.9.0
-black>=25.1.0
-isort>=6.0.0
-mypy>=1.15.0
-pre-commit>=4.1.0
-types-redis>=4.2.0

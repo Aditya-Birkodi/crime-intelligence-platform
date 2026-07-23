@@ -35,7 +35,7 @@ onMounted(async () => {
       <p class="mt-2 max-w-2xl text-slate-600">
         Vue 3 frontend wired to B1 case APIs. Point
         <code class="rounded bg-slate-100 px-1 text-sm">VITE_API_BASE_URL</code>
-        at your ngrok tunnel for remote teammates.
+        at AppSail (or local <code class="rounded bg-slate-100 px-1 text-sm">http://127.0.0.1:8000</code>).
       </p>
     </div>
 
@@ -45,8 +45,8 @@ onMounted(async () => {
     >
       {{ error }}
       <p class="mt-1 text-amber-800/80">
-        Is the backend running and CORS/ngrok URL correct?
-        <code>{{ baseUrl }}</code>
+        Is the backend reachable and CORS allowing this origin?
+        API base: <code>{{ baseUrl }}</code>
       </p>
     </div>
 

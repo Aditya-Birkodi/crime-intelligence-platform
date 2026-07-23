@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import date
 
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.case.accused import Accused
@@ -13,6 +14,7 @@ from app.models.case.victim import Victim
 from app.repositories.case.case_master import CaseMasterRepository
 from app.schemas.case.case_master import (
     AccusedCreate,
+    AccusedRead,
     ActSectionCreate,
     CaseMasterCreate,
     CaseMasterDetail,
@@ -59,6 +61,10 @@ class PostgresCaseStore:
         if entity is None:
             return None
         return CaseMasterRead.model_validate(entity)
+
+    def list_accused(self, *, limit: int = 2000) -> list[AccusedRead]:
+        rows = self._session.scalars(select(Accused).limit(limit)).all()
+        return [AccusedRead.model_validate(r) for r in rows]
 
     def create(self, payload: CaseMasterCreate, *, case_no: str) -> CaseMasterDetail:
         entity = CaseMaster(

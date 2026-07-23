@@ -183,6 +183,22 @@ class CatalystCaseStore:
                 return _row_to_case_read(row)
         return None
 
+    def list_accused(self, *, limit: int = 2000) -> list[AccusedRead]:
+        rows = self._ds.get_paged_rows(_ACCUSED, max_rows=limit)
+        return [
+            AccusedRead(
+                accused_master_id=int(
+                    a.get("ROWID") or a.get("accused_master_id") or 0
+                ),
+                case_master_id=int(a.get("case_master_id") or 0),
+                accused_name=str(a.get("accused_name", "")),
+                age_year=_opt_int(a.get("age_year")),
+                gender_id=a.get("gender_id"),
+                person_id=a.get("person_id"),
+            )
+            for a in rows
+        ]
+
     def create(self, payload: CaseMasterCreate, *, case_no: str) -> CaseMasterDetail:
         case_row = {
             "crime_no": payload.crime_no,

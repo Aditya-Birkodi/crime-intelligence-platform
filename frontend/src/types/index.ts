@@ -147,3 +147,45 @@ export type TrendAlertsResponse = {
     is_alert: boolean;
   }[];
 };
+
+export type GraphNode = {
+  id: string;
+  type: "case" | "accused" | "victim" | "station";
+  label: string;
+  meta: Record<string, unknown>;
+};
+
+export type GraphEdge = {
+  id: string;
+  source: string;
+  target: string;
+  relation: string;
+  score: number;
+};
+
+export type NetworkGraphResponse = {
+  seed: string;
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+};
+
+export type OffenderProfile = {
+  accused_master_id: number;
+  accused_name: string;
+  person_id: string | null;
+  age_year: number | null;
+  gender_id: string | null;
+  case_count: number;
+  cases: {
+    case_master_id: number;
+    crime_no: string;
+    case_no: string;
+    brief_facts: string | null;
+    crime_registered_date: string | null;
+    police_station_id: number;
+    crime_major_head_id: number | null;
+    accused_master_id: number;
+  }[];
+  modus_operandi: string[];
+  linked_accused_ids: number[];
+};

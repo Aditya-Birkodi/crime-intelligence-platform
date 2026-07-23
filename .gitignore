@@ -7,6 +7,7 @@
 .env.*
 !.env.example
 !.env*.example
+!.env.production
 *.pem
 *.key
 credentials.json
@@ -76,11 +77,18 @@ yarn-debug.log*
 yarn-error.log*
 
 # --- Catalyst ---
+# Local CLI cache; keep Slate config under frontend tracked
 .catalyst/
+!frontend/.catalyst/
+!frontend/.catalyst/**
 catalyst-config.json
 .zcapp/
 .data/
 **/catalyst_datastore.json
+# Vendored pip packages for AppSail (created by scripts.predeploy)
+.appsail_vendor/
+# Accidental CLI Vue boilerplate (real app is frontend/)
+cip-web/
 
 # --- Logs ---
 *.log

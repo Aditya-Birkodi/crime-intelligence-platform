@@ -7,6 +7,7 @@ from typing import Protocol
 
 from app.schemas.case.case_master import (
     AccusedCreate,
+    AccusedRead,
     ActSectionCreate,
     CaseMasterCreate,
     CaseMasterDetail,
@@ -33,6 +34,8 @@ class CaseStore(Protocol):
     def get_detail(self, case_master_id: int) -> CaseMasterDetail | None: ...
 
     def get_by_crime_no(self, crime_no: str) -> CaseMasterRead | None: ...
+
+    def list_accused(self, *, limit: int = 2000) -> list[AccusedRead]: ...
 
     def create(
         self, payload: CaseMasterCreate, *, case_no: str

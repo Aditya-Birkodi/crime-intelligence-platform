@@ -1,0 +1,18 @@
+{
+  "command": "python3 -u app.py",
+  "build_path": "./",
+  "stack": "python_3_12",
+  "env_variables": {
+    "APP_RELOAD": "false",
+    "PERSISTENCE_BACKEND": "catalyst",
+    "DATASTORE_MOCK": "true",
+    "DATASTORE_MOCK_PATH": "database/seed/appsail_datastore.json",
+    "CORS_ORIGINS": "*",
+    "DEBUG": "true",
+    "LOG_DIR": "/tmp/cip-logs"
+  },
+  "memory": 1024,
+  "scripts": {
+    "predeploy": "python3 -m pip install -r requirements.txt -t .appsail_vendor -q"
+  }
+}

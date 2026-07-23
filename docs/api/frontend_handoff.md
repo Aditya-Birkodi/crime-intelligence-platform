@@ -36,7 +36,7 @@ Header bar shows the active API base URL.
 | `/cases` | Case list + filters | `/api/v1/cases`, lookups |
 | `/cases/:id` | Case detail | `/api/v1/cases/{id}` |
 | `/map` | Map / hotspots | `/analytics/geo/incidents`, `/geo/districts`, `/hotspots` |
-| `/network` | Network placeholder | cases + detail (until B3) |
+| `/network` | Link analysis graph | `/api/v1/network/graph`, `/network/offenders/{id}` |
 
 ## Live OpenAPI
 
@@ -45,7 +45,7 @@ Header bar shows the active API base URL.
 | `{base}/docs` | Swagger |
 | `{base}/openapi.json` | Contract |
 
-Postman: [`../../postman/CIP_Backend.postman_collection.json`](../../postman/CIP_Backend.postman_collection.json)
+Postman: [`../../postman/`](../../postman/) — import collection + `CIP_AppSail` / `CIP_Local` environments.
 
 ## B1 — Cases
 
@@ -64,6 +64,13 @@ Postman: [`../../postman/CIP_Backend.postman_collection.json`](../../postman/CIP
 | GET | `/api/v1/analytics/geo/incidents` | Map pins |
 | GET | `/api/v1/analytics/hotspots?grain=hour` | Heatmap bins |
 | GET | `/api/v1/analytics/alerts/trends` | Spike badges |
+
+## B3 — Network
+
+| Method | Path | FE use |
+|--------|------|--------|
+| GET | `/api/v1/network/graph?case_id=` or `?accused_id=` | Force graph (`nodes`, `edges`, `score`) |
+| GET | `/api/v1/network/offenders/{id}` | Repeat-offender profile + MO |
 
 ## CORS
 

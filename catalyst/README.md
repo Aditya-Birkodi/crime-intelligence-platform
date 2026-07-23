@@ -1,18 +1,22 @@
-# Catalyst Deployment Stubs
+# Catalyst layout (this repo)
 
-Production deployment **must** use Zoho Catalyst services.
-See [`catalyst.txt`](../catalyst.txt), [`docs/deployment/catalyst.md`](../docs/deployment/catalyst.md),
-and the beginner console walkthrough:
-[`docs/deployment/catalyst_console_setup.md`](../docs/deployment/catalyst_console_setup.md).
+After `catalyst init` (AppSail + Slate):
 
-| Folder | Catalyst service |
-|--------|------------------|
-| `functions/` | Catalyst Serverless (Functions) |
-| `appsail/` | Catalyst AppSail (OCI / managed runtime) |
-| `client/` | Catalyst Slate / Web Client Hosting |
-| `gateway/` | Catalyst API Gateway |
-| `signals/` | Catalyst Signals + Event Functions |
-| `circuits/` | Catalyst Circuits |
+```
+.
+├── catalyst.json          # AppSail cip-api + Slate cip-web
+├── app-config.json        # AppSail Python 3.12 start command
+├── .catalystrc            # linked Catalyst project (local)
+├── app.py                 # AppSail / local API entry
+├── requirements.txt       # AppSail runtime deps
+├── backend/               # FastAPI code
+├── frontend/              # Slate source (cip-web)
+│   ├── .catalyst/slate-config.toml
+│   └── cli-config.json
+└── catalyst/              # human docs / stubs (not CLI source trees)
+```
 
-**TODO:** Add Catalyst project JSON / CLI configs when the Catalyst project is provisioned.
-Do not substitute third-party services for capabilities Catalyst already provides.
+**Do not use** the CLI-generated `cip-web/` boilerplate — removed; Slate points at `frontend/`.
+
+Deploy: `catalyst deploy`
+Serve local: `catalyst serve` (if configured) or `python app.py` + `cd frontend && npm run dev`

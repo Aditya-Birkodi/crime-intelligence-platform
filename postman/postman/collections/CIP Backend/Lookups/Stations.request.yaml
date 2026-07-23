@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/lookups/stations?district_id={{districtId}}"
+method: GET
+queryParams:
+  - key: district_id
+    value: "{{districtId}}"
+    description: Optional filter
+order: 6000

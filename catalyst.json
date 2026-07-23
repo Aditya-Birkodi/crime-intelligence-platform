@@ -1,0 +1,14 @@
+{
+  "appsail": [
+    {
+      "source": ".",
+      "name": "cip-api"
+    }
+  ],
+  "slate": [
+    {
+      "name": "cip-web",
+      "source": "./frontend"
+    }
+  ]
+}

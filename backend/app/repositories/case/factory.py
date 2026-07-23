@@ -9,7 +9,7 @@ from fastapi import Depends
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
-from app.database.session import SessionLocal
+from app.database.session import get_session_factory
 from app.repositories.case.case_store import CaseStore
 from app.repositories.case.catalyst_case_store import CatalystCaseStore
 from app.repositories.case.postgres_case_store import PostgresCaseStore
@@ -22,7 +22,7 @@ def get_case_store() -> Generator[CaseStore, None, None]:
         yield CatalystCaseStore()
         return
 
-    db: Session = SessionLocal()
+    db: Session = get_session_factory()()
     try:
         yield PostgresCaseStore(db)
     finally:

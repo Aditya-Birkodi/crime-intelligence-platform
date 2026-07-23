@@ -1,0 +1,150 @@
+{
+  "seq": 14,
+  "tables": {
+    "cip_case_master": [
+      {
+        "ROWID": 1,
+        "crime_no": "104430006202600001",
+        "case_no": "202600001",
+        "crime_registered_date": "2026-01-15",
+        "police_station_id": 6,
+        "case_category_id": 1,
+        "gravity_offence_id": null,
+        "crime_major_head_id": 1,
+        "crime_minor_head_id": null,
+        "case_status_id": 1,
+        "court_id": null,
+        "incident_from_date": null,
+        "incident_to_date": null,
+        "info_received_ps_date": null,
+        "latitude": "12.971600",
+        "longitude": "77.594600",
+        "brief_facts": "Snatching near MG Road metro; accused fled on bike"
+      },
+      {
+        "ROWID": 6,
+        "crime_no": "104430006202600002",
+        "case_no": "202600002",
+        "crime_registered_date": "2026-02-03",
+        "police_station_id": 6,
+        "case_category_id": 1,
+        "gravity_offence_id": null,
+        "crime_major_head_id": 2,
+        "crime_minor_head_id": null,
+        "case_status_id": 1,
+        "court_id": null,
+        "incident_from_date": null,
+        "incident_to_date": null,
+        "info_received_ps_date": null,
+        "latitude": null,
+        "longitude": null,
+        "brief_facts": "Assault complaint after altercation at bus stop"
+      },
+      {
+        "ROWID": 10,
+        "crime_no": "104430006202600003",
+        "case_no": "202600003",
+        "crime_registered_date": "2026-03-12",
+        "police_station_id": 12,
+        "case_category_id": 1,
+        "gravity_offence_id": null,
+        "crime_major_head_id": 1,
+        "crime_minor_head_id": null,
+        "case_status_id": 1,
+        "court_id": null,
+        "incident_from_date": null,
+        "incident_to_date": null,
+        "info_received_ps_date": null,
+        "latitude": "12.935200",
+        "longitude": "77.624500",
+        "brief_facts": "Repeat snatching MO \u2014 bike getaway near Koramangala"
+      }
+    ],
+    "cip_victim": [
+      {
+        "ROWID": 2,
+        "case_master_id": 1,
+        "victim_name": "Ravi Kumar",
+        "age_year": null,
+        "gender_id": "M",
+        "victim_police": "0"
+      },
+      {
+        "ROWID": 7,
+        "case_master_id": 6,
+        "victim_name": "Anita S",
+        "age_year": null,
+        "gender_id": "F",
+        "victim_police": "0"
+      },
+      {
+        "ROWID": 11,
+        "case_master_id": 10,
+        "victim_name": "Priya N",
+        "age_year": null,
+        "gender_id": "F",
+        "victim_police": "0"
+      }
+    ],
+    "cip_accused": [
+      {
+        "ROWID": 3,
+        "case_master_id": 1,
+        "accused_name": "Ramesh K",
+        "age_year": 28,
+        "gender_id": "M",
+        "person_id": "P100"
+      },
+      {
+        "ROWID": 4,
+        "case_master_id": 1,
+        "accused_name": "Unknown",
+        "age_year": null,
+        "gender_id": null,
+        "person_id": "U1"
+      },
+      {
+        "ROWID": 8,
+        "case_master_id": 6,
+        "accused_name": "Suresh P",
+        "age_year": null,
+        "gender_id": null,
+        "person_id": "A2"
+      },
+      {
+        "ROWID": 12,
+        "case_master_id": 10,
+        "accused_name": "Ramesh K",
+        "age_year": 28,
+        "gender_id": "M",
+        "person_id": "P100"
+      }
+    ],
+    "cip_act_section_association": [
+      {
+        "ROWID": 5,
+        "case_master_id": 1,
+        "act_id": "IPC",
+        "section_id": "379",
+        "act_order_id": 1,
+        "section_order_id": 1
+      },
+      {
+        "ROWID": 9,
+        "case_master_id": 6,
+        "act_id": "IPC",
+        "section_id": "323",
+        "act_order_id": 1,
+        "section_order_id": 1
+      },
+      {
+        "ROWID": 13,
+        "case_master_id": 10,
+        "act_id": "IPC",
+        "section_id": "379",
+        "act_order_id": 1,
+        "section_order_id": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "50116000000022364",
+      "name": "Crime-Intelligence-Platform",
+      "domain": {
+        "id": "50044183252",
+        "name": "crime-intelligence-platform-60078759306.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60078759306",
+          "name": "Development",
+          "type": 3
+        },
+        {
+          "idx": 2,
+          "id": "50044263815",
+          "name": "Production",
+          "type": 1
+        }
+      ]
+    }
+  ]
+}

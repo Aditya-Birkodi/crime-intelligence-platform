@@ -1,0 +1,10 @@
+name: CIP AppSail
+values:
+  - key: baseUrl
+    value: 'https://cip-api-50044183252.development.catalystappsail.in'
+  - key: caseMasterId
+    value: '1'
+  - key: policeStationId
+    value: '6'
+  - key: districtId
+    value: '443'

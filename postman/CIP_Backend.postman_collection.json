@@ -2,13 +2,25 @@
   "info": {
     "_postman_id": "cip-backend-001",
     "name": "CIP Backend",
-    "description": "Crime Intelligence Platform — shared with FE. Import OpenAPI from /openapi.json when routes grow.\n\nDocs: docs/api/frontend_handoff.md",
+    "description": "Crime Intelligence Platform API (B1 cases/lookups, B2 analytics).\n\nSwitch environment:\n- CIP Local → http://127.0.0.1:8000\n- CIP AppSail → https://cip-api-50044183252.development.catalystappsail.in\n\nHandoff: docs/api/frontend_handoff.md",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://127.0.0.1:8000"
+      "value": "https://cip-api-50044183252.development.catalystappsail.in"
+    },
+    {
+      "key": "caseMasterId",
+      "value": "1"
+    },
+    {
+      "key": "policeStationId",
+      "value": "6"
+    },
+    {
+      "key": "districtId",
+      "value": "443"
     }
   ],
   "item": [
@@ -21,7 +33,7 @@
             "method": "GET",
             "header": [],
             "url": "{{baseUrl}}/health",
-            "description": "Liveness probe"
+            "description": "Liveness probe (AppSail / local)."
           }
         },
         {
@@ -30,7 +42,7 @@
             "method": "GET",
             "header": [],
             "url": "{{baseUrl}}/api/v1/status",
-            "description": "Versioned API readiness"
+            "description": "Versioned API readiness."
           }
         },
         {
@@ -39,72 +51,392 @@
             "method": "GET",
             "header": [],
             "url": "{{baseUrl}}/openapi.json",
-            "description": "Machine-readable contract for FE / codegen"
+            "description": "Machine-readable contract (when DEBUG=true)."
           }
         }
       ]
     },
     {
-      "name": "Cases (B1 — coming)",
+      "name": "Lookups",
       "item": [
         {
-          "name": "List cases — placeholder",
+          "name": "Case statuses",
           "request": {
             "method": "GET",
             "header": [],
-            "url": "{{baseUrl}}/api/v1/cases",
-            "description": "TODO: implement in B1. Do not rely on this until OpenAPI lists it."
+            "url": "{{baseUrl}}/api/v1/lookups/case-statuses"
           }
-        }
-      ]
-    },
-    {
-      "name": "Analytics (B2 — coming)",
-      "item": [
+        },
         {
-          "name": "Geo incidents — placeholder",
+          "name": "Case categories",
           "request": {
             "method": "GET",
             "header": [],
-            "url": "{{baseUrl}}/api/v1/analytics/geo/incidents",
-            "description": "TODO: B2"
+            "url": "{{baseUrl}}/api/v1/lookups/case-categories"
           }
-        }
-      ]
-    },
-    {
-      "name": "Network (B3 — coming)",
-      "item": [
+        },
         {
-          "name": "Graph — placeholder",
+          "name": "Gravity offences",
           "request": {
             "method": "GET",
             "header": [],
-            "url": "{{baseUrl}}/api/v1/network/graph",
-            "description": "TODO: B3"
+            "url": "{{baseUrl}}/api/v1/lookups/gravity-offences"
+          }
+        },
+        {
+          "name": "Crime heads",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/lookups/crime-heads"
+          }
+        },
+        {
+          "name": "Districts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/lookups/districts"
+          }
+        },
+        {
+          "name": "Stations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/lookups/stations?district_id={{districtId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "lookups", "stations"],
+              "query": [
+                {
+                  "key": "district_id",
+                  "value": "{{districtId}}",
+                  "description": "Optional filter"
+                }
+              ]
+            }
           }
         }
       ]
     },
     {
-      "name": "AI (B4 — coming)",
+      "name": "Cases (B1)",
       "item": [
         {
-          "name": "Chat — placeholder",
+          "name": "List cases",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "  const body = pm.response.json();",
+                  "  if (body.items && body.items.length) {",
+                  "    pm.collectionVariables.set('caseMasterId', String(body.items[0].case_master_id));",
+                  "  }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/cases?limit=50&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "cases"],
+              "query": [
+                {
+                  "key": "police_station_id",
+                  "value": "{{policeStationId}}",
+                  "disabled": true
+                },
+                {
+                  "key": "case_status_id",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "crime_major_head_id",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "registered_from",
+                  "value": "2026-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "registered_to",
+                  "value": "2026-12-31",
+                  "disabled": true
+                },
+                { "key": "limit", "value": "50" },
+                { "key": "offset", "value": "0" }
+              ]
+            },
+            "description": "List FIRs. Saves first case_master_id to collection variable."
+          }
+        },
+        {
+          "name": "Get case detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/cases/{{caseMasterId}}",
+            "description": "One FIR with victims, accused, act-sections."
+          }
+        },
+        {
+          "name": "Create case",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "  const body = pm.response.json();",
+                  "  pm.collectionVariables.set('caseMasterId', String(body.case_master_id));",
+                  "}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"crime_no\": \"104430006202600099\",\n  \"case_no\": \"202600099\",\n  \"crime_registered_date\": \"2026-03-01\",\n  \"police_station_id\": 6,\n  \"case_category_id\": 1,\n  \"case_status_id\": 1,\n  \"crime_major_head_id\": 1,\n  \"latitude\": \"12.971600\",\n  \"longitude\": \"77.594600\",\n  \"brief_facts\": \"Postman sample theft FIR\",\n  \"victims\": [\n    { \"victim_name\": \"Test Victim\", \"gender_id\": \"M\", \"age_year\": 30 }\n  ],\n  \"accused\": [\n    { \"accused_name\": \"Test Accused\", \"person_id\": \"A99\", \"gender_id\": \"M\" }\n  ],\n  \"act_sections\": [\n    { \"act_id\": \"IPC\", \"section_id\": \"379\", \"act_order_id\": 1, \"section_order_id\": 1 }\n  ]\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/cases",
+            "description": "Create FIR. crime_no must be 18 chars and unique."
+          }
+        },
+        {
+          "name": "Add victim",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"victim_name\": \"Additional Victim\",\n  \"gender_id\": \"F\",\n  \"age_year\": 25,\n  \"victim_police\": \"0\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/cases/{{caseMasterId}}/victims"
+          }
+        },
+        {
+          "name": "Add accused",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accused_name\": \"Additional Accused\",\n  \"person_id\": \"A100\",\n  \"gender_id\": \"M\",\n  \"age_year\": 28\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/cases/{{caseMasterId}}/accused"
+          }
+        },
+        {
+          "name": "Add act-section",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"act_id\": \"IPC\",\n  \"section_id\": \"411\",\n  \"act_order_id\": 1,\n  \"section_order_id\": 2\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/cases/{{caseMasterId}}/act-sections"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Analytics (B2)",
+      "item": [
+        {
+          "name": "Overview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/analytics/overview",
+            "description": "KPI tiles. Analytics currently need Postgres (not Catalyst Data Store)."
+          }
+        },
+        {
+          "name": "Geo districts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/analytics/geo/districts"
+          }
+        },
+        {
+          "name": "Geo incidents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/analytics/geo/incidents?limit=500",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "analytics", "geo", "incidents"],
+              "query": [
+                {
+                  "key": "district_id",
+                  "value": "{{districtId}}",
+                  "disabled": true
+                },
+                {
+                  "key": "police_station_id",
+                  "value": "{{policeStationId}}",
+                  "disabled": true
+                },
+                { "key": "case_status_id", "value": "1", "disabled": true },
+                {
+                  "key": "crime_major_head_id",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "registered_from",
+                  "value": "2026-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "registered_to",
+                  "value": "2026-12-31",
+                  "disabled": true
+                },
+                { "key": "limit", "value": "500" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Hotspots",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/analytics/hotspots?cell_size_degrees=0.05&grain=hour",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "analytics", "hotspots"],
+              "query": [
+                { "key": "cell_size_degrees", "value": "0.05" },
+                { "key": "grain", "value": "hour" },
+                {
+                  "key": "district_id",
+                  "value": "{{districtId}}",
+                  "disabled": true
+                },
+                {
+                  "key": "registered_from",
+                  "value": "2026-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "registered_to",
+                  "value": "2026-12-31",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Trend alerts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/analytics/alerts/trends?recent_days=7&baseline_days=28&threshold=1.5",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "analytics", "alerts", "trends"],
+              "query": [
+                { "key": "recent_days", "value": "7" },
+                { "key": "baseline_days", "value": "28" },
+                { "key": "threshold", "value": "1.5" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Network (B3)",
+      "item": [
+        {
+          "name": "Graph by case_id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/network/graph?case_id={{caseMasterId}}&depth=2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "network", "graph"],
+              "query": [
+                { "key": "case_id", "value": "{{caseMasterId}}" },
+                { "key": "depth", "value": "2" }
+              ]
+            },
+            "description": "Ego network for a case (nodes + scored edges)."
+          }
+        },
+        {
+          "name": "Graph by accused_id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/network/graph?accused_id=1&depth=2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "network", "graph"],
+              "query": [
+                { "key": "accused_id", "value": "1" },
+                { "key": "depth", "value": "2" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Offender profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/network/offenders/3",
+            "description": "Repeat offender profile + linked cases / MO. Seed uses accused_master_id=3 (Ramesh K / P100)."
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI (B4 — stub)",
+      "item": [
+        {
+          "name": "Chat — not implemented",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"question\": \"Summarize this FIR\",\n  \"case_master_id\": 1,\n  \"top_k\": 5\n}"
             },
             "url": "{{baseUrl}}/api/v1/ai/chat",
-            "description": "TODO: B4 — Catalyst QuickML RAG only"
+            "description": "Placeholder — B4 QuickML RAG not shipped yet."
           }
         }
       ]

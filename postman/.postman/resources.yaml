@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: 4c155bcf-3e31-404c-8b61-120771931a0b
+
+cloudResources:
+  collections:
+    ../postman/collections/CIP Backend: ae125d42-f932-4614-b720-a3baa12ff684
+
+# All resources in the `postman/` folder are automatically registered in Local View.
+# Point to additional files outside the `postman/` folder to register them individually. Example:
+#localResources:
+#  collections:
+#    - ../tests/E2E Test Collection/

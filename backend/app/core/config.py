@@ -5,7 +5,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -65,10 +65,16 @@ class CatalystSettings(BaseSettings):
     datastore_table_prefix: str = Field(
         default="cip_", alias="CATALYST_DATASTORE_TABLE_PREFIX"
     )
-    datastore_mock: bool = Field(default=False, alias="CATALYST_DATASTORE_MOCK")
+    # Prefer DATASTORE_* in AppSail app-config.json — CATALYST_* keys are reserved there
+    datastore_mock: bool = Field(
+        default=False,
+        validation_alias=AliasChoices("CATALYST_DATASTORE_MOCK", "DATASTORE_MOCK"),
+    )
     datastore_mock_path: str = Field(
         default=".data/catalyst_datastore.json",
-        alias="CATALYST_DATASTORE_MOCK_PATH",
+        validation_alias=AliasChoices(
+            "CATALYST_DATASTORE_MOCK_PATH", "DATASTORE_MOCK_PATH"
+        ),
     )
     # Optional: prefer Table ID from console over name (under table name in Data Store)
     table_case_master: str = Field(default="", alias="CATALYST_TABLE_CASE_MASTER")
@@ -125,6 +131,8 @@ class Settings(BaseSettings):
     log_level: str = Field(default="INFO", alias="LOG_LEVEL")
     log_dir: str = Field(default="logs", alias="LOG_DIR")
     redis_url: str = Field(default="redis://localhost:6379/0", alias="REDIS_URL")
+    # Comma-separated origins, or * for any (credentials disabled when *)
+    cors_origins: str = Field(default="*", alias="CORS_ORIGINS")
     # postgres = local/CI SQLAlchemy; catalyst = Cloud Scale Data Store (or mock)
     persistence_backend: Literal["postgres", "catalyst"] = Field(
         default="postgres",

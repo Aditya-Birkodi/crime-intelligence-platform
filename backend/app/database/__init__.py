@@ -1,9 +1,6 @@
-"""Database package — engine, session, base.
-
-TODO: Provide Catalyst Data Store client factory for production.
-"""
+"""Database package exports."""
 
 from app.database.base import Base
-from app.database.session import SessionLocal, engine, get_db
+from app.database.session import get_db, get_engine, get_session_factory
 
-__all__ = ["Base", "SessionLocal", "engine", "get_db"]
+__all__ = ["Base", "get_db", "get_engine", "get_session_factory"]

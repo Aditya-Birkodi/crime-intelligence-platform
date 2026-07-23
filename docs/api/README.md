@@ -7,7 +7,7 @@ Version prefix: `/api/v1`.
 Start here: **[`frontend_handoff.md`](frontend_handoff.md)**
 
 - Swagger: `http://127.0.0.1:8000/docs`
-- Postman: [`../../postman/CIP_Backend.postman_collection.json`](../../postman/CIP_Backend.postman_collection.json)
+- Postman: [`../../postman/`](../../postman/) (collection + AppSail/Local environments)
 - Export schema: `./scripts/export_openapi.sh` → `openapi/openapi.json`
 
 ## Current endpoints
@@ -18,7 +18,7 @@ Start here: **[`frontend_handoff.md`](frontend_handoff.md)**
 | GET | `/api/v1/status` | Live |
 | GET | `/api/v1/cases` | Planned B1 |
 | GET | `/api/v1/analytics/*` | Planned B2 |
-| GET | `/api/v1/network/*` | Planned B3 |
+| GET | `/api/v1/network/*` | Link analysis graph + offender profile (B3) |
 | POST | `/api/v1/ai/chat` | Planned B4 |
 
 ## Data backend

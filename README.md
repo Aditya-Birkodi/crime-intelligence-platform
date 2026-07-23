@@ -25,22 +25,26 @@ is for development only.
 | Backend | Python 3.12, FastAPI, Pydantic v2, SQLAlchemy 2, Alembic, uv |
 | Frontend | Vue 3, TypeScript, Vite, TailwindCSS, Vue Router |
 | Local Dev | Docker Compose (Postgres 16, Redis 7) |
-| Production | Zoho Catalyst (Functions, Data Store, Cache, NoSQL, Stratus, Auth, API Gateway, QuickML, Zia, SmartBrowz, Signals, Circuits, …) |
+| Production | Zoho Catalyst — **AppSail** (API) + **Slate** (Vue) + Data Store / … |
 
 ## Repository Structure
 
 ```
 crime-intelligence-platform/
+├── catalyst.json     # AppSail (cip-api) + Slate (cip-web → frontend/)
+├── app-config.json   # AppSail Python start / env
+├── app.py            # API entry (local + AppSail)
 ├── backend/          # FastAPI application (DDD layers)
-├── frontend/         # Vue 3 + Vite SPA (Catalyst Slate / Web Client)
+├── frontend/         # Vue 3 + Vite SPA (Slate source for cip-web)
 ├── database/         # Schema docs, seeds, Alembic migrations
 ├── etl/              # Ingestion → feature-engineering pipeline stubs
-├── catalyst/         # Catalyst deployment stubs
+├── catalyst/         # Human docs for AppSail / Slate / Gateway
 ├── docs/             # Architecture, API, DB, AI, deployment guides
 ├── scripts/          # Dev setup helpers
-├── tests/            # Cross-cutting unit / integration tests
-└── catalyst/         # Catalyst Functions / AppSail / Gateway stubs
+└── tests/            # Cross-cutting unit / integration tests
 ```
+
+**Catalyst deploy targets:** AppSail `cip-api` (backend) + Slate `cip-web` (`frontend/`).
 
 ### Backend bounded contexts (FIR ER)
 

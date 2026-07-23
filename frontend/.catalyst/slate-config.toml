@@ -1,0 +1,9 @@
+# ⚠️ Generated/managed for Catalyst Slate — keep in sync with catalyst.json
+# Slate app: cip-web → source ./frontend
+
+framework = "vue"
+install_command = "npm install"
+build_command = "npm run build"
+build_path = "dist"
+deployment_name = "default"
+root_path = "./"

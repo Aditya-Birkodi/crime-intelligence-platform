@@ -1,6 +1,6 @@
 /**
  * HTTP client for CIP backend.
- * Set VITE_API_BASE_URL to your ngrok HTTPS URL (no trailing slash).
+ * Set VITE_API_BASE_URL (no trailing slash) — AppSail URL in production.
  */
 
 import type {
@@ -14,6 +14,8 @@ import type {
   HotspotsResponse,
   IdName,
   IncidentPoint,
+  NetworkGraphResponse,
+  OffenderProfile,
   TrendAlertsResponse,
 } from "@/types";
 
@@ -110,4 +112,16 @@ export const api = {
     request<TrendAlertsResponse>(
       `/api/v1/analytics/alerts/trends${toQuery(params)}`,
     ),
+
+  // B3 network
+  getNetworkGraph: (params: {
+    case_id?: number;
+    accused_id?: number;
+    depth?: number;
+  }) =>
+    request<NetworkGraphResponse>(
+      `/api/v1/network/graph${toQuery(params)}`,
+    ),
+  getOffenderProfile: (accusedId: number) =>
+    request<OffenderProfile>(`/api/v1/network/offenders/${accusedId}`),
 };

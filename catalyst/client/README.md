@@ -1,9 +1,20 @@
-# Catalyst Slate / Web Client Hosting
+# Catalyst Slate (frontend) — cip-web
 
-Host the Vite React SPA (`frontend/`).
+Real Vue app lives in **`/frontend`** (not a separate `cip-web/` boilerplate).
 
-**TODO:**
+| File | Purpose |
+|------|---------|
+| `/catalyst.json` | `"slate": [{ "name": "cip-web", "source": "./frontend" }]` |
+| `/frontend/.catalyst/slate-config.toml` | install / build / `dist` |
+| `/frontend/cli-config.json` | `npm run dev -- --port $ZC_SLATE_PORT` |
 
-- Build `frontend` → static assets
-- Configure Slate / Web Client Hosting
-- Point SPA at `CATALYST_API_GATEWAY_URL`
+## Deploy
+
+```bash
+cd frontend && npm install && npm run build   # optional local check
+cd .. && catalyst deploy --only slate
+```
+
+## Env
+
+Set `VITE_API_BASE_URL` to the AppSail (or API Gateway) URL before build/deploy.
