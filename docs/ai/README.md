@@ -10,6 +10,7 @@ service already exists (`catalyst.txt`).
 |--------------|----------|----------------|
 | Officer Q&A / LLM | **QuickML** LLM Serving | OpenAI, Gemini, local Ollama (prod) |
 | RAG / knowledge base | **QuickML** RAG | Pinecone, Chroma, FAISS-as-prod |
+| Graph RAG / link context | **NetworkX in AppSail** + CaseStore ego graph | Hosted Neo4j Atlas / external graph SaaS |
 | FIR / BriefFacts documents | **NoSQL** (+ RAG index) | MongoDB Atlas, Elastic |
 | Scanned FIR PDF / images | **Stratus** object store | AWS S3, MinIO (prod) |
 | OCR on scans | **Zia** Services | Tesseract/cloud OCR vendors |

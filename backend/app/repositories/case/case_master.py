@@ -23,7 +23,11 @@ class CaseMasterRepository(BaseRepository[CaseMaster, int]):
             .options(
                 selectinload(CaseMaster.victims),
                 selectinload(CaseMaster.accused),
+                selectinload(CaseMaster.complainants),
                 selectinload(CaseMaster.act_sections),
+                selectinload(CaseMaster.occurrence),
+                selectinload(CaseMaster.arrests),
+                selectinload(CaseMaster.chargesheets),
             )
         )
         return self._session.scalar(stmt)
@@ -43,6 +47,7 @@ class CaseMasterRepository(BaseRepository[CaseMaster, int]):
         police_station_id: int | None = None,
         case_status_id: int | None = None,
         crime_major_head_id: int | None = None,
+        crime_no: str | None = None,
         registered_from: date | None = None,
         registered_to: date | None = None,
         limit: int = 50,
@@ -55,6 +60,8 @@ class CaseMasterRepository(BaseRepository[CaseMaster, int]):
             filters.append(CaseMaster.case_status_id == case_status_id)
         if crime_major_head_id is not None:
             filters.append(CaseMaster.crime_major_head_id == crime_major_head_id)
+        if crime_no is not None:
+            filters.append(CaseMaster.crime_no == crime_no)
         if registered_from is not None:
             filters.append(CaseMaster.crime_registered_date >= registered_from)
         if registered_to is not None:

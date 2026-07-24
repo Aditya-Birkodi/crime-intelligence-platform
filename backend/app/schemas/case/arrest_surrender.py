@@ -1,36 +1,37 @@
-"""Pydantic stubs for `ArrestSurrender`.
-
-TODO: Arrest/surrender events; FKs to State/District/Unit/Employee/Court/Accused.
-TODO: Add Create/Update/Read schemas with field validation.
-"""
+"""Pydantic schemas for `ArrestSurrender`."""
 
 from __future__ import annotations
+
+from datetime import date
 
 from pydantic import BaseModel, ConfigDict
 
 
-class ArrestSurrenderBase(BaseModel):
-    """Shared fields for `ArrestSurrender` DTOs.
-
-    TODO: Declare fields matching the ER diagram.
-    """
-
+class ArrestSurrenderRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
+    arrest_surrender_id: int
+    case_master_id: int
+    arrest_surrender_type_id: int
+    arrest_surrender_date: date | None = None
+    arrest_surrender_state_id: int | None = None
+    arrest_surrender_district_id: int | None = None
+    police_station_id: int | None = None
+    io_id: int | None = None
+    court_id: int | None = None
+    accused_master_id: int | None = None
+    is_accused: bool = True
+    is_complainant_accused: bool = False
 
-class ArrestSurrenderRead(ArrestSurrenderBase):
-    """Read model for `ArrestSurrender`.
 
-    TODO: Include primary key and nested relations as needed.
-    """
-
-    pass
-
-
-class ArrestSurrenderCreate(ArrestSurrenderBase):
-    """Create payload for `ArrestSurrender`.
-
-    TODO: Required fields only.
-    """
-
-    pass
+class ArrestSurrenderCreate(BaseModel):
+    arrest_surrender_type_id: int
+    arrest_surrender_date: date | None = None
+    arrest_surrender_state_id: int | None = None
+    arrest_surrender_district_id: int | None = None
+    police_station_id: int | None = None
+    io_id: int | None = None
+    court_id: int | None = None
+    accused_master_id: int | None = None
+    is_accused: bool = True
+    is_complainant_accused: bool = False

@@ -1,0 +1,15 @@
+$kind: collection
+description: |-
+  Crime Intelligence Platform API (B1–B3).
+
+  Import this single file. Set collection variable `baseUrl`:
+  - AppSail: https://cip-api-50044183252.development.catalystappsail.in
+  - Local: http://127.0.0.1:8000
+
+  Handoff: docs/api/frontend_handoff.md
+variables:
+  baseUrl: "https://cip-api-50044183252.development.catalystappsail.in"
+  caseMasterId: "1"
+  accusedMasterId: "3"
+  policeStationId: "6"
+  districtId: "443"

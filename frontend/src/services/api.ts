@@ -60,6 +60,8 @@ export const api = {
       `/api/v1/cases${toQuery(params as Record<string, string | number | undefined>)}`,
     ),
   getCase: (id: number) => request<CaseMasterDetail>(`/api/v1/cases/${id}`),
+  getCaseByCrimeNo: (crimeNo: string) =>
+    request<CaseMasterDetail>(`/api/v1/cases/by-crime-no/${crimeNo}`),
   listCaseStatuses: () => request<IdName[]>("/api/v1/lookups/case-statuses"),
   listCaseCategories: () => request<IdName[]>("/api/v1/lookups/case-categories"),
   listDistricts: () => request<IdName[]>("/api/v1/lookups/districts"),
@@ -124,4 +126,88 @@ export const api = {
     ),
   getOffenderProfile: (accusedId: number) =>
     request<OffenderProfile>(`/api/v1/network/offenders/${accusedId}`),
+
+  // B4 AI
+    aiChat: (body: {
+    question: string;
+    case_master_id?: number;
+    accused_id?: number;
+    use_graph_rag?: boolean;
+    graph_depth?: number;
+    top_k?: number;
+  }) =>
+    request<{
+      answer: string;
+      citations: {
+        case_master_id: number | null;
+        crime_no: string | null;
+        doc_id: string | null;
+        snippet: string | null;
+      }[];
+      provider: string;
+      knowledge_base_id: string | null;
+      graph_context: {
+        seed: string;
+        node_count: number;
+        edge_count: number;
+        neighbor_crime_nos: string[];
+        summary: string;
+        engine: string;
+      } | null;
+    }>("/api/v1/ai/chat", { method: "POST", body: JSON.stringify(body) }),
+  aiGraphContext: (params: {
+    case_id?: number;
+    accused_id?: number;
+    depth?: number;
+  }) =>
+    request<{
+      seed: string;
+      depth: number;
+      node_count: number;
+      edge_count: number;
+      neighbor_crime_nos: string[];
+      linked_persons: string[];
+      summary: string;
+      engine: string;
+    }>(
+      `/api/v1/ai/graph/context${toQuery(params as Record<string, string | number | undefined>)}`,
+    ),
+  aiPredictRisk: (body: {
+    district_id?: number;
+    police_station_id?: number;
+    horizon_days?: number;
+  } = {}) =>
+    request<{
+      horizon_days: number;
+      items: {
+        scope: string;
+        scope_id: number;
+        scope_name: string | null;
+        risk_score: number;
+        case_count: number;
+        high_severity_share: number;
+        top_crime_heads: string[];
+      }[];
+      provider: string;
+      model: string | null;
+    }>("/api/v1/ai/predict/risk", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  aiAnomalies: (limit = 20) =>
+    request<{
+      items: {
+        anomaly_id: string;
+        kind: string;
+        severity: string;
+        title: string;
+        detail: string;
+        district_id: number | null;
+        police_station_id: number | null;
+        case_master_ids: number[];
+        score: number;
+      }[];
+      provider: string;
+      total: number;
+    }>(`/api/v1/ai/anomalies${toQuery({ limit })}`),
 };

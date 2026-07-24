@@ -14,6 +14,7 @@ from app.schemas.case.case_master import (
     CaseMasterRead,
     VictimCreate,
 )
+from app.schemas.case.complainant_details import ComplainantDetailsCreate
 
 
 class CaseStore(Protocol):
@@ -25,6 +26,7 @@ class CaseStore(Protocol):
         police_station_id: int | None = None,
         case_status_id: int | None = None,
         crime_major_head_id: int | None = None,
+        crime_no: str | None = None,
         registered_from: date | None = None,
         registered_to: date | None = None,
         limit: int = 50,
@@ -51,4 +53,8 @@ class CaseStore(Protocol):
 
     def add_act_section(
         self, case_master_id: int, payload: ActSectionCreate
+    ) -> CaseMasterDetail: ...
+
+    def add_complainant(
+        self, case_master_id: int, payload: ComplainantDetailsCreate
     ) -> CaseMasterDetail: ...

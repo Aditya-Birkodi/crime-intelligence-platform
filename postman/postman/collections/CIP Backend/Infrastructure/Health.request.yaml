@@ -1,5 +1,0 @@
-$kind: http-request
-description: Liveness probe (AppSail / local).
-url: "{{baseUrl}}/health"
-method: GET
-order: 1000

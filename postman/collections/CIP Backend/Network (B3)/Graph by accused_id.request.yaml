@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/network/graph?accused_id={{accusedMasterId}}&depth=2"
+method: GET
+order: 6000

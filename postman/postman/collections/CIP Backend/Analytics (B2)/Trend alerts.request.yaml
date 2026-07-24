@@ -1,8 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/v1/analytics/alerts/trends?recent_days=7&baseline_days=28&threshold=1.5"
-method: GET
-queryParams:
-  recent_days: "7"
-  baseline_days: "28"
-  threshold: "1.5"
-order: 5000

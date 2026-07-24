@@ -38,11 +38,15 @@ CATALYST_DATASTORE_MOCK=true
 CATALYST_DATASTORE_MOCK_PATH=.data/catalyst_datastore.json
 ```
 
-Seed mock FIRs:
+Seed mock FIRs (ER-aligned demo dataset):
 
 ```bash
-PYTHONPATH=backend uv run python database/seed/seed_catalyst_cases.py
+PYTHONPATH=backend python database/seed/seed_fir_dataset.py --target catalyst-mock
+# or both Postgres + mock:
+PYTHONPATH=backend python database/seed/seed_fir_dataset.py --force
 ```
+
+Canonical YAML: [`../../database/seed/fir_demo_dataset.yaml`](../../database/seed/fir_demo_dataset.yaml).
 
 Create console tables named `cip_case_master`, `cip_victim`, `cip_accused`,
 `cip_act_section_association` (prefix from `CATALYST_DATASTORE_TABLE_PREFIX`)

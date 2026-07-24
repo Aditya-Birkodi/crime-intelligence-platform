@@ -2,11 +2,15 @@
   "command": "python3 -u app.py",
   "build_path": "./",
   "stack": "python_3_12",
-  "env_variables": {
+    "env_variables": {
     "APP_RELOAD": "false",
     "PERSISTENCE_BACKEND": "catalyst",
     "DATASTORE_MOCK": "true",
     "DATASTORE_MOCK_PATH": "database/seed/appsail_datastore.json",
+    "QUICKML_MOCK": "true",
+    "RAG_DOCS_PATH": "database/seed/fir_rag_documents.json",
+    "AI_FEATURES_PATH": "database/seed/ai_case_features.json",
+    "LOOKUPS_PATH": "database/seed/appsail_lookups.json",
     "CORS_ORIGINS": "*",
     "DEBUG": "true",
     "LOG_DIR": "/tmp/cip-logs"

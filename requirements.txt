@@ -12,3 +12,4 @@ python-dotenv>=1.0.1
 httpx>=0.28.0
 redis>=5.2.0
 zcatalyst-sdk>=1.0.0
+networkx>=3.2

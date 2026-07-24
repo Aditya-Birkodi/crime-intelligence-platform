@@ -1,0 +1,15 @@
+$kind: http-request
+description: "Placeholder \u2014 B4 QuickML RAG not shipped yet."
+url: "{{baseUrl}}/api/v1/ai/chat"
+method: POST
+order: 6000
+headers:
+  Content-Type: "application/json"
+body:
+  type: json
+  content: |-
+    {
+      "question": "Summarize this FIR",
+      "case_master_id": 1,
+      "top_k": 5
+    }

@@ -7,6 +7,7 @@ from decimal import Decimal
 from typing import Any
 
 from app.integrations.catalyst.datastore import CatalystDataStoreClient
+from app.schemas.case.arrest_surrender import ArrestSurrenderRead
 from app.schemas.case.case_master import (
     AccusedCreate,
     AccusedRead,
@@ -18,11 +19,21 @@ from app.schemas.case.case_master import (
     VictimCreate,
     VictimRead,
 )
+from app.schemas.case.chargesheet_details import ChargesheetDetailsRead
+from app.schemas.case.complainant_details import (
+    ComplainantDetailsCreate,
+    ComplainantDetailsRead,
+)
+from app.schemas.case.inv_occurance_time import InvOccuranceTimeRead
 
 _CASE = "case_master"
 _VICTIM = "victim"
 _ACCUSED = "accused"
 _ACT_SECTION = "act_section_association"
+_COMPLAINANT = "complainant_details"
+_OCCURRENCE = "inv_occurance_time"
+_ARREST = "arrest_surrender"
+_CHARGESHEET = "chargesheet_details"
 
 
 def _ser(value: Any) -> Any:
@@ -42,6 +53,7 @@ def _row_to_case_read(row: dict[str, Any]) -> CaseMasterRead:
         crime_no=str(row.get("crime_no", "")),
         case_no=str(row.get("case_no", "")),
         crime_registered_date=_parse_date(row.get("crime_registered_date")),
+        police_person_id=_opt_int(row.get("police_person_id")),
         police_station_id=int(row.get("police_station_id") or 0),
         case_category_id=int(row.get("case_category_id") or 0),
         gravity_offence_id=_opt_int(row.get("gravity_offence_id")),
@@ -87,6 +99,14 @@ def _parse_dt(value: Any) -> datetime | None:
     return datetime.fromisoformat(text)
 
 
+def _opt_bool(value: Any, default: bool = False) -> bool:
+    if value is None or value == "":
+        return default
+    if isinstance(value, bool):
+        return value
+    return str(value).lower() in {"1", "true", "yes"}
+
+
 class CatalystCaseStore:
     """FIR persistence via Catalyst Cloud Scale Data Store."""
 
@@ -99,6 +119,7 @@ class CatalystCaseStore:
         police_station_id: int | None = None,
         case_status_id: int | None = None,
         crime_major_head_id: int | None = None,
+        crime_no: str | None = None,
         registered_from: date | None = None,
         registered_to: date | None = None,
         limit: int = 50,
@@ -112,6 +133,8 @@ class CatalystCaseStore:
             items = [c for c in items if c.case_status_id == case_status_id]
         if crime_major_head_id is not None:
             items = [c for c in items if c.crime_major_head_id == crime_major_head_id]
+        if crime_no is not None:
+            items = [c for c in items if c.crime_no == crime_no]
         if registered_from is not None:
             items = [
                 c
@@ -158,6 +181,20 @@ class CatalystCaseStore:
             for a in self._ds.get_paged_rows(_ACCUSED, max_rows=2000)
             if int(a.get("case_master_id") or 0) == case_master_id
         ]
+        complainants = [
+            ComplainantDetailsRead(
+                complainant_id=int(c.get("ROWID") or c.get("complainant_id") or 0),
+                case_master_id=case_master_id,
+                complainant_name=str(c.get("complainant_name", "")),
+                age_year=_opt_int(c.get("age_year")),
+                gender_id=c.get("gender_id"),
+                occupation_id=_opt_int(c.get("occupation_id")),
+                religion_id=_opt_int(c.get("religion_id")),
+                caste_id=_opt_int(c.get("caste_id")),
+            )
+            for c in self._ds.get_paged_rows(_COMPLAINANT, max_rows=2000)
+            if int(c.get("case_master_id") or 0) == case_master_id
+        ]
         sections = [
             ActSectionRead(
                 id=int(s.get("ROWID") or 0),
@@ -170,11 +207,68 @@ class CatalystCaseStore:
             for s in self._ds.get_paged_rows(_ACT_SECTION, max_rows=2000)
             if int(s.get("case_master_id") or 0) == case_master_id
         ]
+        occurrence: InvOccuranceTimeRead | None = None
+        for occ in self._ds.get_paged_rows(_OCCURRENCE, max_rows=2000):
+            if (
+                int(occ.get("case_master_id") or occ.get("ROWID") or 0)
+                != case_master_id
+            ):
+                continue
+            occurrence = InvOccuranceTimeRead(
+                case_master_id=case_master_id,
+                occurrence_from=_parse_dt(occ.get("occurrence_from")),
+                occurrence_to=_parse_dt(occ.get("occurrence_to")),
+                place_of_occurrence=occ.get("place_of_occurrence"),
+                beat_number=occ.get("beat_number"),
+                distance_from_ps_km=_opt_decimal(occ.get("distance_from_ps_km")),
+                direction_from_ps=occ.get("direction_from_ps"),
+                village_or_city=occ.get("village_or_city"),
+            )
+            break
+        arrests = [
+            ArrestSurrenderRead(
+                arrest_surrender_id=int(
+                    a.get("ROWID") or a.get("arrest_surrender_id") or 0
+                ),
+                case_master_id=case_master_id,
+                arrest_surrender_type_id=int(a.get("arrest_surrender_type_id") or 1),
+                arrest_surrender_date=_parse_date(a.get("arrest_surrender_date")),
+                arrest_surrender_state_id=_opt_int(a.get("arrest_surrender_state_id")),
+                arrest_surrender_district_id=_opt_int(
+                    a.get("arrest_surrender_district_id")
+                ),
+                police_station_id=_opt_int(a.get("police_station_id")),
+                io_id=_opt_int(a.get("io_id")),
+                court_id=_opt_int(a.get("court_id")),
+                accused_master_id=_opt_int(a.get("accused_master_id")),
+                is_accused=_opt_bool(a.get("is_accused"), True),
+                is_complainant_accused=_opt_bool(
+                    a.get("is_complainant_accused"), False
+                ),
+            )
+            for a in self._ds.get_paged_rows(_ARREST, max_rows=2000)
+            if int(a.get("case_master_id") or 0) == case_master_id
+        ]
+        chargesheets = [
+            ChargesheetDetailsRead(
+                cs_id=int(cs.get("ROWID") or cs.get("cs_id") or 0),
+                case_master_id=case_master_id,
+                cs_date=_parse_dt(cs.get("cs_date")),
+                cs_type=str(cs.get("cs_type") or "A"),
+                police_person_id=_opt_int(cs.get("police_person_id")),
+            )
+            for cs in self._ds.get_paged_rows(_CHARGESHEET, max_rows=2000)
+            if int(cs.get("case_master_id") or 0) == case_master_id
+        ]
         return CaseMasterDetail(
             **base.model_dump(),
             victims=victims,
             accused=accused,
+            complainants=complainants,
             act_sections=sections,
+            occurrence=occurrence,
+            arrests=arrests,
+            chargesheets=chargesheets,
         )
 
     def get_by_crime_no(self, crime_no: str) -> CaseMasterRead | None:
@@ -204,6 +298,7 @@ class CatalystCaseStore:
             "crime_no": payload.crime_no,
             "case_no": case_no,
             "crime_registered_date": _ser(payload.crime_registered_date),
+            "police_person_id": payload.police_person_id,
             "police_station_id": payload.police_station_id,
             "case_category_id": payload.case_category_id,
             "gravity_offence_id": payload.gravity_offence_id,
@@ -241,6 +336,19 @@ class CatalystCaseStore:
                     "age_year": a.age_year,
                     "gender_id": a.gender_id,
                     "person_id": a.person_id,
+                },
+            )
+        for c in payload.complainants:
+            self._ds.insert_row(
+                _COMPLAINANT,
+                {
+                    "case_master_id": case_id,
+                    "complainant_name": c.complainant_name,
+                    "age_year": c.age_year,
+                    "gender_id": c.gender_id,
+                    "occupation_id": c.occupation_id,
+                    "religion_id": c.religion_id,
+                    "caste_id": c.caste_id,
                 },
             )
         for s in payload.act_sections:
@@ -310,6 +418,27 @@ class CatalystCaseStore:
                 "section_id": payload.section_id,
                 "act_order_id": payload.act_order_id,
                 "section_order_id": payload.section_order_id,
+            },
+        )
+        detail = self.get_detail(case_master_id)
+        assert detail is not None
+        return detail
+
+    def add_complainant(
+        self, case_master_id: int, payload: ComplainantDetailsCreate
+    ) -> CaseMasterDetail:
+        if self.get_detail(case_master_id) is None:
+            raise KeyError(case_master_id)
+        self._ds.insert_row(
+            _COMPLAINANT,
+            {
+                "case_master_id": case_master_id,
+                "complainant_name": payload.complainant_name,
+                "age_year": payload.age_year,
+                "gender_id": payload.gender_id,
+                "occupation_id": payload.occupation_id,
+                "religion_id": payload.religion_id,
+                "caste_id": payload.caste_id,
             },
         )
         detail = self.get_detail(case_master_id)

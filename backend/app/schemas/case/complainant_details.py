@@ -1,36 +1,27 @@
-"""Pydantic stubs for `ComplainantDetails`.
-
-TODO: Complainant linked to CaseMaster; FKs to Occupation/Religion/Caste masters.
-TODO: Add Create/Update/Read schemas with field validation.
-"""
+"""Pydantic schemas for `ComplainantDetails`."""
 
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class ComplainantDetailsBase(BaseModel):
-    """Shared fields for `ComplainantDetails` DTOs.
-
-    TODO: Declare fields matching the ER diagram.
-    """
-
+class ComplainantDetailsRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
+    complainant_id: int
+    case_master_id: int
+    complainant_name: str
+    age_year: int | None = None
+    gender_id: str | None = None
+    occupation_id: int | None = None
+    religion_id: int | None = None
+    caste_id: int | None = None
 
-class ComplainantDetailsRead(ComplainantDetailsBase):
-    """Read model for `ComplainantDetails`.
 
-    TODO: Include primary key and nested relations as needed.
-    """
-
-    pass
-
-
-class ComplainantDetailsCreate(ComplainantDetailsBase):
-    """Create payload for `ComplainantDetails`.
-
-    TODO: Required fields only.
-    """
-
-    pass
+class ComplainantDetailsCreate(BaseModel):
+    complainant_name: str = Field(..., min_length=1, max_length=150)
+    age_year: int | None = None
+    gender_id: str | None = Field(default=None, max_length=1)
+    occupation_id: int | None = None
+    religion_id: int | None = None
+    caste_id: int | None = None

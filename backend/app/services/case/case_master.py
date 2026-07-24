@@ -14,6 +14,7 @@ from app.schemas.case.case_master import (
     CaseMasterListResponse,
     VictimCreate,
 )
+from app.schemas.case.complainant_details import ComplainantDetailsCreate
 from app.utils.crime_no import parse_crime_no
 
 
@@ -27,6 +28,7 @@ class CaseMasterService:
         police_station_id: int | None = None,
         case_status_id: int | None = None,
         crime_major_head_id: int | None = None,
+        crime_no: str | None = None,
         registered_from: date | None = None,
         registered_to: date | None = None,
         limit: int = 50,
@@ -36,6 +38,7 @@ class CaseMasterService:
             police_station_id=police_station_id,
             case_status_id=case_status_id,
             crime_major_head_id=crime_major_head_id,
+            crime_no=crime_no,
             registered_from=registered_from,
             registered_to=registered_to,
             limit=limit,
@@ -53,6 +56,12 @@ class CaseMasterService:
         if detail is None:
             raise NotFoundError(f"Case {case_master_id} not found")
         return detail
+
+    def get_case_by_crime_no(self, crime_no: str) -> CaseMasterDetail:
+        summary = self._store.get_by_crime_no(crime_no)
+        if summary is None:
+            raise NotFoundError(f"Case with CrimeNo {crime_no} not found")
+        return self.get_case(summary.case_master_id)
 
     def create_case(self, payload: CaseMasterCreate) -> CaseMasterDetail:
         try:
@@ -90,5 +99,13 @@ class CaseMasterService:
     ) -> CaseMasterDetail:
         try:
             return self._store.add_act_section(case_master_id, payload)
+        except KeyError as exc:
+            raise NotFoundError(f"Case {case_master_id} not found") from exc
+
+    def add_complainant(
+        self, case_master_id: int, payload: ComplainantDetailsCreate
+    ) -> CaseMasterDetail:
+        try:
+            return self._store.add_complainant(case_master_id, payload)
         except KeyError as exc:
             raise NotFoundError(f"Case {case_master_id} not found") from exc

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
+from app.api.v1.ai import router as ai_router
 from app.api.v1.analytics import router as analytics_router
 from app.api.v1.cases import router as cases_router
 from app.api.v1.lookups import router as lookups_router
@@ -14,6 +15,7 @@ api_router.include_router(cases_router)
 api_router.include_router(lookups_router)
 api_router.include_router(analytics_router)
 api_router.include_router(network_router)
+api_router.include_router(ai_router)
 
 
 @api_router.get("/status", tags=["infrastructure"])

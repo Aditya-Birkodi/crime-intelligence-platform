@@ -1,7 +1,0 @@
-$kind: http-request
-description: Placeholder — B3 not shipped yet.
-url: "{{baseUrl}}/api/v1/network/graph?case_id={{caseMasterId}}"
-method: GET
-queryParams:
-  case_id: "{{caseMasterId}}"
-order: 1000

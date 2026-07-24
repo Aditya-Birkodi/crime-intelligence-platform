@@ -90,20 +90,27 @@ Do these in order — each unblocks frontend.
 
 ### B4 — AI / ML APIs (Catalyst-only)
 
-- [ ] Document builder → NoSQL shape (done stub) + publish path
-- [ ] Catalyst QuickML RAG wired in `integrations/catalyst/quickml.py`
-- [ ] `POST /api/v1/ai/chat` — citations with CrimeNo / case id
-- [ ] Feature engineering (`etl/feature_engineering`)
-- [ ] `POST /api/v1/ai/predict/risk` — Zia AutoML / QuickML
-- [ ] `GET /api/v1/ai/anomalies`
+- [x] Document builder → NoSQL shape + `fir_rag_documents.json` / `ai_case_features.json`
+- [x] Catalyst QuickML client with local RAG mock (`QUICKML_MOCK=true`)
+- [x] `POST /api/v1/ai/chat` — citations with CrimeNo / case id
+- [x] Feature export (`export_ai_features` in seeder)
+- [x] `POST /api/v1/ai/predict/risk` — heuristic (Zia AutoML swap-ready)
+- [x] `GET /api/v1/ai/anomalies`
 - [ ] Signals/Cron: reindex + feature refresh (with FE-2 for deploy hooks)
+- [ ] Live QuickML/Zia endpoints when console credentials exist
 
 **FE can start:** Ask AI panel, risk/anomaly widgets.
+
+### Dataset
+
+- [x] Curated `fir_demo_dataset.yaml` (18 FIRs)
+- [x] KSP Excel import → `ksp_relational_dataset.yaml` + merge → `fir_full_dataset.yaml` (118 FIRs)
 
 ### B5 — Catalyst production path
 
 - [x] Case APIs → Catalyst Data Store via `CaseStore` (`PERSISTENCE_BACKEND=catalyst`)
 - [x] Data Store strategy + mock path documented (`docs/database/datastore_strategy.md`)
+- [x] Analytics + lookups work on AppSail via mock Data Store + `appsail_lookups.json`
 - [ ] Create Data Store tables in Catalyst console (cip_case_master, …)
 - [ ] NoSQL + Stratus + Cache clients real (not NotImplemented)
 - [x] Functions or AppSail entry for FastAPI

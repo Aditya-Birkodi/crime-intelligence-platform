@@ -42,11 +42,57 @@ export type ActSection = {
   section_order_id: number;
 };
 
+export type Complainant = {
+  complainant_id: number;
+  case_master_id: number;
+  complainant_name: string;
+  age_year: number | null;
+  gender_id: string | null;
+  occupation_id: number | null;
+  religion_id: number | null;
+  caste_id: number | null;
+};
+
+export type Occurrence = {
+  case_master_id: number;
+  occurrence_from: string | null;
+  occurrence_to: string | null;
+  place_of_occurrence: string | null;
+  beat_number: string | null;
+  distance_from_ps_km: string | number | null;
+  direction_from_ps: string | null;
+  village_or_city: string | null;
+};
+
+export type Arrest = {
+  arrest_surrender_id: number;
+  case_master_id: number;
+  arrest_surrender_type_id: number;
+  arrest_surrender_date: string | null;
+  arrest_surrender_state_id: number | null;
+  arrest_surrender_district_id: number | null;
+  police_station_id: number | null;
+  io_id: number | null;
+  court_id: number | null;
+  accused_master_id: number | null;
+  is_accused: boolean;
+  is_complainant_accused: boolean;
+};
+
+export type Chargesheet = {
+  cs_id: number;
+  case_master_id: number;
+  cs_date: string | null;
+  cs_type: string;
+  police_person_id: number | null;
+};
+
 export type CaseMaster = {
   case_master_id: number;
   crime_no: string;
   case_no: string;
   crime_registered_date: string | null;
+  police_person_id: number | null;
   police_station_id: number;
   case_category_id: number;
   gravity_offence_id: number | null;
@@ -65,7 +111,11 @@ export type CaseMaster = {
 export type CaseMasterDetail = CaseMaster & {
   victims: Victim[];
   accused: Accused[];
+  complainants: Complainant[];
   act_sections: ActSection[];
+  occurrence: Occurrence | null;
+  arrests: Arrest[];
+  chargesheets: Chargesheet[];
 };
 
 export type CaseMasterListResponse = {
@@ -79,6 +129,7 @@ export type CaseListParams = {
   police_station_id?: number;
   case_status_id?: number;
   crime_major_head_id?: number;
+  crime_no?: string;
   registered_from?: string;
   registered_to?: string;
   limit?: number;

@@ -1,0 +1,5 @@
+$kind: http-request
+description: "Ego network for a case (nodes + scored edges)."
+url: "{{baseUrl}}/api/v1/network/graph?case_id={{caseMasterId}}&depth=2"
+method: GET
+order: 5000

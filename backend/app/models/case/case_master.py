@@ -14,7 +14,10 @@ from app.database.base import Base
 if TYPE_CHECKING:
     from app.models.case.accused import Accused
     from app.models.case.act_section_association import ActSectionAssociation
+    from app.models.case.arrest_surrender import ArrestSurrender
+    from app.models.case.chargesheet_details import ChargesheetDetails
     from app.models.case.complainant_details import ComplainantDetails
+    from app.models.case.inv_occurance_time import InvOccuranceTime
     from app.models.case.victim import Victim
 
 
@@ -27,6 +30,9 @@ class CaseMaster(Base):
     )
     case_no: Mapped[str] = mapped_column(String(20), nullable=False, index=True)
     crime_registered_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+    police_person_id: Mapped[int | None] = mapped_column(
+        ForeignKey("cip_employee.employee_id"), nullable=True, index=True
+    )
     police_station_id: Mapped[int] = mapped_column(
         ForeignKey("cip_unit.unit_id"), nullable=False, index=True
     )
@@ -71,5 +77,16 @@ class CaseMaster(Base):
         back_populates="case", cascade="all, delete-orphan"
     )
     act_sections: Mapped[list[ActSectionAssociation]] = relationship(
+        back_populates="case", cascade="all, delete-orphan"
+    )
+    occurrence: Mapped[InvOccuranceTime | None] = relationship(
+        back_populates="case",
+        uselist=False,
+        cascade="all, delete-orphan",
+    )
+    arrests: Mapped[list[ArrestSurrender]] = relationship(
+        back_populates="case", cascade="all, delete-orphan"
+    )
+    chargesheets: Mapped[list[ChargesheetDetails]] = relationship(
         back_populates="case", cascade="all, delete-orphan"
     )

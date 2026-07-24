@@ -1,0 +1,5 @@
+$kind: http-request
+description: "Repeat offender profile + linked cases / MO. Seed default accusedMasterId=3 (Ramesh K / P100)."
+url: "{{baseUrl}}/api/v1/network/offenders/{{accusedMasterId}}"
+method: GET
+order: 7000

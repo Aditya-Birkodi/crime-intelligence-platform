@@ -120,6 +120,40 @@ def test_create_and_list_case(client: TestClient) -> None:
     detail = client.get(f"/api/v1/cases/{body['case_master_id']}")
     assert detail.status_code == 200
     assert detail.json()["brief_facts"] == "Test theft FIR"
+    assert detail.json()["complainants"] == []
+    assert detail.json()["occurrence"] is None
+    assert detail.json()["arrests"] == []
+    assert detail.json()["chargesheets"] == []
+
+    by_crime = client.get("/api/v1/cases/by-crime-no/104430006202600001")
+    assert by_crime.status_code == 200
+    assert by_crime.json()["case_master_id"] == body["case_master_id"]
+
+    filtered = client.get("/api/v1/cases?crime_no=104430006202600001")
+    assert filtered.status_code == 200
+    assert filtered.json()["total"] == 1
+
+
+def test_add_complainant(client: TestClient) -> None:
+    created = client.post(
+        "/api/v1/cases",
+        json={
+            "crime_no": "104430006202600099",
+            "case_no": "202600099",
+            "police_station_id": 6,
+            "case_category_id": 1,
+            "case_status_id": 1,
+        },
+    )
+    assert created.status_code == 201, created.text
+    case_id = created.json()["case_master_id"]
+    added = client.post(
+        f"/api/v1/cases/{case_id}/complainants",
+        json={"complainant_name": "Complainant X", "gender_id": "F"},
+    )
+    assert added.status_code == 201, added.text
+    assert len(added.json()["complainants"]) == 1
+    assert added.json()["complainants"][0]["complainant_name"] == "Complainant X"
 
 
 def test_reject_bad_crime_no(client: TestClient) -> None:

@@ -7,6 +7,14 @@ from decimal import Decimal
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from app.schemas.case.arrest_surrender import ArrestSurrenderRead
+from app.schemas.case.chargesheet_details import ChargesheetDetailsRead
+from app.schemas.case.complainant_details import (
+    ComplainantDetailsCreate,
+    ComplainantDetailsRead,
+)
+from app.schemas.case.inv_occurance_time import InvOccuranceTimeRead
+
 
 class VictimRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -66,6 +74,7 @@ class CaseMasterBase(BaseModel):
     crime_no: str = Field(..., min_length=18, max_length=18)
     case_no: str = Field(..., min_length=1, max_length=20)
     crime_registered_date: date | None = None
+    police_person_id: int | None = None
     police_station_id: int
     case_category_id: int
     gravity_offence_id: int | None = None
@@ -84,6 +93,7 @@ class CaseMasterBase(BaseModel):
 class CaseMasterCreate(CaseMasterBase):
     victims: list[VictimCreate] = Field(default_factory=list)
     accused: list[AccusedCreate] = Field(default_factory=list)
+    complainants: list[ComplainantDetailsCreate] = Field(default_factory=list)
     act_sections: list[ActSectionCreate] = Field(default_factory=list)
 
 
@@ -96,7 +106,11 @@ class CaseMasterRead(CaseMasterBase):
 class CaseMasterDetail(CaseMasterRead):
     victims: list[VictimRead] = Field(default_factory=list)
     accused: list[AccusedRead] = Field(default_factory=list)
+    complainants: list[ComplainantDetailsRead] = Field(default_factory=list)
     act_sections: list[ActSectionRead] = Field(default_factory=list)
+    occurrence: InvOccuranceTimeRead | None = None
+    arrests: list[ArrestSurrenderRead] = Field(default_factory=list)
+    chargesheets: list[ChargesheetDetailsRead] = Field(default_factory=list)
 
 
 class CaseMasterListResponse(BaseModel):

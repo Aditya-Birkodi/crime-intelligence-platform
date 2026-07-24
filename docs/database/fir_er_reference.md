@@ -37,5 +37,6 @@ Zero FIR `804430006202600001`, PAR `404430006202600001`.
 - Act 1:N → Section; CrimeHead 1:N → CrimeSubHead
 - Unit hierarchy via `ParentUnit`
 
-**TODO:** Formalize ER into SQLAlchemy models and Catalyst Data Store tables
-(scaffold placeholders exist under `backend/app/models/*` — no columns yet).
+**TODO:** Formalize remaining ER edges into APIs. Demo seed now covers Case +
+occurrence + arrest/chargesheet + court + employee masters via
+[`../../database/seed/fir_demo_dataset.yaml`](../../database/seed/fir_demo_dataset.yaml).

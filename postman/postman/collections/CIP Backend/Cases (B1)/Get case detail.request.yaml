@@ -1,5 +1,0 @@
-$kind: http-request
-description: One FIR with victims, accused, act-sections.
-url: "{{baseUrl}}/api/v1/cases/{{caseMasterId}}"
-method: GET
-order: 2000

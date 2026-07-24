@@ -1,0 +1,2952 @@
+[
+  {
+    "doc_id": "case:104430006202600001",
+    "case_master_id": 1,
+    "crime_no": "104430006202600001",
+    "case_no": "202600001",
+    "police_station_id": 6,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Two-wheeler snatched near MG Road metro; accused fled on bike.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-01-15T21:00:00+00:00",
+    "incident_to": "2026-01-15T22:30:00+00:00",
+    "latitude": "12.9716000",
+    "longitude": "77.5946000",
+    "place_of_occurrence": "MG Road Metro Exit",
+    "text_blob": "CrimeNo: 104430006202600001\nBrief Facts: Two-wheeler snatched near MG Road metro; accused fled on bike.\nSections: IPC 379\nPlace: MG Road Metro Exit\nVictims: Venkatesh Rao\nAccused: Ramesh K, Unknown\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104430006202600002",
+    "case_master_id": 2,
+    "crime_no": "104430006202600002",
+    "case_no": "202600002",
+    "police_station_id": 6,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Assault after altercation at bus stop near Brigade Road.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "323"
+      }
+    ],
+    "incident_from": "2026-02-03T18:00:00+00:00",
+    "incident_to": "2026-02-03T18:20:00+00:00",
+    "latitude": "12.9731000",
+    "longitude": "77.5992000",
+    "place_of_occurrence": "MG Road Metro Exit",
+    "text_blob": "CrimeNo: 104430006202600002\nBrief Facts: Assault after altercation at bus stop near Brigade Road.\nSections: IPC 323\nPlace: MG Road Metro Exit\nVictims: Anita S\nAccused: Suresh P\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104430006202600003",
+    "case_master_id": 3,
+    "crime_no": "104430006202600003",
+    "case_no": "202600003",
+    "police_station_id": 6,
+    "district_id": 443,
+    "case_status": "cs",
+    "crime_major_head": "property",
+    "brief_facts": "Online investment fraud complaint from local traders association.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "420"
+      }
+    ],
+    "incident_from": "2026-02-10T10:00:00+00:00",
+    "incident_to": "2026-02-18T17:00:00+00:00",
+    "latitude": "12.9698000",
+    "longitude": "77.5961000",
+    "place_of_occurrence": "MG Road Metro Exit",
+    "text_blob": "CrimeNo: 104430006202600003\nBrief Facts: Online investment fraud complaint from local traders association.\nSections: IPC 420\nPlace: MG Road Metro Exit\nVictims: Local Traders Collective\nAccused: Fake Broker Ring\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104430007202600001",
+    "case_master_id": 4,
+    "crime_no": "104430007202600001",
+    "case_no": "202600001",
+    "police_station_id": 7,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Mobile phone snatched near 100 Feet Road; CCTV under review.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-01-22T20:15:00+00:00",
+    "incident_to": "2026-01-22T20:25:00+00:00",
+    "latitude": "12.9784000",
+    "longitude": "77.6408000",
+    "place_of_occurrence": "100 Feet Road Indiranagar",
+    "text_blob": "CrimeNo: 104430007202600001\nBrief Facts: Mobile phone snatched near 100 Feet Road; CCTV under review.\nSections: IPC 379\nPlace: 100 Feet Road Indiranagar\nVictims: Priya Nair\nAccused: Ramesh K\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104430007202600002",
+    "case_master_id": 5,
+    "crime_no": "104430007202600002",
+    "case_no": "202600002",
+    "police_station_id": 7,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Chain snatching by two riders on a motorcycle near CMH Road.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "392"
+      }
+    ],
+    "incident_from": "2026-03-01T22:40:00+00:00",
+    "incident_to": "2026-03-01T22:50:00+00:00",
+    "latitude": "12.9812000",
+    "longitude": "77.6415000",
+    "place_of_occurrence": "100 Feet Road Indiranagar",
+    "text_blob": "CrimeNo: 104430007202600002\nBrief Facts: Chain snatching by two riders on a motorcycle near CMH Road.\nSections: IPC 392\nPlace: 100 Feet Road Indiranagar\nVictims: Meera Joshi\nAccused: Ramesh K, Helper B\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:304430007202600003",
+    "case_master_id": 6,
+    "crime_no": "304430007202600003",
+    "case_no": "202600003",
+    "police_station_id": 7,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "UDR \u2014 unidentified injured person found near park entrance.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "323"
+      }
+    ],
+    "incident_from": "2026-03-08T07:30:00+00:00",
+    "incident_to": "2026-03-08T07:45:00+00:00",
+    "latitude": "12.9755000",
+    "longitude": "77.6382000",
+    "place_of_occurrence": "100 Feet Road Indiranagar",
+    "text_blob": "CrimeNo: 304430007202600003\nBrief Facts: UDR \u2014 unidentified injured person found near park entrance.\nSections: IPC 323\nPlace: 100 Feet Road Indiranagar\nVictims: Unknown Injured\nAccused: Unknown\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104430012202600001",
+    "case_master_id": 7,
+    "crime_no": "104430012202600001",
+    "case_no": "202600001",
+    "police_station_id": 12,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Repeat snatching MO \u2014 bike getaway near Koramangala 5th Block.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-03-12T19:00:00+00:00",
+    "incident_to": "2026-03-12T19:15:00+00:00",
+    "latitude": "12.9352000",
+    "longitude": "77.6245000",
+    "place_of_occurrence": "Koramangala 5th Block",
+    "text_blob": "CrimeNo: 104430012202600001\nBrief Facts: Repeat snatching MO \u2014 bike getaway near Koramangala 5th Block.\nSections: IPC 379\nPlace: Koramangala 5th Block\nVictims: Deepa Krishnan\nAccused: Ramesh K\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104430012202600002",
+    "case_master_id": 8,
+    "crime_no": "104430012202600002",
+    "case_no": "202600002",
+    "police_station_id": 12,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Attempted murder following nightlife dispute; weapon recovered.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "307"
+      }
+    ],
+    "incident_from": "2026-03-18T23:10:00+00:00",
+    "incident_to": "2026-03-18T23:25:00+00:00",
+    "latitude": "12.9341000",
+    "longitude": "77.6208000",
+    "place_of_occurrence": "Koramangala 5th Block",
+    "text_blob": "CrimeNo: 104430012202600002\nBrief Facts: Attempted murder following nightlife dispute; weapon recovered.\nSections: IPC 307\nPlace: Koramangala 5th Block\nVictims: Arjun Menon\nAccused: Vikram D\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:804430012202600003",
+    "case_master_id": 9,
+    "crime_no": "804430012202600003",
+    "case_no": "202600003",
+    "police_station_id": 12,
+    "district_id": 443,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Zero FIR \u2014 laptop theft reported by visitor; jurisdiction transfer pending.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-04-02T14:00:00+00:00",
+    "incident_to": "2026-04-02T14:30:00+00:00",
+    "latitude": "12.9365000",
+    "longitude": "77.6221000",
+    "place_of_occurrence": "Koramangala 5th Block",
+    "text_blob": "CrimeNo: 804430012202600003\nBrief Facts: Zero FIR \u2014 laptop theft reported by visitor; jurisdiction transfer pending.\nSections: IPC 379\nPlace: Koramangala 5th Block\nVictims: Guest Complainant\nAccused: Unknown\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104440011202600001",
+    "case_master_id": 10,
+    "crime_no": "104440011202600001",
+    "case_no": "202600001",
+    "police_station_id": 11,
+    "district_id": 444,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Cheating complaint regarding fake online trading tip service.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "420"
+      }
+    ],
+    "incident_from": "2026-01-20T09:00:00+00:00",
+    "incident_to": "2026-01-27T18:00:00+00:00",
+    "latitude": "12.2958000",
+    "longitude": "76.6394000",
+    "place_of_occurrence": "Mysuru North Market",
+    "text_blob": "CrimeNo: 104440011202600001\nBrief Facts: Cheating complaint regarding fake online trading tip service.\nSections: IPC 420\nPlace: Mysuru North Market\nVictims: Naveen Gowda\nAccused: Fake Broker Ring\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104440011202600002",
+    "case_master_id": 11,
+    "crime_no": "104440011202600002",
+    "case_no": "202600002",
+    "police_station_id": 11,
+    "district_id": 444,
+    "case_status": "cs",
+    "crime_major_head": "property",
+    "brief_facts": "Bicycle theft from college campus parking.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-02-14T16:00:00+00:00",
+    "incident_to": "2026-02-14T16:20:00+00:00",
+    "latitude": "12.3012000",
+    "longitude": "76.6451000",
+    "place_of_occurrence": "Mysuru North Market",
+    "text_blob": "CrimeNo: 104440011202600002\nBrief Facts: Bicycle theft from college campus parking.\nSections: IPC 379\nPlace: Mysuru North Market\nVictims: Student Complainant\nAccused: Local Youth X\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104440013202600001",
+    "case_master_id": 12,
+    "crime_no": "104440013202600001",
+    "case_no": "202600001",
+    "police_station_id": 13,
+    "district_id": 444,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Neighbourhood dispute escalated to assault; both parties injured.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "323"
+      }
+    ],
+    "incident_from": "2026-03-05T21:00:00+00:00",
+    "incident_to": "2026-03-05T21:15:00+00:00",
+    "latitude": "12.2845000",
+    "longitude": "76.6302000",
+    "place_of_occurrence": "Mysuru South Bus Stand",
+    "text_blob": "CrimeNo: 104440013202600001\nBrief Facts: Neighbourhood dispute escalated to assault; both parties injured.\nSections: IPC 323\nPlace: Mysuru South Bus Stand\nVictims: Shobha R, Neighbour Y\nAccused: Neighbour Y, Shobha R\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104440013202600002",
+    "case_master_id": 13,
+    "crime_no": "104440013202600002",
+    "case_no": "202600002",
+    "police_station_id": 13,
+    "district_id": 444,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Purse robbery near bus stand; one accused matched earlier Bengaluru MO.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "392"
+      }
+    ],
+    "incident_from": "2026-04-10T22:00:00+00:00",
+    "incident_to": "2026-04-10T22:10:00+00:00",
+    "latitude": "12.2878000",
+    "longitude": "76.6289000",
+    "place_of_occurrence": "Mysuru South Bus Stand",
+    "text_blob": "CrimeNo: 104440013202600002\nBrief Facts: Purse robbery near bus stand; one accused matched earlier Bengaluru MO.\nSections: IPC 392\nPlace: Mysuru South Bus Stand\nVictims: Lakshmi Bai\nAccused: Helper B\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104450021202600001",
+    "case_master_id": 14,
+    "crime_no": "104450021202600001",
+    "case_no": "202600001",
+    "police_station_id": 21,
+    "district_id": 445,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Homicide following altercation at village fair; forensic team notified.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "302"
+      }
+    ],
+    "incident_from": "2026-01-30T20:00:00+00:00",
+    "incident_to": "2026-01-30T20:40:00+00:00",
+    "latitude": "15.8497000",
+    "longitude": "74.4977000",
+    "place_of_occurrence": "Village Fair Ground",
+    "text_blob": "CrimeNo: 104450021202600001\nBrief Facts: Homicide following altercation at village fair; forensic team notified.\nSections: IPC 302\nPlace: Village Fair Ground\nVictims: Village Resident\nAccused: Suspect A1\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104450021202600002",
+    "case_master_id": 15,
+    "crime_no": "104450021202600002",
+    "case_no": "202600002",
+    "police_station_id": 21,
+    "district_id": 445,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Livestock theft from farm shed overnight.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-02-25T03:00:00+00:00",
+    "incident_to": "2026-02-25T04:00:00+00:00",
+    "latitude": "15.8521000",
+    "longitude": "74.5012000",
+    "place_of_occurrence": "Village Fair Ground",
+    "text_blob": "CrimeNo: 104450021202600002\nBrief Facts: Livestock theft from farm shed overnight.\nSections: IPC 379\nPlace: Village Fair Ground\nVictims: Farmer Complainant\nAccused: Unknown\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104450022202600001",
+    "case_master_id": 16,
+    "crime_no": "104450022202600001",
+    "case_no": "202600001",
+    "police_station_id": 22,
+    "district_id": 445,
+    "case_status": "cs",
+    "crime_major_head": "body",
+    "brief_facts": "Road rage assault near city market; vehicle seized.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "323"
+      }
+    ],
+    "incident_from": "2026-03-20T17:30:00+00:00",
+    "incident_to": "2026-03-20T17:45:00+00:00",
+    "latitude": "15.8610000",
+    "longitude": "74.5120000",
+    "place_of_occurrence": "City Market Belagavi",
+    "text_blob": "CrimeNo: 104450022202600001\nBrief Facts: Road rage assault near city market; vehicle seized.\nSections: IPC 323\nPlace: City Market Belagavi\nVictims: Auto Driver\nAccused: Car Occupant Z\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:104450022202600002",
+    "case_master_id": 17,
+    "crime_no": "104450022202600002",
+    "case_no": "202600002",
+    "police_station_id": 22,
+    "district_id": 445,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Fake job placement racket; multiple complainants recorded.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "420"
+      }
+    ],
+    "incident_from": "2026-04-01T10:00:00+00:00",
+    "incident_to": "2026-04-14T16:00:00+00:00",
+    "latitude": "15.8585000",
+    "longitude": "74.5095000",
+    "place_of_occurrence": "City Market Belagavi",
+    "text_blob": "CrimeNo: 104450022202600002\nBrief Facts: Fake job placement racket; multiple complainants recorded.\nSections: IPC 420\nPlace: City Market Belagavi\nVictims: Job Seeker A, Job Seeker B\nAccused: Fake Broker Ring\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:404450022202600003",
+    "case_master_id": 18,
+    "crime_no": "404450022202600003",
+    "case_no": "202600003",
+    "police_station_id": 22,
+    "district_id": 445,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "PAR \u2014 preventive action report for suspected pickpocket gang.",
+    "act_sections": [
+      {
+        "act_code": "IPC",
+        "section_code": "379"
+      }
+    ],
+    "incident_from": "2026-04-18T11:00:00+00:00",
+    "incident_to": "2026-04-18T11:30:00+00:00",
+    "latitude": "15.8602000",
+    "longitude": "74.5110000",
+    "place_of_occurrence": "City Market Belagavi",
+    "text_blob": "CrimeNo: 404450022202600003\nBrief Facts: PAR \u2014 preventive action report for suspected pickpocket gang.\nSections: IPC 379\nPlace: City Market Belagavi\nVictims: Market Association\nAccused: Suspect Gang Lead\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110282005202500001",
+    "case_master_id": 19,
+    "crime_no": "110282005202500001",
+    "case_no": "202500001",
+    "police_station_id": 2005,
+    "district_id": 1028,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 1. Head: Theft/Armed Robbery. Severity: Medium. RiskScore: 73. Source FIR: FIR-1001.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-06-28T00:00:00",
+    "incident_to": "2025-06-28T01:00:00",
+    "latitude": 12.934,
+    "longitude": 77.542,
+    "place_of_occurrence": "Location 1",
+    "text_blob": "CrimeNo: 110282005202500001\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 1. Head: Theft/Armed Robbery. Severity: Medium. RiskScore: 73. Source FIR: FIR-1001.\nSections: BNS 303\nPlace: Location 1\nVictims: Victim 85\nAccused: Accused 209\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110162002202500002",
+    "case_master_id": 20,
+    "crime_no": "110162002202500002",
+    "case_no": "202500002",
+    "police_station_id": 2002,
+    "district_id": 1016,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 2. Head: Robbery/Physical Assault. Severity: Medium. RiskScore: 63. Source FIR: FIR-1002.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-06-13T00:00:00",
+    "incident_to": "2025-06-13T01:00:00",
+    "latitude": 12.912,
+    "longitude": 77.52,
+    "place_of_occurrence": "Location 2",
+    "text_blob": "CrimeNo: 110162002202500002\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 2. Head: Robbery/Physical Assault. Severity: Medium. RiskScore: 63. Source FIR: FIR-1002.\nSections: BNS 309\nPlace: Location 2\nVictims: Victim 51, Victim 151\nAccused: Accused 123, Accused 180, Accused 196\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110142005202500003",
+    "case_master_id": 21,
+    "crime_no": "110142005202500003",
+    "case_no": "202500003",
+    "police_station_id": 2005,
+    "district_id": 1014,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 3. Head: Cyber Crime/Phishing. Severity: Medium. RiskScore: 83. Source FIR: FIR-1003.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-12-27T00:00:00",
+    "incident_to": "2025-12-27T01:00:00",
+    "latitude": 12.95,
+    "longitude": 77.558,
+    "place_of_occurrence": "Location 3",
+    "text_blob": "CrimeNo: 110142005202500003\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 3. Head: Cyber Crime/Phishing. Severity: Medium. RiskScore: 83. Source FIR: FIR-1003.\nSections: IT 66\nPlace: Location 3\nVictims: Unknown Victim\nAccused: Accused 75, Accused 204\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110282001202500004",
+    "case_master_id": 22,
+    "crime_no": "110282001202500004",
+    "case_no": "202500004",
+    "police_station_id": 2001,
+    "district_id": 1028,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 4. Head: Fraud/Vehicle Theft. Severity: Low. RiskScore: 84. Source FIR: FIR-1004.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-04-21T00:00:00",
+    "incident_to": "2025-04-21T01:00:00",
+    "latitude": 12.918,
+    "longitude": 77.526,
+    "place_of_occurrence": "Location 4",
+    "text_blob": "CrimeNo: 110282001202500004\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 4. Head: Fraud/Vehicle Theft. Severity: Low. RiskScore: 84. Source FIR: FIR-1004.\nSections: BNS 318\nPlace: Location 4\nVictims: Victim 143, Victim 146\nAccused: Accused 15, Accused 43, Accused 56, Accused 67, Accused 211\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110032003202500005",
+    "case_master_id": 23,
+    "crime_no": "110032003202500005",
+    "case_no": "202500005",
+    "police_station_id": 2003,
+    "district_id": 1003,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 5. Head: Assault/Phishing. Severity: High. RiskScore: 71. Source FIR: FIR-1005.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-08-30T00:00:00",
+    "incident_to": "2025-08-30T01:00:00",
+    "latitude": 12.946,
+    "longitude": 77.514,
+    "place_of_occurrence": "Location 5",
+    "text_blob": "CrimeNo: 110032003202500005\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 5. Head: Assault/Phishing. Severity: High. RiskScore: 71. Source FIR: FIR-1005.\nSections: BNS 115\nPlace: Location 5\nVictims: Unknown Victim\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110312007202500006",
+    "case_master_id": 24,
+    "crime_no": "110312007202500006",
+    "case_no": "202500006",
+    "police_station_id": 2007,
+    "district_id": 1031,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 6. Head: Theft/Phishing. Severity: Medium. RiskScore: 12. Source FIR: FIR-1006.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-05-11T00:00:00",
+    "incident_to": "2025-05-11T01:00:00",
+    "latitude": 12.994,
+    "longitude": 77.562,
+    "place_of_occurrence": "Location 6",
+    "text_blob": "CrimeNo: 110312007202500006\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 6. Head: Theft/Phishing. Severity: Medium. RiskScore: 12. Source FIR: FIR-1006.\nSections: BNS 303\nPlace: Location 6\nVictims: Unknown Victim\nAccused: Accused 1, Accused 128, Accused 146\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110172001202500007",
+    "case_master_id": 25,
+    "crime_no": "110172001202500007",
+    "case_no": "202500007",
+    "police_station_id": 2001,
+    "district_id": 1017,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 7. Head: Robbery/Armed Robbery. Severity: Medium. RiskScore: 72. Source FIR: FIR-1007.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-04-07T00:00:00",
+    "incident_to": "2025-04-07T01:00:00",
+    "latitude": 12.886,
+    "longitude": 77.51,
+    "place_of_occurrence": "Location 7",
+    "text_blob": "CrimeNo: 110172001202500007\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 7. Head: Robbery/Armed Robbery. Severity: Medium. RiskScore: 72. Source FIR: FIR-1007.\nSections: BNS 309\nPlace: Location 7\nVictims: Victim 100, Victim 127\nAccused: Accused 84\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062002202500008",
+    "case_master_id": 26,
+    "crime_no": "110062002202500008",
+    "case_no": "202500008",
+    "police_station_id": 2002,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 8. Head: Robbery/Physical Assault. Severity: Medium. RiskScore: 53. Source FIR: FIR-1008.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-08-02T00:00:00",
+    "incident_to": "2025-08-02T01:00:00",
+    "latitude": 12.904,
+    "longitude": 77.528,
+    "place_of_occurrence": "Location 8",
+    "text_blob": "CrimeNo: 110062002202500008\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 8. Head: Robbery/Physical Assault. Severity: Medium. RiskScore: 53. Source FIR: FIR-1008.\nSections: BNS 309\nPlace: Location 8\nVictims: Victim 67\nAccused: Accused 90, Accused 100\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110132006202500009",
+    "case_master_id": 27,
+    "crime_no": "110132006202500009",
+    "case_no": "202500009",
+    "police_station_id": 2006,
+    "district_id": 1013,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 9. Head: Assault/Armed Robbery. Severity: Medium. RiskScore: 6. Source FIR: FIR-1009.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-10-11T00:00:00",
+    "incident_to": "2025-10-11T01:00:00",
+    "latitude": 12.952,
+    "longitude": 77.576,
+    "place_of_occurrence": "Location 9",
+    "text_blob": "CrimeNo: 110132006202500009\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 9. Head: Assault/Armed Robbery. Severity: Medium. RiskScore: 6. Source FIR: FIR-1009.\nSections: BNS 115\nPlace: Location 9\nVictims: Victim 15, Victim 49\nAccused: Accused 141, Accused 173\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062001202500010",
+    "case_master_id": 28,
+    "crime_no": "110062001202500010",
+    "case_no": "202500010",
+    "police_station_id": 2001,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 10. Head: Fraud/Vehicle Theft. Severity: High. RiskScore: 73. Source FIR: FIR-1010.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-03-12T00:00:00",
+    "incident_to": "2025-03-12T01:00:00",
+    "latitude": 12.91,
+    "longitude": 77.494,
+    "place_of_occurrence": "Location 10",
+    "text_blob": "CrimeNo: 110062001202500010\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 10. Head: Fraud/Vehicle Theft. Severity: High. RiskScore: 73. Source FIR: FIR-1010.\nSections: BNS 318\nPlace: Location 10\nVictims: Victim 50, Victim 112, Victim 152\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110142006202500011",
+    "case_master_id": 29,
+    "crime_no": "110142006202500011",
+    "case_no": "202500011",
+    "police_station_id": 2006,
+    "district_id": 1014,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 11. Head: Fraud/Vehicle Theft. Severity: Medium. RiskScore: 79. Source FIR: FIR-1011.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-11-12T00:00:00",
+    "incident_to": "2025-11-12T01:00:00",
+    "latitude": 12.968,
+    "longitude": 77.552,
+    "place_of_occurrence": "Location 11",
+    "text_blob": "CrimeNo: 110142006202500011\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 11. Head: Fraud/Vehicle Theft. Severity: Medium. RiskScore: 79. Source FIR: FIR-1011.\nSections: BNS 318\nPlace: Location 11\nVictims: Victim 4, Victim 111\nAccused: Accused 70, Accused 143\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110102010202500012",
+    "case_master_id": 30,
+    "crime_no": "110102010202500012",
+    "case_no": "202500012",
+    "police_station_id": 2010,
+    "district_id": 1010,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 12. Head: Fraud/Phishing. Severity: Low. RiskScore: 24. Source FIR: FIR-1012.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-06-13T00:00:00",
+    "incident_to": "2025-06-13T01:00:00",
+    "latitude": 13.016,
+    "longitude": 77.6,
+    "place_of_occurrence": "Location 12",
+    "text_blob": "CrimeNo: 110102010202500012\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 12. Head: Fraud/Phishing. Severity: Low. RiskScore: 24. Source FIR: FIR-1012.\nSections: BNS 318\nPlace: Location 12\nVictims: Unknown Victim\nAccused: Accused 71, Accused 206\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110052002202500013",
+    "case_master_id": 31,
+    "crime_no": "110052002202500013",
+    "case_no": "202500013",
+    "police_station_id": 2002,
+    "district_id": 1005,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 13. Head: Assault/Vehicle Theft. Severity: Medium. RiskScore: 73. Source FIR: FIR-1013.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-11-01T00:00:00",
+    "incident_to": "2025-11-01T01:00:00",
+    "latitude": 12.944,
+    "longitude": 77.528,
+    "place_of_occurrence": "Location 13",
+    "text_blob": "CrimeNo: 110052002202500013\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 13. Head: Assault/Vehicle Theft. Severity: Medium. RiskScore: 73. Source FIR: FIR-1013.\nSections: BNS 115\nPlace: Location 13\nVictims: Victim 107, Victim 157\nAccused: Accused 41, Accused 152\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062001202500014",
+    "case_master_id": 32,
+    "crime_no": "110062001202500014",
+    "case_no": "202500014",
+    "police_station_id": 2001,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 14. Head: Assault/Physical Assault. Severity: High. RiskScore: 2. Source FIR: FIR-1014.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-03-21T00:00:00",
+    "incident_to": "2025-03-21T01:00:00",
+    "latitude": 12.886,
+    "longitude": 77.526,
+    "place_of_occurrence": "Location 14",
+    "text_blob": "CrimeNo: 110062001202500014\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 14. Head: Assault/Physical Assault. Severity: High. RiskScore: 2. Source FIR: FIR-1014.\nSections: BNS 115\nPlace: Location 14\nVictims: Unknown Victim\nAccused: Accused 147\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110032006202500015",
+    "case_master_id": 33,
+    "crime_no": "110032006202500015",
+    "case_no": "202500015",
+    "police_station_id": 2006,
+    "district_id": 1003,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 15. Head: Robbery/Armed Robbery. Severity: High. RiskScore: 27. Source FIR: FIR-1015.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-06-30T00:00:00",
+    "incident_to": "2025-06-30T01:00:00",
+    "latitude": 12.944,
+    "longitude": 77.544,
+    "place_of_occurrence": "Location 15",
+    "text_blob": "CrimeNo: 110032006202500015\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 15. Head: Robbery/Armed Robbery. Severity: High. RiskScore: 27. Source FIR: FIR-1015.\nSections: BNS 309\nPlace: Location 15\nVictims: Victim 1\nAccused: Accused 45, Accused 46, Accused 97, Accused 132, Accused 139\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110022005202500016",
+    "case_master_id": 34,
+    "crime_no": "110022005202500016",
+    "case_no": "202500016",
+    "police_station_id": 2005,
+    "district_id": 1002,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 16. Head: Robbery/House Break. Severity: Low. RiskScore: 50. Source FIR: FIR-1016.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-08-18T00:00:00",
+    "incident_to": "2025-08-18T01:00:00",
+    "latitude": 12.942,
+    "longitude": 77.542,
+    "place_of_occurrence": "Location 16",
+    "text_blob": "CrimeNo: 110022005202500016\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 16. Head: Robbery/House Break. Severity: Low. RiskScore: 50. Source FIR: FIR-1016.\nSections: BNS 309\nPlace: Location 16\nVictims: Victim 95\nAccused: Accused 59, Accused 134, Accused 187, Accused 197\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110162001202500017",
+    "case_master_id": 35,
+    "crime_no": "110162001202500017",
+    "case_no": "202500017",
+    "police_station_id": 2001,
+    "district_id": 1016,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 17. Head: Cyber Crime/Physical Assault. Severity: Low. RiskScore: 50. Source FIR: FIR-1017.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-11-04T00:00:00",
+    "incident_to": "2025-11-04T01:00:00",
+    "latitude": 12.91,
+    "longitude": 77.51,
+    "place_of_occurrence": "Location 17",
+    "text_blob": "CrimeNo: 110162001202500017\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 17. Head: Cyber Crime/Physical Assault. Severity: Low. RiskScore: 50. Source FIR: FIR-1017.\nSections: IT 66\nPlace: Location 17\nVictims: Victim 134\nAccused: Accused 82, Accused 130, Accused 137, Accused 168, Accused 185\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110312010202500018",
+    "case_master_id": 36,
+    "crime_no": "110312010202500018",
+    "case_no": "202500018",
+    "police_station_id": 2010,
+    "district_id": 1031,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 18. Head: Assault/UPI Fraud. Severity: Low. RiskScore: 94. Source FIR: FIR-1018.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-01-25T00:00:00",
+    "incident_to": "2025-01-25T01:00:00",
+    "latitude": 13.008,
+    "longitude": 77.608,
+    "place_of_occurrence": "Location 18",
+    "text_blob": "CrimeNo: 110312010202500018\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 18. Head: Assault/UPI Fraud. Severity: Low. RiskScore: 94. Source FIR: FIR-1018.\nSections: BNS 115\nPlace: Location 18\nVictims: Victim 103\nAccused: Accused 138\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110112010202500019",
+    "case_master_id": 37,
+    "crime_no": "110112010202500019",
+    "case_no": "202500019",
+    "police_station_id": 2010,
+    "district_id": 1011,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 19. Head: Theft/Physical Assault. Severity: High. RiskScore: 54. Source FIR: FIR-1019.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-05-07T00:00:00",
+    "incident_to": "2025-05-07T01:00:00",
+    "latitude": 13.016,
+    "longitude": 77.616,
+    "place_of_occurrence": "Location 19",
+    "text_blob": "CrimeNo: 110112010202500019\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 19. Head: Theft/Physical Assault. Severity: High. RiskScore: 54. Source FIR: FIR-1019.\nSections: BNS 303\nPlace: Location 19\nVictims: Unknown Victim\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110282008202500020",
+    "case_master_id": 38,
+    "crime_no": "110282008202500020",
+    "case_no": "202500020",
+    "police_station_id": 2008,
+    "district_id": 1028,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 20. Head: Robbery/Armed Robbery. Severity: High. RiskScore: 96. Source FIR: FIR-1020.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-11-10T00:00:00",
+    "incident_to": "2025-11-10T01:00:00",
+    "latitude": 13.004,
+    "longitude": 77.564,
+    "place_of_occurrence": "Location 20",
+    "text_blob": "CrimeNo: 110282008202500020\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 20. Head: Robbery/Armed Robbery. Severity: High. RiskScore: 96. Source FIR: FIR-1020.\nSections: BNS 309\nPlace: Location 20\nVictims: Victim 24, Victim 80, Victim 89, Victim 99\nAccused: Accused 81, Accused 102, Accused 118\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110082007202500021",
+    "case_master_id": 39,
+    "crime_no": "110082007202500021",
+    "case_no": "202500021",
+    "police_station_id": 2007,
+    "district_id": 1008,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 21. Head: Cyber Crime/Physical Assault. Severity: Low. RiskScore: 7. Source FIR: FIR-1021.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-03-16T00:00:00",
+    "incident_to": "2025-03-16T01:00:00",
+    "latitude": 12.946,
+    "longitude": 77.562,
+    "place_of_occurrence": "Location 21",
+    "text_blob": "CrimeNo: 110082007202500021\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 21. Head: Cyber Crime/Physical Assault. Severity: Low. RiskScore: 7. Source FIR: FIR-1021.\nSections: IT 66\nPlace: Location 21\nVictims: Victim 16, Victim 155\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110222010202500022",
+    "case_master_id": 40,
+    "crime_no": "110222010202500022",
+    "case_no": "202500022",
+    "police_station_id": 2010,
+    "district_id": 1022,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 22. Head: Robbery/Physical Assault. Severity: High. RiskScore: 53. Source FIR: FIR-1022.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-09-22T00:00:00",
+    "incident_to": "2025-09-22T01:00:00",
+    "latitude": 12.984,
+    "longitude": 77.6,
+    "place_of_occurrence": "Location 22",
+    "text_blob": "CrimeNo: 110222010202500022\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 22. Head: Robbery/Physical Assault. Severity: High. RiskScore: 53. Source FIR: FIR-1022.\nSections: BNS 309\nPlace: Location 22\nVictims: Victim 33\nAccused: Accused 176, Accused 208, Accused 215\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110072008202500023",
+    "case_master_id": 41,
+    "crime_no": "110072008202500023",
+    "case_no": "202500023",
+    "police_station_id": 2008,
+    "district_id": 1007,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 23. Head: Theft/House Break. Severity: Low. RiskScore: 25. Source FIR: FIR-1023.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-05-28T00:00:00",
+    "incident_to": "2025-05-28T01:00:00",
+    "latitude": 12.972,
+    "longitude": 77.588,
+    "place_of_occurrence": "Location 23",
+    "text_blob": "CrimeNo: 110072008202500023\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 23. Head: Theft/House Break. Severity: Low. RiskScore: 25. Source FIR: FIR-1023.\nSections: BNS 303\nPlace: Location 23\nVictims: Victim 48, Victim 62, Victim 74, Victim 158\nAccused: Accused 48, Accused 171\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110222002202500024",
+    "case_master_id": 42,
+    "crime_no": "110222002202500024",
+    "case_no": "202500024",
+    "police_station_id": 2002,
+    "district_id": 1022,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 24. Head: Fraud/House Break. Severity: Low. RiskScore: 25. Source FIR: FIR-1024.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-03-30T00:00:00",
+    "incident_to": "2025-03-30T01:00:00",
+    "latitude": 12.92,
+    "longitude": 77.536,
+    "place_of_occurrence": "Location 24",
+    "text_blob": "CrimeNo: 110222002202500024\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 24. Head: Fraud/House Break. Severity: Low. RiskScore: 25. Source FIR: FIR-1024.\nSections: BNS 318\nPlace: Location 24\nVictims: Victim 21\nAccused: Accused 55, Accused 93, Accused 218\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062005202500025",
+    "case_master_id": 43,
+    "crime_no": "110062005202500025",
+    "case_no": "202500025",
+    "police_station_id": 2005,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 25. Head: Robbery/Armed Robbery. Severity: Low. RiskScore: 95. Source FIR: FIR-1025.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-08-31T00:00:00",
+    "incident_to": "2025-08-31T01:00:00",
+    "latitude": 12.958,
+    "longitude": 77.534,
+    "place_of_occurrence": "Location 25",
+    "text_blob": "CrimeNo: 110062005202500025\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 25. Head: Robbery/Armed Robbery. Severity: Low. RiskScore: 95. Source FIR: FIR-1025.\nSections: BNS 309\nPlace: Location 25\nVictims: Victim 42, Victim 131\nAccused: Accused 38\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110302007202500026",
+    "case_master_id": 44,
+    "crime_no": "110302007202500026",
+    "case_no": "202500026",
+    "police_station_id": 2007,
+    "district_id": 1030,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 26. Head: Theft/Vehicle Theft. Severity: High. RiskScore: 42. Source FIR: FIR-1026.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-08-26T00:00:00",
+    "incident_to": "2025-08-26T01:00:00",
+    "latitude": 12.986,
+    "longitude": 77.562,
+    "place_of_occurrence": "Location 26",
+    "text_blob": "CrimeNo: 110302007202500026\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 26. Head: Theft/Vehicle Theft. Severity: High. RiskScore: 42. Source FIR: FIR-1026.\nSections: BNS 303\nPlace: Location 26\nVictims: Victim 56\nAccused: Accused 207\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110172001202500027",
+    "case_master_id": 45,
+    "crime_no": "110172001202500027",
+    "case_no": "202500027",
+    "police_station_id": 2001,
+    "district_id": 1017,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 27. Head: Cyber Crime/UPI Fraud. Severity: High. RiskScore: 72. Source FIR: FIR-1027.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-11-15T00:00:00",
+    "incident_to": "2025-11-15T01:00:00",
+    "latitude": 12.934,
+    "longitude": 77.51,
+    "place_of_occurrence": "Location 27",
+    "text_blob": "CrimeNo: 110172001202500027\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 27. Head: Cyber Crime/UPI Fraud. Severity: High. RiskScore: 72. Source FIR: FIR-1027.\nSections: IT 66\nPlace: Location 27\nVictims: Victim 73\nAccused: Accused 106\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110132010202500028",
+    "case_master_id": 46,
+    "crime_no": "110132010202500028",
+    "case_no": "202500028",
+    "police_station_id": 2010,
+    "district_id": 1013,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 28. Head: Robbery/Physical Assault. Severity: Low. RiskScore: 67. Source FIR: FIR-1028.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-05-29T00:00:00",
+    "incident_to": "2025-05-29T01:00:00",
+    "latitude": 12.976,
+    "longitude": 77.608,
+    "place_of_occurrence": "Location 28",
+    "text_blob": "CrimeNo: 110132010202500028\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 28. Head: Robbery/Physical Assault. Severity: Low. RiskScore: 67. Source FIR: FIR-1028.\nSections: BNS 309\nPlace: Location 28\nVictims: Victim 52, Victim 150\nAccused: Accused 35, Accused 89, Accused 115\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110052002202500029",
+    "case_master_id": 47,
+    "crime_no": "110052002202500029",
+    "case_no": "202500029",
+    "police_station_id": 2002,
+    "district_id": 1005,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 29. Head: Theft/House Break. Severity: Medium. RiskScore: 49. Source FIR: FIR-1029.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-09-17T00:00:00",
+    "incident_to": "2025-09-17T01:00:00",
+    "latitude": 12.904,
+    "longitude": 77.536,
+    "place_of_occurrence": "Location 29",
+    "text_blob": "CrimeNo: 110052002202500029\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 29. Head: Theft/House Break. Severity: Medium. RiskScore: 49. Source FIR: FIR-1029.\nSections: BNS 303\nPlace: Location 29\nVictims: Victim 8\nAccused: Accused 8, Accused 57\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110262002202500030",
+    "case_master_id": 48,
+    "crime_no": "110262002202500030",
+    "case_no": "202500030",
+    "police_station_id": 2002,
+    "district_id": 1026,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 30. Head: Theft/UPI Fraud. Severity: High. RiskScore: 25. Source FIR: FIR-1030.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-11-23T00:00:00",
+    "incident_to": "2025-11-23T01:00:00",
+    "latitude": 12.912,
+    "longitude": 77.504,
+    "place_of_occurrence": "Location 30",
+    "text_blob": "CrimeNo: 110262002202500030\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 30. Head: Theft/UPI Fraud. Severity: High. RiskScore: 25. Source FIR: FIR-1030.\nSections: BNS 303\nPlace: Location 30\nVictims: Unknown Victim\nAccused: Accused 96, Accused 133, Accused 148\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110282003202500031",
+    "case_master_id": 49,
+    "crime_no": "110282003202500031",
+    "case_no": "202500031",
+    "police_station_id": 2003,
+    "district_id": 1028,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 31. Head: Theft/Physical Assault. Severity: High. RiskScore: 84. Source FIR: FIR-1031.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-12-09T00:00:00",
+    "incident_to": "2025-12-09T01:00:00",
+    "latitude": 12.93,
+    "longitude": 77.522,
+    "place_of_occurrence": "Location 31",
+    "text_blob": "CrimeNo: 110282003202500031\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 31. Head: Theft/Physical Assault. Severity: High. RiskScore: 84. Source FIR: FIR-1031.\nSections: BNS 303\nPlace: Location 31\nVictims: Victim 31, Victim 37\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110012010202500032",
+    "case_master_id": 50,
+    "crime_no": "110012010202500032",
+    "case_no": "202500032",
+    "police_station_id": 2010,
+    "district_id": 1001,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 32. Head: Cyber Crime/House Break. Severity: Low. RiskScore: 12. Source FIR: FIR-1032.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-09-06T00:00:00",
+    "incident_to": "2025-09-06T01:00:00",
+    "latitude": 13.008,
+    "longitude": 77.6,
+    "place_of_occurrence": "Location 32",
+    "text_blob": "CrimeNo: 110012010202500032\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 32. Head: Cyber Crime/House Break. Severity: Low. RiskScore: 12. Source FIR: FIR-1032.\nSections: IT 66\nPlace: Location 32\nVictims: Victim 110, Victim 116\nAccused: Accused 116\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110032010202500033",
+    "case_master_id": 51,
+    "crime_no": "110032010202500033",
+    "case_no": "202500033",
+    "police_station_id": 2010,
+    "district_id": 1003,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 33. Head: Assault/Physical Assault. Severity: High. RiskScore: 1. Source FIR: FIR-1033.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-03-26T00:00:00",
+    "incident_to": "2025-03-26T01:00:00",
+    "latitude": 13.016,
+    "longitude": 77.608,
+    "place_of_occurrence": "Location 33",
+    "text_blob": "CrimeNo: 110032010202500033\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 33. Head: Assault/Physical Assault. Severity: High. RiskScore: 1. Source FIR: FIR-1033.\nSections: BNS 115\nPlace: Location 33\nVictims: Victim 91\nAccused: Accused 18, Accused 109\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110152004202500034",
+    "case_master_id": 52,
+    "crime_no": "110152004202500034",
+    "case_no": "202500034",
+    "police_station_id": 2004,
+    "district_id": 1015,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 34. Head: Assault/Armed Robbery. Severity: High. RiskScore: 73. Source FIR: FIR-1034.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-01-08T00:00:00",
+    "incident_to": "2025-01-08T01:00:00",
+    "latitude": 12.964,
+    "longitude": 77.556,
+    "place_of_occurrence": "Location 34",
+    "text_blob": "CrimeNo: 110152004202500034\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 34. Head: Assault/Armed Robbery. Severity: High. RiskScore: 73. Source FIR: FIR-1034.\nSections: BNS 115\nPlace: Location 34\nVictims: Victim 25\nAccused: Accused 119\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110022002202500035",
+    "case_master_id": 53,
+    "crime_no": "110022002202500035",
+    "case_no": "202500035",
+    "police_station_id": 2002,
+    "district_id": 1002,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 35. Head: Fraud/House Break. Severity: Medium. RiskScore: 93. Source FIR: FIR-1035.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-08-08T00:00:00",
+    "incident_to": "2025-08-08T01:00:00",
+    "latitude": 12.896,
+    "longitude": 77.504,
+    "place_of_occurrence": "Location 35",
+    "text_blob": "CrimeNo: 110022002202500035\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 35. Head: Fraud/House Break. Severity: Medium. RiskScore: 93. Source FIR: FIR-1035.\nSections: BNS 318\nPlace: Location 35\nVictims: Victim 109\nAccused: Accused 64, Accused 157, Accused 217\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110022002202500036",
+    "case_master_id": 54,
+    "crime_no": "110022002202500036",
+    "case_no": "202500036",
+    "police_station_id": 2002,
+    "district_id": 1002,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 36. Head: Cyber Crime/Phishing. Severity: High. RiskScore: 58. Source FIR: FIR-1036.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-10-16T00:00:00",
+    "incident_to": "2025-10-16T01:00:00",
+    "latitude": 12.904,
+    "longitude": 77.512,
+    "place_of_occurrence": "Location 36",
+    "text_blob": "CrimeNo: 110022002202500036\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 36. Head: Cyber Crime/Phishing. Severity: High. RiskScore: 58. Source FIR: FIR-1036.\nSections: IT 66\nPlace: Location 36\nVictims: Victim 23\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110232001202500037",
+    "case_master_id": 55,
+    "crime_no": "110232001202500037",
+    "case_no": "202500037",
+    "police_station_id": 2001,
+    "district_id": 1023,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 37. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 42. Source FIR: FIR-1037.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-02-21T00:00:00",
+    "incident_to": "2025-02-21T01:00:00",
+    "latitude": 12.902,
+    "longitude": 77.51,
+    "place_of_occurrence": "Location 37",
+    "text_blob": "CrimeNo: 110232001202500037\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 37. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 42. Source FIR: FIR-1037.\nSections: BNS 115\nPlace: Location 37\nVictims: Victim 87, Victim 130\nAccused: Accused 42, Accused 142, Accused 191\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110042001202500038",
+    "case_master_id": 56,
+    "crime_no": "110042001202500038",
+    "case_no": "202500038",
+    "police_station_id": 2001,
+    "district_id": 1004,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 38. Head: Theft/UPI Fraud. Severity: Low. RiskScore: 54. Source FIR: FIR-1038.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-05-27T00:00:00",
+    "incident_to": "2025-05-27T01:00:00",
+    "latitude": 12.91,
+    "longitude": 77.518,
+    "place_of_occurrence": "Location 38",
+    "text_blob": "CrimeNo: 110042001202500038\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 38. Head: Theft/UPI Fraud. Severity: Low. RiskScore: 54. Source FIR: FIR-1038.\nSections: BNS 303\nPlace: Location 38\nVictims: Unknown Victim\nAccused: Accused 66, Accused 99\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110212010202500039",
+    "case_master_id": 57,
+    "crime_no": "110212010202500039",
+    "case_no": "202500039",
+    "police_station_id": 2010,
+    "district_id": 1021,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 39. Head: Cyber Crime/Physical Assault. Severity: High. RiskScore: 87. Source FIR: FIR-1039.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-04-13T00:00:00",
+    "incident_to": "2025-04-13T01:00:00",
+    "latitude": 13.008,
+    "longitude": 77.616,
+    "place_of_occurrence": "Location 39",
+    "text_blob": "CrimeNo: 110212010202500039\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 39. Head: Cyber Crime/Physical Assault. Severity: High. RiskScore: 87. Source FIR: FIR-1039.\nSections: IT 66\nPlace: Location 39\nVictims: Victim 35, Victim 60\nAccused: Accused 198\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110092003202500040",
+    "case_master_id": 58,
+    "crime_no": "110092003202500040",
+    "case_no": "202500040",
+    "police_station_id": 2003,
+    "district_id": 1009,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 40. Head: Robbery/House Break. Severity: Medium. RiskScore: 46. Source FIR: FIR-1040.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-04-26T00:00:00",
+    "incident_to": "2025-04-26T01:00:00",
+    "latitude": 12.946,
+    "longitude": 77.514,
+    "place_of_occurrence": "Location 40",
+    "text_blob": "CrimeNo: 110092003202500040\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 40. Head: Robbery/House Break. Severity: Medium. RiskScore: 46. Source FIR: FIR-1040.\nSections: BNS 309\nPlace: Location 40\nVictims: Victim 123\nAccused: Accused 11, Accused 31, Accused 61, Accused 95\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110222009202500041",
+    "case_master_id": 59,
+    "crime_no": "110222009202500041",
+    "case_no": "202500041",
+    "police_station_id": 2009,
+    "district_id": 1022,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 41. Head: Theft/House Break. Severity: Low. RiskScore: 96. Source FIR: FIR-1041.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-06-28T00:00:00",
+    "incident_to": "2025-06-28T01:00:00",
+    "latitude": 13.014,
+    "longitude": 77.582,
+    "place_of_occurrence": "Location 41",
+    "text_blob": "CrimeNo: 110222009202500041\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 41. Head: Theft/House Break. Severity: Low. RiskScore: 96. Source FIR: FIR-1041.\nSections: BNS 303\nPlace: Location 41\nVictims: Victim 139\nAccused: Accused 87, Accused 216\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110222009202500042",
+    "case_master_id": 60,
+    "crime_no": "110222009202500042",
+    "case_no": "202500042",
+    "police_station_id": 2009,
+    "district_id": 1022,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 42. Head: Robbery/UPI Fraud. Severity: Low. RiskScore: 6. Source FIR: FIR-1042.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-07-27T00:00:00",
+    "incident_to": "2025-07-27T01:00:00",
+    "latitude": 12.966,
+    "longitude": 77.59,
+    "place_of_occurrence": "Location 42",
+    "text_blob": "CrimeNo: 110222009202500042\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 42. Head: Robbery/UPI Fraud. Severity: Low. RiskScore: 6. Source FIR: FIR-1042.\nSections: BNS 309\nPlace: Location 42\nVictims: Victim 92, Victim 104, Victim 126\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110212004202500043",
+    "case_master_id": 61,
+    "crime_no": "110212004202500043",
+    "case_no": "202500043",
+    "police_station_id": 2004,
+    "district_id": 1021,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 43. Head: Theft/Phishing. Severity: High. RiskScore: 96. Source FIR: FIR-1043.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-02-27T00:00:00",
+    "incident_to": "2025-02-27T01:00:00",
+    "latitude": 12.924,
+    "longitude": 77.548,
+    "place_of_occurrence": "Location 43",
+    "text_blob": "CrimeNo: 110212004202500043\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 43. Head: Theft/Phishing. Severity: High. RiskScore: 96. Source FIR: FIR-1043.\nSections: BNS 303\nPlace: Location 43\nVictims: Victim 82\nAccused: Accused 86, Accused 164, Accused 184\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062002202500044",
+    "case_master_id": 62,
+    "crime_no": "110062002202500044",
+    "case_no": "202500044",
+    "police_station_id": 2002,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 44. Head: Robbery/Armed Robbery. Severity: High. RiskScore: 97. Source FIR: FIR-1044.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-04-29T00:00:00",
+    "incident_to": "2025-04-29T01:00:00",
+    "latitude": 12.912,
+    "longitude": 77.536,
+    "place_of_occurrence": "Location 44",
+    "text_blob": "CrimeNo: 110062002202500044\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 44. Head: Robbery/Armed Robbery. Severity: High. RiskScore: 97. Source FIR: FIR-1044.\nSections: BNS 309\nPlace: Location 44\nVictims: Victim 2, Victim 12, Victim 97, Victim 117\nAccused: Accused 49\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110312006202500045",
+    "case_master_id": 63,
+    "crime_no": "110312006202500045",
+    "case_no": "202500045",
+    "police_station_id": 2006,
+    "district_id": 1031,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 45. Head: Cyber Crime/UPI Fraud. Severity: Low. RiskScore: 74. Source FIR: FIR-1045.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-02-13T00:00:00",
+    "incident_to": "2025-02-13T01:00:00",
+    "latitude": 12.96,
+    "longitude": 77.544,
+    "place_of_occurrence": "Location 45",
+    "text_blob": "CrimeNo: 110312006202500045\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 45. Head: Cyber Crime/UPI Fraud. Severity: Low. RiskScore: 74. Source FIR: FIR-1045.\nSections: IT 66\nPlace: Location 45\nVictims: Victim 39, Victim 93\nAccused: Accused 2, Accused 155, Accused 190\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110152001202500046",
+    "case_master_id": 64,
+    "crime_no": "110152001202500046",
+    "case_no": "202500046",
+    "police_station_id": 2001,
+    "district_id": 1015,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 46. Head: Robbery/Vehicle Theft. Severity: High. RiskScore: 53. Source FIR: FIR-1046.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-12-19T00:00:00",
+    "incident_to": "2025-12-19T01:00:00",
+    "latitude": 12.918,
+    "longitude": 77.502,
+    "place_of_occurrence": "Location 46",
+    "text_blob": "CrimeNo: 110152001202500046\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 46. Head: Robbery/Vehicle Theft. Severity: High. RiskScore: 53. Source FIR: FIR-1046.\nSections: BNS 309\nPlace: Location 46\nVictims: Victim 78\nAccused: Accused 47, Accused 73, Accused 98, Accused 122, Accused 212\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110272003202500047",
+    "case_master_id": 65,
+    "crime_no": "110272003202500047",
+    "case_no": "202500047",
+    "police_station_id": 2003,
+    "district_id": 1027,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 47. Head: Assault/House Break. Severity: High. RiskScore: 97. Source FIR: FIR-1047.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-08-03T00:00:00",
+    "incident_to": "2025-08-03T01:00:00",
+    "latitude": 12.946,
+    "longitude": 77.53,
+    "place_of_occurrence": "Location 47",
+    "text_blob": "CrimeNo: 110272003202500047\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 47. Head: Assault/House Break. Severity: High. RiskScore: 97. Source FIR: FIR-1047.\nSections: BNS 115\nPlace: Location 47\nVictims: Victim 121\nAccused: Accused 214\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110022007202500048",
+    "case_master_id": 66,
+    "crime_no": "110022007202500048",
+    "case_no": "202500048",
+    "police_station_id": 2007,
+    "district_id": 1002,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 48. Head: Robbery/Vehicle Theft. Severity: Medium. RiskScore: 21. Source FIR: FIR-1048.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-05-22T00:00:00",
+    "incident_to": "2025-05-22T01:00:00",
+    "latitude": 12.994,
+    "longitude": 77.578,
+    "place_of_occurrence": "Location 48",
+    "text_blob": "CrimeNo: 110022007202500048\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 48. Head: Robbery/Vehicle Theft. Severity: Medium. RiskScore: 21. Source FIR: FIR-1048.\nSections: BNS 309\nPlace: Location 48\nVictims: Victim 27, Victim 83, Victim 96\nAccused: Accused 4, Accused 200\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110072005202500049",
+    "case_master_id": 67,
+    "crime_no": "110072005202500049",
+    "case_no": "202500049",
+    "police_station_id": 2005,
+    "district_id": 1007,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 49. Head: Theft/Armed Robbery. Severity: Medium. RiskScore: 28. Source FIR: FIR-1049.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-11-12T00:00:00",
+    "incident_to": "2025-11-12T01:00:00",
+    "latitude": 12.926,
+    "longitude": 77.566,
+    "place_of_occurrence": "Location 49",
+    "text_blob": "CrimeNo: 110072005202500049\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 49. Head: Theft/Armed Robbery. Severity: Medium. RiskScore: 28. Source FIR: FIR-1049.\nSections: BNS 303\nPlace: Location 49\nVictims: Unknown Victim\nAccused: Accused 172\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110212003202500050",
+    "case_master_id": 68,
+    "crime_no": "110212003202500050",
+    "case_no": "202500050",
+    "police_station_id": 2003,
+    "district_id": 1021,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 50. Head: Theft/Vehicle Theft. Severity: High. RiskScore: 20. Source FIR: FIR-1050.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-06-22T00:00:00",
+    "incident_to": "2025-06-22T01:00:00",
+    "latitude": 12.914,
+    "longitude": 77.514,
+    "place_of_occurrence": "Location 50",
+    "text_blob": "CrimeNo: 110212003202500050\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 50. Head: Theft/Vehicle Theft. Severity: High. RiskScore: 20. Source FIR: FIR-1050.\nSections: BNS 303\nPlace: Location 50\nVictims: Victim 22, Victim 71\nAccused: Accused 120, Accused 199, Accused 219\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110272007202500051",
+    "case_master_id": 69,
+    "crime_no": "110272007202500051",
+    "case_no": "202500051",
+    "police_station_id": 2007,
+    "district_id": 1027,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 51. Head: Theft/House Break. Severity: Low. RiskScore: 10. Source FIR: FIR-1051.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-07-12T00:00:00",
+    "incident_to": "2025-07-12T01:00:00",
+    "latitude": 12.962,
+    "longitude": 77.562,
+    "place_of_occurrence": "Location 51",
+    "text_blob": "CrimeNo: 110272007202500051\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 51. Head: Theft/House Break. Severity: Low. RiskScore: 10. Source FIR: FIR-1051.\nSections: BNS 303\nPlace: Location 51\nVictims: Unknown Victim\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110292004202500052",
+    "case_master_id": 70,
+    "crime_no": "110292004202500052",
+    "case_no": "202500052",
+    "police_station_id": 2004,
+    "district_id": 1029,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 52. Head: Assault/Physical Assault. Severity: High. RiskScore: 100. Source FIR: FIR-1052.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-05-16T00:00:00",
+    "incident_to": "2025-05-16T01:00:00",
+    "latitude": 12.94,
+    "longitude": 77.54,
+    "place_of_occurrence": "Location 52",
+    "text_blob": "CrimeNo: 110292004202500052\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 52. Head: Assault/Physical Assault. Severity: High. RiskScore: 100. Source FIR: FIR-1052.\nSections: BNS 115\nPlace: Location 52\nVictims: Victim 14, Victim 32, Victim 36, Victim 61, Victim 81, Victim 154\nAccused: Accused 5, Accused 7, Accused 52, Accused 131, Accused 153, Accused 167\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110312004202500053",
+    "case_master_id": 71,
+    "crime_no": "110312004202500053",
+    "case_no": "202500053",
+    "police_station_id": 2004,
+    "district_id": 1031,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 53. Head: Theft/Armed Robbery. Severity: High. RiskScore: 22. Source FIR: FIR-1053.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-07-31T00:00:00",
+    "incident_to": "2025-07-31T01:00:00",
+    "latitude": 12.948,
+    "longitude": 77.548,
+    "place_of_occurrence": "Location 53",
+    "text_blob": "CrimeNo: 110312004202500053\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 53. Head: Theft/Armed Robbery. Severity: High. RiskScore: 22. Source FIR: FIR-1053.\nSections: BNS 303\nPlace: Location 53\nVictims: Victim 18, Victim 43, Victim 129\nAccused: Accused 28, Accused 125, Accused 161\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110302002202500054",
+    "case_master_id": 72,
+    "crime_no": "110302002202500054",
+    "case_no": "202500054",
+    "police_station_id": 2002,
+    "district_id": 1030,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 54. Head: Cyber Crime/Armed Robbery. Severity: Low. RiskScore: 36. Source FIR: FIR-1054.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-04-21T00:00:00",
+    "incident_to": "2025-04-21T01:00:00",
+    "latitude": 12.936,
+    "longitude": 77.536,
+    "place_of_occurrence": "Location 54",
+    "text_blob": "CrimeNo: 110302002202500054\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 54. Head: Cyber Crime/Armed Robbery. Severity: Low. RiskScore: 36. Source FIR: FIR-1054.\nSections: IT 66\nPlace: Location 54\nVictims: Unknown Victim\nAccused: Accused 3, Accused 12\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110012010202600055",
+    "case_master_id": 73,
+    "crime_no": "110012010202600055",
+    "case_no": "202600055",
+    "police_station_id": 2010,
+    "district_id": 1001,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 55. Head: Robbery/Vehicle Theft. Severity: High. RiskScore: 97. Source FIR: FIR-1055.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2026-01-01T00:00:00",
+    "incident_to": "2026-01-01T01:00:00",
+    "latitude": 13.024,
+    "longitude": 77.584,
+    "place_of_occurrence": "Location 55",
+    "text_blob": "CrimeNo: 110012010202600055\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 55. Head: Robbery/Vehicle Theft. Severity: High. RiskScore: 97. Source FIR: FIR-1055.\nSections: BNS 309\nPlace: Location 55\nVictims: Victim 133\nAccused: Accused 127, Accused 135\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110172008202500056",
+    "case_master_id": 74,
+    "crime_no": "110172008202500056",
+    "case_no": "202500056",
+    "police_station_id": 2008,
+    "district_id": 1017,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 56. Head: Fraud/UPI Fraud. Severity: Medium. RiskScore: 82. Source FIR: FIR-1056.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-07-17T00:00:00",
+    "incident_to": "2025-07-17T01:00:00",
+    "latitude": 12.956,
+    "longitude": 77.572,
+    "place_of_occurrence": "Location 56",
+    "text_blob": "CrimeNo: 110172008202500056\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 56. Head: Fraud/UPI Fraud. Severity: Medium. RiskScore: 82. Source FIR: FIR-1056.\nSections: BNS 318\nPlace: Location 56\nVictims: Victim 28\nAccused: Accused 162\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110172010202500057",
+    "case_master_id": 75,
+    "crime_no": "110172010202500057",
+    "case_no": "202500057",
+    "police_station_id": 2010,
+    "district_id": 1017,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 57. Head: Theft/Phishing. Severity: Low. RiskScore: 67. Source FIR: FIR-1057.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-09-14T00:00:00",
+    "incident_to": "2025-09-14T01:00:00",
+    "latitude": 12.984,
+    "longitude": 77.6,
+    "place_of_occurrence": "Location 57",
+    "text_blob": "CrimeNo: 110172010202500057\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 57. Head: Theft/Phishing. Severity: Low. RiskScore: 67. Source FIR: FIR-1057.\nSections: BNS 303\nPlace: Location 57\nVictims: Victim 55, Victim 69\nAccused: Accused 16, Accused 53\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110022007202500058",
+    "case_master_id": 76,
+    "crime_no": "110022007202500058",
+    "case_no": "202500058",
+    "police_station_id": 2007,
+    "district_id": 1002,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 58. Head: Cyber Crime/Phishing. Severity: Medium. RiskScore: 83. Source FIR: FIR-1058.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-02-28T00:00:00",
+    "incident_to": "2025-02-28T01:00:00",
+    "latitude": 12.962,
+    "longitude": 77.578,
+    "place_of_occurrence": "Location 58",
+    "text_blob": "CrimeNo: 110022007202500058\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 58. Head: Cyber Crime/Phishing. Severity: Medium. RiskScore: 83. Source FIR: FIR-1058.\nSections: IT 66\nPlace: Location 58\nVictims: Victim 20, Victim 79\nAccused: Accused 78, Accused 193\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110132003202500059",
+    "case_master_id": 77,
+    "crime_no": "110132003202500059",
+    "case_no": "202500059",
+    "police_station_id": 2003,
+    "district_id": 1013,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 59. Head: Assault/House Break. Severity: Low. RiskScore: 13. Source FIR: FIR-1059.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-05-20T00:00:00",
+    "incident_to": "2025-05-20T01:00:00",
+    "latitude": 12.93,
+    "longitude": 77.546,
+    "place_of_occurrence": "Location 59",
+    "text_blob": "CrimeNo: 110132003202500059\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 59. Head: Assault/House Break. Severity: Low. RiskScore: 13. Source FIR: FIR-1059.\nSections: BNS 115\nPlace: Location 59\nVictims: Victim 54\nAccused: Accused 33, Accused 58, Accused 65\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110292006202500060",
+    "case_master_id": 78,
+    "crime_no": "110292006202500060",
+    "case_no": "202500060",
+    "police_station_id": 2006,
+    "district_id": 1029,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 60. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 25. Source FIR: FIR-1060.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-05-26T00:00:00",
+    "incident_to": "2025-05-26T01:00:00",
+    "latitude": 12.968,
+    "longitude": 77.544,
+    "place_of_occurrence": "Location 60",
+    "text_blob": "CrimeNo: 110292006202500060\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 60. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 25. Source FIR: FIR-1060.\nSections: BNS 115\nPlace: Location 60\nVictims: Victim 19, Victim 29\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110052009202500061",
+    "case_master_id": 79,
+    "crime_no": "110052009202500061",
+    "case_no": "202500061",
+    "police_station_id": 2009,
+    "district_id": 1005,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 61. Head: Fraud/Vehicle Theft. Severity: High. RiskScore: 65. Source FIR: FIR-1061.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-03-12T00:00:00",
+    "incident_to": "2025-03-12T01:00:00",
+    "latitude": 13.006,
+    "longitude": 77.582,
+    "place_of_occurrence": "Location 61",
+    "text_blob": "CrimeNo: 110052009202500061\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 61. Head: Fraud/Vehicle Theft. Severity: High. RiskScore: 65. Source FIR: FIR-1061.\nSections: BNS 318\nPlace: Location 61\nVictims: Unknown Victim\nAccused: Accused 24, Accused 112, Accused 220\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110042003202500062",
+    "case_master_id": 80,
+    "crime_no": "110042003202500062",
+    "case_no": "202500062",
+    "police_station_id": 2003,
+    "district_id": 1004,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 62. Head: Assault/Phishing. Severity: Low. RiskScore: 18. Source FIR: FIR-1062.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-04-30T00:00:00",
+    "incident_to": "2025-04-30T01:00:00",
+    "latitude": 12.954,
+    "longitude": 77.53,
+    "place_of_occurrence": "Location 62",
+    "text_blob": "CrimeNo: 110042003202500062\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 62. Head: Assault/Phishing. Severity: Low. RiskScore: 18. Source FIR: FIR-1062.\nSections: BNS 115\nPlace: Location 62\nVictims: Unknown Victim\nAccused: Accused 19, Accused 160, Accused 195\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110172002202500063",
+    "case_master_id": 81,
+    "crime_no": "110172002202500063",
+    "case_no": "202500063",
+    "police_station_id": 2002,
+    "district_id": 1017,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 63. Head: Cyber Crime/Vehicle Theft. Severity: Low. RiskScore: 22. Source FIR: FIR-1063.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-10-18T00:00:00",
+    "incident_to": "2025-10-18T01:00:00",
+    "latitude": 12.896,
+    "longitude": 77.528,
+    "place_of_occurrence": "Location 63",
+    "text_blob": "CrimeNo: 110172002202500063\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 63. Head: Cyber Crime/Vehicle Theft. Severity: Low. RiskScore: 22. Source FIR: FIR-1063.\nSections: IT 66\nPlace: Location 63\nVictims: Victim 46, Victim 66, Victim 84\nAccused: Accused 126, Accused 194\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110302008202500064",
+    "case_master_id": 82,
+    "crime_no": "110302008202500064",
+    "case_no": "202500064",
+    "police_station_id": 2008,
+    "district_id": 1030,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 64. Head: Fraud/Armed Robbery. Severity: Medium. RiskScore: 18. Source FIR: FIR-1064.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-05-07T00:00:00",
+    "incident_to": "2025-05-07T01:00:00",
+    "latitude": 12.964,
+    "longitude": 77.596,
+    "place_of_occurrence": "Location 64",
+    "text_blob": "CrimeNo: 110302008202500064\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 64. Head: Fraud/Armed Robbery. Severity: Medium. RiskScore: 18. Source FIR: FIR-1064.\nSections: BNS 318\nPlace: Location 64\nVictims: Victim 144\nAccused: Accused 76, Accused 159, Accused 202\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110142007202500065",
+    "case_master_id": 83,
+    "crime_no": "110142007202500065",
+    "case_no": "202500065",
+    "police_station_id": 2007,
+    "district_id": 1014,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 65. Head: Robbery/Phishing. Severity: Low. RiskScore: 21. Source FIR: FIR-1065.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-06-06T00:00:00",
+    "incident_to": "2025-06-06T01:00:00",
+    "latitude": 12.962,
+    "longitude": 77.554,
+    "place_of_occurrence": "Location 65",
+    "text_blob": "CrimeNo: 110142007202500065\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 65. Head: Robbery/Phishing. Severity: Low. RiskScore: 21. Source FIR: FIR-1065.\nSections: BNS 309\nPlace: Location 65\nVictims: Unknown Victim\nAccused: Accused 108, Accused 114, Accused 156\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110232008202500066",
+    "case_master_id": 84,
+    "crime_no": "110232008202500066",
+    "case_no": "202500066",
+    "police_station_id": 2008,
+    "district_id": 1023,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 66. Head: Assault/Vehicle Theft. Severity: Low. RiskScore: 83. Source FIR: FIR-1066.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-11-22T00:00:00",
+    "incident_to": "2025-11-22T01:00:00",
+    "latitude": 12.98,
+    "longitude": 77.572,
+    "place_of_occurrence": "Location 66",
+    "text_blob": "CrimeNo: 110232008202500066\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 66. Head: Assault/Vehicle Theft. Severity: Low. RiskScore: 83. Source FIR: FIR-1066.\nSections: BNS 115\nPlace: Location 66\nVictims: Victim 76\nAccused: Accused 9\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110282004202500067",
+    "case_master_id": 85,
+    "crime_no": "110282004202500067",
+    "case_no": "202500067",
+    "police_station_id": 2004,
+    "district_id": 1028,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 67. Head: Assault/Armed Robbery. Severity: Low. RiskScore: 68. Source FIR: FIR-1067.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-07-28T00:00:00",
+    "incident_to": "2025-07-28T01:00:00",
+    "latitude": 12.948,
+    "longitude": 77.54,
+    "place_of_occurrence": "Location 67",
+    "text_blob": "CrimeNo: 110282004202500067\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 67. Head: Assault/Armed Robbery. Severity: Low. RiskScore: 68. Source FIR: FIR-1067.\nSections: BNS 115\nPlace: Location 67\nVictims: Victim 119, Victim 142\nAccused: Accused 91, Accused 110, Accused 117, Accused 149\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110182008202500068",
+    "case_master_id": 86,
+    "crime_no": "110182008202500068",
+    "case_no": "202500068",
+    "police_station_id": 2008,
+    "district_id": 1018,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 68. Head: Robbery/Armed Robbery. Severity: Medium. RiskScore: 28. Source FIR: FIR-1068.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-10-07T00:00:00",
+    "incident_to": "2025-10-07T01:00:00",
+    "latitude": 12.996,
+    "longitude": 77.588,
+    "place_of_occurrence": "Location 68",
+    "text_blob": "CrimeNo: 110182008202500068\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 68. Head: Robbery/Armed Robbery. Severity: Medium. RiskScore: 28. Source FIR: FIR-1068.\nSections: BNS 309\nPlace: Location 68\nVictims: Victim 65, Victim 160\nAccused: Accused 17, Accused 26, Accused 192\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110012007202500069",
+    "case_master_id": 87,
+    "crime_no": "110012007202500069",
+    "case_no": "202500069",
+    "police_station_id": 2007,
+    "district_id": 1001,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 69. Head: Robbery/Physical Assault. Severity: Low. RiskScore: 86. Source FIR: FIR-1069.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-01-23T00:00:00",
+    "incident_to": "2025-01-23T01:00:00",
+    "latitude": 12.994,
+    "longitude": 77.586,
+    "place_of_occurrence": "Location 69",
+    "text_blob": "CrimeNo: 110012007202500069\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 69. Head: Robbery/Physical Assault. Severity: Low. RiskScore: 86. Source FIR: FIR-1069.\nSections: BNS 309\nPlace: Location 69\nVictims: Victim 64, Victim 105, Victim 114, Victim 147\nAccused: Accused 37, Accused 68\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110292002202500070",
+    "case_master_id": 88,
+    "crime_no": "110292002202500070",
+    "case_no": "202500070",
+    "police_station_id": 2002,
+    "district_id": 1029,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 70. Head: Assault/Phishing. Severity: High. RiskScore: 91. Source FIR: FIR-1070.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-01-27T00:00:00",
+    "incident_to": "2025-01-27T01:00:00",
+    "latitude": 12.896,
+    "longitude": 77.504,
+    "place_of_occurrence": "Location 70",
+    "text_blob": "CrimeNo: 110292002202500070\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 70. Head: Assault/Phishing. Severity: High. RiskScore: 91. Source FIR: FIR-1070.\nSections: BNS 115\nPlace: Location 70\nVictims: Victim 137\nAccused: Accused 181\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110032008202500071",
+    "case_master_id": 89,
+    "crime_no": "110032008202500071",
+    "case_no": "202500071",
+    "police_station_id": 2008,
+    "district_id": 1003,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 71. Head: Robbery/Physical Assault. Severity: High. RiskScore: 23. Source FIR: FIR-1071.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-09-20T00:00:00",
+    "incident_to": "2025-09-20T01:00:00",
+    "latitude": 12.964,
+    "longitude": 77.572,
+    "place_of_occurrence": "Location 71",
+    "text_blob": "CrimeNo: 110032008202500071\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 71. Head: Robbery/Physical Assault. Severity: High. RiskScore: 23. Source FIR: FIR-1071.\nSections: BNS 309\nPlace: Location 71\nVictims: Victim 148\nAccused: Accused 25, Accused 77, Accused 92, Accused 107\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110012004202500072",
+    "case_master_id": 90,
+    "crime_no": "110012004202500072",
+    "case_no": "202500072",
+    "police_station_id": 2004,
+    "district_id": 1001,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 72. Head: Cyber Crime/House Break. Severity: Low. RiskScore: 47. Source FIR: FIR-1072.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-08-26T00:00:00",
+    "incident_to": "2025-08-26T01:00:00",
+    "latitude": 12.932,
+    "longitude": 77.54,
+    "place_of_occurrence": "Location 72",
+    "text_blob": "CrimeNo: 110012004202500072\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 72. Head: Cyber Crime/House Break. Severity: Low. RiskScore: 47. Source FIR: FIR-1072.\nSections: IT 66\nPlace: Location 72\nVictims: Victim 145\nAccused: Accused 62, Accused 104, Accused 136\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110172006202500073",
+    "case_master_id": 91,
+    "crime_no": "110172006202500073",
+    "case_no": "202500073",
+    "police_station_id": 2006,
+    "district_id": 1017,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 73. Head: Assault/Vehicle Theft. Severity: Low. RiskScore: 74. Source FIR: FIR-1073.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-04-19T00:00:00",
+    "incident_to": "2025-04-19T01:00:00",
+    "latitude": 12.96,
+    "longitude": 77.568,
+    "place_of_occurrence": "Location 73",
+    "text_blob": "CrimeNo: 110172006202500073\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 73. Head: Assault/Vehicle Theft. Severity: Low. RiskScore: 74. Source FIR: FIR-1073.\nSections: BNS 115\nPlace: Location 73\nVictims: Victim 41\nAccused: Accused 113, Accused 178\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062008202500074",
+    "case_master_id": 92,
+    "crime_no": "110062008202500074",
+    "case_no": "202500074",
+    "police_station_id": 2008,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 74. Head: Fraud/Vehicle Theft. Severity: High. RiskScore: 62. Source FIR: FIR-1074.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-10-13T00:00:00",
+    "incident_to": "2025-10-13T01:00:00",
+    "latitude": 12.988,
+    "longitude": 77.596,
+    "place_of_occurrence": "Location 74",
+    "text_blob": "CrimeNo: 110062008202500074\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 74. Head: Fraud/Vehicle Theft. Severity: High. RiskScore: 62. Source FIR: FIR-1074.\nSections: BNS 318\nPlace: Location 74\nVictims: Victim 57, Victim 124\nAccused: Accused 79, Accused 163\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110072004202500075",
+    "case_master_id": 93,
+    "crime_no": "110072004202500075",
+    "case_no": "202500075",
+    "police_station_id": 2004,
+    "district_id": 1007,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 75. Head: Cyber Crime/Physical Assault. Severity: High. RiskScore: 66. Source FIR: FIR-1075.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-03-19T00:00:00",
+    "incident_to": "2025-03-19T01:00:00",
+    "latitude": 12.956,
+    "longitude": 77.524,
+    "place_of_occurrence": "Location 75",
+    "text_blob": "CrimeNo: 110072004202500075\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 75. Head: Cyber Crime/Physical Assault. Severity: High. RiskScore: 66. Source FIR: FIR-1075.\nSections: IT 66\nPlace: Location 75\nVictims: Victim 70, Victim 115, Victim 120\nAccused: Accused 6, Accused 21\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110252003202500076",
+    "case_master_id": 94,
+    "crime_no": "110252003202500076",
+    "case_no": "202500076",
+    "police_station_id": 2003,
+    "district_id": 1025,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 76. Head: Assault/Armed Robbery. Severity: High. RiskScore: 68. Source FIR: FIR-1076.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-03-27T00:00:00",
+    "incident_to": "2025-03-27T01:00:00",
+    "latitude": 12.954,
+    "longitude": 77.522,
+    "place_of_occurrence": "Location 76",
+    "text_blob": "CrimeNo: 110252003202500076\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 76. Head: Assault/Armed Robbery. Severity: High. RiskScore: 68. Source FIR: FIR-1076.\nSections: BNS 115\nPlace: Location 76\nVictims: Unknown Victim\nAccused: Accused 29, Accused 60, Accused 85, Accused 103, Accused 151, Accused 201\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110012009202500077",
+    "case_master_id": 95,
+    "crime_no": "110012009202500077",
+    "case_no": "202500077",
+    "police_station_id": 2009,
+    "district_id": 1001,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 77. Head: Cyber Crime/House Break. Severity: High. RiskScore: 74. Source FIR: FIR-1077.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-01-24T00:00:00",
+    "incident_to": "2025-01-24T01:00:00",
+    "latitude": 12.966,
+    "longitude": 77.59,
+    "place_of_occurrence": "Location 77",
+    "text_blob": "CrimeNo: 110012009202500077\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 77. Head: Cyber Crime/House Break. Severity: High. RiskScore: 74. Source FIR: FIR-1077.\nSections: IT 66\nPlace: Location 77\nVictims: Victim 156\nAccused: \n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110102005202500078",
+    "case_master_id": 96,
+    "crime_no": "110102005202500078",
+    "case_no": "202500078",
+    "police_station_id": 2005,
+    "district_id": 1010,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 78. Head: Fraud/Vehicle Theft. Severity: Low. RiskScore: 9. Source FIR: FIR-1078.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-04-11T00:00:00",
+    "incident_to": "2025-04-11T01:00:00",
+    "latitude": 12.934,
+    "longitude": 77.558,
+    "place_of_occurrence": "Location 78",
+    "text_blob": "CrimeNo: 110102005202500078\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 78. Head: Fraud/Vehicle Theft. Severity: Low. RiskScore: 9. Source FIR: FIR-1078.\nSections: BNS 318\nPlace: Location 78\nVictims: Victim 10, Victim 13, Victim 63\nAccused: Accused 20, Accused 183, Accused 188\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110152009202500079",
+    "case_master_id": 97,
+    "crime_no": "110152009202500079",
+    "case_no": "202500079",
+    "police_station_id": 2009,
+    "district_id": 1015,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 79. Head: Assault/Armed Robbery. Severity: High. RiskScore: 71. Source FIR: FIR-1079.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-08-19T00:00:00",
+    "incident_to": "2025-08-19T01:00:00",
+    "latitude": 12.982,
+    "longitude": 77.606,
+    "place_of_occurrence": "Location 79",
+    "text_blob": "CrimeNo: 110152009202500079\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 79. Head: Assault/Armed Robbery. Severity: High. RiskScore: 71. Source FIR: FIR-1079.\nSections: BNS 115\nPlace: Location 79\nVictims: Victim 47, Victim 149\nAccused: Accused 22, Accused 44, Accused 177\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110282003202500080",
+    "case_master_id": 98,
+    "crime_no": "110282003202500080",
+    "case_no": "202500080",
+    "police_station_id": 2003,
+    "district_id": 1028,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 80. Head: Assault/UPI Fraud. Severity: Medium. RiskScore: 8. Source FIR: FIR-1080.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-04-11T00:00:00",
+    "incident_to": "2025-04-11T01:00:00",
+    "latitude": 12.93,
+    "longitude": 77.514,
+    "place_of_occurrence": "Location 80",
+    "text_blob": "CrimeNo: 110282003202500080\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 80. Head: Assault/UPI Fraud. Severity: Medium. RiskScore: 8. Source FIR: FIR-1080.\nSections: BNS 115\nPlace: Location 80\nVictims: Victim 9, Victim 94\nAccused: Accused 124, Accused 154\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110252001202500081",
+    "case_master_id": 99,
+    "crime_no": "110252001202500081",
+    "case_no": "202500081",
+    "police_station_id": 2001,
+    "district_id": 1025,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 81. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 6. Source FIR: FIR-1081.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-01-25T00:00:00",
+    "incident_to": "2025-01-25T01:00:00",
+    "latitude": 12.918,
+    "longitude": 77.502,
+    "place_of_occurrence": "Location 81",
+    "text_blob": "CrimeNo: 110252001202500081\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 81. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 6. Source FIR: FIR-1081.\nSections: BNS 115\nPlace: Location 81\nVictims: Unknown Victim\nAccused: Accused 186\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110042005202500082",
+    "case_master_id": 100,
+    "crime_no": "110042005202500082",
+    "case_no": "202500082",
+    "police_station_id": 2005,
+    "district_id": 1004,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 82. Head: Fraud/House Break. Severity: High. RiskScore: 98. Source FIR: FIR-1082.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-07-14T00:00:00",
+    "incident_to": "2025-07-14T01:00:00",
+    "latitude": 12.966,
+    "longitude": 77.55,
+    "place_of_occurrence": "Location 82",
+    "text_blob": "CrimeNo: 110042005202500082\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 82. Head: Fraud/House Break. Severity: High. RiskScore: 98. Source FIR: FIR-1082.\nSections: BNS 318\nPlace: Location 82\nVictims: Victim 30, Victim 102, Victim 106\nAccused: Accused 23, Accused 40, Accused 165\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110072005202500083",
+    "case_master_id": 101,
+    "crime_no": "110072005202500083",
+    "case_no": "202500083",
+    "police_station_id": 2005,
+    "district_id": 1007,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 83. Head: Fraud/Armed Robbery. Severity: Medium. RiskScore: 60. Source FIR: FIR-1083.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-12-25T00:00:00",
+    "incident_to": "2025-12-25T01:00:00",
+    "latitude": 12.974,
+    "longitude": 77.558,
+    "place_of_occurrence": "Location 83",
+    "text_blob": "CrimeNo: 110072005202500083\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 83. Head: Fraud/Armed Robbery. Severity: Medium. RiskScore: 60. Source FIR: FIR-1083.\nSections: BNS 318\nPlace: Location 83\nVictims: Victim 98\nAccused: Accused 14, Accused 27, Accused 50\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110162009202500084",
+    "case_master_id": 102,
+    "crime_no": "110162009202500084",
+    "case_no": "202500084",
+    "police_station_id": 2009,
+    "district_id": 1016,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 84. Head: Cyber Crime/UPI Fraud. Severity: Low. RiskScore: 66. Source FIR: FIR-1084.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-08-23T00:00:00",
+    "incident_to": "2025-08-23T01:00:00",
+    "latitude": 12.966,
+    "longitude": 77.606,
+    "place_of_occurrence": "Location 84",
+    "text_blob": "CrimeNo: 110162009202500084\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 84. Head: Cyber Crime/UPI Fraud. Severity: Low. RiskScore: 66. Source FIR: FIR-1084.\nSections: IT 66\nPlace: Location 84\nVictims: Victim 6, Victim 17, Victim 122, Victim 135, Victim 141\nAccused: Accused 105, Accused 179\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110042003202500085",
+    "case_master_id": 103,
+    "crime_no": "110042003202500085",
+    "case_no": "202500085",
+    "police_station_id": 2003,
+    "district_id": 1004,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 85. Head: Cyber Crime/UPI Fraud. Severity: Medium. RiskScore: 2. Source FIR: FIR-1085.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-07-11T00:00:00",
+    "incident_to": "2025-07-11T01:00:00",
+    "latitude": 12.914,
+    "longitude": 77.514,
+    "place_of_occurrence": "Location 85",
+    "text_blob": "CrimeNo: 110042003202500085\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 85. Head: Cyber Crime/UPI Fraud. Severity: Medium. RiskScore: 2. Source FIR: FIR-1085.\nSections: IT 66\nPlace: Location 85\nVictims: Victim 77, Victim 86\nAccused: Accused 129\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110292005202500086",
+    "case_master_id": 104,
+    "crime_no": "110292005202500086",
+    "case_no": "202500086",
+    "police_station_id": 2005,
+    "district_id": 1029,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 86. Head: Robbery/Vehicle Theft. Severity: Low. RiskScore: 40. Source FIR: FIR-1086.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-02-11T00:00:00",
+    "incident_to": "2025-02-11T01:00:00",
+    "latitude": 12.942,
+    "longitude": 77.542,
+    "place_of_occurrence": "Location 86",
+    "text_blob": "CrimeNo: 110292005202500086\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 86. Head: Robbery/Vehicle Theft. Severity: Low. RiskScore: 40. Source FIR: FIR-1086.\nSections: BNS 309\nPlace: Location 86\nVictims: Victim 113\nAccused: Accused 32, Accused 189\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110182002202500087",
+    "case_master_id": 105,
+    "crime_no": "110182002202500087",
+    "case_no": "202500087",
+    "police_station_id": 2002,
+    "district_id": 1018,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 87. Head: Theft/House Break. Severity: High. RiskScore: 24. Source FIR: FIR-1087.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-08-17T00:00:00",
+    "incident_to": "2025-08-17T01:00:00",
+    "latitude": 12.92,
+    "longitude": 77.52,
+    "place_of_occurrence": "Location 87",
+    "text_blob": "CrimeNo: 110182002202500087\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 87. Head: Theft/House Break. Severity: High. RiskScore: 24. Source FIR: FIR-1087.\nSections: BNS 303\nPlace: Location 87\nVictims: Victim 125, Victim 138\nAccused: Accused 54\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110182003202500088",
+    "case_master_id": 106,
+    "crime_no": "110182003202500088",
+    "case_no": "202500088",
+    "police_station_id": 2003,
+    "district_id": 1018,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 88. Head: Assault/Vehicle Theft. Severity: Medium. RiskScore: 49. Source FIR: FIR-1088.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-02-23T00:00:00",
+    "incident_to": "2025-02-23T01:00:00",
+    "latitude": 12.938,
+    "longitude": 77.538,
+    "place_of_occurrence": "Location 88",
+    "text_blob": "CrimeNo: 110182003202500088\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 88. Head: Assault/Vehicle Theft. Severity: Medium. RiskScore: 49. Source FIR: FIR-1088.\nSections: BNS 115\nPlace: Location 88\nVictims: Victim 5, Victim 68, Victim 153\nAccused: Accused 150\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110102010202500089",
+    "case_master_id": 107,
+    "crime_no": "110102010202500089",
+    "case_no": "202500089",
+    "police_station_id": 2010,
+    "district_id": 1010,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 89. Head: Fraud/Physical Assault. Severity: Medium. RiskScore: 50. Source FIR: FIR-1089.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-02-13T00:00:00",
+    "incident_to": "2025-02-13T01:00:00",
+    "latitude": 13.016,
+    "longitude": 77.616,
+    "place_of_occurrence": "Location 89",
+    "text_blob": "CrimeNo: 110102010202500089\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 89. Head: Fraud/Physical Assault. Severity: Medium. RiskScore: 50. Source FIR: FIR-1089.\nSections: BNS 318\nPlace: Location 89\nVictims: Victim 34\nAccused: Accused 174, Accused 203\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110252009202500090",
+    "case_master_id": 108,
+    "crime_no": "110252009202500090",
+    "case_no": "202500090",
+    "police_station_id": 2009,
+    "district_id": 1025,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 90. Head: Robbery/Vehicle Theft. Severity: Medium. RiskScore: 29. Source FIR: FIR-1090.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-01-23T00:00:00",
+    "incident_to": "2025-01-23T01:00:00",
+    "latitude": 13.014,
+    "longitude": 77.574,
+    "place_of_occurrence": "Location 90",
+    "text_blob": "CrimeNo: 110252009202500090\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 90. Head: Robbery/Vehicle Theft. Severity: Medium. RiskScore: 29. Source FIR: FIR-1090.\nSections: BNS 309\nPlace: Location 90\nVictims: Victim 44\nAccused: Accused 39, Accused 63, Accused 83, Accused 111\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110312009202500091",
+    "case_master_id": 109,
+    "crime_no": "110312009202500091",
+    "case_no": "202500091",
+    "police_station_id": 2009,
+    "district_id": 1031,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 91. Head: Cyber Crime/UPI Fraud. Severity: Medium. RiskScore: 87. Source FIR: FIR-1091.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-06-17T00:00:00",
+    "incident_to": "2025-06-17T01:00:00",
+    "latitude": 12.966,
+    "longitude": 77.582,
+    "place_of_occurrence": "Location 91",
+    "text_blob": "CrimeNo: 110312009202500091\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 91. Head: Cyber Crime/UPI Fraud. Severity: Medium. RiskScore: 87. Source FIR: FIR-1091.\nSections: IT 66\nPlace: Location 91\nVictims: Victim 58\nAccused: Accused 10, Accused 101\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110062010202500092",
+    "case_master_id": 110,
+    "crime_no": "110062010202500092",
+    "case_no": "202500092",
+    "police_station_id": 2010,
+    "district_id": 1006,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 92. Head: Theft/Vehicle Theft. Severity: Low. RiskScore: 30. Source FIR: FIR-1092.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "303"
+      }
+    ],
+    "incident_from": "2025-11-16T00:00:00",
+    "incident_to": "2025-11-16T01:00:00",
+    "latitude": 12.984,
+    "longitude": 77.6,
+    "place_of_occurrence": "Location 92",
+    "text_blob": "CrimeNo: 110062010202500092\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 92. Head: Theft/Vehicle Theft. Severity: Low. RiskScore: 30. Source FIR: FIR-1092.\nSections: BNS 303\nPlace: Location 92\nVictims: Victim 128\nAccused: Accused 72\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110132005202500093",
+    "case_master_id": 111,
+    "crime_no": "110132005202500093",
+    "case_no": "202500093",
+    "police_station_id": 2005,
+    "district_id": 1013,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 93. Head: Robbery/UPI Fraud. Severity: Medium. RiskScore: 21. Source FIR: FIR-1093.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-10-03T00:00:00",
+    "incident_to": "2025-10-03T01:00:00",
+    "latitude": 12.942,
+    "longitude": 77.558,
+    "place_of_occurrence": "Location 93",
+    "text_blob": "CrimeNo: 110132005202500093\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 93. Head: Robbery/UPI Fraud. Severity: Medium. RiskScore: 21. Source FIR: FIR-1093.\nSections: BNS 309\nPlace: Location 93\nVictims: Victim 38, Victim 40, Victim 45, Victim 88, Victim 132\nAccused: Accused 51, Accused 69, Accused 169, Accused 175\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110092005202500094",
+    "case_master_id": 112,
+    "crime_no": "110092005202500094",
+    "case_no": "202500094",
+    "police_station_id": 2005,
+    "district_id": 1009,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 94. Head: Cyber Crime/Physical Assault. Severity: High. RiskScore: 21. Source FIR: FIR-1094.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-01-13T00:00:00",
+    "incident_to": "2025-01-13T01:00:00",
+    "latitude": 12.95,
+    "longitude": 77.566,
+    "place_of_occurrence": "Location 94",
+    "text_blob": "CrimeNo: 110092005202500094\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 94. Head: Cyber Crime/Physical Assault. Severity: High. RiskScore: 21. Source FIR: FIR-1094.\nSections: IT 66\nPlace: Location 94\nVictims: Victim 59, Victim 118\nAccused: Accused 145\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110022005202500095",
+    "case_master_id": 113,
+    "crime_no": "110022005202500095",
+    "case_no": "202500095",
+    "police_station_id": 2005,
+    "district_id": 1002,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 95. Head: Fraud/UPI Fraud. Severity: High. RiskScore: 78. Source FIR: FIR-1095.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-05-12T00:00:00",
+    "incident_to": "2025-05-12T01:00:00",
+    "latitude": 12.958,
+    "longitude": 77.534,
+    "place_of_occurrence": "Location 95",
+    "text_blob": "CrimeNo: 110022005202500095\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 95. Head: Fraud/UPI Fraud. Severity: High. RiskScore: 78. Source FIR: FIR-1095.\nSections: BNS 318\nPlace: Location 95\nVictims: Victim 11, Victim 72, Victim 159\nAccused: Accused 74\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110262010202500096",
+    "case_master_id": 114,
+    "crime_no": "110262010202500096",
+    "case_no": "202500096",
+    "police_station_id": 2010,
+    "district_id": 1026,
+    "case_status": "ui",
+    "crime_major_head": "cyber",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 96. Head: Cyber Crime/UPI Fraud. Severity: High. RiskScore: 26. Source FIR: FIR-1096.",
+    "act_sections": [
+      {
+        "act_code": "IT",
+        "section_code": "66"
+      }
+    ],
+    "incident_from": "2025-12-09T00:00:00",
+    "incident_to": "2025-12-09T01:00:00",
+    "latitude": 13.016,
+    "longitude": 77.592,
+    "place_of_occurrence": "Location 96",
+    "text_blob": "CrimeNo: 110262010202500096\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 96. Head: Cyber Crime/UPI Fraud. Severity: High. RiskScore: 26. Source FIR: FIR-1096.\nSections: IT 66\nPlace: Location 96\nVictims: Victim 26\nAccused: Accused 166, Accused 182, Accused 210\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110072001202500097",
+    "case_master_id": 115,
+    "crime_no": "110072001202500097",
+    "case_no": "202500097",
+    "police_station_id": 2001,
+    "district_id": 1007,
+    "case_status": "ui",
+    "crime_major_head": "body",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 97. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 54. Source FIR: FIR-1097.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "115"
+      }
+    ],
+    "incident_from": "2025-12-01T00:00:00",
+    "incident_to": "2025-12-01T01:00:00",
+    "latitude": 12.934,
+    "longitude": 77.51,
+    "place_of_occurrence": "Location 97",
+    "text_blob": "CrimeNo: 110072001202500097\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 97. Head: Assault/Physical Assault. Severity: Medium. RiskScore: 54. Source FIR: FIR-1097.\nSections: BNS 115\nPlace: Location 97\nVictims: Victim 101\nAccused: Accused 13, Accused 36, Accused 88\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110212008202500098",
+    "case_master_id": 116,
+    "crime_no": "110212008202500098",
+    "case_no": "202500098",
+    "police_station_id": 2008,
+    "district_id": 1021,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 98. Head: Fraud/Phishing. Severity: High. RiskScore: 70. Source FIR: FIR-1098.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-11-13T00:00:00",
+    "incident_to": "2025-11-13T01:00:00",
+    "latitude": 12.956,
+    "longitude": 77.588,
+    "place_of_occurrence": "Location 98",
+    "text_blob": "CrimeNo: 110212008202500098\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 98. Head: Fraud/Phishing. Severity: High. RiskScore: 70. Source FIR: FIR-1098.\nSections: BNS 318\nPlace: Location 98\nVictims: Victim 108, Victim 140\nAccused: Accused 144, Accused 158, Accused 170\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110222007202500099",
+    "case_master_id": 117,
+    "crime_no": "110222007202500099",
+    "case_no": "202500099",
+    "police_station_id": 2007,
+    "district_id": 1022,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 99. Head: Robbery/Physical Assault. Severity: Low. RiskScore: 20. Source FIR: FIR-1099.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "309"
+      }
+    ],
+    "incident_from": "2025-08-26T00:00:00",
+    "incident_to": "2025-08-26T01:00:00",
+    "latitude": 12.954,
+    "longitude": 77.586,
+    "place_of_occurrence": "Location 99",
+    "text_blob": "CrimeNo: 110222007202500099\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 99. Head: Robbery/Physical Assault. Severity: Low. RiskScore: 20. Source FIR: FIR-1099.\nSections: BNS 309\nPlace: Location 99\nVictims: Victim 7, Victim 53, Victim 75, Victim 90\nAccused: Accused 80, Accused 94, Accused 205\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  },
+  {
+    "doc_id": "case:110202001202500100",
+    "case_master_id": 118,
+    "crime_no": "110202001202500100",
+    "case_no": "202500100",
+    "police_station_id": 2001,
+    "district_id": 1020,
+    "case_status": "ui",
+    "crime_major_head": "property",
+    "brief_facts": "Synthetic summary. MO: Forced Entry. Place: Location 100. Head: Fraud/Armed Robbery. Severity: High. RiskScore: 55. Source FIR: FIR-1100.",
+    "act_sections": [
+      {
+        "act_code": "BNS",
+        "section_code": "318"
+      }
+    ],
+    "incident_from": "2025-09-17T00:00:00",
+    "incident_to": "2025-09-17T01:00:00",
+    "latitude": 12.902,
+    "longitude": 77.494,
+    "place_of_occurrence": "Location 100",
+    "text_blob": "CrimeNo: 110202001202500100\nBrief Facts: Synthetic summary. MO: Forced Entry. Place: Location 100. Head: Fraud/Armed Robbery. Severity: High. RiskScore: 55. Source FIR: FIR-1100.\nSections: BNS 318\nPlace: Location 100\nVictims: Victim 3, Victim 136\nAccused: Accused 30, Accused 34, Accused 121, Accused 140, Accused 213\n",
+    "source": "fir_demo_dataset",
+    "indexed_at": "2026-07-23T17:43:16.795660+00:00"
+  }
+]

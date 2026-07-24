@@ -1,0 +1,5 @@
+$kind: http-request
+description: "List FIRs. Saves first case_master_id to collection variable."
+url: "{{baseUrl}}/api/v1/cases?limit=50&offset=0"
+method: GET
+order: 3000

@@ -1,5 +1,0 @@
-$kind: http-request
-description: Machine-readable contract (when DEBUG=true).
-url: "{{baseUrl}}/openapi.json"
-method: GET
-order: 3000

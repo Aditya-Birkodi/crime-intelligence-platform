@@ -1,0 +1,1031 @@
+{
+  "case_statuses": [
+    {
+      "id": 1,
+      "name": "Under Investigation",
+      "key": "ui"
+    },
+    {
+      "id": 2,
+      "name": "Charge Sheeted",
+      "key": "cs"
+    },
+    {
+      "id": 3,
+      "name": "Closed",
+      "key": "closed"
+    }
+  ],
+  "case_categories": [
+    {
+      "id": 1,
+      "name": "FIR",
+      "key": "fir",
+      "category_code": "1"
+    },
+    {
+      "id": 2,
+      "name": "UDR",
+      "key": "udr",
+      "category_code": "3"
+    },
+    {
+      "id": 3,
+      "name": "PAR",
+      "key": "par",
+      "category_code": "4"
+    },
+    {
+      "id": 4,
+      "name": "Zero FIR",
+      "key": "zero_fir",
+      "category_code": "8"
+    }
+  ],
+  "gravity_offences": [
+    {
+      "id": 1,
+      "name": "Heinous",
+      "key": "heinous"
+    },
+    {
+      "id": 2,
+      "name": "Non-Heinous",
+      "key": "non_heinous"
+    }
+  ],
+  "crime_heads": [
+    {
+      "id": 1,
+      "name": "Crimes Against Body",
+      "key": "body"
+    },
+    {
+      "id": 2,
+      "name": "Crimes Against Property",
+      "key": "property"
+    },
+    {
+      "id": 3,
+      "name": "Cyber Crime",
+      "key": "cyber"
+    }
+  ],
+  "districts": [
+    {
+      "id": 443,
+      "name": "Bengaluru City"
+    },
+    {
+      "id": 444,
+      "name": "Mysuru"
+    },
+    {
+      "id": 445,
+      "name": "Belagavi"
+    },
+    {
+      "id": 1001,
+      "name": "Bengaluru Urban"
+    },
+    {
+      "id": 1002,
+      "name": "Mysuru"
+    },
+    {
+      "id": 1003,
+      "name": "Udupi"
+    },
+    {
+      "id": 1004,
+      "name": "Belagavi"
+    },
+    {
+      "id": 1005,
+      "name": "Kalaburagi"
+    },
+    {
+      "id": 1006,
+      "name": "Mangaluru"
+    },
+    {
+      "id": 1007,
+      "name": "Shivamogga"
+    },
+    {
+      "id": 1008,
+      "name": "Hubballi"
+    },
+    {
+      "id": 1009,
+      "name": "Bengaluru Urban"
+    },
+    {
+      "id": 1010,
+      "name": "Mysuru"
+    },
+    {
+      "id": 1011,
+      "name": "Udupi"
+    },
+    {
+      "id": 1012,
+      "name": "Belagavi"
+    },
+    {
+      "id": 1013,
+      "name": "Kalaburagi"
+    },
+    {
+      "id": 1014,
+      "name": "Mangaluru"
+    },
+    {
+      "id": 1015,
+      "name": "Shivamogga"
+    },
+    {
+      "id": 1016,
+      "name": "Hubballi"
+    },
+    {
+      "id": 1017,
+      "name": "Bengaluru Urban"
+    },
+    {
+      "id": 1018,
+      "name": "Mysuru"
+    },
+    {
+      "id": 1019,
+      "name": "Udupi"
+    },
+    {
+      "id": 1020,
+      "name": "Belagavi"
+    },
+    {
+      "id": 1021,
+      "name": "Kalaburagi"
+    },
+    {
+      "id": 1022,
+      "name": "Mangaluru"
+    },
+    {
+      "id": 1023,
+      "name": "Shivamogga"
+    },
+    {
+      "id": 1024,
+      "name": "Hubballi"
+    },
+    {
+      "id": 1025,
+      "name": "Bengaluru Urban"
+    },
+    {
+      "id": 1026,
+      "name": "Mysuru"
+    },
+    {
+      "id": 1027,
+      "name": "Udupi"
+    },
+    {
+      "id": 1028,
+      "name": "Belagavi"
+    },
+    {
+      "id": 1029,
+      "name": "Kalaburagi"
+    },
+    {
+      "id": 1030,
+      "name": "Mangaluru"
+    },
+    {
+      "id": 1031,
+      "name": "Shivamogga"
+    }
+  ],
+  "stations": [
+    {
+      "id": 6,
+      "name": "MG Road PS",
+      "district_id": 443
+    },
+    {
+      "id": 7,
+      "name": "Indiranagar PS",
+      "district_id": 443
+    },
+    {
+      "id": 12,
+      "name": "Koramangala PS",
+      "district_id": 443
+    },
+    {
+      "id": 11,
+      "name": "Mysuru North PS",
+      "district_id": 444
+    },
+    {
+      "id": 13,
+      "name": "Mysuru South PS",
+      "district_id": 444
+    },
+    {
+      "id": 21,
+      "name": "Belagavi Rural PS",
+      "district_id": 445
+    },
+    {
+      "id": 22,
+      "name": "Belagavi City PS",
+      "district_id": 445
+    },
+    {
+      "id": 2001,
+      "name": "PS-1",
+      "district_id": 1031
+    },
+    {
+      "id": 2003,
+      "name": "PS-3",
+      "district_id": 1031
+    },
+    {
+      "id": 2010,
+      "name": "PS-10",
+      "district_id": 1031
+    },
+    {
+      "id": 2002,
+      "name": "PS-2",
+      "district_id": 1028
+    },
+    {
+      "id": 2004,
+      "name": "PS-4",
+      "district_id": 1027
+    },
+    {
+      "id": 2005,
+      "name": "PS-5",
+      "district_id": 1027
+    },
+    {
+      "id": 2006,
+      "name": "PS-6",
+      "district_id": 1024
+    },
+    {
+      "id": 2007,
+      "name": "PS-7",
+      "district_id": 1030
+    },
+    {
+      "id": 2008,
+      "name": "PS-8",
+      "district_id": 1030
+    },
+    {
+      "id": 2009,
+      "name": "PS-9",
+      "district_id": 1025
+    }
+  ],
+  "courts": [
+    {
+      "id": 1,
+      "name": "CMM Court Bengaluru",
+      "district_id": 443,
+      "key": "cmm_blr"
+    },
+    {
+      "id": 2,
+      "name": "Sessions Court Bengaluru",
+      "district_id": 443,
+      "key": "sessions_blr"
+    },
+    {
+      "id": 3,
+      "name": "JMFC Mysuru",
+      "district_id": 444,
+      "key": "jmfc_mys"
+    },
+    {
+      "id": 4,
+      "name": "Sessions Court Belagavi",
+      "district_id": 445,
+      "key": "sessions_bel"
+    },
+    {
+      "id": 5,
+      "name": "KSP Court 1",
+      "district_id": 1001,
+      "key": "ksp_court_1"
+    },
+    {
+      "id": 6,
+      "name": "KSP Court 2",
+      "district_id": 1001,
+      "key": "ksp_court_2"
+    },
+    {
+      "id": 7,
+      "name": "KSP Court 3",
+      "district_id": 1001,
+      "key": "ksp_court_3"
+    },
+    {
+      "id": 8,
+      "name": "KSP Court 4",
+      "district_id": 1001,
+      "key": "ksp_court_4"
+    },
+    {
+      "id": 9,
+      "name": "KSP Court 5",
+      "district_id": 1001,
+      "key": "ksp_court_5"
+    },
+    {
+      "id": 10,
+      "name": "KSP Court 6",
+      "district_id": 1001,
+      "key": "ksp_court_6"
+    },
+    {
+      "id": 11,
+      "name": "KSP Court 7",
+      "district_id": 1001,
+      "key": "ksp_court_7"
+    },
+    {
+      "id": 12,
+      "name": "KSP Court 8",
+      "district_id": 1001,
+      "key": "ksp_court_8"
+    },
+    {
+      "id": 13,
+      "name": "KSP Court 9",
+      "district_id": 1001,
+      "key": "ksp_court_9"
+    },
+    {
+      "id": 14,
+      "name": "KSP Court 10",
+      "district_id": 1001,
+      "key": "ksp_court_10"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Inspector Naveen",
+      "key": "e_mg_sho",
+      "unit_id": 6,
+      "district_id": 443
+    },
+    {
+      "id": 2,
+      "name": "SI Kavitha",
+      "key": "e_mg_io",
+      "unit_id": 6,
+      "district_id": 443
+    },
+    {
+      "id": 3,
+      "name": "SI Prakash",
+      "key": "e_ind_io",
+      "unit_id": 7,
+      "district_id": 443
+    },
+    {
+      "id": 4,
+      "name": "ASI Rekha",
+      "key": "e_kor_io",
+      "unit_id": 12,
+      "district_id": 443
+    },
+    {
+      "id": 5,
+      "name": "Inspector Ramesh",
+      "key": "e_mys_sho",
+      "unit_id": 11,
+      "district_id": 444
+    },
+    {
+      "id": 6,
+      "name": "SI Divya",
+      "key": "e_mys_io",
+      "unit_id": 13,
+      "district_id": 444
+    },
+    {
+      "id": 7,
+      "name": "SI Mahesh",
+      "key": "e_bel_io",
+      "unit_id": 21,
+      "district_id": 445
+    },
+    {
+      "id": 8,
+      "name": "Inspector Farooq",
+      "key": "e_bel_city",
+      "unit_id": 22,
+      "district_id": 445
+    },
+    {
+      "id": 9,
+      "name": "Officer 1",
+      "key": "ksp_off_1",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 10,
+      "name": "Officer 2",
+      "key": "ksp_off_2",
+      "unit_id": 2005,
+      "district_id": 1027
+    },
+    {
+      "id": 11,
+      "name": "Officer 3",
+      "key": "ksp_off_3",
+      "unit_id": 2001,
+      "district_id": 1031
+    },
+    {
+      "id": 12,
+      "name": "Officer 4",
+      "key": "ksp_off_4",
+      "unit_id": 2002,
+      "district_id": 1028
+    },
+    {
+      "id": 13,
+      "name": "Officer 5",
+      "key": "ksp_off_5",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 14,
+      "name": "Officer 6",
+      "key": "ksp_off_6",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 15,
+      "name": "Officer 7",
+      "key": "ksp_off_7",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 16,
+      "name": "Officer 8",
+      "key": "ksp_off_8",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 17,
+      "name": "Officer 9",
+      "key": "ksp_off_9",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 18,
+      "name": "Officer 10",
+      "key": "ksp_off_10",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 19,
+      "name": "Officer 11",
+      "key": "ksp_off_11",
+      "unit_id": 2001,
+      "district_id": 1031
+    },
+    {
+      "id": 20,
+      "name": "Officer 12",
+      "key": "ksp_off_12",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 21,
+      "name": "Officer 13",
+      "key": "ksp_off_13",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 22,
+      "name": "Officer 14",
+      "key": "ksp_off_14",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 23,
+      "name": "Officer 15",
+      "key": "ksp_off_15",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 24,
+      "name": "Officer 16",
+      "key": "ksp_off_16",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 25,
+      "name": "Officer 17",
+      "key": "ksp_off_17",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 26,
+      "name": "Officer 18",
+      "key": "ksp_off_18",
+      "unit_id": 2009,
+      "district_id": 1025
+    },
+    {
+      "id": 27,
+      "name": "Officer 19",
+      "key": "ksp_off_19",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 28,
+      "name": "Officer 20",
+      "key": "ksp_off_20",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 29,
+      "name": "Officer 21",
+      "key": "ksp_off_21",
+      "unit_id": 2001,
+      "district_id": 1031
+    },
+    {
+      "id": 30,
+      "name": "Officer 22",
+      "key": "ksp_off_22",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 31,
+      "name": "Officer 23",
+      "key": "ksp_off_23",
+      "unit_id": 2001,
+      "district_id": 1031
+    },
+    {
+      "id": 32,
+      "name": "Officer 24",
+      "key": "ksp_off_24",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 33,
+      "name": "Officer 25",
+      "key": "ksp_off_25",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 34,
+      "name": "Officer 26",
+      "key": "ksp_off_26",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 35,
+      "name": "Officer 27",
+      "key": "ksp_off_27",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 36,
+      "name": "Officer 28",
+      "key": "ksp_off_28",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 37,
+      "name": "Officer 29",
+      "key": "ksp_off_29",
+      "unit_id": 2005,
+      "district_id": 1027
+    },
+    {
+      "id": 38,
+      "name": "Officer 30",
+      "key": "ksp_off_30",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 39,
+      "name": "Officer 31",
+      "key": "ksp_off_31",
+      "unit_id": 2005,
+      "district_id": 1027
+    },
+    {
+      "id": 40,
+      "name": "Officer 32",
+      "key": "ksp_off_32",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 41,
+      "name": "Officer 33",
+      "key": "ksp_off_33",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 42,
+      "name": "Officer 34",
+      "key": "ksp_off_34",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 43,
+      "name": "Officer 35",
+      "key": "ksp_off_35",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 44,
+      "name": "Officer 36",
+      "key": "ksp_off_36",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 45,
+      "name": "Officer 37",
+      "key": "ksp_off_37",
+      "unit_id": 2009,
+      "district_id": 1025
+    },
+    {
+      "id": 46,
+      "name": "Officer 38",
+      "key": "ksp_off_38",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 47,
+      "name": "Officer 39",
+      "key": "ksp_off_39",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 48,
+      "name": "Officer 40",
+      "key": "ksp_off_40",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 49,
+      "name": "Officer 41",
+      "key": "ksp_off_41",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 50,
+      "name": "Officer 42",
+      "key": "ksp_off_42",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 51,
+      "name": "Officer 43",
+      "key": "ksp_off_43",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 52,
+      "name": "Officer 44",
+      "key": "ksp_off_44",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 53,
+      "name": "Officer 45",
+      "key": "ksp_off_45",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 54,
+      "name": "Officer 46",
+      "key": "ksp_off_46",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 55,
+      "name": "Officer 47",
+      "key": "ksp_off_47",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 56,
+      "name": "Officer 48",
+      "key": "ksp_off_48",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 57,
+      "name": "Officer 49",
+      "key": "ksp_off_49",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 58,
+      "name": "Officer 50",
+      "key": "ksp_off_50",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 59,
+      "name": "Officer 51",
+      "key": "ksp_off_51",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 60,
+      "name": "Officer 52",
+      "key": "ksp_off_52",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 61,
+      "name": "Officer 53",
+      "key": "ksp_off_53",
+      "unit_id": 2001,
+      "district_id": 1031
+    },
+    {
+      "id": 62,
+      "name": "Officer 54",
+      "key": "ksp_off_54",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 63,
+      "name": "Officer 55",
+      "key": "ksp_off_55",
+      "unit_id": 2009,
+      "district_id": 1025
+    },
+    {
+      "id": 64,
+      "name": "Officer 56",
+      "key": "ksp_off_56",
+      "unit_id": 2001,
+      "district_id": 1031
+    },
+    {
+      "id": 65,
+      "name": "Officer 57",
+      "key": "ksp_off_57",
+      "unit_id": 2009,
+      "district_id": 1025
+    },
+    {
+      "id": 66,
+      "name": "Officer 58",
+      "key": "ksp_off_58",
+      "unit_id": 2005,
+      "district_id": 1027
+    },
+    {
+      "id": 67,
+      "name": "Officer 59",
+      "key": "ksp_off_59",
+      "unit_id": 2002,
+      "district_id": 1028
+    },
+    {
+      "id": 68,
+      "name": "Officer 60",
+      "key": "ksp_off_60",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 69,
+      "name": "Officer 61",
+      "key": "ksp_off_61",
+      "unit_id": 2003,
+      "district_id": 1031
+    },
+    {
+      "id": 70,
+      "name": "Officer 62",
+      "key": "ksp_off_62",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 71,
+      "name": "Officer 63",
+      "key": "ksp_off_63",
+      "unit_id": 2002,
+      "district_id": 1028
+    },
+    {
+      "id": 72,
+      "name": "Officer 64",
+      "key": "ksp_off_64",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 73,
+      "name": "Officer 65",
+      "key": "ksp_off_65",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 74,
+      "name": "Officer 66",
+      "key": "ksp_off_66",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 75,
+      "name": "Officer 67",
+      "key": "ksp_off_67",
+      "unit_id": 2002,
+      "district_id": 1028
+    },
+    {
+      "id": 76,
+      "name": "Officer 68",
+      "key": "ksp_off_68",
+      "unit_id": 2004,
+      "district_id": 1027
+    },
+    {
+      "id": 77,
+      "name": "Officer 69",
+      "key": "ksp_off_69",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 78,
+      "name": "Officer 70",
+      "key": "ksp_off_70",
+      "unit_id": 2002,
+      "district_id": 1028
+    },
+    {
+      "id": 79,
+      "name": "Officer 71",
+      "key": "ksp_off_71",
+      "unit_id": 2009,
+      "district_id": 1025
+    },
+    {
+      "id": 80,
+      "name": "Officer 72",
+      "key": "ksp_off_72",
+      "unit_id": 2008,
+      "district_id": 1030
+    },
+    {
+      "id": 81,
+      "name": "Officer 73",
+      "key": "ksp_off_73",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 82,
+      "name": "Officer 74",
+      "key": "ksp_off_74",
+      "unit_id": 2005,
+      "district_id": 1027
+    },
+    {
+      "id": 83,
+      "name": "Officer 75",
+      "key": "ksp_off_75",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 84,
+      "name": "Officer 76",
+      "key": "ksp_off_76",
+      "unit_id": 2007,
+      "district_id": 1030
+    },
+    {
+      "id": 85,
+      "name": "Officer 77",
+      "key": "ksp_off_77",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 86,
+      "name": "Officer 78",
+      "key": "ksp_off_78",
+      "unit_id": 2006,
+      "district_id": 1024
+    },
+    {
+      "id": 87,
+      "name": "Officer 79",
+      "key": "ksp_off_79",
+      "unit_id": 2010,
+      "district_id": 1031
+    },
+    {
+      "id": 88,
+      "name": "Officer 80",
+      "key": "ksp_off_80",
+      "unit_id": 2008,
+      "district_id": 1030
+    }
+  ],
+  "station_district": {
+    "100": 443,
+    "101": 444,
+    "102": 445,
+    "6": 443,
+    "7": 443,
+    "12": 443,
+    "11": 444,
+    "13": 444,
+    "21": 445,
+    "22": 445,
+    "2131": 1031,
+    "2001": 1031,
+    "2003": 1031,
+    "2010": 1031,
+    "2128": 1028,
+    "2002": 1028,
+    "2127": 1027,
+    "2004": 1027,
+    "2005": 1027,
+    "2124": 1024,
+    "2006": 1024,
+    "2130": 1030,
+    "2007": 1030,
+    "2008": 1030,
+    "2125": 1025,
+    "2009": 1025
+  }
+}

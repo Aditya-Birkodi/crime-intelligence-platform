@@ -7,7 +7,7 @@ Version prefix: `/api/v1`.
 Start here: **[`frontend_handoff.md`](frontend_handoff.md)**
 
 - Swagger: `http://127.0.0.1:8000/docs`
-- Postman: [`../../postman/`](../../postman/) (collection + AppSail/Local environments)
+- Postman: [`../../postman/CIP_Backend.postman_collection.json`](../../postman/CIP_Backend.postman_collection.json)
 - Export schema: `./scripts/export_openapi.sh` → `openapi/openapi.json`
 
 ## Current endpoints

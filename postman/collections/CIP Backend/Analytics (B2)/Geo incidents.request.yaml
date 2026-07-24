@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/analytics/geo/incidents?limit=500"
+method: GET
+order: 6000

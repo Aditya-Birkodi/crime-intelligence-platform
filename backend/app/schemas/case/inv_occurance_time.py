@@ -1,36 +1,31 @@
-"""Pydantic stubs for `Inv_OccuranceTime`.
-
-TODO: Occurrence time/location record (1:1 with CaseMaster per ER matrix).
-TODO: Add Create/Update/Read schemas with field validation.
-"""
+"""Pydantic schemas for `Inv_OccuranceTime`."""
 
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict
+from datetime import datetime
+from decimal import Decimal
+
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class InvOccuranceTimeBase(BaseModel):
-    """Shared fields for `Inv_OccuranceTime` DTOs.
-
-    TODO: Declare fields matching the ER diagram.
-    """
-
+class InvOccuranceTimeRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
+    case_master_id: int
+    occurrence_from: datetime | None = None
+    occurrence_to: datetime | None = None
+    place_of_occurrence: str | None = None
+    beat_number: str | None = None
+    distance_from_ps_km: Decimal | None = None
+    direction_from_ps: str | None = None
+    village_or_city: str | None = None
 
-class InvOccuranceTimeRead(InvOccuranceTimeBase):
-    """Read model for `Inv_OccuranceTime`.
 
-    TODO: Include primary key and nested relations as needed.
-    """
-
-    pass
-
-
-class InvOccuranceTimeCreate(InvOccuranceTimeBase):
-    """Create payload for `Inv_OccuranceTime`.
-
-    TODO: Required fields only.
-    """
-
-    pass
+class InvOccuranceTimeCreate(BaseModel):
+    occurrence_from: datetime | None = None
+    occurrence_to: datetime | None = None
+    place_of_occurrence: str | None = None
+    beat_number: str | None = Field(default=None, max_length=20)
+    distance_from_ps_km: Decimal | None = None
+    direction_from_ps: str | None = Field(default=None, max_length=50)
+    village_or_city: str | None = Field(default=None, max_length=150)

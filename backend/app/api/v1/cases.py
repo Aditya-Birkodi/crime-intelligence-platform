@@ -17,6 +17,7 @@ from app.schemas.case.case_master import (
     CaseMasterListResponse,
     VictimCreate,
 )
+from app.schemas.case.complainant_details import ComplainantDetailsCreate
 from app.services.case.case_master import CaseMasterService
 
 router = APIRouter(prefix="/cases", tags=["cases"])
@@ -34,16 +35,18 @@ def list_cases(
     police_station_id: int | None = None,
     case_status_id: int | None = None,
     crime_major_head_id: int | None = None,
+    crime_no: str | None = None,
     registered_from: date | None = None,
     registered_to: date | None = None,
     limit: Annotated[int, Query(ge=1, le=200)] = 50,
     offset: Annotated[int, Query(ge=0)] = 0,
 ) -> CaseMasterListResponse:
-    """List FIRs with optional station/status/crime-head/date filters."""
+    """List FIRs with optional station/status/crime-head/CrimeNo/date filters."""
     return service.list_cases(
         police_station_id=police_station_id,
         case_status_id=case_status_id,
         crime_major_head_id=crime_major_head_id,
+        crime_no=crime_no,
         registered_from=registered_from,
         registered_to=registered_to,
         limit=limit,
@@ -51,12 +54,21 @@ def list_cases(
     )
 
 
+@router.get("/by-crime-no/{crime_no}", response_model=CaseMasterDetail)
+def get_case_by_crime_no(
+    crime_no: str,
+    service: Annotated[CaseMasterService, Depends(_service)],
+) -> CaseMasterDetail:
+    """Get one FIR by 18-digit CrimeNo (with parties, occurrence, arrests)."""
+    return service.get_case_by_crime_no(crime_no)
+
+
 @router.get("/{case_master_id}", response_model=CaseMasterDetail)
 def get_case(
     case_master_id: int,
     service: Annotated[CaseMasterService, Depends(_service)],
 ) -> CaseMasterDetail:
-    """Get one FIR with victims, accused, and act-sections."""
+    """Get one FIR with victims, accused, complainants, occurrence, arrests."""
     return service.get_case(case_master_id)
 
 
@@ -93,6 +105,19 @@ def add_accused(
     service: Annotated[CaseMasterService, Depends(_service)],
 ) -> CaseMasterDetail:
     return service.add_accused(case_master_id, payload)
+
+
+@router.post(
+    "/{case_master_id}/complainants",
+    response_model=CaseMasterDetail,
+    status_code=status.HTTP_201_CREATED,
+)
+def add_complainant(
+    case_master_id: int,
+    payload: ComplainantDetailsCreate,
+    service: Annotated[CaseMasterService, Depends(_service)],
+) -> CaseMasterDetail:
+    return service.add_complainant(case_master_id, payload)
 
 
 @router.post(

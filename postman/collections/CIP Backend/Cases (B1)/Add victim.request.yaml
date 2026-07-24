@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/cases/{{caseMasterId}}/victims"
+method: POST
+order: 6000
+headers:
+  Content-Type: "application/json"
+body:
+  type: json
+  content: |-
+    {
+      "victim_name": "Additional Victim",
+      "gender_id": "F",
+      "age_year": 25,
+      "victim_police": "0"
+    }

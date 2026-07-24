@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 from app.models.case.accused import Accused
 from app.models.case.act_section_association import ActSectionAssociation
 from app.models.case.case_master import CaseMaster
+from app.models.case.complainant_details import ComplainantDetails
 from app.models.case.victim import Victim
 from app.repositories.case.case_master import CaseMasterRepository
 from app.schemas.case.case_master import (
@@ -21,6 +22,7 @@ from app.schemas.case.case_master import (
     CaseMasterRead,
     VictimCreate,
 )
+from app.schemas.case.complainant_details import ComplainantDetailsCreate
 
 
 class PostgresCaseStore:
@@ -34,6 +36,7 @@ class PostgresCaseStore:
         police_station_id: int | None = None,
         case_status_id: int | None = None,
         crime_major_head_id: int | None = None,
+        crime_no: str | None = None,
         registered_from: date | None = None,
         registered_to: date | None = None,
         limit: int = 50,
@@ -43,6 +46,7 @@ class PostgresCaseStore:
             police_station_id=police_station_id,
             case_status_id=case_status_id,
             crime_major_head_id=crime_major_head_id,
+            crime_no=crime_no,
             registered_from=registered_from,
             registered_to=registered_to,
             limit=limit,
@@ -71,6 +75,7 @@ class PostgresCaseStore:
             crime_no=payload.crime_no,
             case_no=case_no,
             crime_registered_date=payload.crime_registered_date,
+            police_person_id=payload.police_person_id,
             police_station_id=payload.police_station_id,
             case_category_id=payload.case_category_id,
             gravity_offence_id=payload.gravity_offence_id,
@@ -101,6 +106,17 @@ class PostgresCaseStore:
                     person_id=a.person_id,
                 )
                 for a in payload.accused
+            ],
+            complainants=[
+                ComplainantDetails(
+                    complainant_name=c.complainant_name,
+                    age_year=c.age_year,
+                    gender_id=c.gender_id,
+                    occupation_id=c.occupation_id,
+                    religion_id=c.religion_id,
+                    caste_id=c.caste_id,
+                )
+                for c in payload.complainants
             ],
             act_sections=[
                 ActSectionAssociation(
@@ -168,6 +184,27 @@ class PostgresCaseStore:
                 section_id=payload.section_id,
                 act_order_id=payload.act_order_id,
                 section_order_id=payload.section_order_id,
+            )
+        )
+        self._session.commit()
+        detail = self.get_detail(case_master_id)
+        assert detail is not None
+        return detail
+
+    def add_complainant(
+        self, case_master_id: int, payload: ComplainantDetailsCreate
+    ) -> CaseMasterDetail:
+        case = self._repo.get_by_id(case_master_id)
+        if case is None:
+            raise KeyError(case_master_id)
+        case.complainants.append(
+            ComplainantDetails(
+                complainant_name=payload.complainant_name,
+                age_year=payload.age_year,
+                gender_id=payload.gender_id,
+                occupation_id=payload.occupation_id,
+                religion_id=payload.religion_id,
+                caste_id=payload.caste_id,
             )
         )
         self._session.commit()

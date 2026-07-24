@@ -95,6 +95,23 @@ class CatalystSettings(BaseSettings):
         default="", alias="CATALYST_RAG_KNOWLEDGE_BASE_ID"
     )
     rag_endpoint: str = Field(default="", alias="CATALYST_RAG_ENDPOINT")
+    # Prefer QUICKML_MOCK in AppSail — avoids reserved CATALYST_* console restrictions
+    quickml_mock: bool = Field(
+        default=True,
+        validation_alias=AliasChoices("CATALYST_QUICKML_MOCK", "QUICKML_MOCK"),
+    )
+    rag_docs_path: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_RAG_DOCS_PATH", "RAG_DOCS_PATH"),
+    )
+    ai_features_path: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_AI_FEATURES_PATH", "AI_FEATURES_PATH"),
+    )
+    lookups_path: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_LOOKUPS_PATH", "LOOKUPS_PATH"),
+    )
     zia_automl_endpoint: str = Field(default="", alias="CATALYST_ZIA_AUTOML_ENDPOINT")
     zia_endpoint: str = Field(default="", alias="CATALYST_ZIA_ENDPOINT")
     smartbrowz_endpoint: str = Field(default="", alias="CATALYST_SMARTBROWZ_ENDPOINT")

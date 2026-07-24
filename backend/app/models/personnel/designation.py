@@ -1,18 +1,19 @@
-"""ORM stub for ER table `Designation`.
-
-TODO: Designation (IO, SHO, …).
-TODO: Add SQLAlchemy Mapped columns — no business logic in this scaffold.
-"""
+"""Designation — IO, SHO, etc. (ER: Designation)."""
 
 from __future__ import annotations
+
+from sqlalchemy import Boolean, Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.base import Base
 
 
 class Designation(Base):
-    """Placeholder model for `Designation`.
+    __tablename__ = "cip_designation"
 
-    TODO: Define __tablename__ and columns from Police_FIR_ER_Diagram.pdf.
-    """
-
-    __abstract__ = True
+    designation_id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    designation_name: Mapped[str] = mapped_column(
+        String(100), unique=True, nullable=False
+    )
+    active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
+    sort_order: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
