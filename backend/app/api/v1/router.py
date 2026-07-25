@@ -9,7 +9,9 @@ from app.api.v1.ai import router as ai_router
 from app.api.v1.analytics import router as analytics_router
 from app.api.v1.cases import router as cases_router
 from app.api.v1.lookups import router as lookups_router
+from app.api.v1.media import router as media_router
 from app.api.v1.network import router as network_router
+from app.api.v1.search import router as search_router
 
 api_router = APIRouter()
 api_router.include_router(cases_router)
@@ -17,6 +19,8 @@ api_router.include_router(lookups_router)
 api_router.include_router(analytics_router)
 api_router.include_router(network_router)
 api_router.include_router(ai_router)
+api_router.include_router(search_router)
+api_router.include_router(media_router)
 api_router.include_router(admin_router)
 
 

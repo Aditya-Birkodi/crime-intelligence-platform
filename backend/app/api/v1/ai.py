@@ -8,6 +8,7 @@ from fastapi import APIRouter, Depends, Query
 
 from app.ai.chat.service import ChatService
 from app.ai.graph.service import GraphService
+from app.ai.intelligence.service import IntelligenceService
 from app.ai.prediction.service import PredictionService
 from app.exceptions.base import ValidationError
 from app.repositories.case.case_store import CaseStore
@@ -15,6 +16,7 @@ from app.repositories.case.factory import get_case_store
 from app.schemas.ai.anomalies import AnomaliesResponse
 from app.schemas.ai.chat import ChatRequest, ChatResponse
 from app.schemas.ai.graph import GraphRagContext
+from app.schemas.ai.intelligence import IntelligenceBriefResponse, MoClustersResponse
 from app.schemas.ai.prediction import RiskPredictRequest, RiskPredictResponse
 
 router = APIRouter(prefix="/ai", tags=["ai"])
@@ -74,3 +76,26 @@ def ai_anomalies(
 ) -> AnomaliesResponse:
     """Recent anomaly call-outs (high risk, volume spikes, arrest clusters)."""
     return service.list_anomalies(limit=limit)
+
+
+def _intelligence_service() -> IntelligenceService:
+    return IntelligenceService()
+
+
+@router.get("/mo-clusters", response_model=MoClustersResponse)
+def ai_mo_clusters(
+    service: Annotated[IntelligenceService, Depends(_intelligence_service)],
+    min_size: Annotated[int, Query(ge=2, le=20)] = 3,
+    limit: Annotated[int, Query(ge=1, le=50)] = 12,
+) -> MoClustersResponse:
+    """Cluster FIRs by shared act/section + brief-facts MO tokens."""
+    return service.mo_clusters(min_size=min_size, limit=limit)
+
+
+@router.get("/intelligence-brief", response_model=IntelligenceBriefResponse)
+def ai_intelligence_brief(
+    service: Annotated[IntelligenceService, Depends(_intelligence_service)],
+    horizon_days: Annotated[int, Query(ge=1, le=90)] = 7,
+) -> IntelligenceBriefResponse:
+    """One-page SCRB strategic brief: trends, socio, MO, risk, actions."""
+    return service.intelligence_brief(horizon_days=horizon_days)

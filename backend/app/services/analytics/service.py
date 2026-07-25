@@ -26,6 +26,7 @@ from app.schemas.analytics import (
     TrendAlert,
     TrendAlertsResponse,
 )
+from app.schemas.analytics_socio import SocioEconomicOverlayResponse
 from app.utils.ttl_cache import cache_get, cache_set
 
 
@@ -403,3 +404,9 @@ class AnalyticsService:
             threshold=threshold,
             alerts=alerts,
         )
+
+    def socio_economic_overlay(self) -> SocioEconomicOverlayResponse:
+        """Postgres path: reuse Catalyst mock join (file-based indicators)."""
+        from app.services.analytics.mock_service import MockAnalyticsService
+
+        return MockAnalyticsService().socio_economic_overlay()

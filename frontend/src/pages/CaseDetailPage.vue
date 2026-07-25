@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
 import { useRoute, RouterLink } from "vue-router";
-import { api } from "@/services/api";
+import { api, fileToBase64 } from "@/services/api";
 import AiChatPanel from "@/components/AiChatPanel.vue";
-import type { CaseMasterDetail, IdName } from "@/types";
+import type { CaseMasterDetail, IdName, MediaAttachment } from "@/types";
 
 const route = useRoute();
 const loading = ref(true);
@@ -12,6 +12,9 @@ const detail = ref<CaseMasterDetail | null>(null);
 const stations = ref<IdName[]>([]);
 const statuses = ref<IdName[]>([]);
 const crimeHeads = ref<IdName[]>([]);
+const media = ref<MediaAttachment[]>([]);
+const uploadBusy = ref(false);
+const uploadMsg = ref<string | null>(null);
 const graphCtx = ref<{
   summary: string;
   node_count: number;
@@ -41,6 +44,44 @@ const headLabel = computed(() => {
   return crimeHeads.value.find((h) => h.id === id)?.name ?? String(id);
 });
 
+async function loadMedia() {
+  try {
+    const res = await api.listMedia({ case_master_id: caseId.value, limit: 30 });
+    media.value = res.items;
+  } catch {
+    media.value = [];
+  }
+}
+
+async function onUpload(ev: Event, entityType: string, entityId?: number) {
+  const input = ev.target as HTMLInputElement;
+  const file = input.files?.[0];
+  if (!file || !detail.value) return;
+  uploadBusy.value = true;
+  uploadMsg.value = null;
+  try {
+    const b64 = await fileToBase64(file);
+    await api.uploadMediaJson({
+      image_base64: b64,
+      filename: file.name,
+      content_type: file.type || "image/jpeg",
+      entity_type: entityType,
+      entity_id: entityId,
+      case_master_id: detail.value.case_master_id,
+      analyse_face: entityType === "accused",
+      face_mode: "moderate",
+      label: entityType,
+    });
+    uploadMsg.value = `Uploaded ${file.name}`;
+    await loadMedia();
+  } catch (e) {
+    uploadMsg.value = e instanceof Error ? e.message : "Upload failed";
+  } finally {
+    uploadBusy.value = false;
+    input.value = "";
+  }
+}
+
 async function load() {
   loading.value = true;
   error.value = null;
@@ -57,6 +98,7 @@ async function load() {
     stations.value = st;
     statuses.value = statusList;
     crimeHeads.value = heads;
+    void loadMedia();
 
     try {
       graphCtx.value = await api.aiGraphContext({
@@ -199,6 +241,16 @@ watch(caseId, load);
                   <span v-if="v.age_year != null"> · </span>{{ v.gender_id }}
                 </span>
               </p>
+              <label class="mt-1 block text-[10px] text-[var(--cip-accent)]">
+                + photo
+                <input
+                  type="file"
+                  accept="image/*"
+                  class="sr-only"
+                  :disabled="uploadBusy"
+                  @change="onUpload($event, 'victim', v.victim_master_id)"
+                />
+              </label>
             </li>
             <li v-if="!detail.victims.length" class="text-[var(--cip-muted)]">None</li>
           </ul>
@@ -228,6 +280,16 @@ watch(caseId, load);
                   <span class="font-mono text-[var(--cip-accent)]">{{ a.person_id }}</span>
                 </span>
               </p>
+              <label class="mt-1 block text-[10px] text-[var(--cip-accent)]">
+                + face photo (Zia)
+                <input
+                  type="file"
+                  accept="image/*"
+                  class="sr-only"
+                  :disabled="uploadBusy"
+                  @change="onUpload($event, 'accused', a.accused_master_id)"
+                />
+              </label>
             </li>
             <li v-if="!detail.accused.length" class="text-[var(--cip-muted)]">None</li>
           </ul>
@@ -252,6 +314,48 @@ watch(caseId, load);
             </li>
             <li v-if="!detail.act_sections.length" class="text-[var(--cip-muted)]">None</li>
           </ul>
+        </div>
+      </div>
+
+      <div class="cip-panel p-5 pl-6">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 class="cip-display text-lg text-[var(--cip-ink)]">Case media</h2>
+            <p class="mt-1 text-xs text-[var(--cip-muted)]">
+              Photos stored via Stratus / local media · face analysis on accused uploads
+            </p>
+          </div>
+          <label class="cip-btn cip-btn-ghost cursor-pointer">
+            {{ uploadBusy ? "Uploading…" : "Attach case image" }}
+            <input
+              type="file"
+              accept="image/*"
+              class="sr-only"
+              :disabled="uploadBusy"
+              @change="onUpload($event, 'case', detail.case_master_id)"
+            />
+          </label>
+        </div>
+        <p v-if="uploadMsg" class="mt-2 text-sm text-[var(--cip-ink-soft)]">{{ uploadMsg }}</p>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <a
+            v-for="m in media"
+            :key="m.media_id"
+            :href="api.mediaContentUrl(m.media_id)"
+            target="_blank"
+            rel="noopener"
+            class="border border-[rgba(197,212,216,0.65)] bg-[rgba(255,255,255,0.4)] p-2"
+          >
+            <img
+              :src="api.mediaContentUrl(m.media_id)"
+              :alt="m.filename"
+              class="h-28 w-full object-cover"
+            />
+            <p class="mt-1 truncate text-[11px] text-[var(--cip-muted)]">
+              {{ m.entity_type }} · {{ m.filename }}
+            </p>
+          </a>
+          <p v-if="!media.length" class="text-sm text-[var(--cip-muted)]">No images yet</p>
         </div>
       </div>
 

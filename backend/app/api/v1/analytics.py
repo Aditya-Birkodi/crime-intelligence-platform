@@ -18,6 +18,7 @@ from app.schemas.analytics import (
     IncidentPointsResponse,
     TrendAlertsResponse,
 )
+from app.schemas.analytics_socio import SocioEconomicOverlayResponse
 from app.services.analytics import AnalyticsService
 from app.services.analytics.mock_service import MockAnalyticsService
 
@@ -58,6 +59,8 @@ class AnalyticsPort(Protocol):
         baseline_days: int = 28,
         threshold: float = 1.5,
     ) -> TrendAlertsResponse: ...
+
+    def socio_economic_overlay(self) -> SocioEconomicOverlayResponse: ...
 
 
 def get_analytics_service() -> Generator[AnalyticsPort, None, None]:
@@ -145,3 +148,11 @@ def trend_alerts(
         baseline_days=baseline_days,
         threshold=threshold,
     )
+
+
+@router.get("/socio-economic", response_model=SocioEconomicOverlayResponse)
+def socio_economic_overlay(
+    service: Annotated[AnalyticsPort, Depends(get_analytics_service)],
+) -> SocioEconomicOverlayResponse:
+    """District crime joined to socio-economic indicators (urbanization, density, etc.)."""
+    return service.socio_economic_overlay()

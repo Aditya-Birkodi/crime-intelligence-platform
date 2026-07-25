@@ -72,13 +72,12 @@ class NetworkService:
         if depth < 1 or depth > 3:
             raise ValidationError("depth must be between 1 and 3")
 
+        # One accused scan — do NOT preload hundreds of full case details
+        # (Catalyst Data Store: that exceeds AppSail execution time).
         all_accused = self._store.list_accused(limit=5000)
-        by_case = self._cases_index(limit=500)
 
         if case_id is not None:
             seed = _case_node_id(case_id)
-            if case_id not in by_case:
-                raise NotFoundError(f"Case {case_id} not found")
             seed_case_ids = {case_id}
             seed_accused_ids = {
                 a.accused_master_id for a in all_accused if a.case_master_id == case_id
@@ -105,14 +104,35 @@ class NetworkService:
                     a.accused_master_id for a in all_accused if a.case_master_id == cid
                 }
 
+        # Hard cap for AppSail time budget (depth-2 can fan out widely)
+        max_cases = 25 if depth >= 2 else 15
+        if len(seed_case_ids) > max_cases:
+            # Prefer seed case, then lowest ids for stability
+            ordered = sorted(seed_case_ids)
+            if case_id is not None and case_id in ordered:
+                ordered.remove(case_id)
+                ordered = [case_id, *ordered]
+            seed_case_ids = set(ordered[:max_cases])
+            seed_accused_ids = {
+                a.accused_master_id
+                for a in all_accused
+                if a.case_master_id in seed_case_ids
+            }
+
         nodes: dict[str, GraphNode] = {}
         edges: dict[str, GraphEdge] = {}
 
+        found_seed_case = False
         for cid in seed_case_ids:
-            detail = by_case.get(cid)
+            detail = self._store.get_detail(cid)
             if detail is None:
                 continue
+            if case_id is not None and cid == case_id:
+                found_seed_case = True
             self._add_case_subgraph(detail, nodes, edges)
+
+        if case_id is not None and not found_seed_case:
+            raise NotFoundError(f"Case {case_id} not found")
 
         # same_person edges across accused in the ego set
         groups: dict[str, list[AccusedRead]] = defaultdict(list)
@@ -159,7 +179,12 @@ class NetworkService:
 
         related = self._related_accused(all_accused, {accused_id})
         cohort = [seed, *[a for a in related if a.accused_master_id != accused_id]]
-        by_case = self._cases_index(limit=500)
+        case_ids = list({a.case_master_id for a in cohort})[:40]
+        by_case: dict[int, CaseMasterDetail] = {}
+        for cid in case_ids:
+            detail = self._store.get_detail(cid)
+            if detail is not None:
+                by_case[cid] = detail
 
         cases: list[OffenderCaseSummary] = []
         mo: list[str] = []

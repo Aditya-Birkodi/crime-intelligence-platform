@@ -270,7 +270,7 @@ watch(depth, () => {
     <template v-if="graph">
       <div class="flex flex-wrap items-center gap-4 text-sm">
         <label
-          v-for="(on, type) in visibleTypes"
+          v-for="(_on, type) in visibleTypes"
           :key="type"
           class="inline-flex items-center gap-1.5"
         >

@@ -22,6 +22,12 @@ const router = createRouter({
       meta: { title: "Case detail" },
     },
     {
+      path: "/identity",
+      name: "identity",
+      component: () => import("@/pages/IdentityPage.vue"),
+      meta: { title: "Identity" },
+    },
+    {
       path: "/map",
       name: "map",
       component: () => import("@/pages/MapPage.vue"),

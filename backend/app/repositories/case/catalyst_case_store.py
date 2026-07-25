@@ -112,6 +112,16 @@ class CatalystCaseStore:
 
     def __init__(self, client: CatalystDataStoreClient | None = None) -> None:
         self._ds = client or CatalystDataStoreClient()
+        # Per-request cache: get_detail used to re-scan every child table each call
+        self._table_cache: dict[str, list[dict[str, Any]]] = {}
+
+    def _table_rows(self, table: str, *, max_rows: int = 5000) -> list[dict[str, Any]]:
+        cached = self._table_cache.get(table)
+        if cached is not None:
+            return cached
+        rows = self._ds.get_paged_rows(table, max_rows=max_rows)
+        self._table_cache[table] = rows
+        return rows
 
     def list_filtered(
         self,
@@ -166,7 +176,7 @@ class CatalystCaseStore:
                 gender_id=v.get("gender_id"),
                 victim_police=v.get("victim_police"),
             )
-            for v in self._ds.get_paged_rows(_VICTIM, max_rows=2000)
+            for v in self._table_rows(_VICTIM)
             if int(v.get("case_master_id") or 0) == case_master_id
         ]
         accused = [
@@ -178,7 +188,7 @@ class CatalystCaseStore:
                 gender_id=a.get("gender_id"),
                 person_id=a.get("person_id"),
             )
-            for a in self._ds.get_paged_rows(_ACCUSED, max_rows=2000)
+            for a in self._table_rows(_ACCUSED)
             if int(a.get("case_master_id") or 0) == case_master_id
         ]
         complainants = [
@@ -192,7 +202,7 @@ class CatalystCaseStore:
                 religion_id=_opt_int(c.get("religion_id")),
                 caste_id=_opt_int(c.get("caste_id")),
             )
-            for c in self._ds.get_paged_rows(_COMPLAINANT, max_rows=2000)
+            for c in self._table_rows(_COMPLAINANT)
             if int(c.get("case_master_id") or 0) == case_master_id
         ]
         sections = [
@@ -204,11 +214,11 @@ class CatalystCaseStore:
                 act_order_id=int(s.get("act_order_id") or 1),
                 section_order_id=int(s.get("section_order_id") or 1),
             )
-            for s in self._ds.get_paged_rows(_ACT_SECTION, max_rows=2000)
+            for s in self._table_rows(_ACT_SECTION)
             if int(s.get("case_master_id") or 0) == case_master_id
         ]
         occurrence: InvOccuranceTimeRead | None = None
-        for occ in self._ds.get_paged_rows(_OCCURRENCE, max_rows=2000):
+        for occ in self._table_rows(_OCCURRENCE):
             if (
                 int(occ.get("case_master_id") or occ.get("ROWID") or 0)
                 != case_master_id
@@ -246,7 +256,7 @@ class CatalystCaseStore:
                     a.get("is_complainant_accused"), False
                 ),
             )
-            for a in self._ds.get_paged_rows(_ARREST, max_rows=2000)
+            for a in self._table_rows(_ARREST)
             if int(a.get("case_master_id") or 0) == case_master_id
         ]
         chargesheets = [
@@ -257,7 +267,7 @@ class CatalystCaseStore:
                 cs_type=str(cs.get("cs_type") or "A"),
                 police_person_id=_opt_int(cs.get("police_person_id")),
             )
-            for cs in self._ds.get_paged_rows(_CHARGESHEET, max_rows=2000)
+            for cs in self._table_rows(_CHARGESHEET)
             if int(cs.get("case_master_id") or 0) == case_master_id
         ]
         return CaseMasterDetail(
@@ -278,7 +288,7 @@ class CatalystCaseStore:
         return None
 
     def list_accused(self, *, limit: int = 2000) -> list[AccusedRead]:
-        rows = self._ds.get_paged_rows(_ACCUSED, max_rows=limit)
+        rows = self._table_rows(_ACCUSED, max_rows=max(limit, 5000))[:limit]
         return [
             AccusedRead(
                 accused_master_id=int(

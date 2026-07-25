@@ -11,6 +11,7 @@ import type {
   AnalyticsOverview,
   DistrictGeoSummary,
   HotspotsResponse,
+  SocioDistrict,
   TrendAlertsResponse,
 } from "@/types";
 
@@ -20,6 +21,8 @@ const overview = ref<AnalyticsOverview | null>(null);
 const districts = ref<DistrictGeoSummary[]>([]);
 const hotspots = ref<HotspotsResponse | null>(null);
 const trends = ref<TrendAlertsResponse | null>(null);
+const socioInsight = ref("");
+const socioTop = ref<SocioDistrict[]>([]);
 const riskTop = ref<
   {
     scope_id: number;
@@ -118,7 +121,7 @@ const deskStamp = computed(() =>
 
 onMounted(async () => {
   try {
-    const [ov, geo, hs, risk, anom, tr] = await Promise.all([
+    const [ov, geo, hs, risk, anom, tr, socio] = await Promise.all([
       api.getAnalyticsOverview(),
       api.getGeoDistricts().catch(() => [] as DistrictGeoSummary[]),
       api.getHotspots({ grain: "hour", cell_size_degrees: 0.08 }).catch(() => null),
@@ -127,6 +130,7 @@ onMounted(async () => {
       api
         .getTrendAlerts({ recent_days: 30, baseline_days: 90, threshold: 1.5 })
         .catch(() => null),
+      api.getSocioEconomicOverlay().catch(() => null),
     ]);
     overview.value = ov;
     districts.value = geo;
@@ -134,6 +138,12 @@ onMounted(async () => {
     if (risk) riskTop.value = risk.items.slice(0, 6);
     if (anom) anomalies.value = anom.items.slice(0, 5);
     trends.value = tr;
+    if (socio) {
+      socioInsight.value = socio.insight;
+      socioTop.value = [...socio.districts]
+        .sort((a, b) => b.crime_per_10k_density - a.crime_per_10k_density)
+        .slice(0, 5);
+    }
   } catch (e) {
     error.value = e instanceof Error ? e.message : "Could not load analytics";
   } finally {
@@ -161,7 +171,7 @@ onMounted(async () => {
         <p class="mr-2 text-xs text-[var(--cip-muted)]">{{ deskStamp }}</p>
         <RouterLink to="/cases" class="cip-btn cip-btn-primary">Cases</RouterLink>
         <RouterLink to="/map" class="cip-btn cip-btn-ghost">Map</RouterLink>
-        <RouterLink to="/intelligence" class="cip-btn cip-btn-ghost">Ask AI</RouterLink>
+        <RouterLink to="/intelligence" class="cip-btn cip-btn-ghost">Intelligence</RouterLink>
       </div>
     </div>
 
@@ -353,44 +363,116 @@ onMounted(async () => {
         </div>
       </div>
 
-      <!-- Trend alerts -->
-      <div class="cip-rise cip-rise-delay-4 cip-panel p-5 pl-6">
-        <h2 class="cip-display text-xl text-[var(--cip-ink)]">Trend alerts</h2>
-        <p class="mt-1 text-xs text-[var(--cip-muted)]">
-          Spikes vs baseline
-          <span v-if="trends">
-            · recent {{ trends.recent_days }}d · baseline {{ trends.baseline_days }}d ·
-            {{ trends.threshold }}× threshold
-          </span>
-        </p>
-        <div class="cip-table-wrap mt-5">
-          <table>
-            <thead>
-              <tr>
-                <th>District</th>
-                <th>Crime head</th>
-                <th>Recent</th>
-                <th>Baseline avg</th>
-                <th>Spike</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(a, i) in alertRows" :key="i">
-                <td>{{ a.district_name }}</td>
-                <td>{{ a.crime_head_name }}</td>
-                <td class="tabular-nums">{{ a.recent_count }}</td>
-                <td class="tabular-nums">{{ a.baseline_avg.toFixed(1) }}</td>
-                <td class="cip-display text-lg tabular-nums text-[var(--cip-signal)]">
-                  {{ a.spike_ratio.toFixed(2) }}×
-                </td>
-              </tr>
-              <tr v-if="!alertRows.length">
-                <td colspan="5" class="py-8 text-center text-[var(--cip-muted)]">
-                  No active alerts
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Socio + trend alerts -->
+      <div class="cip-rise cip-rise-delay-4 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="cip-panel p-5 pl-6">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <h2 class="cip-display text-xl text-[var(--cip-ink)]">
+                Socio-economic pressure
+              </h2>
+              <p class="mt-1 text-xs text-[var(--cip-muted)]">
+                Crime intensity vs urbanization / density
+              </p>
+            </div>
+            <RouterLink
+              to="/map"
+              class="text-xs font-semibold text-[var(--cip-accent)] hover:underline"
+            >
+              Overlay →
+            </RouterLink>
+          </div>
+          <p
+            v-if="socioInsight"
+            class="mt-4 text-sm leading-relaxed text-[var(--cip-ink-soft)]"
+          >
+            {{ socioInsight }}
+          </p>
+          <ul class="mt-4 space-y-2.5">
+            <li
+              v-for="d in socioTop"
+              :key="d.district_id"
+              class="flex items-center justify-between gap-3 text-sm"
+            >
+              <div class="min-w-0">
+                <p class="truncate font-medium text-[var(--cip-ink)]">
+                  {{ d.district_name }}
+                  <span
+                    v-if="d.is_urban_core"
+                    class="ml-1 text-[10px] font-semibold uppercase tracking-wider text-[var(--cip-accent)]"
+                    >urban</span
+                  >
+                </p>
+                <p class="text-[11px] text-[var(--cip-muted)]">
+                  Unemp {{ d.youth_unemployment_pct }}% · Urban
+                  {{ d.urbanization_pct }}%
+                </p>
+              </div>
+              <span class="cip-display tabular-nums text-[var(--cip-accent-deep)]">
+                {{ d.crime_per_10k_density.toFixed(1) }}
+              </span>
+            </li>
+            <li v-if="!socioTop.length" class="text-sm text-[var(--cip-muted)]">
+              Socio overlay unavailable
+            </li>
+          </ul>
+        </div>
+
+        <div class="cip-panel p-5 pl-6">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <h2 class="cip-display text-xl text-[var(--cip-ink)]">Trend alerts</h2>
+              <p class="mt-1 text-xs text-[var(--cip-muted)]">
+                Spikes vs baseline
+                <span v-if="trends">
+                  · {{ trends.recent_days }}d / {{ trends.baseline_days }}d ·
+                  {{ trends.threshold }}×
+                </span>
+              </p>
+            </div>
+            <RouterLink
+              to="/map"
+              class="text-xs font-semibold text-[var(--cip-accent)] hover:underline"
+            >
+              Red zones →
+            </RouterLink>
+          </div>
+          <div class="cip-table-wrap mt-5">
+            <table>
+              <thead>
+                <tr>
+                  <th>District</th>
+                  <th>Crime head</th>
+                  <th>Recent</th>
+                  <th>Spike</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(a, i) in alertRows" :key="i">
+                  <td>
+                    <RouterLink
+                      :to="`/map?district_id=${a.district_id}`"
+                      class="font-medium text-[var(--cip-accent-deep)] hover:underline"
+                    >
+                      {{ a.district_name }}
+                    </RouterLink>
+                  </td>
+                  <td>{{ a.crime_head_name }}</td>
+                  <td class="tabular-nums">{{ a.recent_count }}</td>
+                  <td
+                    class="cip-display text-lg tabular-nums text-[var(--cip-signal)]"
+                  >
+                    {{ a.spike_ratio.toFixed(2) }}×
+                  </td>
+                </tr>
+                <tr v-if="!alertRows.length">
+                  <td colspan="4" class="py-8 text-center text-[var(--cip-muted)]">
+                    No active alerts
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </template>

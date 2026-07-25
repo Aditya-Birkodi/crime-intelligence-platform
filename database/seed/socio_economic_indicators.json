@@ -1,0 +1,654 @@
+{
+  "districts": [
+    {
+      "district_id": 443,
+      "district_name": "Bengaluru City",
+      "population_density_per_km2": 9284,
+      "urbanization_pct": 59.0,
+      "literacy_pct": 84.0,
+      "youth_unemployment_pct": 8.0,
+      "per_capita_income_index": 0.64,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 444,
+      "district_name": "Mysuru",
+      "population_density_per_km2": 8671,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 83.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.51,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 445,
+      "district_name": "Belagavi",
+      "population_density_per_km2": 6831,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 79.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.71,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1001,
+      "district_name": "Bengaluru Urban",
+      "population_density_per_km2": 4371,
+      "urbanization_pct": 66.0,
+      "literacy_pct": 85.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.71,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1002,
+      "district_name": "Mysuru",
+      "population_density_per_km2": 7025,
+      "urbanization_pct": 80.0,
+      "literacy_pct": 93.0,
+      "youth_unemployment_pct": 17.0,
+      "per_capita_income_index": 0.85,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1003,
+      "district_name": "Udupi",
+      "population_density_per_km2": 9300,
+      "urbanization_pct": 75.0,
+      "literacy_pct": 82.0,
+      "youth_unemployment_pct": 12.0,
+      "per_capita_income_index": 0.8,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1004,
+      "district_name": "Belagavi",
+      "population_density_per_km2": 2962,
+      "urbanization_pct": 57.0,
+      "literacy_pct": 80.0,
+      "youth_unemployment_pct": 10.0,
+      "per_capita_income_index": 0.42,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1005,
+      "district_name": "Kalaburagi",
+      "population_density_per_km2": 2899,
+      "urbanization_pct": 74.0,
+      "literacy_pct": 89.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.99,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1006,
+      "district_name": "Mangaluru",
+      "population_density_per_km2": 4341,
+      "urbanization_pct": 76.0,
+      "literacy_pct": 91.0,
+      "youth_unemployment_pct": 9.0,
+      "per_capita_income_index": 0.41,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1007,
+      "district_name": "Shivamogga",
+      "population_density_per_km2": 5031,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 79.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.71,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1008,
+      "district_name": "Hubballi",
+      "population_density_per_km2": 2191,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 83.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.51,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1009,
+      "district_name": "Bengaluru Urban",
+      "population_density_per_km2": 2178,
+      "urbanization_pct": 73.0,
+      "literacy_pct": 88.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.98,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1010,
+      "district_name": "Mysuru",
+      "population_density_per_km2": 9114,
+      "urbanization_pct": 89.0,
+      "literacy_pct": 94.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.74,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1011,
+      "district_name": "Udupi",
+      "population_density_per_km2": 3294,
+      "urbanization_pct": 69.0,
+      "literacy_pct": 88.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.74,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1012,
+      "district_name": "Belagavi",
+      "population_density_per_km2": 1222,
+      "urbanization_pct": 77.0,
+      "literacy_pct": 86.0,
+      "youth_unemployment_pct": 10.0,
+      "per_capita_income_index": 0.42,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1013,
+      "district_name": "Kalaburagi",
+      "population_density_per_km2": 2831,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 93.0,
+      "youth_unemployment_pct": 11.0,
+      "per_capita_income_index": 0.91,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1014,
+      "district_name": "Mangaluru",
+      "population_density_per_km2": 4870,
+      "urbanization_pct": 85.0,
+      "literacy_pct": 80.0,
+      "youth_unemployment_pct": 10.0,
+      "per_capita_income_index": 0.9,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1015,
+      "district_name": "Shivamogga",
+      "population_density_per_km2": 2248,
+      "urbanization_pct": 63.0,
+      "literacy_pct": 86.0,
+      "youth_unemployment_pct": 16.0,
+      "per_capita_income_index": 0.48,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1016,
+      "district_name": "Hubballi",
+      "population_density_per_km2": 7433,
+      "urbanization_pct": 88.0,
+      "literacy_pct": 87.0,
+      "youth_unemployment_pct": 17.0,
+      "per_capita_income_index": 0.73,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1017,
+      "district_name": "Bengaluru Urban",
+      "population_density_per_km2": 995,
+      "urbanization_pct": 90.0,
+      "literacy_pct": 93.0,
+      "youth_unemployment_pct": 11.0,
+      "per_capita_income_index": 0.55,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1018,
+      "district_name": "Mysuru",
+      "population_density_per_km2": 4277,
+      "urbanization_pct": 92.0,
+      "literacy_pct": 81.0,
+      "youth_unemployment_pct": 17.0,
+      "per_capita_income_index": 0.97,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1019,
+      "district_name": "Udupi",
+      "population_density_per_km2": 7259,
+      "urbanization_pct": 74.0,
+      "literacy_pct": 93.0,
+      "youth_unemployment_pct": 11.0,
+      "per_capita_income_index": 0.79,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1020,
+      "district_name": "Belagavi",
+      "population_density_per_km2": 4354,
+      "urbanization_pct": 89.0,
+      "literacy_pct": 86.0,
+      "youth_unemployment_pct": 10.0,
+      "per_capita_income_index": 0.54,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1021,
+      "district_name": "Kalaburagi",
+      "population_density_per_km2": 4322,
+      "urbanization_pct": 57.0,
+      "literacy_pct": 90.0,
+      "youth_unemployment_pct": 14.0,
+      "per_capita_income_index": 0.82,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1022,
+      "district_name": "Mangaluru",
+      "population_density_per_km2": 6337,
+      "urbanization_pct": 72.0,
+      "literacy_pct": 89.0,
+      "youth_unemployment_pct": 13.0,
+      "per_capita_income_index": 0.57,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1023,
+      "district_name": "Shivamogga",
+      "population_density_per_km2": 5319,
+      "urbanization_pct": 94.0,
+      "literacy_pct": 79.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.59,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1024,
+      "district_name": "Hubballi",
+      "population_density_per_km2": 2958,
+      "urbanization_pct": 93.0,
+      "literacy_pct": 94.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.98,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1025,
+      "district_name": "Bengaluru Urban",
+      "population_density_per_km2": 1299,
+      "urbanization_pct": 74.0,
+      "literacy_pct": 91.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.59,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1026,
+      "district_name": "Mysuru",
+      "population_density_per_km2": 6380,
+      "urbanization_pct": 75.0,
+      "literacy_pct": 78.0,
+      "youth_unemployment_pct": 8.0,
+      "per_capita_income_index": 0.4,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1027,
+      "district_name": "Udupi",
+      "population_density_per_km2": 7251,
+      "urbanization_pct": 66.0,
+      "literacy_pct": 85.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.71,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1028,
+      "district_name": "Belagavi",
+      "population_density_per_km2": 5627,
+      "urbanization_pct": 82.0,
+      "literacy_pct": 81.0,
+      "youth_unemployment_pct": 11.0,
+      "per_capita_income_index": 0.67,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1029,
+      "district_name": "Kalaburagi",
+      "population_density_per_km2": 947,
+      "urbanization_pct": 82.0,
+      "literacy_pct": 81.0,
+      "youth_unemployment_pct": 11.0,
+      "per_capita_income_index": 0.67,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1030,
+      "district_name": "Mangaluru",
+      "population_density_per_km2": 2621,
+      "urbanization_pct": 76.0,
+      "literacy_pct": 81.0,
+      "youth_unemployment_pct": 17.0,
+      "per_capita_income_index": 0.61,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 1031,
+      "district_name": "Shivamogga",
+      "population_density_per_km2": 8536,
+      "urbanization_pct": 71.0,
+      "literacy_pct": 92.0,
+      "youth_unemployment_pct": 16.0,
+      "per_capita_income_index": 0.96,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2001,
+      "district_name": "Bagalkote",
+      "population_density_per_km2": 207,
+      "urbanization_pct": 34.0,
+      "literacy_pct": 69.0,
+      "youth_unemployment_pct": 22.0,
+      "per_capita_income_index": 0.67,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2002,
+      "district_name": "Ballari",
+      "population_density_per_km2": 551,
+      "urbanization_pct": 28.0,
+      "literacy_pct": 73.0,
+      "youth_unemployment_pct": 21.0,
+      "per_capita_income_index": 0.51,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2003,
+      "district_name": "Belagavi",
+      "population_density_per_km2": 2739,
+      "urbanization_pct": 74.0,
+      "literacy_pct": 91.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.59,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2004,
+      "district_name": "Bengaluru Rural",
+      "population_density_per_km2": 7911,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 79.0,
+      "youth_unemployment_pct": 15.0,
+      "per_capita_income_index": 0.71,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2005,
+      "district_name": "Bengaluru Urban",
+      "population_density_per_km2": 7553,
+      "urbanization_pct": 88.0,
+      "literacy_pct": 81.0,
+      "youth_unemployment_pct": 17.0,
+      "per_capita_income_index": 0.73,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2006,
+      "district_name": "Bidar",
+      "population_density_per_km2": 204,
+      "urbanization_pct": 31.0,
+      "literacy_pct": 66.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.64,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2007,
+      "district_name": "Chamarajanagara",
+      "population_density_per_km2": 484,
+      "urbanization_pct": 31.0,
+      "literacy_pct": 66.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.64,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2008,
+      "district_name": "Chikkaballapur",
+      "population_density_per_km2": 119,
+      "urbanization_pct": 16.0,
+      "literacy_pct": 81.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.79,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2009,
+      "district_name": "Chikkamagaluru",
+      "population_density_per_km2": 463,
+      "urbanization_pct": 45.0,
+      "literacy_pct": 65.0,
+      "youth_unemployment_pct": 13.0,
+      "per_capita_income_index": 0.43,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2010,
+      "district_name": "Chitradurga",
+      "population_density_per_km2": 328,
+      "urbanization_pct": 15.0,
+      "literacy_pct": 70.0,
+      "youth_unemployment_pct": 23.0,
+      "per_capita_income_index": 0.68,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2011,
+      "district_name": "Dakshina Kannada",
+      "population_density_per_km2": 157,
+      "urbanization_pct": 19.0,
+      "literacy_pct": 79.0,
+      "youth_unemployment_pct": 22.0,
+      "per_capita_income_index": 0.97,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2012,
+      "district_name": "Davanagere",
+      "population_density_per_km2": 723,
+      "urbanization_pct": 25.0,
+      "literacy_pct": 65.0,
+      "youth_unemployment_pct": 23.0,
+      "per_capita_income_index": 0.83,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2013,
+      "district_name": "Dharwad",
+      "population_density_per_km2": 489,
+      "urbanization_pct": 36.0,
+      "literacy_pct": 71.0,
+      "youth_unemployment_pct": 24.0,
+      "per_capita_income_index": 0.69,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2014,
+      "district_name": "Gadag",
+      "population_density_per_km2": 95,
+      "urbanization_pct": 27.0,
+      "literacy_pct": 77.0,
+      "youth_unemployment_pct": 20.0,
+      "per_capita_income_index": 0.95,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2015,
+      "district_name": "Hassan",
+      "population_density_per_km2": 763,
+      "urbanization_pct": 30.0,
+      "literacy_pct": 65.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.63,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2016,
+      "district_name": "Haveri",
+      "population_density_per_km2": 180,
+      "urbanization_pct": 42.0,
+      "literacy_pct": 62.0,
+      "youth_unemployment_pct": 20.0,
+      "per_capita_income_index": 0.8,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2017,
+      "district_name": "Kalaburagi",
+      "population_density_per_km2": 1496,
+      "urbanization_pct": 71.0,
+      "literacy_pct": 90.0,
+      "youth_unemployment_pct": 8.0,
+      "per_capita_income_index": 0.76,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2018,
+      "district_name": "Kodagu",
+      "population_density_per_km2": 156,
+      "urbanization_pct": 18.0,
+      "literacy_pct": 78.0,
+      "youth_unemployment_pct": 21.0,
+      "per_capita_income_index": 0.96,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2019,
+      "district_name": "Kolar",
+      "population_density_per_km2": 403,
+      "urbanization_pct": 20.0,
+      "literacy_pct": 65.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.63,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2020,
+      "district_name": "Koppal",
+      "population_density_per_km2": 214,
+      "urbanization_pct": 41.0,
+      "literacy_pct": 76.0,
+      "youth_unemployment_pct": 24.0,
+      "per_capita_income_index": 0.54,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2021,
+      "district_name": "Mandya",
+      "population_density_per_km2": 598,
+      "urbanization_pct": 40.0,
+      "literacy_pct": 80.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.78,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2022,
+      "district_name": "Mysuru",
+      "population_density_per_km2": 3732,
+      "urbanization_pct": 67.0,
+      "literacy_pct": 94.0,
+      "youth_unemployment_pct": 12.0,
+      "per_capita_income_index": 0.92,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2023,
+      "district_name": "Raichur",
+      "population_density_per_km2": 375,
+      "urbanization_pct": 27.0,
+      "literacy_pct": 77.0,
+      "youth_unemployment_pct": 20.0,
+      "per_capita_income_index": 0.95,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2024,
+      "district_name": "Ramanagara",
+      "population_density_per_km2": 358,
+      "urbanization_pct": 45.0,
+      "literacy_pct": 80.0,
+      "youth_unemployment_pct": 13.0,
+      "per_capita_income_index": 0.58,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2025,
+      "district_name": "Shivamogga",
+      "population_density_per_km2": 8071,
+      "urbanization_pct": 86.0,
+      "literacy_pct": 95.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.51,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2026,
+      "district_name": "Tumakuru",
+      "population_density_per_km2": 654,
+      "urbanization_pct": 26.0,
+      "literacy_pct": 76.0,
+      "youth_unemployment_pct": 19.0,
+      "per_capita_income_index": 0.94,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2027,
+      "district_name": "Udupi",
+      "population_density_per_km2": 3874,
+      "urbanization_pct": 89.0,
+      "literacy_pct": 92.0,
+      "youth_unemployment_pct": 10.0,
+      "per_capita_income_index": 0.54,
+      "is_urban_core": true
+    },
+    {
+      "district_id": 2028,
+      "district_name": "Uttara Kannada",
+      "population_density_per_km2": 273,
+      "urbanization_pct": 30.0,
+      "literacy_pct": 75.0,
+      "youth_unemployment_pct": 18.0,
+      "per_capita_income_index": 0.93,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2029,
+      "district_name": "Vijayanagara",
+      "population_density_per_km2": 277,
+      "urbanization_pct": 34.0,
+      "literacy_pct": 79.0,
+      "youth_unemployment_pct": 22.0,
+      "per_capita_income_index": 0.97,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2030,
+      "district_name": "Vijayapura",
+      "population_density_per_km2": 218,
+      "urbanization_pct": 45.0,
+      "literacy_pct": 80.0,
+      "youth_unemployment_pct": 13.0,
+      "per_capita_income_index": 0.58,
+      "is_urban_core": false
+    },
+    {
+      "district_id": 2031,
+      "district_name": "Yadgir",
+      "population_density_per_km2": 236,
+      "urbanization_pct": 28.0,
+      "literacy_pct": 78.0,
+      "youth_unemployment_pct": 16.0,
+      "per_capita_income_index": 0.76,
+      "is_urban_core": false
+    }
+  ]
+}

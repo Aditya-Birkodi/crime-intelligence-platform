@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from collections import defaultdict
 from datetime import date, datetime, timedelta
 from decimal import Decimal
@@ -19,6 +20,10 @@ from app.schemas.analytics import (
     StatusCount,
     TrendAlert,
     TrendAlertsResponse,
+)
+from app.schemas.analytics_socio import (
+    DistrictSocioCrimeCorrelation,
+    SocioEconomicOverlayResponse,
 )
 from app.services import lookups_catalog as lookups
 from app.utils.ttl_cache import cache_get, cache_set
@@ -283,6 +288,7 @@ class MockAnalyticsService:
 
         alerts: list[TrendAlert] = []
         keys = set(recent) | set(baseline)
+        geo = {d.district_id: d for d in self.geo_districts()}
         for did, head in keys:
             recent_count = recent.get((did, head), 0)
             baseline_count = baseline.get((did, head), 0)
@@ -291,6 +297,7 @@ class MockAnalyticsService:
                 spike = float(recent_count) if recent_count else 0.0
             else:
                 spike = recent_count / baseline_avg
+            g = geo.get(did)
             alerts.append(
                 TrendAlert(
                     district_id=did,
@@ -301,6 +308,8 @@ class MockAnalyticsService:
                     baseline_avg=round(baseline_avg, 2),
                     spike_ratio=round(spike, 2),
                     is_alert=spike >= threshold and recent_count > 0,
+                    avg_latitude=g.avg_latitude if g else None,
+                    avg_longitude=g.avg_longitude if g else None,
                 )
             )
         alerts.sort(key=lambda a: a.spike_ratio, reverse=True)
@@ -310,3 +319,71 @@ class MockAnalyticsService:
             threshold=threshold,
             alerts=alerts,
         )
+
+    def socio_economic_overlay(self) -> SocioEconomicOverlayResponse:
+        """Join district crime counts with socio-economic indicators."""
+        from pathlib import Path
+
+        from app.core.config import get_settings
+
+        settings = get_settings()
+        path = (
+            Path(settings.catalyst.socio_economic_path)
+            if settings.catalyst.socio_economic_path
+            else Path(__file__).resolve().parents[4]
+            / "database"
+            / "seed"
+            / "socio_economic_indicators.json"
+        )
+        socio_rows: list[dict[str, Any]] = []
+        if path.exists():
+            raw = json.loads(path.read_text(encoding="utf-8"))
+            socio_rows = raw.get("districts") or []
+        socio_by_id = {int(r["district_id"]): r for r in socio_rows}
+
+        out: list[DistrictSocioCrimeCorrelation] = []
+        for g in self.geo_districts():
+            s = socio_by_id.get(g.district_id) or {}
+            density = float(s.get("population_density_per_km2") or 100)
+            urban = float(s.get("urbanization_pct") or 30)
+            lit = float(s.get("literacy_pct") or 70)
+            unemp = float(s.get("youth_unemployment_pct") or 12)
+            income = float(s.get("per_capita_income_index") or 0.5)
+            urban_core = bool(s.get("is_urban_core"))
+            norm = round(g.case_count / max(density / 1000.0, 0.05), 2)
+            note = (
+                "Urban density pressure"
+                if urban_core and g.case_count >= 5
+                else (
+                    "Elevated unemployment correlation"
+                    if unemp >= 18 and g.case_count >= 3
+                    else "Baseline socio profile"
+                )
+            )
+            out.append(
+                DistrictSocioCrimeCorrelation(
+                    district_id=g.district_id,
+                    district_name=g.district_name,
+                    case_count=g.case_count,
+                    avg_latitude=g.avg_latitude,
+                    avg_longitude=g.avg_longitude,
+                    population_density_per_km2=density,
+                    urbanization_pct=urban,
+                    literacy_pct=lit,
+                    youth_unemployment_pct=unemp,
+                    per_capita_income_index=income,
+                    is_urban_core=urban_core,
+                    crime_per_10k_density=norm,
+                    correlation_note=note,
+                )
+            )
+        out.sort(key=lambda d: d.crime_per_10k_density, reverse=True)
+        urban_high = [d for d in out if d.is_urban_core and d.case_count >= 3]
+        insight = (
+            f"{len(urban_high)} urban-core districts show elevated absolute volume; "
+            f"top socio-normalized pressure is {out[0].district_name} "
+            f"({out[0].crime_per_10k_density} proxy score)."
+            if out
+            else "No socio-economic join available."
+        )
+        return SocioEconomicOverlayResponse(districts=out, insight=insight)

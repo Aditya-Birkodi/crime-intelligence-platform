@@ -188,20 +188,132 @@ export type HotspotsResponse = {
   }[];
 };
 
+export type TrendAlert = {
+  district_id: number;
+  district_name: string;
+  crime_major_head_id: number | null;
+  crime_head_name: string;
+  recent_count: number;
+  baseline_avg: number;
+  spike_ratio: number;
+  is_alert: boolean;
+  avg_latitude: string | number | null;
+  avg_longitude: string | number | null;
+};
+
 export type TrendAlertsResponse = {
   recent_days: number;
   baseline_days: number;
   threshold: number;
-  alerts: {
-    district_id: number;
-    district_name: string;
-    crime_major_head_id: number | null;
-    crime_head_name: string;
-    recent_count: number;
-    baseline_avg: number;
-    spike_ratio: number;
-    is_alert: boolean;
-  }[];
+  alerts: TrendAlert[];
+};
+
+export type SocioDistrict = {
+  district_id: number;
+  district_name: string;
+  case_count: number;
+  avg_latitude: string | number | null;
+  avg_longitude: string | number | null;
+  population_density_per_km2: number;
+  urbanization_pct: number;
+  literacy_pct: number;
+  youth_unemployment_pct: number;
+  per_capita_income_index: number;
+  is_urban_core: boolean;
+  crime_per_10k_density: number;
+  correlation_note: string;
+};
+
+export type SocioEconomicOverlayResponse = {
+  districts: SocioDistrict[];
+  insight: string;
+  provider: string;
+};
+
+export type MoClusterMember = {
+  case_master_id: number;
+  crime_no: string;
+  brief_facts: string | null;
+  police_station_id: number | null;
+  district_id: number | null;
+  crime_major_head_id: number | null;
+};
+
+export type MoCluster = {
+  cluster_id: string;
+  label: string;
+  mo_signature: string;
+  size: number;
+  districts: string[];
+  act_sections: string[];
+  members: MoClusterMember[];
+  similarity_note: string;
+};
+
+export type MoClustersResponse = {
+  clusters: MoCluster[];
+  provider: string;
+  total_cases_clustered: number;
+};
+
+export type IntelligenceBriefSection = {
+  title: string;
+  body: string;
+};
+
+export type IntelligenceBriefResponse = {
+  title: string;
+  generated_at: string;
+  horizon_days: number;
+  headline: string;
+  sections: IntelligenceBriefSection[];
+  recommended_actions: string[];
+  provider: string;
+};
+
+export type SearchHit = {
+  entity_type: "accused" | "victim" | "complainant" | "case" | string;
+  entity_id: number;
+  name: string;
+  case_master_id: number | null;
+  crime_no: string | null;
+  person_id: string | null;
+  match_field: string;
+  score: number;
+};
+
+export type SearchResponse = {
+  query: string;
+  total: number;
+  items: SearchHit[];
+  provider: string;
+};
+
+export type MediaAttachment = {
+  media_id: string;
+  entity_type: string;
+  entity_id: number | null;
+  case_master_id: number | null;
+  filename: string;
+  content_type: string;
+  uri: string;
+  size_bytes: number;
+  label: string | null;
+  zia_face: Record<string, unknown> | null;
+  created_at: string;
+};
+
+export type FaceAnalyseResponse = {
+  result: Record<string, unknown>;
+  provider: string;
+  media_id: string | null;
+};
+
+export type FaceCompareResponse = {
+  result: Record<string, unknown>;
+  provider: string;
+  matched: boolean | null;
+  confidence: number | null;
 };
 
 export type GraphNode = {

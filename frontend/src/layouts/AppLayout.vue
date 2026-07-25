@@ -6,6 +6,7 @@ const route = useRoute();
 const links = [
   { to: "/", label: "Dashboard", exact: true },
   { to: "/cases", label: "Cases" },
+  { to: "/identity", label: "Identity" },
   { to: "/map", label: "Map" },
   { to: "/network", label: "Network" },
   { to: "/intelligence", label: "Intelligence" },
@@ -58,7 +59,7 @@ function isOn(to: string, exact?: boolean) {
           <p
             class="cip-rise cip-rise-delay-1 hidden max-w-xs text-right text-xs font-light leading-relaxed text-[rgba(244,250,249,0.55)] sm:block"
           >
-            FIR analytics · geospatial heat · link graphs · Graph RAG
+            FIR analytics · geospatial heat · link graphs · MO clusters · Graph RAG
           </p>
         </div>
 

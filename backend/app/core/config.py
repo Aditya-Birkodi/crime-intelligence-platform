@@ -83,8 +83,22 @@ class CatalystSettings(BaseSettings):
     table_act_section: str = Field(default="", alias="CATALYST_TABLE_ACT_SECTION")
     nosql_table: str = Field(default="", alias="CATALYST_NOSQL_TABLE")
     nosql_endpoint: str = Field(default="", alias="CATALYST_NOSQL_ENDPOINT")
-    stratus_bucket: str = Field(default="", alias="CATALYST_STRATUS_BUCKET")
-    stratus_endpoint: str = Field(default="", alias="CATALYST_STRATUS_ENDPOINT")
+    stratus_bucket: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_STRATUS_BUCKET", "STRATUS_BUCKET"),
+    )
+    stratus_endpoint: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_STRATUS_ENDPOINT", "STRATUS_ENDPOINT"),
+    )
+    media_path: str = Field(
+        default=".data/media",
+        validation_alias=AliasChoices("CATALYST_MEDIA_PATH", "MEDIA_PATH"),
+    )
+    zia_mock: bool = Field(
+        default=True,
+        validation_alias=AliasChoices("CATALYST_ZIA_MOCK", "ZIA_MOCK"),
+    )
     cache_segment: str = Field(default="", alias="CATALYST_CACHE_SEGMENT")
     cache_endpoint: str = Field(default="", alias="CATALYST_CACHE_ENDPOINT")
 
@@ -146,6 +160,12 @@ class CatalystSettings(BaseSettings):
     lookups_path: str = Field(
         default="",
         validation_alias=AliasChoices("CATALYST_LOOKUPS_PATH", "LOOKUPS_PATH"),
+    )
+    socio_economic_path: str = Field(
+        default="",
+        validation_alias=AliasChoices(
+            "CATALYST_SOCIO_ECONOMIC_PATH", "SOCIO_ECONOMIC_PATH"
+        ),
     )
     zia_automl_endpoint: str = Field(default="", alias="CATALYST_ZIA_AUTOML_ENDPOINT")
     zia_endpoint: str = Field(default="", alias="CATALYST_ZIA_ENDPOINT")

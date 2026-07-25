@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, watch } from "vue";
 import { RouterLink, useRouter } from "vue-router";
 import { api } from "@/services/api";
-import type { CaseMaster, IdName } from "@/types";
+import type { CaseMaster, IdName, SearchHit } from "@/types";
 
 const router = useRouter();
 const loading = ref(true);
@@ -22,6 +22,9 @@ const filterHead = ref("");
 const filterCrimeNo = ref("");
 const filterFrom = ref("");
 const filterTo = ref("");
+const filterName = ref("");
+const nameHits = ref<SearchHit[]>([]);
+const nameSearching = ref(false);
 
 const stationName = computed(() => {
   const map = new Map(stations.value.map((s) => [s.id, s.name]));
@@ -126,6 +129,27 @@ async function jumpCrimeNo() {
   }
 }
 
+async function searchByName() {
+  const q = filterName.value.trim();
+  if (q.length < 2) {
+    nameHits.value = [];
+    return;
+  }
+  nameSearching.value = true;
+  try {
+    const res = await api.search({
+      q,
+      types: "accused,victim,complainant",
+      limit: 20,
+    });
+    nameHits.value = res.items;
+  } catch {
+    nameHits.value = [];
+  } finally {
+    nameSearching.value = false;
+  }
+}
+
 onMounted(async () => {
   try {
     await loadLookups();
@@ -164,6 +188,26 @@ watch([filterStatus, filterStation, filterHead, filterFrom, filterTo], resetAndL
           <button type="button" class="cip-btn cip-btn-ghost shrink-0" @click="jumpCrimeNo">Go</button>
         </div>
       </label>
+      <label class="block text-sm sm:col-span-2 xl:col-span-2">
+        <span class="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-[var(--cip-muted)]">Person name</span>
+        <div class="mt-1 flex gap-2">
+          <input
+            v-model="filterName"
+            type="search"
+            placeholder="Accused / victim / complainant"
+            class="cip-field !mt-0"
+            @keydown.enter="searchByName"
+          />
+          <button
+            type="button"
+            class="cip-btn cip-btn-ghost shrink-0"
+            :disabled="nameSearching"
+            @click="searchByName"
+          >
+            {{ nameSearching ? "…" : "Find" }}
+          </button>
+        </div>
+      </label>
       <label class="block text-sm">
         <span class="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-[var(--cip-muted)]">Status</span>
         <select v-model="filterStatus" class="cip-field">
@@ -198,7 +242,44 @@ watch([filterStatus, filterStation, filterHead, filterFrom, filterTo], resetAndL
     <p v-if="error" class="text-sm text-[#9b2c1f]">{{ error }}</p>
     <p v-else-if="loading" class="text-sm text-[var(--cip-muted)]">Loading cases…</p>
 
-    <div v-else class="cip-table-wrap">
+    <div v-if="nameHits.length" class="cip-panel p-4 pl-5">
+      <div class="flex items-center justify-between gap-2">
+        <h2 class="cip-display text-lg text-[var(--cip-ink)]">
+          Name matches ({{ nameHits.length }})
+        </h2>
+        <button
+          type="button"
+          class="text-xs font-semibold text-[var(--cip-muted)] hover:underline"
+          @click="nameHits = []"
+        >
+          Clear
+        </button>
+      </div>
+      <ul class="mt-3 divide-y divide-[rgba(197,212,216,0.5)]">
+        <li
+          v-for="(h, i) in nameHits"
+          :key="i"
+          class="flex flex-wrap items-center justify-between gap-2 py-2 text-sm"
+        >
+          <div>
+            <span class="cip-badge cip-badge-med mr-2">{{ h.entity_type }}</span>
+            <span class="font-semibold text-[var(--cip-ink)]">{{ h.name }}</span>
+            <span v-if="h.crime_no" class="ml-2 font-mono text-xs text-[var(--cip-muted)]">{{
+              h.crime_no
+            }}</span>
+          </div>
+          <RouterLink
+            v-if="h.case_master_id"
+            :to="`/cases/${h.case_master_id}`"
+            class="font-semibold text-[var(--cip-accent-deep)] hover:underline"
+          >
+            Open case →
+          </RouterLink>
+        </li>
+      </ul>
+    </div>
+
+    <div v-if="!loading" class="cip-table-wrap">
       <table>
         <thead>
           <tr>
@@ -217,7 +298,11 @@ watch([filterStatus, filterStation, filterHead, filterFrom, filterTo], resetAndL
             <td>{{ c.case_no }}</td>
             <td>{{ stationName(c.police_station_id) }}</td>
             <td>{{ headName(c.crime_major_head_id) }}</td>
-            <td>{{ statusName(c.case_status_id) }}</td>
+            <td>
+              <span class="cip-badge cip-badge-med">{{
+                statusName(c.case_status_id)
+              }}</span>
+            </td>
             <td>{{ c.crime_registered_date ?? "—" }}</td>
             <td class="text-right">
               <RouterLink

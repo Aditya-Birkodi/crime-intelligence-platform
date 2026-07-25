@@ -83,6 +83,8 @@ class TrendAlert(BaseModel):
     baseline_avg: float
     spike_ratio: float
     is_alert: bool
+    avg_latitude: Decimal | None = None
+    avg_longitude: Decimal | None = None
 
 
 class TrendAlertsResponse(BaseModel):

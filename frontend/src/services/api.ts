@@ -10,12 +10,19 @@ import type {
   CaseMasterDetail,
   CaseMasterListResponse,
   DistrictGeoSummary,
+  FaceAnalyseResponse,
+  FaceCompareResponse,
   HealthResponse,
   HotspotsResponse,
   IdName,
   IncidentPoint,
+  IntelligenceBriefResponse,
+  MediaAttachment,
+  MoClustersResponse,
   NetworkGraphResponse,
   OffenderProfile,
+  SearchResponse,
+  SocioEconomicOverlayResponse,
   TrendAlertsResponse,
 } from "@/types";
 
@@ -130,6 +137,10 @@ export const api = {
     request<TrendAlertsResponse>(
       `/api/v1/analytics/alerts/trends${toQuery(params)}`,
     ),
+  getSocioEconomicOverlay: () =>
+    request<SocioEconomicOverlayResponse>(
+      "/api/v1/analytics/socio-economic",
+    ),
 
   // B3 network
   getNetworkGraph: (params: {
@@ -226,4 +237,91 @@ export const api = {
       provider: string;
       total: number;
     }>(`/api/v1/ai/anomalies${toQuery({ limit })}`),
+  aiMoClusters: (params: { min_size?: number; limit?: number } = {}) =>
+    request<MoClustersResponse>(
+      `/api/v1/ai/mo-clusters${toQuery(params)}`,
+    ),
+  aiIntelligenceBrief: (params: { horizon_days?: number } = {}) =>
+    request<IntelligenceBriefResponse>(
+      `/api/v1/ai/intelligence-brief${toQuery(params)}`,
+    ),
+
+  // Search + media + Zia
+  search: (params: { q: string; types?: string; limit?: number }) =>
+    request<SearchResponse>(
+      `/api/v1/search${toQuery(params as Record<string, string | number | undefined>)}`,
+    ),
+  listMedia: (params: {
+    case_master_id?: number;
+    entity_type?: string;
+    entity_id?: number;
+    limit?: number;
+  } = {}) =>
+    request<{ items: MediaAttachment[]; total: number }>(
+      `/api/v1/media${toQuery(params as Record<string, string | number | undefined>)}`,
+    ),
+  mediaContentUrl: (mediaId: string) => `${baseUrl}/api/v1/media/${mediaId}/content`,
+  uploadMediaJson: (body: {
+    image_base64: string;
+    filename?: string;
+    content_type?: string;
+    entity_type?: string;
+    entity_id?: number;
+    case_master_id?: number;
+    label?: string;
+    analyse_face?: boolean;
+    face_mode?: string;
+  }) =>
+    request<{
+      attachment: MediaAttachment;
+      face_analysis: Record<string, unknown> | null;
+      provider: string;
+    }>("/api/v1/media/upload-json", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  analyseFaceJson: (body: {
+    image_base64: string;
+    filename?: string;
+    mode?: string;
+    age?: boolean;
+    emotion?: boolean;
+    gender?: boolean;
+    persist?: boolean;
+    case_master_id?: number;
+    entity_type?: string;
+    entity_id?: number;
+  }) =>
+    request<FaceAnalyseResponse>("/api/v1/media/zia/analyse-face-json", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  compareFaceJson: (body: {
+    source_base64: string;
+    query_base64: string;
+    source_filename?: string;
+    query_filename?: string;
+  }) =>
+    request<FaceCompareResponse>("/api/v1/media/zia/compare-face-json", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  detectObjectsJson: (body: { image_base64: string; filename?: string }) =>
+    request<Record<string, unknown>>("/api/v1/media/zia/detect-objects-json", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  ocrJson: (body: { image_base64: string; filename?: string }) =>
+    request<Record<string, unknown>>("/api/v1/media/zia/ocr-json", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
 };
+
+export async function fileToBase64(file: File): Promise<string> {
+  const buf = await file.arrayBuffer();
+  const bytes = new Uint8Array(buf);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]!);
+  return btoa(binary);
+}
