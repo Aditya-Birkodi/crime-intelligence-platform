@@ -1,25 +1,369 @@
 @import "tailwindcss";
 
 :root {
-  --cip-ink: #0f172a;
-  --cip-muted: #64748b;
-  --cip-line: #e2e8f0;
-  --cip-accent: #0f4c5c;
-  --cip-surface: #f8fafc;
+  --cip-ink: #0a2a32;
+  --cip-ink-soft: #1a4550;
+  --cip-muted: #5a6f76;
+  --cip-line: #c5d4d8;
+  --cip-accent: #0d6b7c;
+  --cip-accent-deep: #064552;
+  --cip-signal: #c4782a;
+  --cip-signal-soft: #f3e4d0;
+  --cip-surface: #eef3f2;
+  --cip-panel: rgba(255, 255, 255, 0.72);
+  --cip-panel-solid: #f7faf9;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: "Outfit", "Segoe UI", sans-serif;
+}
+
+@theme {
+  --font-display: var(--font-display);
+  --font-ui: var(--font-ui);
+  --color-cip-ink: var(--cip-ink);
+  --color-cip-accent: var(--cip-accent);
+  --color-cip-signal: var(--cip-signal);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  font-family: var(--font-ui);
   color: var(--cip-ink);
-  background:
-    radial-gradient(ellipse at top left, #e8eef5 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, #dfe8f0 0%, transparent 45%),
-    var(--cip-surface);
+  background-color: var(--cip-surface);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 0% -10%, rgba(13, 107, 124, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(196, 120, 42, 0.1), transparent 50%),
+    linear-gradient(180deg, #e8f0ef 0%, var(--cip-surface) 40%, #e6eceb 100%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 11px,
+      rgba(10, 42, 50, 0.015) 11px,
+      rgba(10, 42, 50, 0.015) 12px
+    );
+  background-attachment: fixed;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::selection {
+  background: rgba(13, 107, 124, 0.22);
+}
+
+/* —— Layout primitives —— */
+.cip-shell {
+  position: relative;
+}
+
+.cip-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+
+.cip-kicker {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cip-accent);
+}
+
+.cip-panel {
+  background: var(--cip-panel);
+  border: 1px solid rgba(197, 212, 216, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 2px;
+  position: relative;
+}
+
+.cip-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--cip-accent), var(--cip-signal));
+  opacity: 0.85;
+  border-radius: 2px 0 0 2px;
+}
+
+.cip-panel-flush::before {
+  display: none;
+}
+
+.cip-stat {
+  position: relative;
+  overflow: hidden;
+  padding: 1.1rem 1.15rem 1.15rem 1.25rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 249, 0.65));
+  border: 1px solid rgba(197, 212, 216, 0.9);
+  border-radius: 2px;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease;
+}
+
+.cip-stat:hover {
+  transform: translateY(-2px);
+  border-color: rgba(13, 107, 124, 0.45);
+}
+
+.cip-stat::after {
+  content: "";
+  position: absolute;
+  right: -20%;
+  top: -40%;
+  width: 70%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(13, 107, 124, 0.07), transparent 65%);
+  pointer-events: none;
+}
+
+.cip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cip-btn:active {
+  transform: translateY(1px);
+}
+
+.cip-btn-primary {
+  background: var(--cip-accent-deep);
+  color: #f4faf9;
+}
+
+.cip-btn-primary:hover {
+  background: var(--cip-ink);
+}
+
+.cip-btn-ghost {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: var(--cip-line);
+  color: var(--cip-ink);
+}
+
+.cip-btn-ghost:hover {
+  border-color: var(--cip-accent);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.cip-field {
+  width: 100%;
+  margin-top: 0.35rem;
+  border-radius: 2px;
+  border: 1px solid var(--cip-line);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.55rem 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  color: var(--cip-ink);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cip-field:focus {
+  outline: none;
+  border-color: var(--cip-accent);
+  box-shadow: 0 0 0 3px rgba(13, 107, 124, 0.12);
+}
+
+.cip-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(197, 212, 216, 0.9);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 2px;
+}
+
+.cip-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.cip-table-wrap thead {
+  border-bottom: 1px solid var(--cip-line);
+  background: rgba(13, 107, 124, 0.06);
+}
+
+.cip-table-wrap th {
+  padding: 0.75rem 1rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cip-muted);
+}
+
+.cip-table-wrap td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(197, 212, 216, 0.45);
+}
+
+.cip-table-wrap tbody tr {
+  transition: background 0.15s ease;
+}
+
+.cip-table-wrap tbody tr:hover {
+  background: rgba(13, 107, 124, 0.04);
+}
+
+.cip-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.cip-badge-high {
+  background: #fde8e4;
+  color: #9b2c1f;
+}
+
+.cip-badge-med {
+  background: var(--cip-signal-soft);
+  color: #8a4b12;
+}
+
+.cip-badge-low {
+  background: #e4eceb;
+  color: #3d555c;
+}
+
+/* —— Motion —— */
+@keyframes cip-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cip-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes cip-pulse-soft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.cip-rise {
+  animation: cip-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cip-rise-delay-1 {
+  animation-delay: 0.07s;
+}
+.cip-rise-delay-2 {
+  animation-delay: 0.14s;
+}
+.cip-rise-delay-3 {
+  animation-delay: 0.21s;
+}
+.cip-rise-delay-4 {
+  animation-delay: 0.28s;
+}
+
+.cip-live-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #2f9e7a;
+  box-shadow: 0 0 0 0 rgba(47, 158, 122, 0.45);
+  animation: cip-pulse-soft 2.2s ease-in-out infinite;
+}
+
+.cip-nav-link {
+  position: relative;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(244, 250, 249, 0.72);
+  border-radius: 2px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.cip-nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cip-nav-link.router-link-active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cip-nav-link.router-link-active::after {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: var(--cip-signal);
+  transform-origin: left;
+  animation: cip-draw 0.35s ease both;
+}
+
+.route-fade-enter-active,
+.route-fade-leave-active {
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.route-fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.route-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.leaflet-default-icon-path {
+  background-image: url(https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png);
+}
+
+.leaflet-container {
+  border-radius: 2px;
+  font-family: var(--font-ui);
 }

@@ -88,13 +88,48 @@ class CatalystSettings(BaseSettings):
     cache_segment: str = Field(default="", alias="CATALYST_CACHE_SEGMENT")
     cache_endpoint: str = Field(default="", alias="CATALYST_CACHE_ENDPOINT")
 
-    # AI / ML
-    quickml_endpoint: str = Field(default="", alias="CATALYST_QUICKML_ENDPOINT")
-    quickml_model_id: str = Field(default="", alias="CATALYST_QUICKML_MODEL_ID")
-    rag_knowledge_base_id: str = Field(
-        default="", alias="CATALYST_RAG_KNOWLEDGE_BASE_ID"
+    # AI / ML — prefer QUICKML_* aliases in AppSail (CATALYST_* often reserved)
+    quickml_endpoint: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_QUICKML_ENDPOINT", "QUICKML_ENDPOINT"),
     )
-    rag_endpoint: str = Field(default="", alias="CATALYST_RAG_ENDPOINT")
+    quickml_model_id: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_QUICKML_MODEL_ID", "QUICKML_MODEL_ID"),
+    )
+    # Bearer for QuickML GLM chat (short-lived). Prefer OAuth refresh when possible.
+    quickml_access_token: str = Field(
+        default="",
+        validation_alias=AliasChoices(
+            "CATALYST_QUICKML_ACCESS_TOKEN",
+            "QUICKML_ACCESS_TOKEN",
+            "CATALYST_ACCESS_TOKEN",
+        ),
+    )
+    # CATALYST-ORG header for QuickML (India DC org id)
+    quickml_org_id: str = Field(
+        default="",
+        validation_alias=AliasChoices(
+            "CATALYST_QUICKML_ORG", "QUICKML_ORG", "CATALYST_ORG_ID"
+        ),
+    )
+    # accounts.zoho.in (India) or accounts.zoho.com — used to refresh access tokens
+    oauth_accounts_url: str = Field(
+        default="https://accounts.zoho.in",
+        validation_alias=AliasChoices(
+            "CATALYST_OAUTH_ACCOUNTS_URL", "QUICKML_OAUTH_ACCOUNTS_URL"
+        ),
+    )
+    rag_knowledge_base_id: str = Field(
+        default="",
+        validation_alias=AliasChoices(
+            "CATALYST_RAG_KNOWLEDGE_BASE_ID", "QUICKML_RAG_KNOWLEDGE_BASE_ID"
+        ),
+    )
+    rag_endpoint: str = Field(
+        default="",
+        validation_alias=AliasChoices("CATALYST_RAG_ENDPOINT", "QUICKML_RAG_ENDPOINT"),
+    )
     # Prefer QUICKML_MOCK in AppSail — avoids reserved CATALYST_* console restrictions
     quickml_mock: bool = Field(
         default=True,

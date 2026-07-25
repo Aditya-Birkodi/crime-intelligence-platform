@@ -26,14 +26,24 @@ export const baseUrl = (
 ).replace(/\/$/, "");
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${baseUrl}${path}`, {
-    ...init,
-    headers: {
-      Accept: "application/json",
-      ...(init?.body ? { "Content-Type": "application/json" } : {}),
-      ...init?.headers,
-    },
-  });
+  const url = `${baseUrl}${path}`;
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      ...init,
+      headers: {
+        Accept: "application/json",
+        ...(init?.body ? { "Content-Type": "application/json" } : {}),
+        ...init?.headers,
+      },
+    });
+  } catch (err) {
+    const detail = err instanceof Error ? err.message : String(err);
+    throw new Error(
+      `Network error calling ${url} (${detail}). ` +
+        "Confirm VITE_API_BASE_URL points at AppSail — never call api.catalyst.zoho.in from the browser.",
+    );
+  }
   if (!response.ok) {
     const text = await response.text();
     throw new Error(`API ${response.status}: ${text || response.statusText}`);
@@ -61,7 +71,9 @@ export const api = {
     ),
   getCase: (id: number) => request<CaseMasterDetail>(`/api/v1/cases/${id}`),
   getCaseByCrimeNo: (crimeNo: string) =>
-    request<CaseMasterDetail>(`/api/v1/cases/by-crime-no/${crimeNo}`),
+    request<CaseMasterDetail>(
+      `/api/v1/cases/by-crime-no/${encodeURIComponent(crimeNo)}`,
+    ),
   listCaseStatuses: () => request<IdName[]>("/api/v1/lookups/case-statuses"),
   listCaseCategories: () => request<IdName[]>("/api/v1/lookups/case-categories"),
   listDistricts: () => request<IdName[]>("/api/v1/lookups/districts"),
@@ -128,7 +140,7 @@ export const api = {
     request<OffenderProfile>(`/api/v1/network/offenders/${accusedId}`),
 
   // B4 AI
-    aiChat: (body: {
+  aiChat: (body: {
     question: string;
     case_master_id?: number;
     accused_id?: number;

@@ -1,0 +1,601 @@
+# Extra interlocking FIRs for denser link-analysis demos.
+# Merged by seed_fir_dataset.py when present. Synthetic PII only.
+cases:
+- category_code: '1'
+  district_id: 443
+  police_station_id: 7
+  year: 2026
+  serial: 40
+  registered_date: '2026-03-02'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-03-02T20:00:00+00:00'
+  incident_to: '2026-03-02T20:40:00+00:00'
+  info_received: '2026-03-02T21:15:00+00:00'
+  latitude: '12.9782000'
+  longitude: '77.6408000'
+  brief_facts: Chain snatching near 100 Feet Road; same MO as MG Road series.
+  complainants:
+  - name: Meena Iyer
+    age_year: 36
+    gender_id: F
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Meena Iyer
+    age_year: 36
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh K
+    age_year: 28
+    gender_id: M
+    person_id: P100
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_ind_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-03-02T20:00:00+00:00'
+    occurrence_to: '2026-03-02T20:40:00+00:00'
+    place_of_occurrence: 100 Feet Road Indiranagar
+    beat_number: B-04
+    distance_from_ps_km: 0.8
+    direction_from_ps: N
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-03-03'
+    accused_person_id: P100
+    io: e_ind_io
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 12
+  year: 2026
+  serial: 41
+  registered_date: '2026-03-11'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-03-11T22:10:00+00:00'
+  incident_to: '2026-03-11T22:30:00+00:00'
+  info_received: '2026-03-11T23:00:00+00:00'
+  latitude: '12.9352000'
+  longitude: '77.6245000'
+  brief_facts: Mobile phone snatched near Forum Mall; co-accused fled on scooter.
+  complainants:
+  - name: Arjun Nair
+    age_year: 24
+    gender_id: M
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Arjun Nair
+    age_year: 24
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh K
+    age_year: 28
+    gender_id: M
+    person_id: P100
+  - name: Vikram T
+    age_year: 26
+    gender_id: M
+    person_id: RING3
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_kor_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-03-11T22:10:00+00:00'
+    occurrence_to: '2026-03-11T22:30:00+00:00'
+    place_of_occurrence: Forum Mall outer road
+    beat_number: B-09
+    distance_from_ps_km: 1.2
+    direction_from_ps: W
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-03-12'
+    accused_person_id: RING3
+    io: e_kor_io
+    court: cmm_blr
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-03-28'
+    officer: e_kor_io
+- category_code: '1'
+  district_id: 444
+  police_station_id: 11
+  year: 2026
+  serial: 42
+  registered_date: '2026-03-18'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-03-18T19:30:00+00:00'
+  incident_to: '2026-03-18T20:00:00+00:00'
+  info_received: '2026-03-18T20:40:00+00:00'
+  latitude: '12.3095000'
+  longitude: '76.6551000'
+  brief_facts: Two-wheeler theft near Mysuru North; accused matches Bengaluru series.
+  complainants:
+  - name: Kiran Gowda
+    age_year: 33
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Kiran Gowda
+    age_year: 33
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Vikram T
+    age_year: 26
+    gender_id: M
+    person_id: RING3
+  - name: Naveen M
+    age_year: 29
+    gender_id: M
+    person_id: RING3B
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_mys_io
+  court: jmfc_mys
+  occurrence:
+    occurrence_from: '2026-03-18T19:30:00+00:00'
+    occurrence_to: '2026-03-18T20:00:00+00:00'
+    place_of_occurrence: Mysuru North bus stand parking
+    beat_number: M-02
+    distance_from_ps_km: 0.5
+    direction_from_ps: S
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-03-19'
+    accused_person_id: RING3
+    io: e_mys_io
+    court: jmfc_mys
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 6
+  year: 2026
+  serial: 43
+  registered_date: '2026-04-01'
+  status: ui
+  gravity: heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-04-01T23:15:00+00:00'
+  incident_to: '2026-04-01T23:40:00+00:00'
+  info_received: '2026-04-02T00:10:00+00:00'
+  latitude: '12.9698000'
+  longitude: '77.5971000'
+  brief_facts: Group assault after pub dispute; repeat faces from prior FIRs.
+  complainants:
+  - name: Rahul Desai
+    age_year: 27
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rahul Desai
+    age_year: 27
+    gender_id: M
+    victim_police: '0'
+  - name: Sameer Khan
+    age_year: 25
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Imran S
+    age_year: 31
+    gender_id: M
+    person_id: RING4
+  - name: Farhan Q
+    age_year: 28
+    gender_id: M
+    person_id: RING4B
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  - act_id: IPC
+    section_id: '143'
+  registering_officer: e_mg_io
+  court: sessions_blr
+  occurrence:
+    occurrence_from: '2026-04-01T23:15:00+00:00'
+    occurrence_to: '2026-04-01T23:40:00+00:00'
+    place_of_occurrence: Church Street alley
+    beat_number: B-12
+    distance_from_ps_km: 0.6
+    direction_from_ps: S
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-04-02'
+    accused_person_id: RING4
+    io: e_mg_io
+    court: sessions_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 445
+  police_station_id: 22
+  year: 2026
+  serial: 44
+  registered_date: '2026-04-08'
+  status: ui
+  gravity: heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-04-08T21:00:00+00:00'
+  incident_to: '2026-04-08T21:25:00+00:00'
+  info_received: '2026-04-08T21:50:00+00:00'
+  latitude: '15.8497000'
+  longitude: '74.4977000'
+  brief_facts: Assault outside Belagavi City market; linked to Church Street group.
+  complainants:
+  - name: Prakash Patil
+    age_year: 44
+    gender_id: M
+    occupation: trader
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Prakash Patil
+    age_year: 44
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Imran S
+    age_year: 31
+    gender_id: M
+    person_id: RING4
+  - name: Yusuf R
+    age_year: 30
+    gender_id: M
+    person_id: RING4C
+  act_sections:
+  - act_id: IPC
+    section_id: '324'
+  registering_officer: e_bel_city
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-04-08T21:00:00+00:00'
+    occurrence_to: '2026-04-08T21:25:00+00:00'
+    place_of_occurrence: Belagavi City market lane
+    beat_number: BL-01
+    distance_from_ps_km: 1.0
+    direction_from_ps: E
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-04-09'
+    accused_person_id: RING4
+    io: e_bel_city
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 7
+  year: 2026
+  serial: 45
+  registered_date: '2026-04-14'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-04-10T10:00:00+00:00'
+  incident_to: '2026-04-12T18:00:00+00:00'
+  info_received: '2026-04-14T11:00:00+00:00'
+  latitude: '12.9811000'
+  longitude: '77.6419000'
+  brief_facts: Online job fraud; same operator as prior FBR1 cases.
+  complainants:
+  - name: Divya R
+    age_year: 22
+    gender_id: F
+    occupation: student
+    religion: hindu
+    caste: sc
+  victims:
+  - name: Divya R
+    age_year: 22
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Fraud Ring Lead
+    age_year: 35
+    gender_id: M
+    person_id: FBR1
+  - name: Caller X
+    age_year: 24
+    gender_id: M
+    person_id: FBR2
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  - act_id: IT
+    section_id: 66C
+  registering_officer: e_ind_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-04-10T10:00:00+00:00'
+    occurrence_to: '2026-04-12T18:00:00+00:00'
+    place_of_occurrence: Online / Indiranagar residence
+    beat_number: B-05
+    distance_from_ps_km: 0.0
+    direction_from_ps: N
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-04-15'
+    accused_person_id: FBR1
+    io: e_ind_io
+    court: cmm_blr
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-30'
+    officer: e_ind_io
+- category_code: '1'
+  district_id: 443
+  police_station_id: 12
+  year: 2026
+  serial: 46
+  registered_date: '2026-04-20'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-04-20T01:20:00+00:00'
+  incident_to: '2026-04-20T01:50:00+00:00'
+  info_received: '2026-04-20T02:30:00+00:00'
+  latitude: '12.9279000'
+  longitude: '77.6271000'
+  brief_facts: House break-in; tools recovered match Koramangala series.
+  complainants:
+  - name: Lakshmi Devi
+    age_year: 52
+    gender_id: F
+    occupation: farmer
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Lakshmi Devi
+    age_year: 52
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Vikram T
+    age_year: 26
+    gender_id: M
+    person_id: RING3
+  - name: Naveen M
+    age_year: 29
+    gender_id: M
+    person_id: RING3B
+  - name: Unknown
+    person_id: U46
+  act_sections:
+  - act_id: IPC
+    section_id: '457'
+  - act_id: IPC
+    section_id: '380'
+  registering_officer: e_kor_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-04-20T01:20:00+00:00'
+    occurrence_to: '2026-04-20T01:50:00+00:00'
+    place_of_occurrence: 5th Block Koramangala residence
+    beat_number: B-11
+    distance_from_ps_km: 0.9
+    direction_from_ps: E
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-04-21'
+    accused_person_id: RING3B
+    io: e_kor_io
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 444
+  police_station_id: 13
+  year: 2026
+  serial: 47
+  registered_date: '2026-05-02'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-04-28T09:00:00+00:00'
+  incident_to: '2026-05-01T17:00:00+00:00'
+  info_received: '2026-05-02T10:00:00+00:00'
+  latitude: '12.2958000'
+  longitude: '76.6394000'
+  brief_facts: UPI mule account fraud; FBR2 caller reused Mysuru numbers.
+  complainants:
+  - name: Suma Hegde
+    age_year: 39
+    gender_id: F
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Suma Hegde
+    age_year: 39
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Caller X
+    age_year: 24
+    gender_id: M
+    person_id: FBR2
+  - name: Fraud Ring Lead
+    age_year: 35
+    gender_id: M
+    person_id: FBR1
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_mys_sho
+  court: jmfc_mys
+  occurrence:
+    occurrence_from: '2026-04-28T09:00:00+00:00'
+    occurrence_to: '2026-05-01T17:00:00+00:00'
+    place_of_occurrence: Online / Mysuru South
+    beat_number: M-08
+    distance_from_ps_km: 0.0
+    direction_from_ps: N
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-05-03'
+    accused_person_id: FBR2
+    io: e_mys_sho
+    court: jmfc_mys
+    is_accused: true
+- category_code: '1'
+  district_id: 445
+  police_station_id: 21
+  year: 2026
+  serial: 48
+  registered_date: '2026-05-09'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-09T04:00:00+00:00'
+  incident_to: '2026-05-09T04:45:00+00:00'
+  info_received: '2026-05-09T06:00:00+00:00'
+  latitude: '15.8621000'
+  longitude: '74.5122000'
+  brief_facts: Cattle theft; RING3B spotted near Belagavi Rural highway.
+  complainants:
+  - name: Basavaraj K
+    age_year: 48
+    gender_id: M
+    occupation: farmer
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Basavaraj K
+    age_year: 48
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Naveen M
+    age_year: 29
+    gender_id: M
+    person_id: RING3B
+  - name: Local Aid
+    age_year: 33
+    gender_id: M
+    person_id: BLRURAL1
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_bel_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-05-09T04:00:00+00:00'
+    occurrence_to: '2026-05-09T04:45:00+00:00'
+    place_of_occurrence: Belagavi Rural highway shed
+    beat_number: BR-03
+    distance_from_ps_km: 3.5
+    direction_from_ps: W
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-05-10'
+    accused_person_id: RING3B
+    io: e_bel_io
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 6
+  year: 2026
+  serial: 49
+  registered_date: '2026-05-16'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-16T18:40:00+00:00'
+  incident_to: '2026-05-16T19:00:00+00:00'
+  info_received: '2026-05-16T19:25:00+00:00'
+  latitude: '12.9744000'
+  longitude: '77.6012000'
+  brief_facts: Laptop bag theft at Cubbon Park; Helper B again on CCTV.
+  complainants:
+  - name: Nikhil Rao
+    age_year: 30
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Nikhil Rao
+    age_year: 30
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  - name: Ramesh K
+    age_year: 28
+    gender_id: M
+    person_id: P100
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_mg_sho
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-05-16T18:40:00+00:00'
+    occurrence_to: '2026-05-16T19:00:00+00:00'
+    place_of_occurrence: Cubbon Park east gate
+    beat_number: B-12
+    distance_from_ps_km: 1.1
+    direction_from_ps: W
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-05-17'
+    accused_person_id: H2
+    io: e_mg_sho
+    court: cmm_blr
+    is_accused: true

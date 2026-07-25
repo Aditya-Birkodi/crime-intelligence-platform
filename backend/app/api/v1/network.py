@@ -8,13 +8,23 @@ from fastapi import APIRouter, Depends, Query
 
 from app.repositories.case.factory import CaseStoreDep
 from app.schemas.network import NetworkGraphResponse, OffenderProfile
+from app.services import lookups_catalog as catalog
 from app.services.network import NetworkService
 
 router = APIRouter(prefix="/network", tags=["network"])
 
 
 def _service(store: CaseStoreDep) -> NetworkService:
-    return NetworkService(store)
+    station_names: dict[int, str] = {}
+    try:
+        for row in catalog.load_lookups().get("stations") or []:
+            sid = int(row.get("id"))
+            name = str(row.get("name") or "").strip()
+            if name:
+                station_names[sid] = name
+    except Exception:
+        station_names = {}
+    return NetworkService(store, station_names=station_names)
 
 
 @router.get("/graph", response_model=NetworkGraphResponse)

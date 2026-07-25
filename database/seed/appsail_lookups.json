@@ -207,6 +207,130 @@
     {
       "id": 1031,
       "name": "Shivamogga"
+    },
+    {
+      "id": 2001,
+      "name": "Bagalkote"
+    },
+    {
+      "id": 2002,
+      "name": "Ballari"
+    },
+    {
+      "id": 2003,
+      "name": "Belagavi"
+    },
+    {
+      "id": 2004,
+      "name": "Bengaluru Rural"
+    },
+    {
+      "id": 2005,
+      "name": "Bengaluru Urban"
+    },
+    {
+      "id": 2006,
+      "name": "Bidar"
+    },
+    {
+      "id": 2007,
+      "name": "Chamarajanagara"
+    },
+    {
+      "id": 2008,
+      "name": "Chikkaballapur"
+    },
+    {
+      "id": 2009,
+      "name": "Chikkamagaluru"
+    },
+    {
+      "id": 2010,
+      "name": "Chitradurga"
+    },
+    {
+      "id": 2011,
+      "name": "Dakshina Kannada"
+    },
+    {
+      "id": 2012,
+      "name": "Davanagere"
+    },
+    {
+      "id": 2013,
+      "name": "Dharwad"
+    },
+    {
+      "id": 2014,
+      "name": "Gadag"
+    },
+    {
+      "id": 2015,
+      "name": "Hassan"
+    },
+    {
+      "id": 2016,
+      "name": "Haveri"
+    },
+    {
+      "id": 2017,
+      "name": "Kalaburagi"
+    },
+    {
+      "id": 2018,
+      "name": "Kodagu"
+    },
+    {
+      "id": 2019,
+      "name": "Kolar"
+    },
+    {
+      "id": 2020,
+      "name": "Koppal"
+    },
+    {
+      "id": 2021,
+      "name": "Mandya"
+    },
+    {
+      "id": 2022,
+      "name": "Mysuru"
+    },
+    {
+      "id": 2023,
+      "name": "Raichur"
+    },
+    {
+      "id": 2024,
+      "name": "Ramanagara"
+    },
+    {
+      "id": 2025,
+      "name": "Shivamogga"
+    },
+    {
+      "id": 2026,
+      "name": "Tumakuru"
+    },
+    {
+      "id": 2027,
+      "name": "Udupi"
+    },
+    {
+      "id": 2028,
+      "name": "Uttara Kannada"
+    },
+    {
+      "id": 2029,
+      "name": "Vijayanagara"
+    },
+    {
+      "id": 2030,
+      "name": "Vijayapura"
+    },
+    {
+      "id": 2031,
+      "name": "Yadgir"
     }
   ],
   "stations": [
@@ -294,6 +418,161 @@
       "id": 2009,
       "name": "PS-9",
       "district_id": 1025
+    },
+    {
+      "id": 5300,
+      "name": "Bagalkote Town PS",
+      "district_id": 2001
+    },
+    {
+      "id": 5301,
+      "name": "Ballari Town PS",
+      "district_id": 2002
+    },
+    {
+      "id": 5302,
+      "name": "Belagavi Town PS",
+      "district_id": 2003
+    },
+    {
+      "id": 5303,
+      "name": "Bengaluru Rural Town PS",
+      "district_id": 2004
+    },
+    {
+      "id": 5304,
+      "name": "Bengaluru Urban Town PS",
+      "district_id": 2005
+    },
+    {
+      "id": 5305,
+      "name": "Bidar Town PS",
+      "district_id": 2006
+    },
+    {
+      "id": 5306,
+      "name": "Chamarajanagara Town PS",
+      "district_id": 2007
+    },
+    {
+      "id": 5307,
+      "name": "Chikkaballapur Town PS",
+      "district_id": 2008
+    },
+    {
+      "id": 5308,
+      "name": "Chikkamagaluru Town PS",
+      "district_id": 2009
+    },
+    {
+      "id": 5309,
+      "name": "Chitradurga Town PS",
+      "district_id": 2010
+    },
+    {
+      "id": 5310,
+      "name": "Dakshina Kannada Town PS",
+      "district_id": 2011
+    },
+    {
+      "id": 5311,
+      "name": "Davanagere Town PS",
+      "district_id": 2012
+    },
+    {
+      "id": 5312,
+      "name": "Dharwad Town PS",
+      "district_id": 2013
+    },
+    {
+      "id": 5313,
+      "name": "Gadag Town PS",
+      "district_id": 2014
+    },
+    {
+      "id": 5314,
+      "name": "Hassan Town PS",
+      "district_id": 2015
+    },
+    {
+      "id": 5315,
+      "name": "Haveri Town PS",
+      "district_id": 2016
+    },
+    {
+      "id": 5316,
+      "name": "Kalaburagi Town PS",
+      "district_id": 2017
+    },
+    {
+      "id": 5317,
+      "name": "Kodagu Town PS",
+      "district_id": 2018
+    },
+    {
+      "id": 5318,
+      "name": "Kolar Town PS",
+      "district_id": 2019
+    },
+    {
+      "id": 5319,
+      "name": "Koppal Town PS",
+      "district_id": 2020
+    },
+    {
+      "id": 5320,
+      "name": "Mandya Town PS",
+      "district_id": 2021
+    },
+    {
+      "id": 5321,
+      "name": "Mysuru Town PS",
+      "district_id": 2022
+    },
+    {
+      "id": 5322,
+      "name": "Raichur Town PS",
+      "district_id": 2023
+    },
+    {
+      "id": 5323,
+      "name": "Ramanagara Town PS",
+      "district_id": 2024
+    },
+    {
+      "id": 5324,
+      "name": "Shivamogga Town PS",
+      "district_id": 2025
+    },
+    {
+      "id": 5325,
+      "name": "Tumakuru Town PS",
+      "district_id": 2026
+    },
+    {
+      "id": 5326,
+      "name": "Udupi Town PS",
+      "district_id": 2027
+    },
+    {
+      "id": 5327,
+      "name": "Uttara Kannada Town PS",
+      "district_id": 2028
+    },
+    {
+      "id": 5328,
+      "name": "Vijayanagara Town PS",
+      "district_id": 2029
+    },
+    {
+      "id": 5329,
+      "name": "Vijayapura Town PS",
+      "district_id": 2030
+    },
+    {
+      "id": 5330,
+      "name": "Yadgir Town PS",
+      "district_id": 2031
     }
   ],
   "courts": [
@@ -380,6 +659,192 @@
       "name": "KSP Court 10",
       "district_id": 1001,
       "key": "ksp_court_10"
+    },
+    {
+      "id": 15,
+      "name": "JMFC Bagalkote",
+      "district_id": 2001,
+      "key": "court_sw_2001"
+    },
+    {
+      "id": 16,
+      "name": "JMFC Ballari",
+      "district_id": 2002,
+      "key": "court_sw_2002"
+    },
+    {
+      "id": 17,
+      "name": "JMFC Belagavi",
+      "district_id": 2003,
+      "key": "court_sw_2003"
+    },
+    {
+      "id": 18,
+      "name": "JMFC Bengaluru Rural",
+      "district_id": 2004,
+      "key": "court_sw_2004"
+    },
+    {
+      "id": 19,
+      "name": "JMFC Bengaluru Urban",
+      "district_id": 2005,
+      "key": "court_sw_2005"
+    },
+    {
+      "id": 20,
+      "name": "JMFC Bidar",
+      "district_id": 2006,
+      "key": "court_sw_2006"
+    },
+    {
+      "id": 21,
+      "name": "JMFC Chamarajanagara",
+      "district_id": 2007,
+      "key": "court_sw_2007"
+    },
+    {
+      "id": 22,
+      "name": "JMFC Chikkaballapur",
+      "district_id": 2008,
+      "key": "court_sw_2008"
+    },
+    {
+      "id": 23,
+      "name": "JMFC Chikkamagaluru",
+      "district_id": 2009,
+      "key": "court_sw_2009"
+    },
+    {
+      "id": 24,
+      "name": "JMFC Chitradurga",
+      "district_id": 2010,
+      "key": "court_sw_2010"
+    },
+    {
+      "id": 25,
+      "name": "JMFC Dakshina Kannada",
+      "district_id": 2011,
+      "key": "court_sw_2011"
+    },
+    {
+      "id": 26,
+      "name": "JMFC Davanagere",
+      "district_id": 2012,
+      "key": "court_sw_2012"
+    },
+    {
+      "id": 27,
+      "name": "JMFC Dharwad",
+      "district_id": 2013,
+      "key": "court_sw_2013"
+    },
+    {
+      "id": 28,
+      "name": "JMFC Gadag",
+      "district_id": 2014,
+      "key": "court_sw_2014"
+    },
+    {
+      "id": 29,
+      "name": "JMFC Hassan",
+      "district_id": 2015,
+      "key": "court_sw_2015"
+    },
+    {
+      "id": 30,
+      "name": "JMFC Haveri",
+      "district_id": 2016,
+      "key": "court_sw_2016"
+    },
+    {
+      "id": 31,
+      "name": "JMFC Kalaburagi",
+      "district_id": 2017,
+      "key": "court_sw_2017"
+    },
+    {
+      "id": 32,
+      "name": "JMFC Kodagu",
+      "district_id": 2018,
+      "key": "court_sw_2018"
+    },
+    {
+      "id": 33,
+      "name": "JMFC Kolar",
+      "district_id": 2019,
+      "key": "court_sw_2019"
+    },
+    {
+      "id": 34,
+      "name": "JMFC Koppal",
+      "district_id": 2020,
+      "key": "court_sw_2020"
+    },
+    {
+      "id": 35,
+      "name": "JMFC Mandya",
+      "district_id": 2021,
+      "key": "court_sw_2021"
+    },
+    {
+      "id": 36,
+      "name": "JMFC Mysuru",
+      "district_id": 2022,
+      "key": "court_sw_2022"
+    },
+    {
+      "id": 37,
+      "name": "JMFC Raichur",
+      "district_id": 2023,
+      "key": "court_sw_2023"
+    },
+    {
+      "id": 38,
+      "name": "JMFC Ramanagara",
+      "district_id": 2024,
+      "key": "court_sw_2024"
+    },
+    {
+      "id": 39,
+      "name": "JMFC Shivamogga",
+      "district_id": 2025,
+      "key": "court_sw_2025"
+    },
+    {
+      "id": 40,
+      "name": "JMFC Tumakuru",
+      "district_id": 2026,
+      "key": "court_sw_2026"
+    },
+    {
+      "id": 41,
+      "name": "JMFC Udupi",
+      "district_id": 2027,
+      "key": "court_sw_2027"
+    },
+    {
+      "id": 42,
+      "name": "JMFC Uttara Kannada",
+      "district_id": 2028,
+      "key": "court_sw_2028"
+    },
+    {
+      "id": 43,
+      "name": "JMFC Vijayanagara",
+      "district_id": 2029,
+      "key": "court_sw_2029"
+    },
+    {
+      "id": 44,
+      "name": "JMFC Vijayapura",
+      "district_id": 2030,
+      "key": "court_sw_2030"
+    },
+    {
+      "id": 45,
+      "name": "JMFC Yadgir",
+      "district_id": 2031,
+      "key": "court_sw_2031"
     }
   ],
   "employees": [
@@ -998,6 +1463,223 @@
       "key": "ksp_off_80",
       "unit_id": 2008,
       "district_id": 1030
+    },
+    {
+      "id": 89,
+      "name": "SI Anand",
+      "key": "e_sw_2001_io",
+      "unit_id": 5300,
+      "district_id": 2001
+    },
+    {
+      "id": 90,
+      "name": "SI Bhavya",
+      "key": "e_sw_2002_io",
+      "unit_id": 5301,
+      "district_id": 2002
+    },
+    {
+      "id": 91,
+      "name": "SI Chetan",
+      "key": "e_sw_2003_io",
+      "unit_id": 5302,
+      "district_id": 2003
+    },
+    {
+      "id": 92,
+      "name": "SI Geetha",
+      "key": "e_sw_2004_io",
+      "unit_id": 5303,
+      "district_id": 2004
+    },
+    {
+      "id": 93,
+      "name": "SI Eshwar",
+      "key": "e_sw_2005_io",
+      "unit_id": 5304,
+      "district_id": 2005
+    },
+    {
+      "id": 94,
+      "name": "SI Lakshmi",
+      "key": "e_sw_2006_io",
+      "unit_id": 5305,
+      "district_id": 2006
+    },
+    {
+      "id": 95,
+      "name": "SI Harish",
+      "key": "e_sw_2007_io",
+      "unit_id": 5306,
+      "district_id": 2007
+    },
+    {
+      "id": 96,
+      "name": "SI Poornima",
+      "key": "e_sw_2008_io",
+      "unit_id": 5307,
+      "district_id": 2008
+    },
+    {
+      "id": 97,
+      "name": "SI Kiran",
+      "key": "e_sw_2009_io",
+      "unit_id": 5308,
+      "district_id": 2009
+    },
+    {
+      "id": 98,
+      "name": "SI Shwetha",
+      "key": "e_sw_2010_io",
+      "unit_id": 5309,
+      "district_id": 2010
+    },
+    {
+      "id": 99,
+      "name": "SI Mahesh",
+      "key": "e_sw_2011_io",
+      "unit_id": 5310,
+      "district_id": 2011
+    },
+    {
+      "id": 100,
+      "name": "SI Vanitha",
+      "key": "e_sw_2012_io",
+      "unit_id": 5311,
+      "district_id": 2012
+    },
+    {
+      "id": 101,
+      "name": "SI Prakash",
+      "key": "e_sw_2013_io",
+      "unit_id": 5312,
+      "district_id": 2013
+    },
+    {
+      "id": 102,
+      "name": "SI Priya",
+      "key": "e_sw_2014_io",
+      "unit_id": 5313,
+      "district_id": 2014
+    },
+    {
+      "id": 103,
+      "name": "SI Suresh",
+      "key": "e_sw_2015_io",
+      "unit_id": 5314,
+      "district_id": 2015
+    },
+    {
+      "id": 104,
+      "name": "SI Bhavya",
+      "key": "e_sw_2016_io",
+      "unit_id": 5315,
+      "district_id": 2016
+    },
+    {
+      "id": 105,
+      "name": "SI Vijay",
+      "key": "e_sw_2017_io",
+      "unit_id": 5316,
+      "district_id": 2017
+    },
+    {
+      "id": 106,
+      "name": "SI Geetha",
+      "key": "e_sw_2018_io",
+      "unit_id": 5317,
+      "district_id": 2018
+    },
+    {
+      "id": 107,
+      "name": "SI Naveen",
+      "key": "e_sw_2019_io",
+      "unit_id": 5318,
+      "district_id": 2019
+    },
+    {
+      "id": 108,
+      "name": "SI Lakshmi",
+      "key": "e_sw_2020_io",
+      "unit_id": 5319,
+      "district_id": 2020
+    },
+    {
+      "id": 109,
+      "name": "SI Manjunath",
+      "key": "e_sw_2021_io",
+      "unit_id": 5320,
+      "district_id": 2021
+    },
+    {
+      "id": 110,
+      "name": "SI Poornima",
+      "key": "e_sw_2022_io",
+      "unit_id": 5321,
+      "district_id": 2022
+    },
+    {
+      "id": 111,
+      "name": "SI Praveen",
+      "key": "e_sw_2023_io",
+      "unit_id": 5322,
+      "district_id": 2023
+    },
+    {
+      "id": 112,
+      "name": "SI Shwetha",
+      "key": "e_sw_2024_io",
+      "unit_id": 5323,
+      "district_id": 2024
+    },
+    {
+      "id": 113,
+      "name": "SI Raghavendra",
+      "key": "e_sw_2025_io",
+      "unit_id": 5324,
+      "district_id": 2025
+    },
+    {
+      "id": 114,
+      "name": "SI Vanitha",
+      "key": "e_sw_2026_io",
+      "unit_id": 5325,
+      "district_id": 2026
+    },
+    {
+      "id": 115,
+      "name": "SI Ashok",
+      "key": "e_sw_2027_io",
+      "unit_id": 5326,
+      "district_id": 2027
+    },
+    {
+      "id": 116,
+      "name": "SI Priya",
+      "key": "e_sw_2028_io",
+      "unit_id": 5327,
+      "district_id": 2028
+    },
+    {
+      "id": 117,
+      "name": "SI Anand",
+      "key": "e_sw_2029_io",
+      "unit_id": 5328,
+      "district_id": 2029
+    },
+    {
+      "id": 118,
+      "name": "SI Bhavya",
+      "key": "e_sw_2030_io",
+      "unit_id": 5329,
+      "district_id": 2030
+    },
+    {
+      "id": 119,
+      "name": "SI Chetan",
+      "key": "e_sw_2031_io",
+      "unit_id": 5330,
+      "district_id": 2031
     }
   ],
   "station_district": {
@@ -1026,6 +1708,68 @@
     "2007": 1030,
     "2008": 1030,
     "2125": 1025,
-    "2009": 1025
+    "2009": 1025,
+    "5200": 2001,
+    "5300": 2001,
+    "5201": 2002,
+    "5301": 2002,
+    "5202": 2003,
+    "5302": 2003,
+    "5203": 2004,
+    "5303": 2004,
+    "5204": 2005,
+    "5304": 2005,
+    "5205": 2006,
+    "5305": 2006,
+    "5206": 2007,
+    "5306": 2007,
+    "5207": 2008,
+    "5307": 2008,
+    "5208": 2009,
+    "5308": 2009,
+    "5209": 2010,
+    "5309": 2010,
+    "5210": 2011,
+    "5310": 2011,
+    "5211": 2012,
+    "5311": 2012,
+    "5212": 2013,
+    "5312": 2013,
+    "5213": 2014,
+    "5313": 2014,
+    "5214": 2015,
+    "5314": 2015,
+    "5215": 2016,
+    "5315": 2016,
+    "5216": 2017,
+    "5316": 2017,
+    "5217": 2018,
+    "5317": 2018,
+    "5218": 2019,
+    "5318": 2019,
+    "5219": 2020,
+    "5319": 2020,
+    "5220": 2021,
+    "5320": 2021,
+    "5221": 2022,
+    "5321": 2022,
+    "5222": 2023,
+    "5322": 2023,
+    "5223": 2024,
+    "5323": 2024,
+    "5224": 2025,
+    "5324": 2025,
+    "5225": 2026,
+    "5325": 2026,
+    "5226": 2027,
+    "5326": 2027,
+    "5227": 2028,
+    "5327": 2028,
+    "5228": 2029,
+    "5328": 2029,
+    "5229": 2030,
+    "5329": 2030,
+    "5230": 2031,
+    "5330": 2031
   }
 }

@@ -1,0 +1,6152 @@
+_meta:
+  source: generate_statewide_karnataka.py
+  districts: 31
+  cases_per_district: 3
+  accused_naming: realistic_kannada_region
+  note: Synthetic statewide cover for all Karnataka districts
+geography:
+  districts:
+  - id: 2001
+    name: Bagalkote
+    hq_latitude: 16.1867
+    hq_longitude: 75.6961
+  - id: 2002
+    name: Ballari
+    hq_latitude: 15.1394
+    hq_longitude: 76.9214
+  - id: 2003
+    name: Belagavi
+    hq_latitude: 15.8497
+    hq_longitude: 74.4977
+  - id: 2004
+    name: Bengaluru Rural
+    hq_latitude: 13.2846
+    hq_longitude: 77.595
+  - id: 2005
+    name: Bengaluru Urban
+    hq_latitude: 12.9716
+    hq_longitude: 77.5946
+  - id: 2006
+    name: Bidar
+    hq_latitude: 17.9104
+    hq_longitude: 77.5199
+  - id: 2007
+    name: Chamarajanagara
+    hq_latitude: 11.9261
+    hq_longitude: 76.9437
+  - id: 2008
+    name: Chikkaballapur
+    hq_latitude: 13.4355
+    hq_longitude: 77.7315
+  - id: 2009
+    name: Chikkamagaluru
+    hq_latitude: 13.3161
+    hq_longitude: 75.772
+  - id: 2010
+    name: Chitradurga
+    hq_latitude: 14.2253
+    hq_longitude: 76.398
+  - id: 2011
+    name: Dakshina Kannada
+    hq_latitude: 12.9141
+    hq_longitude: 74.856
+  - id: 2012
+    name: Davanagere
+    hq_latitude: 14.4644
+    hq_longitude: 75.9218
+  - id: 2013
+    name: Dharwad
+    hq_latitude: 15.4589
+    hq_longitude: 75.0078
+  - id: 2014
+    name: Gadag
+    hq_latitude: 15.4315
+    hq_longitude: 75.635
+  - id: 2015
+    name: Hassan
+    hq_latitude: 13.0033
+    hq_longitude: 76.1004
+  - id: 2016
+    name: Haveri
+    hq_latitude: 14.7936
+    hq_longitude: 75.399
+  - id: 2017
+    name: Kalaburagi
+    hq_latitude: 17.3297
+    hq_longitude: 76.8343
+  - id: 2018
+    name: Kodagu
+    hq_latitude: 12.4244
+    hq_longitude: 75.7382
+  - id: 2019
+    name: Kolar
+    hq_latitude: 13.1367
+    hq_longitude: 78.1291
+  - id: 2020
+    name: Koppal
+    hq_latitude: 15.3452
+    hq_longitude: 76.1548
+  - id: 2021
+    name: Mandya
+    hq_latitude: 12.5242
+    hq_longitude: 76.897
+  - id: 2022
+    name: Mysuru
+    hq_latitude: 12.2958
+    hq_longitude: 76.6394
+  - id: 2023
+    name: Raichur
+    hq_latitude: 16.2076
+    hq_longitude: 77.3463
+  - id: 2024
+    name: Ramanagara
+    hq_latitude: 12.7209
+    hq_longitude: 77.2824
+  - id: 2025
+    name: Shivamogga
+    hq_latitude: 13.9299
+    hq_longitude: 75.5681
+  - id: 2026
+    name: Tumakuru
+    hq_latitude: 13.3379
+    hq_longitude: 77.1173
+  - id: 2027
+    name: Udupi
+    hq_latitude: 13.3409
+    hq_longitude: 74.7421
+  - id: 2028
+    name: Uttara Kannada
+    hq_latitude: 14.8136
+    hq_longitude: 74.13
+  - id: 2029
+    name: Vijayanagara
+    hq_latitude: 15.27
+    hq_longitude: 76.39
+  - id: 2030
+    name: Vijayapura
+    hq_latitude: 16.8302
+    hq_longitude: 75.71
+  - id: 2031
+    name: Yadgir
+    hq_latitude: 16.7717
+    hq_longitude: 77.1376
+  units:
+  - id: 5200
+    name: Bagalkote Circle
+    district_id: 2001
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5300
+    name: Bagalkote Town PS
+    district_id: 2001
+    type_key: ps
+    parent_unit: 5200
+  - id: 5201
+    name: Ballari Circle
+    district_id: 2002
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5301
+    name: Ballari Town PS
+    district_id: 2002
+    type_key: ps
+    parent_unit: 5201
+  - id: 5202
+    name: Belagavi Circle
+    district_id: 2003
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5302
+    name: Belagavi Town PS
+    district_id: 2003
+    type_key: ps
+    parent_unit: 5202
+  - id: 5203
+    name: Bengaluru Rural Circle
+    district_id: 2004
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5303
+    name: Bengaluru Rural Town PS
+    district_id: 2004
+    type_key: ps
+    parent_unit: 5203
+  - id: 5204
+    name: Bengaluru Urban Circle
+    district_id: 2005
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5304
+    name: Bengaluru Urban Town PS
+    district_id: 2005
+    type_key: ps
+    parent_unit: 5204
+  - id: 5205
+    name: Bidar Circle
+    district_id: 2006
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5305
+    name: Bidar Town PS
+    district_id: 2006
+    type_key: ps
+    parent_unit: 5205
+  - id: 5206
+    name: Chamarajanagara Circle
+    district_id: 2007
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5306
+    name: Chamarajanagara Town PS
+    district_id: 2007
+    type_key: ps
+    parent_unit: 5206
+  - id: 5207
+    name: Chikkaballapur Circle
+    district_id: 2008
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5307
+    name: Chikkaballapur Town PS
+    district_id: 2008
+    type_key: ps
+    parent_unit: 5207
+  - id: 5208
+    name: Chikkamagaluru Circle
+    district_id: 2009
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5308
+    name: Chikkamagaluru Town PS
+    district_id: 2009
+    type_key: ps
+    parent_unit: 5208
+  - id: 5209
+    name: Chitradurga Circle
+    district_id: 2010
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5309
+    name: Chitradurga Town PS
+    district_id: 2010
+    type_key: ps
+    parent_unit: 5209
+  - id: 5210
+    name: Dakshina Kannada Circle
+    district_id: 2011
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5310
+    name: Dakshina Kannada Town PS
+    district_id: 2011
+    type_key: ps
+    parent_unit: 5210
+  - id: 5211
+    name: Davanagere Circle
+    district_id: 2012
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5311
+    name: Davanagere Town PS
+    district_id: 2012
+    type_key: ps
+    parent_unit: 5211
+  - id: 5212
+    name: Dharwad Circle
+    district_id: 2013
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5312
+    name: Dharwad Town PS
+    district_id: 2013
+    type_key: ps
+    parent_unit: 5212
+  - id: 5213
+    name: Gadag Circle
+    district_id: 2014
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5313
+    name: Gadag Town PS
+    district_id: 2014
+    type_key: ps
+    parent_unit: 5213
+  - id: 5214
+    name: Hassan Circle
+    district_id: 2015
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5314
+    name: Hassan Town PS
+    district_id: 2015
+    type_key: ps
+    parent_unit: 5214
+  - id: 5215
+    name: Haveri Circle
+    district_id: 2016
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5315
+    name: Haveri Town PS
+    district_id: 2016
+    type_key: ps
+    parent_unit: 5215
+  - id: 5216
+    name: Kalaburagi Circle
+    district_id: 2017
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5316
+    name: Kalaburagi Town PS
+    district_id: 2017
+    type_key: ps
+    parent_unit: 5216
+  - id: 5217
+    name: Kodagu Circle
+    district_id: 2018
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5317
+    name: Kodagu Town PS
+    district_id: 2018
+    type_key: ps
+    parent_unit: 5217
+  - id: 5218
+    name: Kolar Circle
+    district_id: 2019
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5318
+    name: Kolar Town PS
+    district_id: 2019
+    type_key: ps
+    parent_unit: 5218
+  - id: 5219
+    name: Koppal Circle
+    district_id: 2020
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5319
+    name: Koppal Town PS
+    district_id: 2020
+    type_key: ps
+    parent_unit: 5219
+  - id: 5220
+    name: Mandya Circle
+    district_id: 2021
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5320
+    name: Mandya Town PS
+    district_id: 2021
+    type_key: ps
+    parent_unit: 5220
+  - id: 5221
+    name: Mysuru Circle
+    district_id: 2022
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5321
+    name: Mysuru Town PS
+    district_id: 2022
+    type_key: ps
+    parent_unit: 5221
+  - id: 5222
+    name: Raichur Circle
+    district_id: 2023
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5322
+    name: Raichur Town PS
+    district_id: 2023
+    type_key: ps
+    parent_unit: 5222
+  - id: 5223
+    name: Ramanagara Circle
+    district_id: 2024
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5323
+    name: Ramanagara Town PS
+    district_id: 2024
+    type_key: ps
+    parent_unit: 5223
+  - id: 5224
+    name: Shivamogga Circle
+    district_id: 2025
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5324
+    name: Shivamogga Town PS
+    district_id: 2025
+    type_key: ps
+    parent_unit: 5224
+  - id: 5225
+    name: Tumakuru Circle
+    district_id: 2026
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5325
+    name: Tumakuru Town PS
+    district_id: 2026
+    type_key: ps
+    parent_unit: 5225
+  - id: 5226
+    name: Udupi Circle
+    district_id: 2027
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5326
+    name: Udupi Town PS
+    district_id: 2027
+    type_key: ps
+    parent_unit: 5226
+  - id: 5227
+    name: Uttara Kannada Circle
+    district_id: 2028
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5327
+    name: Uttara Kannada Town PS
+    district_id: 2028
+    type_key: ps
+    parent_unit: 5227
+  - id: 5228
+    name: Vijayanagara Circle
+    district_id: 2029
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5328
+    name: Vijayanagara Town PS
+    district_id: 2029
+    type_key: ps
+    parent_unit: 5228
+  - id: 5229
+    name: Vijayapura Circle
+    district_id: 2030
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5329
+    name: Vijayapura Town PS
+    district_id: 2030
+    type_key: ps
+    parent_unit: 5229
+  - id: 5230
+    name: Yadgir Circle
+    district_id: 2031
+    type: circle
+    type_key: circle
+    parent_unit: null
+  - id: 5330
+    name: Yadgir Town PS
+    district_id: 2031
+    type_key: ps
+    parent_unit: 5230
+  courts:
+  - key: court_sw_2001
+    name: JMFC Bagalkote
+    district_id: 2001
+  - key: court_sw_2002
+    name: JMFC Ballari
+    district_id: 2002
+  - key: court_sw_2003
+    name: JMFC Belagavi
+    district_id: 2003
+  - key: court_sw_2004
+    name: JMFC Bengaluru Rural
+    district_id: 2004
+  - key: court_sw_2005
+    name: JMFC Bengaluru Urban
+    district_id: 2005
+  - key: court_sw_2006
+    name: JMFC Bidar
+    district_id: 2006
+  - key: court_sw_2007
+    name: JMFC Chamarajanagara
+    district_id: 2007
+  - key: court_sw_2008
+    name: JMFC Chikkaballapur
+    district_id: 2008
+  - key: court_sw_2009
+    name: JMFC Chikkamagaluru
+    district_id: 2009
+  - key: court_sw_2010
+    name: JMFC Chitradurga
+    district_id: 2010
+  - key: court_sw_2011
+    name: JMFC Dakshina Kannada
+    district_id: 2011
+  - key: court_sw_2012
+    name: JMFC Davanagere
+    district_id: 2012
+  - key: court_sw_2013
+    name: JMFC Dharwad
+    district_id: 2013
+  - key: court_sw_2014
+    name: JMFC Gadag
+    district_id: 2014
+  - key: court_sw_2015
+    name: JMFC Hassan
+    district_id: 2015
+  - key: court_sw_2016
+    name: JMFC Haveri
+    district_id: 2016
+  - key: court_sw_2017
+    name: JMFC Kalaburagi
+    district_id: 2017
+  - key: court_sw_2018
+    name: JMFC Kodagu
+    district_id: 2018
+  - key: court_sw_2019
+    name: JMFC Kolar
+    district_id: 2019
+  - key: court_sw_2020
+    name: JMFC Koppal
+    district_id: 2020
+  - key: court_sw_2021
+    name: JMFC Mandya
+    district_id: 2021
+  - key: court_sw_2022
+    name: JMFC Mysuru
+    district_id: 2022
+  - key: court_sw_2023
+    name: JMFC Raichur
+    district_id: 2023
+  - key: court_sw_2024
+    name: JMFC Ramanagara
+    district_id: 2024
+  - key: court_sw_2025
+    name: JMFC Shivamogga
+    district_id: 2025
+  - key: court_sw_2026
+    name: JMFC Tumakuru
+    district_id: 2026
+  - key: court_sw_2027
+    name: JMFC Udupi
+    district_id: 2027
+  - key: court_sw_2028
+    name: JMFC Uttara Kannada
+    district_id: 2028
+  - key: court_sw_2029
+    name: JMFC Vijayanagara
+    district_id: 2029
+  - key: court_sw_2030
+    name: JMFC Vijayapura
+    district_id: 2030
+  - key: court_sw_2031
+    name: JMFC Yadgir
+    district_id: 2031
+personnel:
+  employees:
+  - key: e_sw_2001_io
+    kgid: KGIDSW2001
+    first_name: SI Anand
+    unit_id: 5300
+    district_id: 2001
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2002_io
+    kgid: KGIDSW2002
+    first_name: SI Bhavya
+    unit_id: 5301
+    district_id: 2002
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2003_io
+    kgid: KGIDSW2003
+    first_name: SI Chetan
+    unit_id: 5302
+    district_id: 2003
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2004_io
+    kgid: KGIDSW2004
+    first_name: SI Geetha
+    unit_id: 5303
+    district_id: 2004
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2005_io
+    kgid: KGIDSW2005
+    first_name: SI Eshwar
+    unit_id: 5304
+    district_id: 2005
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2006_io
+    kgid: KGIDSW2006
+    first_name: SI Lakshmi
+    unit_id: 5305
+    district_id: 2006
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2007_io
+    kgid: KGIDSW2007
+    first_name: SI Harish
+    unit_id: 5306
+    district_id: 2007
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2008_io
+    kgid: KGIDSW2008
+    first_name: SI Poornima
+    unit_id: 5307
+    district_id: 2008
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2009_io
+    kgid: KGIDSW2009
+    first_name: SI Kiran
+    unit_id: 5308
+    district_id: 2009
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2010_io
+    kgid: KGIDSW2010
+    first_name: SI Shwetha
+    unit_id: 5309
+    district_id: 2010
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2011_io
+    kgid: KGIDSW2011
+    first_name: SI Mahesh
+    unit_id: 5310
+    district_id: 2011
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2012_io
+    kgid: KGIDSW2012
+    first_name: SI Vanitha
+    unit_id: 5311
+    district_id: 2012
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2013_io
+    kgid: KGIDSW2013
+    first_name: SI Prakash
+    unit_id: 5312
+    district_id: 2013
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2014_io
+    kgid: KGIDSW2014
+    first_name: SI Priya
+    unit_id: 5313
+    district_id: 2014
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2015_io
+    kgid: KGIDSW2015
+    first_name: SI Suresh
+    unit_id: 5314
+    district_id: 2015
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2016_io
+    kgid: KGIDSW2016
+    first_name: SI Bhavya
+    unit_id: 5315
+    district_id: 2016
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2017_io
+    kgid: KGIDSW2017
+    first_name: SI Vijay
+    unit_id: 5316
+    district_id: 2017
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2018_io
+    kgid: KGIDSW2018
+    first_name: SI Geetha
+    unit_id: 5317
+    district_id: 2018
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2019_io
+    kgid: KGIDSW2019
+    first_name: SI Naveen
+    unit_id: 5318
+    district_id: 2019
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2020_io
+    kgid: KGIDSW2020
+    first_name: SI Lakshmi
+    unit_id: 5319
+    district_id: 2020
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2021_io
+    kgid: KGIDSW2021
+    first_name: SI Manjunath
+    unit_id: 5320
+    district_id: 2021
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2022_io
+    kgid: KGIDSW2022
+    first_name: SI Poornima
+    unit_id: 5321
+    district_id: 2022
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2023_io
+    kgid: KGIDSW2023
+    first_name: SI Praveen
+    unit_id: 5322
+    district_id: 2023
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2024_io
+    kgid: KGIDSW2024
+    first_name: SI Shwetha
+    unit_id: 5323
+    district_id: 2024
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2025_io
+    kgid: KGIDSW2025
+    first_name: SI Raghavendra
+    unit_id: 5324
+    district_id: 2025
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2026_io
+    kgid: KGIDSW2026
+    first_name: SI Vanitha
+    unit_id: 5325
+    district_id: 2026
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2027_io
+    kgid: KGIDSW2027
+    first_name: SI Ashok
+    unit_id: 5326
+    district_id: 2027
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2028_io
+    kgid: KGIDSW2028
+    first_name: SI Priya
+    unit_id: 5327
+    district_id: 2028
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2029_io
+    kgid: KGIDSW2029
+    first_name: SI Anand
+    unit_id: 5328
+    district_id: 2029
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+  - key: e_sw_2030_io
+    kgid: KGIDSW2030
+    first_name: SI Bhavya
+    unit_id: 5329
+    district_id: 2030
+    rank: si
+    designation: io
+    gender_id: F
+    appointment_date: '2018-01-15'
+  - key: e_sw_2031_io
+    kgid: KGIDSW2031
+    first_name: SI Chetan
+    unit_id: 5330
+    district_id: 2031
+    rank: si
+    designation: io
+    gender_id: M
+    appointment_date: '2018-01-15'
+cases:
+- category_code: '1'
+  district_id: 2001
+  police_station_id: 5300
+  year: 2026
+  serial: 200
+  registered_date: '2026-01-03'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-03T18:00:00+00:00'
+  incident_to: '2026-01-03T19:30:00+00:00'
+  info_received: '2026-01-03T20:00:00+00:00'
+  latitude: '16.1667000'
+  longitude: '75.6761000'
+  brief_facts: Two-wheeler theft near Bagalkote HQ. Accused Anand Gowda (approx 21y/M) seen fleeing on
+    bike; person id SW00TH.
+  complainants:
+  - name: Kamalamma Gowda
+    age_year: 28
+    gender_id: F
+    occupation: trader
+    religion: hindu
+    caste: general
+  victims:
+  - name: Kamalamma Gowda
+    age_year: 28
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Anand Gowda
+    age_year: 21
+    gender_id: M
+    person_id: SW00TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2001_io
+  court: court_sw_2001
+  occurrence:
+    occurrence_from: '2026-01-03T18:00:00+00:00'
+    occurrence_to: '2026-01-03T19:30:00+00:00'
+    place_of_occurrence: Bagalkote HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Bagalkote
+  arrests:
+  - type_id: 2
+    date: '2026-01-04'
+    accused_person_id: SW00TH
+    io: e_sw_2001_io
+    court: court_sw_2001
+    is_accused: true
+- category_code: '1'
+  district_id: 2001
+  police_station_id: 5300
+  year: 2026
+  serial: 201
+  registered_date: '2026-02-04'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-04T18:00:00+00:00'
+  incident_to: '2026-02-04T19:30:00+00:00'
+  info_received: '2026-02-04T20:00:00+00:00'
+  latitude: '16.1867000'
+  longitude: '75.6961000'
+  brief_facts: Assault after altercation at Bagalkote HQ market. Accused Basavaraj Patil with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Krishnamurthy Nayak
+    age_year: 33
+    gender_id: M
+    occupation: employee
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Krishnamurthy Nayak
+    age_year: 33
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Basavaraj Patil
+    age_year: 24
+    gender_id: M
+    person_id: SW00AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2001_io
+  court: court_sw_2001
+  occurrence:
+    occurrence_from: '2026-02-04T18:00:00+00:00'
+    occurrence_to: '2026-02-04T19:30:00+00:00'
+    place_of_occurrence: Bagalkote HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Bagalkote
+  arrests:
+  - type_id: 2
+    date: '2026-02-05'
+    accused_person_id: SW00AS
+    io: e_sw_2001_io
+    court: court_sw_2001
+    is_accused: true
+- category_code: '1'
+  district_id: 2001
+  police_station_id: 5300
+  year: 2026
+  serial: 202
+  registered_date: '2026-03-05'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-05T18:00:00+00:00'
+  incident_to: '2026-03-05T19:30:00+00:00'
+  info_received: '2026-03-05T20:00:00+00:00'
+  latitude: '16.2067000'
+  longitude: '75.7161000'
+  brief_facts: Online payment fraud from Bagalkote HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Shankara Reddy
+    age_year: 38
+    gender_id: M
+    occupation: farmer
+    religion: christian
+    caste: sc
+  victims:
+  - name: Shankara Reddy
+    age_year: 38
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2001_io
+  court: court_sw_2001
+  occurrence:
+    occurrence_from: '2026-03-05T18:00:00+00:00'
+    occurrence_to: '2026-03-05T19:30:00+00:00'
+    place_of_occurrence: Bagalkote HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Bagalkote
+  arrests:
+  - type_id: 2
+    date: '2026-03-06'
+    accused_person_id: SWFRAUD
+    io: e_sw_2001_io
+    court: court_sw_2001
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2001_io
+- category_code: '1'
+  district_id: 2002
+  police_station_id: 5301
+  year: 2026
+  serial: 200
+  registered_date: '2026-02-06'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-06T18:00:00+00:00'
+  incident_to: '2026-02-06T19:30:00+00:00'
+  info_received: '2026-02-06T20:00:00+00:00'
+  latitude: '15.1194000'
+  longitude: '76.9014000'
+  brief_facts: Assault after altercation at Ballari HQ market. Accused Deepak Rao with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Krishnamurthy Shetty
+    age_year: 29
+    gender_id: M
+    occupation: employee
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Krishnamurthy Shetty
+    age_year: 29
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Deepak Rao
+    age_year: 25
+    gender_id: M
+    person_id: SW01AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2002_io
+  court: court_sw_2002
+  occurrence:
+    occurrence_from: '2026-02-06T18:00:00+00:00'
+    occurrence_to: '2026-02-06T19:30:00+00:00'
+    place_of_occurrence: Ballari HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Ballari
+  arrests:
+  - type_id: 2
+    date: '2026-02-07'
+    accused_person_id: SW01AS
+    io: e_sw_2002_io
+    court: court_sw_2002
+    is_accused: true
+- category_code: '1'
+  district_id: 2002
+  police_station_id: 5301
+  year: 2026
+  serial: 201
+  registered_date: '2026-03-07'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-07T18:00:00+00:00'
+  incident_to: '2026-03-07T19:30:00+00:00'
+  info_received: '2026-03-07T20:00:00+00:00'
+  latitude: '15.1394000'
+  longitude: '76.9214000'
+  brief_facts: Online payment fraud from Ballari HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Shankara Hegde
+    age_year: 34
+    gender_id: M
+    occupation: farmer
+    religion: christian
+    caste: sc
+  victims:
+  - name: Shankara Hegde
+    age_year: 34
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2002_io
+  court: court_sw_2002
+  occurrence:
+    occurrence_from: '2026-03-07T18:00:00+00:00'
+    occurrence_to: '2026-03-07T19:30:00+00:00'
+    place_of_occurrence: Ballari HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Ballari
+  arrests:
+  - type_id: 2
+    date: '2026-03-08'
+    accused_person_id: SWFRAUD
+    io: e_sw_2002_io
+    court: court_sw_2002
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2002_io
+- category_code: '1'
+  district_id: 2002
+  police_station_id: 5301
+  year: 2026
+  serial: 202
+  registered_date: '2026-04-08'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-08T18:00:00+00:00'
+  incident_to: '2026-04-08T19:30:00+00:00'
+  info_received: '2026-04-08T20:00:00+00:00'
+  latitude: '15.1594000'
+  longitude: '76.9414000'
+  brief_facts: Highway robbery attempt near Ballari HQ. Accused Ganesh Joshi assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Gangamma Kulkarni
+    age_year: 39
+    gender_id: F
+    occupation: driver
+    religion: other
+    caste: st
+  victims:
+  - name: Gangamma Kulkarni
+    age_year: 39
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ganesh Joshi
+    age_year: 31
+    gender_id: M
+    person_id: SW01RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2002_io
+  court: court_sw_2002
+  occurrence:
+    occurrence_from: '2026-04-08T18:00:00+00:00'
+    occurrence_to: '2026-04-08T19:30:00+00:00'
+    place_of_occurrence: Ballari HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Ballari
+  arrests:
+  - type_id: 2
+    date: '2026-04-09'
+    accused_person_id: SW01RB
+    io: e_sw_2002_io
+    court: court_sw_2002
+    is_accused: true
+- category_code: '1'
+  district_id: 2003
+  police_station_id: 5302
+  year: 2026
+  serial: 200
+  registered_date: '2026-03-09'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-09T18:00:00+00:00'
+  incident_to: '2026-03-09T19:30:00+00:00'
+  info_received: '2026-03-09T20:00:00+00:00'
+  latitude: '15.8297000'
+  longitude: '74.4777000'
+  brief_facts: Online payment fraud from Belagavi HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Shankara Patil
+    age_year: 30
+    gender_id: M
+    occupation: farmer
+    religion: christian
+    caste: sc
+  victims:
+  - name: Shankara Patil
+    age_year: 30
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2003_io
+  court: court_sw_2003
+  occurrence:
+    occurrence_from: '2026-03-09T18:00:00+00:00'
+    occurrence_to: '2026-03-09T19:30:00+00:00'
+    place_of_occurrence: Belagavi HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-03-10'
+    accused_person_id: SWFRAUD
+    io: e_sw_2003_io
+    court: court_sw_2003
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2003_io
+- category_code: '1'
+  district_id: 2003
+  police_station_id: 5302
+  year: 2026
+  serial: 201
+  registered_date: '2026-04-10'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-10T18:00:00+00:00'
+  incident_to: '2026-04-10T19:30:00+00:00'
+  info_received: '2026-04-10T20:00:00+00:00'
+  latitude: '15.8497000'
+  longitude: '74.4977000'
+  brief_facts: Highway robbery attempt near Belagavi HQ. Accused Jagadish Poojary assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Gangamma Rao
+    age_year: 35
+    gender_id: F
+    occupation: driver
+    religion: other
+    caste: st
+  victims:
+  - name: Gangamma Rao
+    age_year: 35
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Jagadish Poojary
+    age_year: 32
+    gender_id: M
+    person_id: SW02RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2003_io
+  court: court_sw_2003
+  occurrence:
+    occurrence_from: '2026-04-10T18:00:00+00:00'
+    occurrence_to: '2026-04-10T19:30:00+00:00'
+    place_of_occurrence: Belagavi HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-04-11'
+    accused_person_id: SW02RB
+    io: e_sw_2003_io
+    court: court_sw_2003
+    is_accused: true
+- category_code: '1'
+  district_id: 2003
+  police_station_id: 5302
+  year: 2026
+  serial: 202
+  registered_date: '2026-05-11'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-11T18:00:00+00:00'
+  incident_to: '2026-05-11T19:30:00+00:00'
+  info_received: '2026-05-11T20:00:00+00:00'
+  latitude: '15.8697000'
+  longitude: '74.5177000'
+  brief_facts: Two-wheeler theft near Belagavi HQ. Accused Kiran Kamble (approx 35y/M) seen fleeing on
+    bike; person id SW02TH.
+  complainants:
+  - name: Rajashekar Desai
+    age_year: 40
+    gender_id: M
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rajashekar Desai
+    age_year: 40
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Kiran Kamble
+    age_year: 35
+    gender_id: M
+    person_id: SW02TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2003_io
+  court: court_sw_2003
+  occurrence:
+    occurrence_from: '2026-05-11T18:00:00+00:00'
+    occurrence_to: '2026-05-11T19:30:00+00:00'
+    place_of_occurrence: Belagavi HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-05-12'
+    accused_person_id: SW02TH
+    io: e_sw_2003_io
+    court: court_sw_2003
+    is_accused: true
+- category_code: '1'
+  district_id: 2004
+  police_station_id: 5303
+  year: 2026
+  serial: 200
+  registered_date: '2026-04-12'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-12T18:00:00+00:00'
+  incident_to: '2026-04-12T19:30:00+00:00'
+  info_received: '2026-04-12T20:00:00+00:00'
+  latitude: '13.2646000'
+  longitude: '77.5750000'
+  brief_facts: Highway robbery attempt near Bengaluru Rural HQ. Accused Lokesh Chavan assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Gangamma Nayak
+    age_year: 31
+    gender_id: F
+    occupation: driver
+    religion: other
+    caste: st
+  victims:
+  - name: Gangamma Nayak
+    age_year: 31
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Lokesh Chavan
+    age_year: 33
+    gender_id: M
+    person_id: SW03RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2004_io
+  court: court_sw_2004
+  occurrence:
+    occurrence_from: '2026-04-12T18:00:00+00:00'
+    occurrence_to: '2026-04-12T19:30:00+00:00'
+    place_of_occurrence: Bengaluru Rural HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Bengaluru Rural
+  arrests:
+  - type_id: 2
+    date: '2026-04-13'
+    accused_person_id: SW03RB
+    io: e_sw_2004_io
+    court: court_sw_2004
+    is_accused: true
+- category_code: '1'
+  district_id: 2004
+  police_station_id: 5303
+  year: 2026
+  serial: 201
+  registered_date: '2026-05-13'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-13T18:00:00+00:00'
+  incident_to: '2026-05-13T19:30:00+00:00'
+  info_received: '2026-05-13T20:00:00+00:00'
+  latitude: '13.2846000'
+  longitude: '77.5950000'
+  brief_facts: Two-wheeler theft near Bengaluru Rural HQ. Accused Mahesh Hiremath (approx 36y/M) seen
+    fleeing on bike; person id SW03TH.
+  complainants:
+  - name: Rajashekar Reddy
+    age_year: 36
+    gender_id: M
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rajashekar Reddy
+    age_year: 36
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Mahesh Hiremath
+    age_year: 36
+    gender_id: M
+    person_id: SW03TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2004_io
+  court: court_sw_2004
+  occurrence:
+    occurrence_from: '2026-05-13T18:00:00+00:00'
+    occurrence_to: '2026-05-13T19:30:00+00:00'
+    place_of_occurrence: Bengaluru Rural HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Bengaluru Rural
+  arrests:
+  - type_id: 2
+    date: '2026-05-14'
+    accused_person_id: SW03TH
+    io: e_sw_2004_io
+    court: court_sw_2004
+    is_accused: true
+- category_code: '1'
+  district_id: 2004
+  police_station_id: 5303
+  year: 2026
+  serial: 202
+  registered_date: '2026-06-14'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-14T18:00:00+00:00'
+  incident_to: '2026-06-14T19:30:00+00:00'
+  info_received: '2026-06-14T20:00:00+00:00'
+  latitude: '13.3046000'
+  longitude: '77.6150000'
+  brief_facts: Assault after altercation at Bengaluru Rural HQ market. Accused Nagesh Uppin with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Mahadeva Joshi
+    age_year: 41
+    gender_id: M
+    occupation: trader
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Mahadeva Joshi
+    age_year: 41
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Nagesh Uppin
+    age_year: 39
+    gender_id: M
+    person_id: SW03AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2004_io
+  court: court_sw_2004
+  occurrence:
+    occurrence_from: '2026-06-14T18:00:00+00:00'
+    occurrence_to: '2026-06-14T19:30:00+00:00'
+    place_of_occurrence: Bengaluru Rural HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Bengaluru Rural
+  arrests:
+  - type_id: 2
+    date: '2026-06-15'
+    accused_person_id: SW03AS
+    io: e_sw_2004_io
+    court: court_sw_2004
+    is_accused: true
+- category_code: '1'
+  district_id: 2005
+  police_station_id: 5304
+  year: 2026
+  serial: 200
+  registered_date: '2026-05-15'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-15T18:00:00+00:00'
+  incident_to: '2026-05-15T19:30:00+00:00'
+  info_received: '2026-05-15T20:00:00+00:00'
+  latitude: '12.9516000'
+  longitude: '77.5746000'
+  brief_facts: Two-wheeler theft near Bengaluru Urban HQ. Accused Prakash Gowda (approx 37y/M) seen fleeing
+    on bike; person id SW04TH.
+  complainants:
+  - name: Rajashekar Hegde
+    age_year: 32
+    gender_id: M
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rajashekar Hegde
+    age_year: 32
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Prakash Gowda
+    age_year: 37
+    gender_id: M
+    person_id: SW04TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2005_io
+  court: court_sw_2005
+  occurrence:
+    occurrence_from: '2026-05-15T18:00:00+00:00'
+    occurrence_to: '2026-05-15T19:30:00+00:00'
+    place_of_occurrence: Bengaluru Urban HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Bengaluru Urban
+  arrests:
+  - type_id: 2
+    date: '2026-05-16'
+    accused_person_id: SW04TH
+    io: e_sw_2005_io
+    court: court_sw_2005
+    is_accused: true
+- category_code: '1'
+  district_id: 2005
+  police_station_id: 5304
+  year: 2026
+  serial: 201
+  registered_date: '2026-06-16'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-16T18:00:00+00:00'
+  incident_to: '2026-06-16T19:30:00+00:00'
+  info_received: '2026-06-16T20:00:00+00:00'
+  latitude: '12.9716000'
+  longitude: '77.5946000'
+  brief_facts: Assault after altercation at Bengaluru Urban HQ market. Accused Ravi Patil with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Mahadeva Kulkarni
+    age_year: 37
+    gender_id: M
+    occupation: trader
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Mahadeva Kulkarni
+    age_year: 37
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ravi Patil
+    age_year: 40
+    gender_id: M
+    person_id: SW04AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2005_io
+  court: court_sw_2005
+  occurrence:
+    occurrence_from: '2026-06-16T18:00:00+00:00'
+    occurrence_to: '2026-06-16T19:30:00+00:00'
+    place_of_occurrence: Bengaluru Urban HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Bengaluru Urban
+  arrests:
+  - type_id: 2
+    date: '2026-06-17'
+    accused_person_id: SW04AS
+    io: e_sw_2005_io
+    court: court_sw_2005
+    is_accused: true
+- category_code: '1'
+  district_id: 2005
+  police_station_id: 5304
+  year: 2026
+  serial: 202
+  registered_date: '2026-07-17'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-17T18:00:00+00:00'
+  incident_to: '2026-07-17T19:30:00+00:00'
+  info_received: '2026-07-17T20:00:00+00:00'
+  latitude: '12.9916000'
+  longitude: '77.6146000'
+  brief_facts: Online payment fraud from Bengaluru Urban HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Pushpa Bhat
+    age_year: 42
+    gender_id: F
+    occupation: employee
+    religion: christian
+    caste: sc
+  victims:
+  - name: Pushpa Bhat
+    age_year: 42
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2005_io
+  court: court_sw_2005
+  occurrence:
+    occurrence_from: '2026-07-17T18:00:00+00:00'
+    occurrence_to: '2026-07-17T19:30:00+00:00'
+    place_of_occurrence: Bengaluru Urban HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Bengaluru Urban
+  arrests:
+  - type_id: 2
+    date: '2026-07-18'
+    accused_person_id: SWFRAUD
+    io: e_sw_2005_io
+    court: court_sw_2005
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2005_io
+- category_code: '1'
+  district_id: 2006
+  police_station_id: 5305
+  year: 2026
+  serial: 200
+  registered_date: '2026-06-18'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-18T18:00:00+00:00'
+  incident_to: '2026-06-18T19:30:00+00:00'
+  info_received: '2026-06-18T20:00:00+00:00'
+  latitude: '17.8904000'
+  longitude: '77.4999000'
+  brief_facts: Assault after altercation at Bidar HQ market. Accused Umesh Rao with associate Imran Pasha;
+    injuries documented.
+  complainants:
+  - name: Mahadeva Rao
+    age_year: 33
+    gender_id: M
+    occupation: trader
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Mahadeva Rao
+    age_year: 33
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Umesh Rao
+    age_year: 41
+    gender_id: M
+    person_id: SW05AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2006_io
+  court: court_sw_2006
+  occurrence:
+    occurrence_from: '2026-06-18T18:00:00+00:00'
+    occurrence_to: '2026-06-18T19:30:00+00:00'
+    place_of_occurrence: Bidar HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Bidar
+  arrests:
+  - type_id: 2
+    date: '2026-06-19'
+    accused_person_id: SW05AS
+    io: e_sw_2006_io
+    court: court_sw_2006
+    is_accused: true
+- category_code: '1'
+  district_id: 2006
+  police_station_id: 5305
+  year: 2026
+  serial: 201
+  registered_date: '2026-07-19'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-19T18:00:00+00:00'
+  incident_to: '2026-07-19T19:30:00+00:00'
+  info_received: '2026-07-19T20:00:00+00:00'
+  latitude: '17.9104000'
+  longitude: '77.5199000'
+  brief_facts: Online payment fraud from Bidar HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Pushpa Desai
+    age_year: 38
+    gender_id: F
+    occupation: employee
+    religion: christian
+    caste: sc
+  victims:
+  - name: Pushpa Desai
+    age_year: 38
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2006_io
+  court: court_sw_2006
+  occurrence:
+    occurrence_from: '2026-07-19T18:00:00+00:00'
+    occurrence_to: '2026-07-19T19:30:00+00:00'
+    place_of_occurrence: Bidar HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Bidar
+  arrests:
+  - type_id: 2
+    date: '2026-07-20'
+    accused_person_id: SWFRAUD
+    io: e_sw_2006_io
+    court: court_sw_2006
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2006_io
+- category_code: '1'
+  district_id: 2006
+  police_station_id: 5305
+  year: 2026
+  serial: 202
+  registered_date: '2026-08-20'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-20T18:00:00+00:00'
+  incident_to: '2026-08-20T19:30:00+00:00'
+  info_received: '2026-08-20T20:00:00+00:00'
+  latitude: '17.9304000'
+  longitude: '77.5399000'
+  brief_facts: Highway robbery attempt near Bidar HQ. Accused Yogesh Joshi assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Thimmaiah Kamath
+    age_year: 43
+    gender_id: M
+    occupation: farmer
+    religion: other
+    caste: st
+  victims:
+  - name: Thimmaiah Kamath
+    age_year: 43
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Yogesh Joshi
+    age_year: 47
+    gender_id: M
+    person_id: SW05RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2006_io
+  court: court_sw_2006
+  occurrence:
+    occurrence_from: '2026-08-20T18:00:00+00:00'
+    occurrence_to: '2026-08-20T19:30:00+00:00'
+    place_of_occurrence: Bidar HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Bidar
+  arrests:
+  - type_id: 2
+    date: '2026-08-21'
+    accused_person_id: SW05RB
+    io: e_sw_2006_io
+    court: court_sw_2006
+    is_accused: true
+- category_code: '1'
+  district_id: 2007
+  police_station_id: 5306
+  year: 2026
+  serial: 200
+  registered_date: '2026-07-21'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-21T18:00:00+00:00'
+  incident_to: '2026-07-21T19:30:00+00:00'
+  info_received: '2026-07-21T20:00:00+00:00'
+  latitude: '11.9061000'
+  longitude: '76.9237000'
+  brief_facts: Online payment fraud from Chamarajanagara HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Pushpa Reddy
+    age_year: 34
+    gender_id: F
+    occupation: employee
+    religion: christian
+    caste: sc
+  victims:
+  - name: Pushpa Reddy
+    age_year: 34
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2007_io
+  court: court_sw_2007
+  occurrence:
+    occurrence_from: '2026-07-21T18:00:00+00:00'
+    occurrence_to: '2026-07-21T19:30:00+00:00'
+    place_of_occurrence: Chamarajanagara HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Chamarajanagara
+  arrests:
+  - type_id: 2
+    date: '2026-07-22'
+    accused_person_id: SWFRAUD
+    io: e_sw_2007_io
+    court: court_sw_2007
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2007_io
+- category_code: '1'
+  district_id: 2007
+  police_station_id: 5306
+  year: 2026
+  serial: 201
+  registered_date: '2026-08-22'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-22T18:00:00+00:00'
+  incident_to: '2026-08-22T19:30:00+00:00'
+  info_received: '2026-08-22T20:00:00+00:00'
+  latitude: '11.9261000'
+  longitude: '76.9437000'
+  brief_facts: Highway robbery attempt near Chamarajanagara HQ. Accused Sanjay Poojary assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Thimmaiah Joshi
+    age_year: 39
+    gender_id: M
+    occupation: farmer
+    religion: other
+    caste: st
+  victims:
+  - name: Thimmaiah Joshi
+    age_year: 39
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Sanjay Poojary
+    age_year: 48
+    gender_id: M
+    person_id: SW06RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2007_io
+  court: court_sw_2007
+  occurrence:
+    occurrence_from: '2026-08-22T18:00:00+00:00'
+    occurrence_to: '2026-08-22T19:30:00+00:00'
+    place_of_occurrence: Chamarajanagara HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Chamarajanagara
+  arrests:
+  - type_id: 2
+    date: '2026-08-23'
+    accused_person_id: SW06RB
+    io: e_sw_2007_io
+    court: court_sw_2007
+    is_accused: true
+- category_code: '1'
+  district_id: 2007
+  police_station_id: 5306
+  year: 2026
+  serial: 202
+  registered_date: '2026-09-23'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-23T18:00:00+00:00'
+  incident_to: '2026-09-23T19:30:00+00:00'
+  info_received: '2026-09-23T20:00:00+00:00'
+  latitude: '11.9461000'
+  longitude: '76.9637000'
+  brief_facts: Two-wheeler theft near Chamarajanagara HQ. Accused Manjunath Kamble (approx 23y/M) seen
+    fleeing on bike; person id SW06TH.
+  complainants:
+  - name: Narayana Poojary
+    age_year: 44
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: general
+  victims:
+  - name: Narayana Poojary
+    age_year: 44
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Manjunath Kamble
+    age_year: 23
+    gender_id: M
+    person_id: SW06TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2007_io
+  court: court_sw_2007
+  occurrence:
+    occurrence_from: '2026-09-23T18:00:00+00:00'
+    occurrence_to: '2026-09-23T19:30:00+00:00'
+    place_of_occurrence: Chamarajanagara HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Chamarajanagara
+  arrests:
+  - type_id: 2
+    date: '2026-09-24'
+    accused_person_id: SW06TH
+    io: e_sw_2007_io
+    court: court_sw_2007
+    is_accused: true
+- category_code: '1'
+  district_id: 2008
+  police_station_id: 5307
+  year: 2026
+  serial: 200
+  registered_date: '2026-08-24'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-24T18:00:00+00:00'
+  incident_to: '2026-08-24T19:30:00+00:00'
+  info_received: '2026-08-24T20:00:00+00:00'
+  latitude: '13.4155000'
+  longitude: '77.7115000'
+  brief_facts: Highway robbery attempt near Chikkaballapur HQ. Accused Shivaraj Chavan assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Thimmaiah Kulkarni
+    age_year: 35
+    gender_id: M
+    occupation: farmer
+    religion: other
+    caste: st
+  victims:
+  - name: Thimmaiah Kulkarni
+    age_year: 35
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Shivaraj Chavan
+    age_year: 21
+    gender_id: M
+    person_id: SW07RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2008_io
+  court: court_sw_2008
+  occurrence:
+    occurrence_from: '2026-08-24T18:00:00+00:00'
+    occurrence_to: '2026-08-24T19:30:00+00:00'
+    place_of_occurrence: Chikkaballapur HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Chikkaballapur
+  arrests:
+  - type_id: 2
+    date: '2026-08-25'
+    accused_person_id: SW07RB
+    io: e_sw_2008_io
+    court: court_sw_2008
+    is_accused: true
+- category_code: '1'
+  district_id: 2008
+  police_station_id: 5307
+  year: 2026
+  serial: 201
+  registered_date: '2026-09-25'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-25T18:00:00+00:00'
+  incident_to: '2026-09-25T19:30:00+00:00'
+  info_received: '2026-09-25T20:00:00+00:00'
+  latitude: '13.4355000'
+  longitude: '77.7315000'
+  brief_facts: Two-wheeler theft near Chikkaballapur HQ. Accused Praveen Hiremath (approx 24y/M) seen
+    fleeing on bike; person id SW07TH.
+  complainants:
+  - name: Narayana Bhat
+    age_year: 40
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: general
+  victims:
+  - name: Narayana Bhat
+    age_year: 40
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Praveen Hiremath
+    age_year: 24
+    gender_id: M
+    person_id: SW07TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2008_io
+  court: court_sw_2008
+  occurrence:
+    occurrence_from: '2026-09-25T18:00:00+00:00'
+    occurrence_to: '2026-09-25T19:30:00+00:00'
+    place_of_occurrence: Chikkaballapur HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Chikkaballapur
+  arrests:
+  - type_id: 2
+    date: '2026-09-26'
+    accused_person_id: SW07TH
+    io: e_sw_2008_io
+    court: court_sw_2008
+    is_accused: true
+- category_code: '1'
+  district_id: 2008
+  police_station_id: 5307
+  year: 2026
+  serial: 202
+  registered_date: '2026-10-26'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-10-26T18:00:00+00:00'
+  incident_to: '2026-10-26T19:30:00+00:00'
+  info_received: '2026-10-26T20:00:00+00:00'
+  latitude: '13.4555000'
+  longitude: '77.7515000'
+  brief_facts: Assault after altercation at Chikkaballapur HQ market. Accused Dinesh Uppin with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Bhagyalakshmi Naik
+    age_year: 45
+    gender_id: F
+    occupation: student
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Bhagyalakshmi Naik
+    age_year: 45
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Dinesh Uppin
+    age_year: 27
+    gender_id: M
+    person_id: SW07AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2008_io
+  court: court_sw_2008
+  occurrence:
+    occurrence_from: '2026-10-26T18:00:00+00:00'
+    occurrence_to: '2026-10-26T19:30:00+00:00'
+    place_of_occurrence: Chikkaballapur HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Chikkaballapur
+  arrests:
+  - type_id: 2
+    date: '2026-10-27'
+    accused_person_id: SW07AS
+    io: e_sw_2008_io
+    court: court_sw_2008
+    is_accused: true
+- category_code: '1'
+  district_id: 2009
+  police_station_id: 5308
+  year: 2026
+  serial: 200
+  registered_date: '2026-09-27'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-27T18:00:00+00:00'
+  incident_to: '2026-09-27T19:30:00+00:00'
+  info_received: '2026-09-27T20:00:00+00:00'
+  latitude: '13.2961000'
+  longitude: '75.7520000'
+  brief_facts: Two-wheeler theft near Chikkamagaluru HQ. Accused Raghavendra Gowda (approx 25y/M) seen
+    fleeing on bike; person id SW08TH.
+  complainants:
+  - name: Narayana Desai
+    age_year: 36
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: general
+  victims:
+  - name: Narayana Desai
+    age_year: 36
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Raghavendra Gowda
+    age_year: 25
+    gender_id: M
+    person_id: SW08TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2009_io
+  court: court_sw_2009
+  occurrence:
+    occurrence_from: '2026-09-27T18:00:00+00:00'
+    occurrence_to: '2026-09-27T19:30:00+00:00'
+    place_of_occurrence: Chikkamagaluru HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Chikkamagaluru
+  arrests:
+  - type_id: 2
+    date: '2026-09-28'
+    accused_person_id: SW08TH
+    io: e_sw_2009_io
+    court: court_sw_2009
+    is_accused: true
+- category_code: '1'
+  district_id: 2009
+  police_station_id: 5308
+  year: 2026
+  serial: 201
+  registered_date: '2026-10-03'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-10-03T18:00:00+00:00'
+  incident_to: '2026-10-03T19:30:00+00:00'
+  info_received: '2026-10-03T20:00:00+00:00'
+  latitude: '13.3161000'
+  longitude: '75.7720000'
+  brief_facts: Assault after altercation at Chikkamagaluru HQ market. Accused Satish Patil with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Bhagyalakshmi Kamath
+    age_year: 41
+    gender_id: F
+    occupation: student
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Bhagyalakshmi Kamath
+    age_year: 41
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Satish Patil
+    age_year: 28
+    gender_id: M
+    person_id: SW08AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2009_io
+  court: court_sw_2009
+  occurrence:
+    occurrence_from: '2026-10-03T18:00:00+00:00'
+    occurrence_to: '2026-10-03T19:30:00+00:00'
+    place_of_occurrence: Chikkamagaluru HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Chikkamagaluru
+  arrests:
+  - type_id: 2
+    date: '2026-10-04'
+    accused_person_id: SW08AS
+    io: e_sw_2009_io
+    court: court_sw_2009
+    is_accused: true
+- category_code: '1'
+  district_id: 2009
+  police_station_id: 5308
+  year: 2026
+  serial: 202
+  registered_date: '2026-11-04'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-11-04T18:00:00+00:00'
+  incident_to: '2026-11-04T19:30:00+00:00'
+  info_received: '2026-11-04T20:00:00+00:00'
+  latitude: '13.3361000'
+  longitude: '75.7920000'
+  brief_facts: Online payment fraud from Chikkamagaluru HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Venkatappa Kamble
+    age_year: 46
+    gender_id: M
+    occupation: trader
+    religion: christian
+    caste: sc
+  victims:
+  - name: Venkatappa Kamble
+    age_year: 46
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2009_io
+  court: court_sw_2009
+  occurrence:
+    occurrence_from: '2026-11-04T18:00:00+00:00'
+    occurrence_to: '2026-11-04T19:30:00+00:00'
+    place_of_occurrence: Chikkamagaluru HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Chikkamagaluru
+  arrests:
+  - type_id: 2
+    date: '2026-11-05'
+    accused_person_id: SWFRAUD
+    io: e_sw_2009_io
+    court: court_sw_2009
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-12-15'
+    officer: e_sw_2009_io
+- category_code: '1'
+  district_id: 2010
+  police_station_id: 5309
+  year: 2026
+  serial: 200
+  registered_date: '2026-10-05'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-10-05T18:00:00+00:00'
+  incident_to: '2026-10-05T19:30:00+00:00'
+  info_received: '2026-10-05T20:00:00+00:00'
+  latitude: '14.2053000'
+  longitude: '76.3780000'
+  brief_facts: Assault after altercation at Chitradurga HQ market. Accused Vinod Rao with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Bhagyalakshmi Joshi
+    age_year: 37
+    gender_id: F
+    occupation: student
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Bhagyalakshmi Joshi
+    age_year: 37
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Vinod Rao
+    age_year: 29
+    gender_id: M
+    person_id: SW09AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2010_io
+  court: court_sw_2010
+  occurrence:
+    occurrence_from: '2026-10-05T18:00:00+00:00'
+    occurrence_to: '2026-10-05T19:30:00+00:00'
+    place_of_occurrence: Chitradurga HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Chitradurga
+  arrests:
+  - type_id: 2
+    date: '2026-10-06'
+    accused_person_id: SW09AS
+    io: e_sw_2010_io
+    court: court_sw_2010
+    is_accused: true
+- category_code: '1'
+  district_id: 2010
+  police_station_id: 5309
+  year: 2026
+  serial: 201
+  registered_date: '2026-11-06'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-11-06T18:00:00+00:00'
+  incident_to: '2026-11-06T19:30:00+00:00'
+  info_received: '2026-11-06T20:00:00+00:00'
+  latitude: '14.2253000'
+  longitude: '76.3980000'
+  brief_facts: Online payment fraud from Chitradurga HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Venkatappa Poojary
+    age_year: 42
+    gender_id: M
+    occupation: trader
+    religion: christian
+    caste: sc
+  victims:
+  - name: Venkatappa Poojary
+    age_year: 42
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2010_io
+  court: court_sw_2010
+  occurrence:
+    occurrence_from: '2026-11-06T18:00:00+00:00'
+    occurrence_to: '2026-11-06T19:30:00+00:00'
+    place_of_occurrence: Chitradurga HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Chitradurga
+  arrests:
+  - type_id: 2
+    date: '2026-11-07'
+    accused_person_id: SWFRAUD
+    io: e_sw_2010_io
+    court: court_sw_2010
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-12-15'
+    officer: e_sw_2010_io
+- category_code: '1'
+  district_id: 2010
+  police_station_id: 5309
+  year: 2026
+  serial: 202
+  registered_date: '2026-12-07'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-12-07T18:00:00+00:00'
+  incident_to: '2026-12-07T19:30:00+00:00'
+  info_received: '2026-12-07T20:00:00+00:00'
+  latitude: '14.2453000'
+  longitude: '76.4180000'
+  brief_facts: Highway robbery attempt near Chitradurga HQ. Accused Basavaraj Joshi assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Krishnamurthy Chavan
+    age_year: 47
+    gender_id: M
+    occupation: employee
+    religion: other
+    caste: st
+  victims:
+  - name: Krishnamurthy Chavan
+    age_year: 47
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Basavaraj Joshi
+    age_year: 35
+    gender_id: M
+    person_id: SW09RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2010_io
+  court: court_sw_2010
+  occurrence:
+    occurrence_from: '2026-12-07T18:00:00+00:00'
+    occurrence_to: '2026-12-07T19:30:00+00:00'
+    place_of_occurrence: Chitradurga HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Chitradurga
+  arrests:
+  - type_id: 2
+    date: '2026-12-08'
+    accused_person_id: SW09RB
+    io: e_sw_2010_io
+    court: court_sw_2010
+    is_accused: true
+- category_code: '1'
+  district_id: 2011
+  police_station_id: 5310
+  year: 2026
+  serial: 200
+  registered_date: '2026-11-08'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-11-08T18:00:00+00:00'
+  incident_to: '2026-11-08T19:30:00+00:00'
+  info_received: '2026-11-08T20:00:00+00:00'
+  latitude: '12.8941000'
+  longitude: '74.8360000'
+  brief_facts: Online payment fraud from Dakshina Kannada HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Venkatappa Bhat
+    age_year: 38
+    gender_id: M
+    occupation: trader
+    religion: christian
+    caste: sc
+  victims:
+  - name: Venkatappa Bhat
+    age_year: 38
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2011_io
+  court: court_sw_2011
+  occurrence:
+    occurrence_from: '2026-11-08T18:00:00+00:00'
+    occurrence_to: '2026-11-08T19:30:00+00:00'
+    place_of_occurrence: Dakshina Kannada HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Dakshina Kannada
+  arrests:
+  - type_id: 2
+    date: '2026-11-09'
+    accused_person_id: SWFRAUD
+    io: e_sw_2011_io
+    court: court_sw_2011
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-12-15'
+    officer: e_sw_2011_io
+- category_code: '1'
+  district_id: 2011
+  police_station_id: 5310
+  year: 2026
+  serial: 201
+  registered_date: '2026-12-09'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-12-09T18:00:00+00:00'
+  incident_to: '2026-12-09T19:30:00+00:00'
+  info_received: '2026-12-09T20:00:00+00:00'
+  latitude: '12.9141000'
+  longitude: '74.8560000'
+  brief_facts: Highway robbery attempt near Dakshina Kannada HQ. Accused Deepak Poojary assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Krishnamurthy Naik
+    age_year: 43
+    gender_id: M
+    occupation: employee
+    religion: other
+    caste: st
+  victims:
+  - name: Krishnamurthy Naik
+    age_year: 43
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Deepak Poojary
+    age_year: 36
+    gender_id: M
+    person_id: SW10RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2011_io
+  court: court_sw_2011
+  occurrence:
+    occurrence_from: '2026-12-09T18:00:00+00:00'
+    occurrence_to: '2026-12-09T19:30:00+00:00'
+    place_of_occurrence: Dakshina Kannada HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Dakshina Kannada
+  arrests:
+  - type_id: 2
+    date: '2026-12-10'
+    accused_person_id: SW10RB
+    io: e_sw_2011_io
+    court: court_sw_2011
+    is_accused: true
+- category_code: '1'
+  district_id: 2011
+  police_station_id: 5310
+  year: 2026
+  serial: 202
+  registered_date: '2026-01-10'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-10T18:00:00+00:00'
+  incident_to: '2026-01-10T19:30:00+00:00'
+  info_received: '2026-01-10T20:00:00+00:00'
+  latitude: '12.9341000'
+  longitude: '74.8760000'
+  brief_facts: Two-wheeler theft near Dakshina Kannada HQ. Accused Eshwar Kamble (approx 39y/M) seen fleeing
+    on bike; person id SW10TH.
+  complainants:
+  - name: Parvathi Biradar
+    age_year: 48
+    gender_id: F
+    occupation: farmer
+    religion: hindu
+    caste: general
+  victims:
+  - name: Parvathi Biradar
+    age_year: 48
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Eshwar Kamble
+    age_year: 39
+    gender_id: M
+    person_id: SW10TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2011_io
+  court: court_sw_2011
+  occurrence:
+    occurrence_from: '2026-01-10T18:00:00+00:00'
+    occurrence_to: '2026-01-10T19:30:00+00:00'
+    place_of_occurrence: Dakshina Kannada HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Dakshina Kannada
+  arrests:
+  - type_id: 2
+    date: '2026-01-11'
+    accused_person_id: SW10TH
+    io: e_sw_2011_io
+    court: court_sw_2011
+    is_accused: true
+- category_code: '1'
+  district_id: 2012
+  police_station_id: 5311
+  year: 2026
+  serial: 200
+  registered_date: '2026-12-11'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-12-11T18:00:00+00:00'
+  incident_to: '2026-12-11T19:30:00+00:00'
+  info_received: '2026-12-11T20:00:00+00:00'
+  latitude: '14.4444000'
+  longitude: '75.9018000'
+  brief_facts: Highway robbery attempt near Davanagere HQ. Accused Ganesh Chavan assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Krishnamurthy Kamath
+    age_year: 39
+    gender_id: M
+    occupation: employee
+    religion: other
+    caste: st
+  victims:
+  - name: Krishnamurthy Kamath
+    age_year: 39
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ganesh Chavan
+    age_year: 37
+    gender_id: M
+    person_id: SW11RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2012_io
+  court: court_sw_2012
+  occurrence:
+    occurrence_from: '2026-12-11T18:00:00+00:00'
+    occurrence_to: '2026-12-11T19:30:00+00:00'
+    place_of_occurrence: Davanagere HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Davanagere
+  arrests:
+  - type_id: 2
+    date: '2026-12-12'
+    accused_person_id: SW11RB
+    io: e_sw_2012_io
+    court: court_sw_2012
+    is_accused: true
+- category_code: '1'
+  district_id: 2012
+  police_station_id: 5311
+  year: 2026
+  serial: 201
+  registered_date: '2026-01-12'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-12T18:00:00+00:00'
+  incident_to: '2026-01-12T19:30:00+00:00'
+  info_received: '2026-01-12T20:00:00+00:00'
+  latitude: '14.4644000'
+  longitude: '75.9218000'
+  brief_facts: Two-wheeler theft near Davanagere HQ. Accused Harish Hiremath (approx 40y/M) seen fleeing
+    on bike; person id SW11TH.
+  complainants:
+  - name: Parvathi Kamble
+    age_year: 44
+    gender_id: F
+    occupation: farmer
+    religion: hindu
+    caste: general
+  victims:
+  - name: Parvathi Kamble
+    age_year: 44
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Harish Hiremath
+    age_year: 40
+    gender_id: M
+    person_id: SW11TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2012_io
+  court: court_sw_2012
+  occurrence:
+    occurrence_from: '2026-01-12T18:00:00+00:00'
+    occurrence_to: '2026-01-12T19:30:00+00:00'
+    place_of_occurrence: Davanagere HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Davanagere
+  arrests:
+  - type_id: 2
+    date: '2026-01-13'
+    accused_person_id: SW11TH
+    io: e_sw_2012_io
+    court: court_sw_2012
+    is_accused: true
+- category_code: '1'
+  district_id: 2012
+  police_station_id: 5311
+  year: 2026
+  serial: 202
+  registered_date: '2026-02-13'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-13T18:00:00+00:00'
+  incident_to: '2026-02-13T19:30:00+00:00'
+  info_received: '2026-02-13T20:00:00+00:00'
+  latitude: '14.4844000'
+  longitude: '75.9418000'
+  brief_facts: Assault after altercation at Davanagere HQ market. Accused Jagadish Uppin with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Hanumanthappa Hiremath
+    age_year: 49
+    gender_id: M
+    occupation: driver
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Hanumanthappa Hiremath
+    age_year: 49
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Jagadish Uppin
+    age_year: 43
+    gender_id: M
+    person_id: SW11AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2012_io
+  court: court_sw_2012
+  occurrence:
+    occurrence_from: '2026-02-13T18:00:00+00:00'
+    occurrence_to: '2026-02-13T19:30:00+00:00'
+    place_of_occurrence: Davanagere HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Davanagere
+  arrests:
+  - type_id: 2
+    date: '2026-02-14'
+    accused_person_id: SW11AS
+    io: e_sw_2012_io
+    court: court_sw_2012
+    is_accused: true
+- category_code: '1'
+  district_id: 2013
+  police_station_id: 5312
+  year: 2026
+  serial: 200
+  registered_date: '2026-01-14'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-14T18:00:00+00:00'
+  incident_to: '2026-01-14T19:30:00+00:00'
+  info_received: '2026-01-14T20:00:00+00:00'
+  latitude: '15.4389000'
+  longitude: '74.9878000'
+  brief_facts: Two-wheeler theft near Dharwad HQ. Accused Kiran Gowda (approx 41y/M) seen fleeing on bike;
+    person id SW12TH.
+  complainants:
+  - name: Parvathi Poojary
+    age_year: 40
+    gender_id: F
+    occupation: farmer
+    religion: hindu
+    caste: general
+  victims:
+  - name: Parvathi Poojary
+    age_year: 40
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Kiran Gowda
+    age_year: 41
+    gender_id: M
+    person_id: SW12TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2013_io
+  court: court_sw_2013
+  occurrence:
+    occurrence_from: '2026-01-14T18:00:00+00:00'
+    occurrence_to: '2026-01-14T19:30:00+00:00'
+    place_of_occurrence: Dharwad HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Dharwad
+  arrests:
+  - type_id: 2
+    date: '2026-01-15'
+    accused_person_id: SW12TH
+    io: e_sw_2013_io
+    court: court_sw_2013
+    is_accused: true
+- category_code: '1'
+  district_id: 2013
+  police_station_id: 5312
+  year: 2026
+  serial: 201
+  registered_date: '2026-02-15'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-15T18:00:00+00:00'
+  incident_to: '2026-02-15T19:30:00+00:00'
+  info_received: '2026-02-15T20:00:00+00:00'
+  latitude: '15.4589000'
+  longitude: '75.0078000'
+  brief_facts: Assault after altercation at Dharwad HQ market. Accused Lokesh Patil with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Hanumanthappa Chavan
+    age_year: 45
+    gender_id: M
+    occupation: driver
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Hanumanthappa Chavan
+    age_year: 45
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Lokesh Patil
+    age_year: 44
+    gender_id: M
+    person_id: SW12AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2013_io
+  court: court_sw_2013
+  occurrence:
+    occurrence_from: '2026-02-15T18:00:00+00:00'
+    occurrence_to: '2026-02-15T19:30:00+00:00'
+    place_of_occurrence: Dharwad HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Dharwad
+  arrests:
+  - type_id: 2
+    date: '2026-02-16'
+    accused_person_id: SW12AS
+    io: e_sw_2013_io
+    court: court_sw_2013
+    is_accused: true
+- category_code: '1'
+  district_id: 2013
+  police_station_id: 5312
+  year: 2026
+  serial: 202
+  registered_date: '2026-03-16'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-16T18:00:00+00:00'
+  incident_to: '2026-03-16T19:30:00+00:00'
+  info_received: '2026-03-16T20:00:00+00:00'
+  latitude: '15.4789000'
+  longitude: '75.0278000'
+  brief_facts: Online payment fraud from Dharwad HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Rajashekar Bannur
+    age_year: 50
+    gender_id: M
+    occupation: student
+    religion: christian
+    caste: sc
+  victims:
+  - name: Rajashekar Bannur
+    age_year: 50
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2013_io
+  court: court_sw_2013
+  occurrence:
+    occurrence_from: '2026-03-16T18:00:00+00:00'
+    occurrence_to: '2026-03-16T19:30:00+00:00'
+    place_of_occurrence: Dharwad HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Dharwad
+  arrests:
+  - type_id: 2
+    date: '2026-03-17'
+    accused_person_id: SWFRAUD
+    io: e_sw_2013_io
+    court: court_sw_2013
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2013_io
+- category_code: '1'
+  district_id: 2014
+  police_station_id: 5313
+  year: 2026
+  serial: 200
+  registered_date: '2026-02-17'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-17T18:00:00+00:00'
+  incident_to: '2026-02-17T19:30:00+00:00'
+  info_received: '2026-02-17T20:00:00+00:00'
+  latitude: '15.4115000'
+  longitude: '75.6150000'
+  brief_facts: Assault after altercation at Gadag HQ market. Accused Nagesh Rao with associate Imran Pasha;
+    injuries documented.
+  complainants:
+  - name: Hanumanthappa Naik
+    age_year: 41
+    gender_id: M
+    occupation: driver
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Hanumanthappa Naik
+    age_year: 41
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Nagesh Rao
+    age_year: 45
+    gender_id: M
+    person_id: SW13AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2014_io
+  court: court_sw_2014
+  occurrence:
+    occurrence_from: '2026-02-17T18:00:00+00:00'
+    occurrence_to: '2026-02-17T19:30:00+00:00'
+    place_of_occurrence: Gadag HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Gadag
+  arrests:
+  - type_id: 2
+    date: '2026-02-18'
+    accused_person_id: SW13AS
+    io: e_sw_2014_io
+    court: court_sw_2014
+    is_accused: true
+- category_code: '1'
+  district_id: 2014
+  police_station_id: 5313
+  year: 2026
+  serial: 201
+  registered_date: '2026-03-18'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-18T18:00:00+00:00'
+  incident_to: '2026-03-18T19:30:00+00:00'
+  info_received: '2026-03-18T20:00:00+00:00'
+  latitude: '15.4315000'
+  longitude: '75.6350000'
+  brief_facts: Online payment fraud from Gadag HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Rajashekar Biradar
+    age_year: 46
+    gender_id: M
+    occupation: student
+    religion: christian
+    caste: sc
+  victims:
+  - name: Rajashekar Biradar
+    age_year: 46
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2014_io
+  court: court_sw_2014
+  occurrence:
+    occurrence_from: '2026-03-18T18:00:00+00:00'
+    occurrence_to: '2026-03-18T19:30:00+00:00'
+    place_of_occurrence: Gadag HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Gadag
+  arrests:
+  - type_id: 2
+    date: '2026-03-19'
+    accused_person_id: SWFRAUD
+    io: e_sw_2014_io
+    court: court_sw_2014
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2014_io
+- category_code: '1'
+  district_id: 2014
+  police_station_id: 5313
+  year: 2026
+  serial: 202
+  registered_date: '2026-04-19'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-19T18:00:00+00:00'
+  incident_to: '2026-04-19T19:30:00+00:00'
+  info_received: '2026-04-19T20:00:00+00:00'
+  latitude: '15.4515000'
+  longitude: '75.6550000'
+  brief_facts: Highway robbery attempt near Gadag HQ. Accused Ravi Joshi assisted by Bhaskar Hegde; vehicle
+    details under verification.
+  complainants:
+  - name: Jayalakshmi Uppin
+    age_year: 51
+    gender_id: F
+    occupation: trader
+    religion: other
+    caste: st
+  victims:
+  - name: Jayalakshmi Uppin
+    age_year: 51
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ravi Joshi
+    age_year: 23
+    gender_id: M
+    person_id: SW13RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2014_io
+  court: court_sw_2014
+  occurrence:
+    occurrence_from: '2026-04-19T18:00:00+00:00'
+    occurrence_to: '2026-04-19T19:30:00+00:00'
+    place_of_occurrence: Gadag HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Gadag
+  arrests:
+  - type_id: 2
+    date: '2026-04-20'
+    accused_person_id: SW13RB
+    io: e_sw_2014_io
+    court: court_sw_2014
+    is_accused: true
+- category_code: '1'
+  district_id: 2015
+  police_station_id: 5314
+  year: 2026
+  serial: 200
+  registered_date: '2026-03-20'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-20T18:00:00+00:00'
+  incident_to: '2026-03-20T19:30:00+00:00'
+  info_received: '2026-03-20T20:00:00+00:00'
+  latitude: '12.9833000'
+  longitude: '76.0804000'
+  brief_facts: Online payment fraud from Hassan HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Rajashekar Kamble
+    age_year: 42
+    gender_id: M
+    occupation: student
+    religion: christian
+    caste: sc
+  victims:
+  - name: Rajashekar Kamble
+    age_year: 42
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2015_io
+  court: court_sw_2015
+  occurrence:
+    occurrence_from: '2026-03-20T18:00:00+00:00'
+    occurrence_to: '2026-03-20T19:30:00+00:00'
+    place_of_occurrence: Hassan HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Hassan
+  arrests:
+  - type_id: 2
+    date: '2026-03-21'
+    accused_person_id: SWFRAUD
+    io: e_sw_2015_io
+    court: court_sw_2015
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2015_io
+- category_code: '1'
+  district_id: 2015
+  police_station_id: 5314
+  year: 2026
+  serial: 201
+  registered_date: '2026-04-21'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-21T18:00:00+00:00'
+  incident_to: '2026-04-21T19:30:00+00:00'
+  info_received: '2026-04-21T20:00:00+00:00'
+  latitude: '13.0033000'
+  longitude: '76.1004000'
+  brief_facts: Highway robbery attempt near Hassan HQ. Accused Umesh Poojary assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Jayalakshmi Hiremath
+    age_year: 47
+    gender_id: F
+    occupation: trader
+    religion: other
+    caste: st
+  victims:
+  - name: Jayalakshmi Hiremath
+    age_year: 47
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Umesh Poojary
+    age_year: 24
+    gender_id: M
+    person_id: SW14RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2015_io
+  court: court_sw_2015
+  occurrence:
+    occurrence_from: '2026-04-21T18:00:00+00:00'
+    occurrence_to: '2026-04-21T19:30:00+00:00'
+    place_of_occurrence: Hassan HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Hassan
+  arrests:
+  - type_id: 2
+    date: '2026-04-22'
+    accused_person_id: SW14RB
+    io: e_sw_2015_io
+    court: court_sw_2015
+    is_accused: true
+- category_code: '1'
+  district_id: 2015
+  police_station_id: 5314
+  year: 2026
+  serial: 202
+  registered_date: '2026-05-22'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-22T18:00:00+00:00'
+  incident_to: '2026-05-22T19:30:00+00:00'
+  info_received: '2026-05-22T20:00:00+00:00'
+  latitude: '13.0233000'
+  longitude: '76.1204000'
+  brief_facts: Two-wheeler theft near Hassan HQ. Accused Vijay Kamble (approx 27y/M) seen fleeing on bike;
+    person id SW14TH.
+  complainants:
+  - name: Siddarama Gowda
+    age_year: 52
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Siddarama Gowda
+    age_year: 52
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Vijay Kamble
+    age_year: 27
+    gender_id: M
+    person_id: SW14TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2015_io
+  court: court_sw_2015
+  occurrence:
+    occurrence_from: '2026-05-22T18:00:00+00:00'
+    occurrence_to: '2026-05-22T19:30:00+00:00'
+    place_of_occurrence: Hassan HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Hassan
+  arrests:
+  - type_id: 2
+    date: '2026-05-23'
+    accused_person_id: SW14TH
+    io: e_sw_2015_io
+    court: court_sw_2015
+    is_accused: true
+- category_code: '1'
+  district_id: 2016
+  police_station_id: 5315
+  year: 2026
+  serial: 200
+  registered_date: '2026-04-23'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-23T18:00:00+00:00'
+  incident_to: '2026-04-23T19:30:00+00:00'
+  info_received: '2026-04-23T20:00:00+00:00'
+  latitude: '14.7736000'
+  longitude: '75.3790000'
+  brief_facts: Highway robbery attempt near Haveri HQ. Accused Yogesh Chavan assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Jayalakshmi Chavan
+    age_year: 43
+    gender_id: F
+    occupation: trader
+    religion: other
+    caste: st
+  victims:
+  - name: Jayalakshmi Chavan
+    age_year: 43
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Yogesh Chavan
+    age_year: 25
+    gender_id: M
+    person_id: SW15RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2016_io
+  court: court_sw_2016
+  occurrence:
+    occurrence_from: '2026-04-23T18:00:00+00:00'
+    occurrence_to: '2026-04-23T19:30:00+00:00'
+    place_of_occurrence: Haveri HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Haveri
+  arrests:
+  - type_id: 2
+    date: '2026-04-24'
+    accused_person_id: SW15RB
+    io: e_sw_2016_io
+    court: court_sw_2016
+    is_accused: true
+- category_code: '1'
+  district_id: 2016
+  police_station_id: 5315
+  year: 2026
+  serial: 201
+  registered_date: '2026-05-24'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-24T18:00:00+00:00'
+  incident_to: '2026-05-24T19:30:00+00:00'
+  info_received: '2026-05-24T20:00:00+00:00'
+  latitude: '14.7936000'
+  longitude: '75.3990000'
+  brief_facts: Two-wheeler theft near Haveri HQ. Accused Naveen Hiremath (approx 28y/M) seen fleeing on
+    bike; person id SW15TH.
+  complainants:
+  - name: Siddarama Bannur
+    age_year: 48
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Siddarama Bannur
+    age_year: 48
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Naveen Hiremath
+    age_year: 28
+    gender_id: M
+    person_id: SW15TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2016_io
+  court: court_sw_2016
+  occurrence:
+    occurrence_from: '2026-05-24T18:00:00+00:00'
+    occurrence_to: '2026-05-24T19:30:00+00:00'
+    place_of_occurrence: Haveri HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Haveri
+  arrests:
+  - type_id: 2
+    date: '2026-05-25'
+    accused_person_id: SW15TH
+    io: e_sw_2016_io
+    court: court_sw_2016
+    is_accused: true
+- category_code: '1'
+  district_id: 2016
+  police_station_id: 5315
+  year: 2026
+  serial: 202
+  registered_date: '2026-06-25'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-25T18:00:00+00:00'
+  incident_to: '2026-06-25T19:30:00+00:00'
+  info_received: '2026-06-25T20:00:00+00:00'
+  latitude: '14.8136000'
+  longitude: '75.4190000'
+  brief_facts: Assault after altercation at Haveri HQ market. Accused Sanjay Uppin with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Thimmaiah Shetty
+    age_year: 53
+    gender_id: M
+    occupation: farmer
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Thimmaiah Shetty
+    age_year: 53
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Sanjay Uppin
+    age_year: 31
+    gender_id: M
+    person_id: SW15AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2016_io
+  court: court_sw_2016
+  occurrence:
+    occurrence_from: '2026-06-25T18:00:00+00:00'
+    occurrence_to: '2026-06-25T19:30:00+00:00'
+    place_of_occurrence: Haveri HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Haveri
+  arrests:
+  - type_id: 2
+    date: '2026-06-26'
+    accused_person_id: SW15AS
+    io: e_sw_2016_io
+    court: court_sw_2016
+    is_accused: true
+- category_code: '1'
+  district_id: 2017
+  police_station_id: 5316
+  year: 2026
+  serial: 200
+  registered_date: '2026-05-26'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-26T18:00:00+00:00'
+  incident_to: '2026-05-26T19:30:00+00:00'
+  info_received: '2026-05-26T20:00:00+00:00'
+  latitude: '17.3097000'
+  longitude: '76.8143000'
+  brief_facts: Two-wheeler theft near Kalaburagi HQ. Accused Manjunath Gowda (approx 29y/M) seen fleeing
+    on bike; person id SW16TH.
+  complainants:
+  - name: Siddarama Biradar
+    age_year: 44
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Siddarama Biradar
+    age_year: 44
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Manjunath Gowda
+    age_year: 29
+    gender_id: M
+    person_id: SW16TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2017_io
+  court: court_sw_2017
+  occurrence:
+    occurrence_from: '2026-05-26T18:00:00+00:00'
+    occurrence_to: '2026-05-26T19:30:00+00:00'
+    place_of_occurrence: Kalaburagi HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Kalaburagi
+  arrests:
+  - type_id: 2
+    date: '2026-05-27'
+    accused_person_id: SW16TH
+    io: e_sw_2017_io
+    court: court_sw_2017
+    is_accused: true
+- category_code: '1'
+  district_id: 2017
+  police_station_id: 5316
+  year: 2026
+  serial: 201
+  registered_date: '2026-06-27'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-27T18:00:00+00:00'
+  incident_to: '2026-06-27T19:30:00+00:00'
+  info_received: '2026-06-27T20:00:00+00:00'
+  latitude: '17.3297000'
+  longitude: '76.8343000'
+  brief_facts: Assault after altercation at Kalaburagi HQ market. Accused Shivaraj Patil with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Thimmaiah Uppin
+    age_year: 49
+    gender_id: M
+    occupation: farmer
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Thimmaiah Uppin
+    age_year: 49
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Shivaraj Patil
+    age_year: 32
+    gender_id: M
+    person_id: SW16AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2017_io
+  court: court_sw_2017
+  occurrence:
+    occurrence_from: '2026-06-27T18:00:00+00:00'
+    occurrence_to: '2026-06-27T19:30:00+00:00'
+    place_of_occurrence: Kalaburagi HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Kalaburagi
+  arrests:
+  - type_id: 2
+    date: '2026-06-28'
+    accused_person_id: SW16AS
+    io: e_sw_2017_io
+    court: court_sw_2017
+    is_accused: true
+- category_code: '1'
+  district_id: 2017
+  police_station_id: 5316
+  year: 2026
+  serial: 202
+  registered_date: '2026-07-03'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-03T18:00:00+00:00'
+  incident_to: '2026-07-03T19:30:00+00:00'
+  info_received: '2026-07-03T20:00:00+00:00'
+  latitude: '17.3497000'
+  longitude: '76.8543000'
+  brief_facts: Online payment fraud from Kalaburagi HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Nirmala Patil
+    age_year: 54
+    gender_id: F
+    occupation: driver
+    religion: christian
+    caste: sc
+  victims:
+  - name: Nirmala Patil
+    age_year: 54
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2017_io
+  court: court_sw_2017
+  occurrence:
+    occurrence_from: '2026-07-03T18:00:00+00:00'
+    occurrence_to: '2026-07-03T19:30:00+00:00'
+    place_of_occurrence: Kalaburagi HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Kalaburagi
+  arrests:
+  - type_id: 2
+    date: '2026-07-04'
+    accused_person_id: SWFRAUD
+    io: e_sw_2017_io
+    court: court_sw_2017
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2017_io
+- category_code: '1'
+  district_id: 2018
+  police_station_id: 5317
+  year: 2026
+  serial: 200
+  registered_date: '2026-06-04'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-04T18:00:00+00:00'
+  incident_to: '2026-06-04T19:30:00+00:00'
+  info_received: '2026-06-04T20:00:00+00:00'
+  latitude: '12.4044000'
+  longitude: '75.7182000'
+  brief_facts: Assault after altercation at Kodagu HQ market. Accused Dinesh Rao with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Thimmaiah Hiremath
+    age_year: 45
+    gender_id: M
+    occupation: farmer
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Thimmaiah Hiremath
+    age_year: 45
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Dinesh Rao
+    age_year: 33
+    gender_id: M
+    person_id: SW17AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2018_io
+  court: court_sw_2018
+  occurrence:
+    occurrence_from: '2026-06-04T18:00:00+00:00'
+    occurrence_to: '2026-06-04T19:30:00+00:00'
+    place_of_occurrence: Kodagu HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Kodagu
+  arrests:
+  - type_id: 2
+    date: '2026-06-05'
+    accused_person_id: SW17AS
+    io: e_sw_2018_io
+    court: court_sw_2018
+    is_accused: true
+- category_code: '1'
+  district_id: 2018
+  police_station_id: 5317
+  year: 2026
+  serial: 201
+  registered_date: '2026-07-05'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-05T18:00:00+00:00'
+  incident_to: '2026-07-05T19:30:00+00:00'
+  info_received: '2026-07-05T20:00:00+00:00'
+  latitude: '12.4244000'
+  longitude: '75.7382000'
+  brief_facts: Online payment fraud from Kodagu HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Nirmala Gowda
+    age_year: 50
+    gender_id: F
+    occupation: driver
+    religion: christian
+    caste: sc
+  victims:
+  - name: Nirmala Gowda
+    age_year: 50
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2018_io
+  court: court_sw_2018
+  occurrence:
+    occurrence_from: '2026-07-05T18:00:00+00:00'
+    occurrence_to: '2026-07-05T19:30:00+00:00'
+    place_of_occurrence: Kodagu HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Kodagu
+  arrests:
+  - type_id: 2
+    date: '2026-07-06'
+    accused_person_id: SWFRAUD
+    io: e_sw_2018_io
+    court: court_sw_2018
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2018_io
+- category_code: '1'
+  district_id: 2018
+  police_station_id: 5317
+  year: 2026
+  serial: 202
+  registered_date: '2026-08-06'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-06T18:00:00+00:00'
+  incident_to: '2026-08-06T19:30:00+00:00'
+  info_received: '2026-08-06T20:00:00+00:00'
+  latitude: '12.4444000'
+  longitude: '75.7582000'
+  brief_facts: Highway robbery attempt near Kodagu HQ. Accused Satish Joshi assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Govindaraju Nayak
+    age_year: 55
+    gender_id: M
+    occupation: student
+    religion: other
+    caste: st
+  victims:
+  - name: Govindaraju Nayak
+    age_year: 55
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Satish Joshi
+    age_year: 39
+    gender_id: M
+    person_id: SW17RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2018_io
+  court: court_sw_2018
+  occurrence:
+    occurrence_from: '2026-08-06T18:00:00+00:00'
+    occurrence_to: '2026-08-06T19:30:00+00:00'
+    place_of_occurrence: Kodagu HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Kodagu
+  arrests:
+  - type_id: 2
+    date: '2026-08-07'
+    accused_person_id: SW17RB
+    io: e_sw_2018_io
+    court: court_sw_2018
+    is_accused: true
+- category_code: '1'
+  district_id: 2019
+  police_station_id: 5318
+  year: 2026
+  serial: 200
+  registered_date: '2026-07-07'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-07T18:00:00+00:00'
+  incident_to: '2026-07-07T19:30:00+00:00'
+  info_received: '2026-07-07T20:00:00+00:00'
+  latitude: '13.1167000'
+  longitude: '78.1091000'
+  brief_facts: Online payment fraud from Kolar HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Nirmala Bannur
+    age_year: 46
+    gender_id: F
+    occupation: driver
+    religion: christian
+    caste: sc
+  victims:
+  - name: Nirmala Bannur
+    age_year: 46
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2019_io
+  court: court_sw_2019
+  occurrence:
+    occurrence_from: '2026-07-07T18:00:00+00:00'
+    occurrence_to: '2026-07-07T19:30:00+00:00'
+    place_of_occurrence: Kolar HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Kolar
+  arrests:
+  - type_id: 2
+    date: '2026-07-08'
+    accused_person_id: SWFRAUD
+    io: e_sw_2019_io
+    court: court_sw_2019
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2019_io
+- category_code: '1'
+  district_id: 2019
+  police_station_id: 5318
+  year: 2026
+  serial: 201
+  registered_date: '2026-08-08'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-08T18:00:00+00:00'
+  incident_to: '2026-08-08T19:30:00+00:00'
+  info_received: '2026-08-08T20:00:00+00:00'
+  latitude: '13.1367000'
+  longitude: '78.1291000'
+  brief_facts: Highway robbery attempt near Kolar HQ. Accused Vinod Poojary assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Govindaraju Shetty
+    age_year: 51
+    gender_id: M
+    occupation: student
+    religion: other
+    caste: st
+  victims:
+  - name: Govindaraju Shetty
+    age_year: 51
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Vinod Poojary
+    age_year: 40
+    gender_id: M
+    person_id: SW18RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2019_io
+  court: court_sw_2019
+  occurrence:
+    occurrence_from: '2026-08-08T18:00:00+00:00'
+    occurrence_to: '2026-08-08T19:30:00+00:00'
+    place_of_occurrence: Kolar HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Kolar
+  arrests:
+  - type_id: 2
+    date: '2026-08-09'
+    accused_person_id: SW18RB
+    io: e_sw_2019_io
+    court: court_sw_2019
+    is_accused: true
+- category_code: '1'
+  district_id: 2019
+  police_station_id: 5318
+  year: 2026
+  serial: 202
+  registered_date: '2026-09-09'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-09T18:00:00+00:00'
+  incident_to: '2026-09-09T19:30:00+00:00'
+  info_received: '2026-09-09T20:00:00+00:00'
+  latitude: '13.1567000'
+  longitude: '78.1491000'
+  brief_facts: Two-wheeler theft near Kolar HQ. Accused Anand Kamble (approx 43y/M) seen fleeing on bike;
+    person id SW18TH.
+  complainants:
+  - name: Venkatappa Hegde
+    age_year: 56
+    gender_id: M
+    occupation: trader
+    religion: hindu
+    caste: general
+  victims:
+  - name: Venkatappa Hegde
+    age_year: 56
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Anand Kamble
+    age_year: 43
+    gender_id: M
+    person_id: SW18TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2019_io
+  court: court_sw_2019
+  occurrence:
+    occurrence_from: '2026-09-09T18:00:00+00:00'
+    occurrence_to: '2026-09-09T19:30:00+00:00'
+    place_of_occurrence: Kolar HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Kolar
+  arrests:
+  - type_id: 2
+    date: '2026-09-10'
+    accused_person_id: SW18TH
+    io: e_sw_2019_io
+    court: court_sw_2019
+    is_accused: true
+- category_code: '1'
+  district_id: 2020
+  police_station_id: 5319
+  year: 2026
+  serial: 200
+  registered_date: '2026-08-10'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-10T18:00:00+00:00'
+  incident_to: '2026-08-10T19:30:00+00:00'
+  info_received: '2026-08-10T20:00:00+00:00'
+  latitude: '15.3252000'
+  longitude: '76.1348000'
+  brief_facts: Highway robbery attempt near Koppal HQ. Accused Basavaraj Chavan assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Govindaraju Uppin
+    age_year: 47
+    gender_id: M
+    occupation: student
+    religion: other
+    caste: st
+  victims:
+  - name: Govindaraju Uppin
+    age_year: 47
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Basavaraj Chavan
+    age_year: 41
+    gender_id: M
+    person_id: SW19RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2020_io
+  court: court_sw_2020
+  occurrence:
+    occurrence_from: '2026-08-10T18:00:00+00:00'
+    occurrence_to: '2026-08-10T19:30:00+00:00'
+    place_of_occurrence: Koppal HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Koppal
+  arrests:
+  - type_id: 2
+    date: '2026-08-11'
+    accused_person_id: SW19RB
+    io: e_sw_2020_io
+    court: court_sw_2020
+    is_accused: true
+- category_code: '1'
+  district_id: 2020
+  police_station_id: 5319
+  year: 2026
+  serial: 201
+  registered_date: '2026-09-11'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-11T18:00:00+00:00'
+  incident_to: '2026-09-11T19:30:00+00:00'
+  info_received: '2026-09-11T20:00:00+00:00'
+  latitude: '15.3452000'
+  longitude: '76.1548000'
+  brief_facts: Two-wheeler theft near Koppal HQ. Accused Chetan Hiremath (approx 44y/M) seen fleeing on
+    bike; person id SW19TH.
+  complainants:
+  - name: Venkatappa Patil
+    age_year: 52
+    gender_id: M
+    occupation: trader
+    religion: hindu
+    caste: general
+  victims:
+  - name: Venkatappa Patil
+    age_year: 52
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Chetan Hiremath
+    age_year: 44
+    gender_id: M
+    person_id: SW19TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2020_io
+  court: court_sw_2020
+  occurrence:
+    occurrence_from: '2026-09-11T18:00:00+00:00'
+    occurrence_to: '2026-09-11T19:30:00+00:00'
+    place_of_occurrence: Koppal HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Koppal
+  arrests:
+  - type_id: 2
+    date: '2026-09-12'
+    accused_person_id: SW19TH
+    io: e_sw_2020_io
+    court: court_sw_2020
+    is_accused: true
+- category_code: '1'
+  district_id: 2020
+  police_station_id: 5319
+  year: 2026
+  serial: 202
+  registered_date: '2026-10-12'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-10-12T18:00:00+00:00'
+  incident_to: '2026-10-12T19:30:00+00:00'
+  info_received: '2026-10-12T20:00:00+00:00'
+  latitude: '15.3652000'
+  longitude: '76.1748000'
+  brief_facts: Assault after altercation at Koppal HQ market. Accused Deepak Uppin with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Saraswathi Rao
+    age_year: 57
+    gender_id: F
+    occupation: employee
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Saraswathi Rao
+    age_year: 57
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Deepak Uppin
+    age_year: 47
+    gender_id: M
+    person_id: SW19AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2020_io
+  court: court_sw_2020
+  occurrence:
+    occurrence_from: '2026-10-12T18:00:00+00:00'
+    occurrence_to: '2026-10-12T19:30:00+00:00'
+    place_of_occurrence: Koppal HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Koppal
+  arrests:
+  - type_id: 2
+    date: '2026-10-13'
+    accused_person_id: SW19AS
+    io: e_sw_2020_io
+    court: court_sw_2020
+    is_accused: true
+- category_code: '1'
+  district_id: 2021
+  police_station_id: 5320
+  year: 2026
+  serial: 200
+  registered_date: '2026-09-13'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-13T18:00:00+00:00'
+  incident_to: '2026-09-13T19:30:00+00:00'
+  info_received: '2026-09-13T20:00:00+00:00'
+  latitude: '12.5042000'
+  longitude: '76.8770000'
+  brief_facts: Two-wheeler theft near Mandya HQ. Accused Eshwar Gowda (approx 45y/M) seen fleeing on bike;
+    person id SW20TH.
+  complainants:
+  - name: Venkatappa Gowda
+    age_year: 48
+    gender_id: M
+    occupation: trader
+    religion: hindu
+    caste: general
+  victims:
+  - name: Venkatappa Gowda
+    age_year: 48
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Eshwar Gowda
+    age_year: 45
+    gender_id: M
+    person_id: SW20TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2021_io
+  court: court_sw_2021
+  occurrence:
+    occurrence_from: '2026-09-13T18:00:00+00:00'
+    occurrence_to: '2026-09-13T19:30:00+00:00'
+    place_of_occurrence: Mandya HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Mandya
+  arrests:
+  - type_id: 2
+    date: '2026-09-14'
+    accused_person_id: SW20TH
+    io: e_sw_2021_io
+    court: court_sw_2021
+    is_accused: true
+- category_code: '1'
+  district_id: 2021
+  police_station_id: 5320
+  year: 2026
+  serial: 201
+  registered_date: '2026-10-14'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-10-14T18:00:00+00:00'
+  incident_to: '2026-10-14T19:30:00+00:00'
+  info_received: '2026-10-14T20:00:00+00:00'
+  latitude: '12.5242000'
+  longitude: '76.8970000'
+  brief_facts: Assault after altercation at Mandya HQ market. Accused Ganesh Patil with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Saraswathi Nayak
+    age_year: 53
+    gender_id: F
+    occupation: employee
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Saraswathi Nayak
+    age_year: 53
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ganesh Patil
+    age_year: 48
+    gender_id: M
+    person_id: SW20AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2021_io
+  court: court_sw_2021
+  occurrence:
+    occurrence_from: '2026-10-14T18:00:00+00:00'
+    occurrence_to: '2026-10-14T19:30:00+00:00'
+    place_of_occurrence: Mandya HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Mandya
+  arrests:
+  - type_id: 2
+    date: '2026-10-15'
+    accused_person_id: SW20AS
+    io: e_sw_2021_io
+    court: court_sw_2021
+    is_accused: true
+- category_code: '1'
+  district_id: 2021
+  police_station_id: 5320
+  year: 2026
+  serial: 202
+  registered_date: '2026-11-15'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-11-15T18:00:00+00:00'
+  incident_to: '2026-11-15T19:30:00+00:00'
+  info_received: '2026-11-15T20:00:00+00:00'
+  latitude: '12.5442000'
+  longitude: '76.9170000'
+  brief_facts: Online payment fraud from Mandya HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Shankara Reddy
+    age_year: 58
+    gender_id: M
+    occupation: farmer
+    religion: christian
+    caste: sc
+  victims:
+  - name: Shankara Reddy
+    age_year: 58
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2021_io
+  court: court_sw_2021
+  occurrence:
+    occurrence_from: '2026-11-15T18:00:00+00:00'
+    occurrence_to: '2026-11-15T19:30:00+00:00'
+    place_of_occurrence: Mandya HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Mandya
+  arrests:
+  - type_id: 2
+    date: '2026-11-16'
+    accused_person_id: SWFRAUD
+    io: e_sw_2021_io
+    court: court_sw_2021
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-12-15'
+    officer: e_sw_2021_io
+- category_code: '1'
+  district_id: 2022
+  police_station_id: 5321
+  year: 2026
+  serial: 200
+  registered_date: '2026-10-16'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-10-16T18:00:00+00:00'
+  incident_to: '2026-10-16T19:30:00+00:00'
+  info_received: '2026-10-16T20:00:00+00:00'
+  latitude: '12.2758000'
+  longitude: '76.6194000'
+  brief_facts: Assault after altercation at Mysuru HQ market. Accused Jagadish Rao with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Saraswathi Shetty
+    age_year: 49
+    gender_id: F
+    occupation: employee
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Saraswathi Shetty
+    age_year: 49
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Jagadish Rao
+    age_year: 21
+    gender_id: M
+    person_id: SW21AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2022_io
+  court: court_sw_2022
+  occurrence:
+    occurrence_from: '2026-10-16T18:00:00+00:00'
+    occurrence_to: '2026-10-16T19:30:00+00:00'
+    place_of_occurrence: Mysuru HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-10-17'
+    accused_person_id: SW21AS
+    io: e_sw_2022_io
+    court: court_sw_2022
+    is_accused: true
+- category_code: '1'
+  district_id: 2022
+  police_station_id: 5321
+  year: 2026
+  serial: 201
+  registered_date: '2026-11-17'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-11-17T18:00:00+00:00'
+  incident_to: '2026-11-17T19:30:00+00:00'
+  info_received: '2026-11-17T20:00:00+00:00'
+  latitude: '12.2958000'
+  longitude: '76.6394000'
+  brief_facts: Online payment fraud from Mysuru HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Shankara Hegde
+    age_year: 54
+    gender_id: M
+    occupation: farmer
+    religion: christian
+    caste: sc
+  victims:
+  - name: Shankara Hegde
+    age_year: 54
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2022_io
+  court: court_sw_2022
+  occurrence:
+    occurrence_from: '2026-11-17T18:00:00+00:00'
+    occurrence_to: '2026-11-17T19:30:00+00:00'
+    place_of_occurrence: Mysuru HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-11-18'
+    accused_person_id: SWFRAUD
+    io: e_sw_2022_io
+    court: court_sw_2022
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-12-15'
+    officer: e_sw_2022_io
+- category_code: '1'
+  district_id: 2022
+  police_station_id: 5321
+  year: 2026
+  serial: 202
+  registered_date: '2026-12-18'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-12-18T18:00:00+00:00'
+  incident_to: '2026-12-18T19:30:00+00:00'
+  info_received: '2026-12-18T20:00:00+00:00'
+  latitude: '12.3158000'
+  longitude: '76.6594000'
+  brief_facts: Highway robbery attempt near Mysuru HQ. Accused Lokesh Joshi assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Hanumanthappa Kulkarni
+    age_year: 59
+    gender_id: M
+    occupation: driver
+    religion: other
+    caste: st
+  victims:
+  - name: Hanumanthappa Kulkarni
+    age_year: 59
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Lokesh Joshi
+    age_year: 27
+    gender_id: M
+    person_id: SW21RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2022_io
+  court: court_sw_2022
+  occurrence:
+    occurrence_from: '2026-12-18T18:00:00+00:00'
+    occurrence_to: '2026-12-18T19:30:00+00:00'
+    place_of_occurrence: Mysuru HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-12-19'
+    accused_person_id: SW21RB
+    io: e_sw_2022_io
+    court: court_sw_2022
+    is_accused: true
+- category_code: '1'
+  district_id: 2023
+  police_station_id: 5322
+  year: 2026
+  serial: 200
+  registered_date: '2026-11-19'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-11-19T18:00:00+00:00'
+  incident_to: '2026-11-19T19:30:00+00:00'
+  info_received: '2026-11-19T20:00:00+00:00'
+  latitude: '16.1876000'
+  longitude: '77.3263000'
+  brief_facts: Online payment fraud from Raichur HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Shankara Patil
+    age_year: 50
+    gender_id: M
+    occupation: farmer
+    religion: christian
+    caste: sc
+  victims:
+  - name: Shankara Patil
+    age_year: 50
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2023_io
+  court: court_sw_2023
+  occurrence:
+    occurrence_from: '2026-11-19T18:00:00+00:00'
+    occurrence_to: '2026-11-19T19:30:00+00:00'
+    place_of_occurrence: Raichur HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Raichur
+  arrests:
+  - type_id: 2
+    date: '2026-11-20'
+    accused_person_id: SWFRAUD
+    io: e_sw_2023_io
+    court: court_sw_2023
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-12-15'
+    officer: e_sw_2023_io
+- category_code: '1'
+  district_id: 2023
+  police_station_id: 5322
+  year: 2026
+  serial: 201
+  registered_date: '2026-12-20'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-12-20T18:00:00+00:00'
+  incident_to: '2026-12-20T19:30:00+00:00'
+  info_received: '2026-12-20T20:00:00+00:00'
+  latitude: '16.2076000'
+  longitude: '77.3463000'
+  brief_facts: Highway robbery attempt near Raichur HQ. Accused Nagesh Poojary assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Hanumanthappa Rao
+    age_year: 55
+    gender_id: M
+    occupation: driver
+    religion: other
+    caste: st
+  victims:
+  - name: Hanumanthappa Rao
+    age_year: 55
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Nagesh Poojary
+    age_year: 28
+    gender_id: M
+    person_id: SW22RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2023_io
+  court: court_sw_2023
+  occurrence:
+    occurrence_from: '2026-12-20T18:00:00+00:00'
+    occurrence_to: '2026-12-20T19:30:00+00:00'
+    place_of_occurrence: Raichur HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Raichur
+  arrests:
+  - type_id: 2
+    date: '2026-12-21'
+    accused_person_id: SW22RB
+    io: e_sw_2023_io
+    court: court_sw_2023
+    is_accused: true
+- category_code: '1'
+  district_id: 2023
+  police_station_id: 5322
+  year: 2026
+  serial: 202
+  registered_date: '2026-01-21'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-21T18:00:00+00:00'
+  incident_to: '2026-01-21T19:30:00+00:00'
+  info_received: '2026-01-21T20:00:00+00:00'
+  latitude: '16.2276000'
+  longitude: '77.3663000'
+  brief_facts: Two-wheeler theft near Raichur HQ. Accused Prakash Kamble (approx 31y/M) seen fleeing on
+    bike; person id SW22TH.
+  complainants:
+  - name: Rathnamma Desai
+    age_year: 60
+    gender_id: F
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rathnamma Desai
+    age_year: 60
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Prakash Kamble
+    age_year: 31
+    gender_id: M
+    person_id: SW22TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2023_io
+  court: court_sw_2023
+  occurrence:
+    occurrence_from: '2026-01-21T18:00:00+00:00'
+    occurrence_to: '2026-01-21T19:30:00+00:00'
+    place_of_occurrence: Raichur HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Raichur
+  arrests:
+  - type_id: 2
+    date: '2026-01-22'
+    accused_person_id: SW22TH
+    io: e_sw_2023_io
+    court: court_sw_2023
+    is_accused: true
+- category_code: '1'
+  district_id: 2024
+  police_station_id: 5323
+  year: 2026
+  serial: 200
+  registered_date: '2026-12-22'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-12-22T18:00:00+00:00'
+  incident_to: '2026-12-22T19:30:00+00:00'
+  info_received: '2026-12-22T20:00:00+00:00'
+  latitude: '12.7009000'
+  longitude: '77.2624000'
+  brief_facts: Highway robbery attempt near Ramanagara HQ. Accused Ravi Chavan assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Hanumanthappa Nayak
+    age_year: 51
+    gender_id: M
+    occupation: driver
+    religion: other
+    caste: st
+  victims:
+  - name: Hanumanthappa Nayak
+    age_year: 51
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ravi Chavan
+    age_year: 29
+    gender_id: M
+    person_id: SW23RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2024_io
+  court: court_sw_2024
+  occurrence:
+    occurrence_from: '2026-12-22T18:00:00+00:00'
+    occurrence_to: '2026-12-22T19:30:00+00:00'
+    place_of_occurrence: Ramanagara HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Ramanagara
+  arrests:
+  - type_id: 2
+    date: '2026-12-23'
+    accused_person_id: SW23RB
+    io: e_sw_2024_io
+    court: court_sw_2024
+    is_accused: true
+- category_code: '1'
+  district_id: 2024
+  police_station_id: 5323
+  year: 2026
+  serial: 201
+  registered_date: '2026-01-23'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-23T18:00:00+00:00'
+  incident_to: '2026-01-23T19:30:00+00:00'
+  info_received: '2026-01-23T20:00:00+00:00'
+  latitude: '12.7209000'
+  longitude: '77.2824000'
+  brief_facts: Two-wheeler theft near Ramanagara HQ. Accused Suresh Hiremath (approx 32y/M) seen fleeing
+    on bike; person id SW23TH.
+  complainants:
+  - name: Rathnamma Reddy
+    age_year: 56
+    gender_id: F
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rathnamma Reddy
+    age_year: 56
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Suresh Hiremath
+    age_year: 32
+    gender_id: M
+    person_id: SW23TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2024_io
+  court: court_sw_2024
+  occurrence:
+    occurrence_from: '2026-01-23T18:00:00+00:00'
+    occurrence_to: '2026-01-23T19:30:00+00:00'
+    place_of_occurrence: Ramanagara HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Ramanagara
+  arrests:
+  - type_id: 2
+    date: '2026-01-24'
+    accused_person_id: SW23TH
+    io: e_sw_2024_io
+    court: court_sw_2024
+    is_accused: true
+- category_code: '1'
+  district_id: 2024
+  police_station_id: 5323
+  year: 2026
+  serial: 202
+  registered_date: '2026-02-24'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-24T18:00:00+00:00'
+  incident_to: '2026-02-24T19:30:00+00:00'
+  info_received: '2026-02-24T20:00:00+00:00'
+  latitude: '12.7409000'
+  longitude: '77.3024000'
+  brief_facts: Assault after altercation at Ramanagara HQ market. Accused Umesh Uppin with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Mahadeva Joshi
+    age_year: 61
+    gender_id: M
+    occupation: trader
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Mahadeva Joshi
+    age_year: 61
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Umesh Uppin
+    age_year: 35
+    gender_id: M
+    person_id: SW23AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2024_io
+  court: court_sw_2024
+  occurrence:
+    occurrence_from: '2026-02-24T18:00:00+00:00'
+    occurrence_to: '2026-02-24T19:30:00+00:00'
+    place_of_occurrence: Ramanagara HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Ramanagara
+  arrests:
+  - type_id: 2
+    date: '2026-02-25'
+    accused_person_id: SW23AS
+    io: e_sw_2024_io
+    court: court_sw_2024
+    is_accused: true
+- category_code: '1'
+  district_id: 2025
+  police_station_id: 5324
+  year: 2026
+  serial: 200
+  registered_date: '2026-01-25'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-01-25T18:00:00+00:00'
+  incident_to: '2026-01-25T19:30:00+00:00'
+  info_received: '2026-01-25T20:00:00+00:00'
+  latitude: '13.9099000'
+  longitude: '75.5481000'
+  brief_facts: Two-wheeler theft near Shivamogga HQ. Accused Vijay Gowda (approx 33y/M) seen fleeing on
+    bike; person id SW24TH.
+  complainants:
+  - name: Rathnamma Hegde
+    age_year: 52
+    gender_id: F
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rathnamma Hegde
+    age_year: 52
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Vijay Gowda
+    age_year: 33
+    gender_id: M
+    person_id: SW24TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2025_io
+  court: court_sw_2025
+  occurrence:
+    occurrence_from: '2026-01-25T18:00:00+00:00'
+    occurrence_to: '2026-01-25T19:30:00+00:00'
+    place_of_occurrence: Shivamogga HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Shivamogga
+  arrests:
+  - type_id: 2
+    date: '2026-01-26'
+    accused_person_id: SW24TH
+    io: e_sw_2025_io
+    court: court_sw_2025
+    is_accused: true
+- category_code: '1'
+  district_id: 2025
+  police_station_id: 5324
+  year: 2026
+  serial: 201
+  registered_date: '2026-02-26'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-26T18:00:00+00:00'
+  incident_to: '2026-02-26T19:30:00+00:00'
+  info_received: '2026-02-26T20:00:00+00:00'
+  latitude: '13.9299000'
+  longitude: '75.5681000'
+  brief_facts: Assault after altercation at Shivamogga HQ market. Accused Yogesh Patil with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Mahadeva Kulkarni
+    age_year: 57
+    gender_id: M
+    occupation: trader
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Mahadeva Kulkarni
+    age_year: 57
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Yogesh Patil
+    age_year: 36
+    gender_id: M
+    person_id: SW24AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2025_io
+  court: court_sw_2025
+  occurrence:
+    occurrence_from: '2026-02-26T18:00:00+00:00'
+    occurrence_to: '2026-02-26T19:30:00+00:00'
+    place_of_occurrence: Shivamogga HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Shivamogga
+  arrests:
+  - type_id: 2
+    date: '2026-02-27'
+    accused_person_id: SW24AS
+    io: e_sw_2025_io
+    court: court_sw_2025
+    is_accused: true
+- category_code: '1'
+  district_id: 2025
+  police_station_id: 5324
+  year: 2026
+  serial: 202
+  registered_date: '2026-03-27'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-27T18:00:00+00:00'
+  incident_to: '2026-03-27T19:30:00+00:00'
+  info_received: '2026-03-27T20:00:00+00:00'
+  latitude: '13.9499000'
+  longitude: '75.5881000'
+  brief_facts: Online payment fraud from Shivamogga HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Siddarama Bhat
+    age_year: 62
+    gender_id: M
+    occupation: employee
+    religion: christian
+    caste: sc
+  victims:
+  - name: Siddarama Bhat
+    age_year: 62
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2025_io
+  court: court_sw_2025
+  occurrence:
+    occurrence_from: '2026-03-27T18:00:00+00:00'
+    occurrence_to: '2026-03-27T19:30:00+00:00'
+    place_of_occurrence: Shivamogga HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Shivamogga
+  arrests:
+  - type_id: 2
+    date: '2026-03-28'
+    accused_person_id: SWFRAUD
+    io: e_sw_2025_io
+    court: court_sw_2025
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2025_io
+- category_code: '1'
+  district_id: 2026
+  police_station_id: 5325
+  year: 2026
+  serial: 200
+  registered_date: '2026-02-03'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-02-03T18:00:00+00:00'
+  incident_to: '2026-02-03T19:30:00+00:00'
+  info_received: '2026-02-03T20:00:00+00:00'
+  latitude: '13.3179000'
+  longitude: '77.0973000'
+  brief_facts: Assault after altercation at Tumakuru HQ market. Accused Sanjay Rao with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Mahadeva Rao
+    age_year: 53
+    gender_id: M
+    occupation: trader
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Mahadeva Rao
+    age_year: 53
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Sanjay Rao
+    age_year: 37
+    gender_id: M
+    person_id: SW25AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2026_io
+  court: court_sw_2026
+  occurrence:
+    occurrence_from: '2026-02-03T18:00:00+00:00'
+    occurrence_to: '2026-02-03T19:30:00+00:00'
+    place_of_occurrence: Tumakuru HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Tumakuru
+  arrests:
+  - type_id: 2
+    date: '2026-02-04'
+    accused_person_id: SW25AS
+    io: e_sw_2026_io
+    court: court_sw_2026
+    is_accused: true
+- category_code: '1'
+  district_id: 2026
+  police_station_id: 5325
+  year: 2026
+  serial: 201
+  registered_date: '2026-03-04'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-04T18:00:00+00:00'
+  incident_to: '2026-03-04T19:30:00+00:00'
+  info_received: '2026-03-04T20:00:00+00:00'
+  latitude: '13.3379000'
+  longitude: '77.1173000'
+  brief_facts: Online payment fraud from Tumakuru HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Siddarama Desai
+    age_year: 58
+    gender_id: M
+    occupation: employee
+    religion: christian
+    caste: sc
+  victims:
+  - name: Siddarama Desai
+    age_year: 58
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2026_io
+  court: court_sw_2026
+  occurrence:
+    occurrence_from: '2026-03-04T18:00:00+00:00'
+    occurrence_to: '2026-03-04T19:30:00+00:00'
+    place_of_occurrence: Tumakuru HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Tumakuru
+  arrests:
+  - type_id: 2
+    date: '2026-03-05'
+    accused_person_id: SWFRAUD
+    io: e_sw_2026_io
+    court: court_sw_2026
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2026_io
+- category_code: '1'
+  district_id: 2026
+  police_station_id: 5325
+  year: 2026
+  serial: 202
+  registered_date: '2026-04-05'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-05T18:00:00+00:00'
+  incident_to: '2026-04-05T19:30:00+00:00'
+  info_received: '2026-04-05T20:00:00+00:00'
+  latitude: '13.3579000'
+  longitude: '77.1373000'
+  brief_facts: Highway robbery attempt near Tumakuru HQ. Accused Shivaraj Joshi assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Savitha Kamath
+    age_year: 28
+    gender_id: F
+    occupation: farmer
+    religion: other
+    caste: st
+  victims:
+  - name: Savitha Kamath
+    age_year: 28
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Shivaraj Joshi
+    age_year: 43
+    gender_id: M
+    person_id: SW25RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2026_io
+  court: court_sw_2026
+  occurrence:
+    occurrence_from: '2026-04-05T18:00:00+00:00'
+    occurrence_to: '2026-04-05T19:30:00+00:00'
+    place_of_occurrence: Tumakuru HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Tumakuru
+  arrests:
+  - type_id: 2
+    date: '2026-04-06'
+    accused_person_id: SW25RB
+    io: e_sw_2026_io
+    court: court_sw_2026
+    is_accused: true
+- category_code: '1'
+  district_id: 2027
+  police_station_id: 5326
+  year: 2026
+  serial: 200
+  registered_date: '2026-03-06'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-03-06T18:00:00+00:00'
+  incident_to: '2026-03-06T19:30:00+00:00'
+  info_received: '2026-03-06T20:00:00+00:00'
+  latitude: '13.3209000'
+  longitude: '74.7221000'
+  brief_facts: Online payment fraud from Udupi HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Siddarama Reddy
+    age_year: 54
+    gender_id: M
+    occupation: employee
+    religion: christian
+    caste: sc
+  victims:
+  - name: Siddarama Reddy
+    age_year: 54
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2027_io
+  court: court_sw_2027
+  occurrence:
+    occurrence_from: '2026-03-06T18:00:00+00:00'
+    occurrence_to: '2026-03-06T19:30:00+00:00'
+    place_of_occurrence: Udupi HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Udupi
+  arrests:
+  - type_id: 2
+    date: '2026-03-07'
+    accused_person_id: SWFRAUD
+    io: e_sw_2027_io
+    court: court_sw_2027
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-15'
+    officer: e_sw_2027_io
+- category_code: '1'
+  district_id: 2027
+  police_station_id: 5326
+  year: 2026
+  serial: 201
+  registered_date: '2026-04-07'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-07T18:00:00+00:00'
+  incident_to: '2026-04-07T19:30:00+00:00'
+  info_received: '2026-04-07T20:00:00+00:00'
+  latitude: '13.3409000'
+  longitude: '74.7421000'
+  brief_facts: Highway robbery attempt near Udupi HQ. Accused Dinesh Poojary assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Savitha Joshi
+    age_year: 59
+    gender_id: F
+    occupation: farmer
+    religion: other
+    caste: st
+  victims:
+  - name: Savitha Joshi
+    age_year: 59
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Dinesh Poojary
+    age_year: 44
+    gender_id: M
+    person_id: SW26RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2027_io
+  court: court_sw_2027
+  occurrence:
+    occurrence_from: '2026-04-07T18:00:00+00:00'
+    occurrence_to: '2026-04-07T19:30:00+00:00'
+    place_of_occurrence: Udupi HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Udupi
+  arrests:
+  - type_id: 2
+    date: '2026-04-08'
+    accused_person_id: SW26RB
+    io: e_sw_2027_io
+    court: court_sw_2027
+    is_accused: true
+- category_code: '1'
+  district_id: 2027
+  police_station_id: 5326
+  year: 2026
+  serial: 202
+  registered_date: '2026-05-08'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-08T18:00:00+00:00'
+  incident_to: '2026-05-08T19:30:00+00:00'
+  info_received: '2026-05-08T20:00:00+00:00'
+  latitude: '13.3609000'
+  longitude: '74.7621000'
+  brief_facts: Two-wheeler theft near Udupi HQ. Accused Raghavendra Kamble (approx 47y/M) seen fleeing
+    on bike; person id SW26TH.
+  complainants:
+  - name: Narayana Poojary
+    age_year: 29
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: general
+  victims:
+  - name: Narayana Poojary
+    age_year: 29
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Raghavendra Kamble
+    age_year: 47
+    gender_id: M
+    person_id: SW26TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2027_io
+  court: court_sw_2027
+  occurrence:
+    occurrence_from: '2026-05-08T18:00:00+00:00'
+    occurrence_to: '2026-05-08T19:30:00+00:00'
+    place_of_occurrence: Udupi HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Udupi
+  arrests:
+  - type_id: 2
+    date: '2026-05-09'
+    accused_person_id: SW26TH
+    io: e_sw_2027_io
+    court: court_sw_2027
+    is_accused: true
+- category_code: '1'
+  district_id: 2028
+  police_station_id: 5327
+  year: 2026
+  serial: 200
+  registered_date: '2026-04-09'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-04-09T18:00:00+00:00'
+  incident_to: '2026-04-09T19:30:00+00:00'
+  info_received: '2026-04-09T20:00:00+00:00'
+  latitude: '14.7936000'
+  longitude: '74.1100000'
+  brief_facts: Highway robbery attempt near Uttara Kannada HQ. Accused Satish Chavan assisted by Bhaskar
+    Hegde; vehicle details under verification.
+  complainants:
+  - name: Savitha Kulkarni
+    age_year: 55
+    gender_id: F
+    occupation: farmer
+    religion: other
+    caste: st
+  victims:
+  - name: Savitha Kulkarni
+    age_year: 55
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Satish Chavan
+    age_year: 45
+    gender_id: M
+    person_id: SW27RB
+  - name: Bhaskar Hegde
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2028_io
+  court: court_sw_2028
+  occurrence:
+    occurrence_from: '2026-04-09T18:00:00+00:00'
+    occurrence_to: '2026-04-09T19:30:00+00:00'
+    place_of_occurrence: Uttara Kannada HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Uttara Kannada
+  arrests:
+  - type_id: 2
+    date: '2026-04-10'
+    accused_person_id: SW27RB
+    io: e_sw_2028_io
+    court: court_sw_2028
+    is_accused: true
+- category_code: '1'
+  district_id: 2028
+  police_station_id: 5327
+  year: 2026
+  serial: 201
+  registered_date: '2026-05-10'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-10T18:00:00+00:00'
+  incident_to: '2026-05-10T19:30:00+00:00'
+  info_received: '2026-05-10T20:00:00+00:00'
+  latitude: '14.8136000'
+  longitude: '74.1300000'
+  brief_facts: Two-wheeler theft near Uttara Kannada HQ. Accused Ashok Hiremath (approx 48y/M) seen fleeing
+    on bike; person id SW27TH.
+  complainants:
+  - name: Narayana Bhat
+    age_year: 60
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: general
+  victims:
+  - name: Narayana Bhat
+    age_year: 60
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ashok Hiremath
+    age_year: 48
+    gender_id: M
+    person_id: SW27TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2028_io
+  court: court_sw_2028
+  occurrence:
+    occurrence_from: '2026-05-10T18:00:00+00:00'
+    occurrence_to: '2026-05-10T19:30:00+00:00'
+    place_of_occurrence: Uttara Kannada HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Uttara Kannada
+  arrests:
+  - type_id: 2
+    date: '2026-05-11'
+    accused_person_id: SW27TH
+    io: e_sw_2028_io
+    court: court_sw_2028
+    is_accused: true
+- category_code: '1'
+  district_id: 2028
+  police_station_id: 5327
+  year: 2026
+  serial: 202
+  registered_date: '2026-06-11'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-11T18:00:00+00:00'
+  incident_to: '2026-06-11T19:30:00+00:00'
+  info_received: '2026-06-11T20:00:00+00:00'
+  latitude: '14.8336000'
+  longitude: '74.1500000'
+  brief_facts: Assault after altercation at Uttara Kannada HQ market. Accused Vinod Uppin with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Govindaraju Naik
+    age_year: 30
+    gender_id: M
+    occupation: student
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Govindaraju Naik
+    age_year: 30
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Vinod Uppin
+    age_year: 23
+    gender_id: M
+    person_id: SW27AS
+  - name: Imran Pasha
+    age_year: 31
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2028_io
+  court: court_sw_2028
+  occurrence:
+    occurrence_from: '2026-06-11T18:00:00+00:00'
+    occurrence_to: '2026-06-11T19:30:00+00:00'
+    place_of_occurrence: Uttara Kannada HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Uttara Kannada
+  arrests:
+  - type_id: 2
+    date: '2026-06-12'
+    accused_person_id: SW27AS
+    io: e_sw_2028_io
+    court: court_sw_2028
+    is_accused: true
+- category_code: '1'
+  district_id: 2029
+  police_station_id: 5328
+  year: 2026
+  serial: 200
+  registered_date: '2026-05-12'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-12T18:00:00+00:00'
+  incident_to: '2026-05-12T19:30:00+00:00'
+  info_received: '2026-05-12T20:00:00+00:00'
+  latitude: '15.2500000'
+  longitude: '76.3700000'
+  brief_facts: Two-wheeler theft near Vijayanagara HQ. Accused Anand Gowda (approx 21y/M) seen fleeing
+    on bike; person id SW28TH.
+  complainants:
+  - name: Narayana Desai
+    age_year: 56
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: general
+  victims:
+  - name: Narayana Desai
+    age_year: 56
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Anand Gowda
+    age_year: 21
+    gender_id: M
+    person_id: SW28TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2029_io
+  court: court_sw_2029
+  occurrence:
+    occurrence_from: '2026-05-12T18:00:00+00:00'
+    occurrence_to: '2026-05-12T19:30:00+00:00'
+    place_of_occurrence: Vijayanagara HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Vijayanagara
+  arrests:
+  - type_id: 2
+    date: '2026-05-13'
+    accused_person_id: SW28TH
+    io: e_sw_2029_io
+    court: court_sw_2029
+    is_accused: true
+- category_code: '1'
+  district_id: 2029
+  police_station_id: 5328
+  year: 2026
+  serial: 201
+  registered_date: '2026-06-13'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-13T18:00:00+00:00'
+  incident_to: '2026-06-13T19:30:00+00:00'
+  info_received: '2026-06-13T20:00:00+00:00'
+  latitude: '15.2700000'
+  longitude: '76.3900000'
+  brief_facts: Assault after altercation at Vijayanagara HQ market. Accused Basavaraj Patil with associate
+    Imran Pasha; injuries documented.
+  complainants:
+  - name: Govindaraju Kamath
+    age_year: 61
+    gender_id: M
+    occupation: student
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Govindaraju Kamath
+    age_year: 61
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Basavaraj Patil
+    age_year: 24
+    gender_id: M
+    person_id: SW28AS
+  - name: Imran Pasha
+    age_year: 30
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2029_io
+  court: court_sw_2029
+  occurrence:
+    occurrence_from: '2026-06-13T18:00:00+00:00'
+    occurrence_to: '2026-06-13T19:30:00+00:00'
+    place_of_occurrence: Vijayanagara HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Vijayanagara
+  arrests:
+  - type_id: 2
+    date: '2026-06-14'
+    accused_person_id: SW28AS
+    io: e_sw_2029_io
+    court: court_sw_2029
+    is_accused: true
+- category_code: '1'
+  district_id: 2029
+  police_station_id: 5328
+  year: 2026
+  serial: 202
+  registered_date: '2026-07-14'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-14T18:00:00+00:00'
+  incident_to: '2026-07-14T19:30:00+00:00'
+  info_received: '2026-07-14T20:00:00+00:00'
+  latitude: '15.2900000'
+  longitude: '76.4100000'
+  brief_facts: Online payment fraud from Vijayanagara HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Kamalamma Kamble
+    age_year: 31
+    gender_id: F
+    occupation: trader
+    religion: christian
+    caste: sc
+  victims:
+  - name: Kamalamma Kamble
+    age_year: 31
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2029_io
+  court: court_sw_2029
+  occurrence:
+    occurrence_from: '2026-07-14T18:00:00+00:00'
+    occurrence_to: '2026-07-14T19:30:00+00:00'
+    place_of_occurrence: Vijayanagara HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Vijayanagara
+  arrests:
+  - type_id: 2
+    date: '2026-07-15'
+    accused_person_id: SWFRAUD
+    io: e_sw_2029_io
+    court: court_sw_2029
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2029_io
+- category_code: '1'
+  district_id: 2030
+  police_station_id: 5329
+  year: 2026
+  serial: 200
+  registered_date: '2026-06-15'
+  status: ui
+  gravity: non_heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-06-15T18:00:00+00:00'
+  incident_to: '2026-06-15T19:30:00+00:00'
+  info_received: '2026-06-15T20:00:00+00:00'
+  latitude: '16.8102000'
+  longitude: '75.6900000'
+  brief_facts: Assault after altercation at Vijayapura HQ market. Accused Deepak Rao with associate Imran
+    Pasha; injuries documented.
+  complainants:
+  - name: Govindaraju Joshi
+    age_year: 57
+    gender_id: M
+    occupation: student
+    religion: muslim
+    caste: obc
+  victims:
+  - name: Govindaraju Joshi
+    age_year: 57
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Deepak Rao
+    age_year: 25
+    gender_id: M
+    person_id: SW29AS
+  - name: Imran Pasha
+    age_year: 29
+    gender_id: M
+    person_id: SWLINK
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  registering_officer: e_sw_2030_io
+  court: court_sw_2030
+  occurrence:
+    occurrence_from: '2026-06-15T18:00:00+00:00'
+    occurrence_to: '2026-06-15T19:30:00+00:00'
+    place_of_occurrence: Vijayapura HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Vijayapura
+  arrests:
+  - type_id: 2
+    date: '2026-06-16'
+    accused_person_id: SW29AS
+    io: e_sw_2030_io
+    court: court_sw_2030
+    is_accused: true
+- category_code: '1'
+  district_id: 2030
+  police_station_id: 5329
+  year: 2026
+  serial: 201
+  registered_date: '2026-07-16'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-16T18:00:00+00:00'
+  incident_to: '2026-07-16T19:30:00+00:00'
+  info_received: '2026-07-16T20:00:00+00:00'
+  latitude: '16.8302000'
+  longitude: '75.7100000'
+  brief_facts: Online payment fraud from Vijayapura HQ. Primary accused Ramesh Nayak linked to statewide
+    mule pattern (SWFRAUD).
+  complainants:
+  - name: Kamalamma Poojary
+    age_year: 62
+    gender_id: F
+    occupation: trader
+    religion: christian
+    caste: sc
+  victims:
+  - name: Kamalamma Poojary
+    age_year: 62
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2030_io
+  court: court_sw_2030
+  occurrence:
+    occurrence_from: '2026-07-16T18:00:00+00:00'
+    occurrence_to: '2026-07-16T19:30:00+00:00'
+    place_of_occurrence: Vijayapura HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Vijayapura
+  arrests:
+  - type_id: 2
+    date: '2026-07-17'
+    accused_person_id: SWFRAUD
+    io: e_sw_2030_io
+    court: court_sw_2030
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2030_io
+- category_code: '1'
+  district_id: 2030
+  police_station_id: 5329
+  year: 2026
+  serial: 202
+  registered_date: '2026-08-17'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-17T18:00:00+00:00'
+  incident_to: '2026-08-17T19:30:00+00:00'
+  info_received: '2026-08-17T20:00:00+00:00'
+  latitude: '16.8502000'
+  longitude: '75.7300000'
+  brief_facts: Highway robbery attempt near Vijayapura HQ. Accused Ganesh Joshi assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Krishnamurthy Chavan
+    age_year: 32
+    gender_id: M
+    occupation: employee
+    religion: other
+    caste: st
+  victims:
+  - name: Krishnamurthy Chavan
+    age_year: 32
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ganesh Joshi
+    age_year: 31
+    gender_id: M
+    person_id: SW29RB
+  - name: Bhaskar Hegde
+    age_year: 24
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2030_io
+  court: court_sw_2030
+  occurrence:
+    occurrence_from: '2026-08-17T18:00:00+00:00'
+    occurrence_to: '2026-08-17T19:30:00+00:00'
+    place_of_occurrence: Vijayapura HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Vijayapura
+  arrests:
+  - type_id: 2
+    date: '2026-08-18'
+    accused_person_id: SW29RB
+    io: e_sw_2030_io
+    court: court_sw_2030
+    is_accused: true
+- category_code: '1'
+  district_id: 2031
+  police_station_id: 5330
+  year: 2026
+  serial: 200
+  registered_date: '2026-07-18'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-07-18T18:00:00+00:00'
+  incident_to: '2026-07-18T19:30:00+00:00'
+  info_received: '2026-07-18T20:00:00+00:00'
+  latitude: '16.7517000'
+  longitude: '77.1176000'
+  brief_facts: Online payment fraud from Yadgir HQ. Primary accused Ramesh Nayak linked to statewide mule
+    pattern (SWFRAUD).
+  complainants:
+  - name: Kamalamma Bhat
+    age_year: 58
+    gender_id: F
+    occupation: trader
+    religion: christian
+    caste: sc
+  victims:
+  - name: Kamalamma Bhat
+    age_year: 58
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh Nayak
+    age_year: 34
+    gender_id: M
+    person_id: SWFRAUD
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_sw_2031_io
+  court: court_sw_2031
+  occurrence:
+    occurrence_from: '2026-07-18T18:00:00+00:00'
+    occurrence_to: '2026-07-18T19:30:00+00:00'
+    place_of_occurrence: Yadgir HQ
+    beat_number: B-01
+    distance_from_ps_km: 0.5
+    direction_from_ps: N
+    village_or_city: Yadgir
+  arrests:
+  - type_id: 2
+    date: '2026-07-19'
+    accused_person_id: SWFRAUD
+    io: e_sw_2031_io
+    court: court_sw_2031
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-08-15'
+    officer: e_sw_2031_io
+- category_code: '1'
+  district_id: 2031
+  police_station_id: 5330
+  year: 2026
+  serial: 201
+  registered_date: '2026-08-19'
+  status: ui
+  gravity: heinous
+  major_head: property
+  minor_head: robbery
+  incident_from: '2026-08-19T18:00:00+00:00'
+  incident_to: '2026-08-19T19:30:00+00:00'
+  info_received: '2026-08-19T20:00:00+00:00'
+  latitude: '16.7717000'
+  longitude: '77.1376000'
+  brief_facts: Highway robbery attempt near Yadgir HQ. Accused Jagadish Poojary assisted by Bhaskar Hegde;
+    vehicle details under verification.
+  complainants:
+  - name: Krishnamurthy Naik
+    age_year: 28
+    gender_id: M
+    occupation: employee
+    religion: other
+    caste: st
+  victims:
+  - name: Krishnamurthy Naik
+    age_year: 28
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Jagadish Poojary
+    age_year: 32
+    gender_id: M
+    person_id: SW30RB
+  - name: Bhaskar Hegde
+    age_year: 23
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '392'
+  registering_officer: e_sw_2031_io
+  court: court_sw_2031
+  occurrence:
+    occurrence_from: '2026-08-19T18:00:00+00:00'
+    occurrence_to: '2026-08-19T19:30:00+00:00'
+    place_of_occurrence: Yadgir HQ
+    beat_number: B-02
+    distance_from_ps_km: 0.8
+    direction_from_ps: E
+    village_or_city: Yadgir
+  arrests:
+  - type_id: 2
+    date: '2026-08-20'
+    accused_person_id: SW30RB
+    io: e_sw_2031_io
+    court: court_sw_2031
+    is_accused: true
+- category_code: '1'
+  district_id: 2031
+  police_station_id: 5330
+  year: 2026
+  serial: 202
+  registered_date: '2026-09-20'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-09-20T18:00:00+00:00'
+  incident_to: '2026-09-20T19:30:00+00:00'
+  info_received: '2026-09-20T20:00:00+00:00'
+  latitude: '16.7917000'
+  longitude: '77.1576000'
+  brief_facts: Two-wheeler theft near Yadgir HQ. Accused Kiran Kamble (approx 35y/M) seen fleeing on bike;
+    person id SW30TH.
+  complainants:
+  - name: Shankara Biradar
+    age_year: 33
+    gender_id: M
+    occupation: farmer
+    religion: hindu
+    caste: general
+  victims:
+  - name: Shankara Biradar
+    age_year: 33
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Kiran Kamble
+    age_year: 35
+    gender_id: M
+    person_id: SW30TH
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_sw_2031_io
+  court: court_sw_2031
+  occurrence:
+    occurrence_from: '2026-09-20T18:00:00+00:00'
+    occurrence_to: '2026-09-20T19:30:00+00:00'
+    place_of_occurrence: Yadgir HQ
+    beat_number: B-03
+    distance_from_ps_km: 1.1
+    direction_from_ps: S
+    village_or_city: Yadgir
+  arrests:
+  - type_id: 2
+    date: '2026-09-21'
+    accused_person_id: SW30TH
+    io: e_sw_2031_io
+    court: court_sw_2031
+    is_accused: true

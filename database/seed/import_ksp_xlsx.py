@@ -122,11 +122,22 @@ def _slug(name: str) -> str:
 
 
 def _person_id(accused: dict[str, Any]) -> str:
-    """Stable synthetic person id; cluster repeat offenders by district for network."""
+    """Stable synthetic person id; cluster repeat offenders into mid-size hubs.
+
+    Buckets by district + name so link graphs stay readable (~15–40 cases per hub)
+    instead of collapsing every district into a single mega-node.
+    """
     aid = int(accused["accused_id"])
     if accused.get("repeat_offender") in (True, "True", 1, "1"):
         district = str(accused.get("district") or "na")
-        bucket = int(hashlib.md5(district.encode()).hexdigest()[:6], 16) % 12
+        name = str(
+            accused.get("name")
+            or accused.get("accused_name")
+            or accused.get("accused_id")
+            or "x"
+        ).lower()
+        digest = hashlib.md5(f"{district}:{name}".encode()).hexdigest()
+        bucket = int(digest[:6], 16) % 36
         return f"KR{bucket:02d}"
     return f"K{aid:04d}"
 

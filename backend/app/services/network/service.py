@@ -52,8 +52,13 @@ def _station_node_id(station_id: int) -> str:
 class NetworkService:
     """Link analysis over FIR parties."""
 
-    def __init__(self, store: CaseStore) -> None:
+    def __init__(
+        self,
+        store: CaseStore,
+        station_names: dict[int, str] | None = None,
+    ) -> None:
         self._store = store
+        self._station_names = station_names or {}
 
     def graph(
         self,
@@ -242,8 +247,8 @@ class NetworkService:
                 related.append(a)
         return related
 
-    @staticmethod
     def _add_case_subgraph(
+        self,
         detail: CaseMasterDetail,
         nodes: dict[str, GraphNode],
         edges: dict[str, GraphEdge],
@@ -268,12 +273,16 @@ class NetworkService:
         )
 
         snode = _station_node_id(detail.police_station_id)
+        station_label = self._station_names.get(
+            detail.police_station_id,
+            f"PS {detail.police_station_id}",
+        )
         nodes.setdefault(
             snode,
             GraphNode(
                 id=snode,
                 type="station",
-                label=f"Unit {detail.police_station_id}",
+                label=station_label,
                 meta={"police_station_id": detail.police_station_id},
             ),
         )
@@ -298,6 +307,13 @@ class NetworkService:
                     "accused_master_id": a.accused_master_id,
                     "person_id": a.person_id,
                     "case_master_id": cid,
+                    "age_year": a.age_year,
+                    "gender_id": a.gender_id,
+                    "display": (
+                        f"{a.accused_name}"
+                        + (f" ({a.age_year}y)" if a.age_year is not None else "")
+                        + (f" · {a.person_id}" if a.person_id else "")
+                    ),
                 },
             )
             ae = f"accused_of:{a.accused_master_id}:{cid}"
@@ -329,6 +345,12 @@ class NetworkService:
                 meta={
                     "victim_master_id": v.victim_master_id,
                     "case_master_id": cid,
+                    "age_year": v.age_year,
+                    "gender_id": v.gender_id,
+                    "display": (
+                        f"{v.victim_name}"
+                        + (f" ({v.age_year}y)" if v.age_year is not None else "")
+                    ),
                 },
             )
             ve = f"victim_of:{v.victim_master_id}:{cid}"

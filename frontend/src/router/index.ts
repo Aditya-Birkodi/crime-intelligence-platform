@@ -33,6 +33,12 @@ const router = createRouter({
       component: () => import("@/pages/NetworkPage.vue"),
       meta: { title: "Network" },
     },
+    {
+      path: "/intelligence",
+      name: "intelligence",
+      component: () => import("@/pages/IntelligencePage.vue"),
+      meta: { title: "Intelligence" },
+    },
   ],
   scrollBehavior: () => ({ top: 0 }),
 });

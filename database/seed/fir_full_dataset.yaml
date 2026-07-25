@@ -1850,8 +1850,7 @@ cases:
   incident_to: '2026-04-02T14:30:00+00:00'
   latitude: '12.9365000'
   longitude: '77.6221000'
-  brief_facts: Zero FIR — laptop theft reported by visitor; jurisdiction transfer
-    pending.
+  brief_facts: Zero FIR — laptop theft reported by visitor; jurisdiction transfer pending.
   complainants:
   - name: Guest Complainant
     age_year: 33
@@ -2055,8 +2054,7 @@ cases:
   incident_to: '2026-04-10T22:10:00+00:00'
   latitude: '12.2878000'
   longitude: '76.6289000'
-  brief_facts: Purse robbery near bus stand; one accused matched earlier Bengaluru
-    MO.
+  brief_facts: Purse robbery near bus stand; one accused matched earlier Bengaluru MO.
   complainants:
   - name: Lakshmi Bai
     age_year: 58
@@ -2333,6 +2331,604 @@ cases:
     direction_from_ps: C
     village_or_city: Belagavi
 - category_code: '1'
+  district_id: 443
+  police_station_id: 7
+  year: 2026
+  serial: 40
+  registered_date: '2026-03-02'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-03-02T20:00:00+00:00'
+  incident_to: '2026-03-02T20:40:00+00:00'
+  info_received: '2026-03-02T21:15:00+00:00'
+  latitude: '12.9782000'
+  longitude: '77.6408000'
+  brief_facts: Chain snatching near 100 Feet Road; same MO as MG Road series.
+  complainants:
+  - name: Meena Iyer
+    age_year: 36
+    gender_id: F
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Meena Iyer
+    age_year: 36
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Ramesh K
+    age_year: 28
+    gender_id: M
+    person_id: P100
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_ind_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-03-02T20:00:00+00:00'
+    occurrence_to: '2026-03-02T20:40:00+00:00'
+    place_of_occurrence: 100 Feet Road Indiranagar
+    beat_number: B-04
+    distance_from_ps_km: 0.8
+    direction_from_ps: N
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-03-03'
+    accused_person_id: P100
+    io: e_ind_io
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 12
+  year: 2026
+  serial: 41
+  registered_date: '2026-03-11'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-03-11T22:10:00+00:00'
+  incident_to: '2026-03-11T22:30:00+00:00'
+  info_received: '2026-03-11T23:00:00+00:00'
+  latitude: '12.9352000'
+  longitude: '77.6245000'
+  brief_facts: Mobile phone snatched near Forum Mall; co-accused fled on scooter.
+  complainants:
+  - name: Arjun Nair
+    age_year: 24
+    gender_id: M
+    occupation: student
+    religion: hindu
+    caste: general
+  victims:
+  - name: Arjun Nair
+    age_year: 24
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Ramesh K
+    age_year: 28
+    gender_id: M
+    person_id: P100
+  - name: Vikram T
+    age_year: 26
+    gender_id: M
+    person_id: RING3
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_kor_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-03-11T22:10:00+00:00'
+    occurrence_to: '2026-03-11T22:30:00+00:00'
+    place_of_occurrence: Forum Mall outer road
+    beat_number: B-09
+    distance_from_ps_km: 1.2
+    direction_from_ps: W
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-03-12'
+    accused_person_id: RING3
+    io: e_kor_io
+    court: cmm_blr
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-03-28'
+    officer: e_kor_io
+- category_code: '1'
+  district_id: 444
+  police_station_id: 11
+  year: 2026
+  serial: 42
+  registered_date: '2026-03-18'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-03-18T19:30:00+00:00'
+  incident_to: '2026-03-18T20:00:00+00:00'
+  info_received: '2026-03-18T20:40:00+00:00'
+  latitude: '12.3095000'
+  longitude: '76.6551000'
+  brief_facts: Two-wheeler theft near Mysuru North; accused matches Bengaluru series.
+  complainants:
+  - name: Kiran Gowda
+    age_year: 33
+    gender_id: M
+    occupation: driver
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Kiran Gowda
+    age_year: 33
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Vikram T
+    age_year: 26
+    gender_id: M
+    person_id: RING3
+  - name: Naveen M
+    age_year: 29
+    gender_id: M
+    person_id: RING3B
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_mys_io
+  court: jmfc_mys
+  occurrence:
+    occurrence_from: '2026-03-18T19:30:00+00:00'
+    occurrence_to: '2026-03-18T20:00:00+00:00'
+    place_of_occurrence: Mysuru North bus stand parking
+    beat_number: M-02
+    distance_from_ps_km: 0.5
+    direction_from_ps: S
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-03-19'
+    accused_person_id: RING3
+    io: e_mys_io
+    court: jmfc_mys
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 6
+  year: 2026
+  serial: 43
+  registered_date: '2026-04-01'
+  status: ui
+  gravity: heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-04-01T23:15:00+00:00'
+  incident_to: '2026-04-01T23:40:00+00:00'
+  info_received: '2026-04-02T00:10:00+00:00'
+  latitude: '12.9698000'
+  longitude: '77.5971000'
+  brief_facts: Group assault after pub dispute; repeat faces from prior FIRs.
+  complainants:
+  - name: Rahul Desai
+    age_year: 27
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Rahul Desai
+    age_year: 27
+    gender_id: M
+    victim_police: '0'
+  - name: Sameer Khan
+    age_year: 25
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Imran S
+    age_year: 31
+    gender_id: M
+    person_id: RING4
+  - name: Farhan Q
+    age_year: 28
+    gender_id: M
+    person_id: RING4B
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  act_sections:
+  - act_id: IPC
+    section_id: '323'
+  - act_id: IPC
+    section_id: '143'
+  registering_officer: e_mg_io
+  court: sessions_blr
+  occurrence:
+    occurrence_from: '2026-04-01T23:15:00+00:00'
+    occurrence_to: '2026-04-01T23:40:00+00:00'
+    place_of_occurrence: Church Street alley
+    beat_number: B-12
+    distance_from_ps_km: 0.6
+    direction_from_ps: S
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-04-02'
+    accused_person_id: RING4
+    io: e_mg_io
+    court: sessions_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 445
+  police_station_id: 22
+  year: 2026
+  serial: 44
+  registered_date: '2026-04-08'
+  status: ui
+  gravity: heinous
+  major_head: body
+  minor_head: hurt
+  incident_from: '2026-04-08T21:00:00+00:00'
+  incident_to: '2026-04-08T21:25:00+00:00'
+  info_received: '2026-04-08T21:50:00+00:00'
+  latitude: '15.8497000'
+  longitude: '74.4977000'
+  brief_facts: Assault outside Belagavi City market; linked to Church Street group.
+  complainants:
+  - name: Prakash Patil
+    age_year: 44
+    gender_id: M
+    occupation: trader
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Prakash Patil
+    age_year: 44
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Imran S
+    age_year: 31
+    gender_id: M
+    person_id: RING4
+  - name: Yusuf R
+    age_year: 30
+    gender_id: M
+    person_id: RING4C
+  act_sections:
+  - act_id: IPC
+    section_id: '324'
+  registering_officer: e_bel_city
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-04-08T21:00:00+00:00'
+    occurrence_to: '2026-04-08T21:25:00+00:00'
+    place_of_occurrence: Belagavi City market lane
+    beat_number: BL-01
+    distance_from_ps_km: 1.0
+    direction_from_ps: E
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-04-09'
+    accused_person_id: RING4
+    io: e_bel_city
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 7
+  year: 2026
+  serial: 45
+  registered_date: '2026-04-14'
+  status: cs
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-04-10T10:00:00+00:00'
+  incident_to: '2026-04-12T18:00:00+00:00'
+  info_received: '2026-04-14T11:00:00+00:00'
+  latitude: '12.9811000'
+  longitude: '77.6419000'
+  brief_facts: Online job fraud; same operator as prior FBR1 cases.
+  complainants:
+  - name: Divya R
+    age_year: 22
+    gender_id: F
+    occupation: student
+    religion: hindu
+    caste: sc
+  victims:
+  - name: Divya R
+    age_year: 22
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Fraud Ring Lead
+    age_year: 35
+    gender_id: M
+    person_id: FBR1
+  - name: Caller X
+    age_year: 24
+    gender_id: M
+    person_id: FBR2
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  - act_id: IT
+    section_id: 66C
+  registering_officer: e_ind_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-04-10T10:00:00+00:00'
+    occurrence_to: '2026-04-12T18:00:00+00:00'
+    place_of_occurrence: Online / Indiranagar residence
+    beat_number: B-05
+    distance_from_ps_km: 0.0
+    direction_from_ps: N
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-04-15'
+    accused_person_id: FBR1
+    io: e_ind_io
+    court: cmm_blr
+    is_accused: true
+  chargesheets:
+  - cs_type: '1'
+    cs_date: '2026-04-30'
+    officer: e_ind_io
+- category_code: '1'
+  district_id: 443
+  police_station_id: 12
+  year: 2026
+  serial: 46
+  registered_date: '2026-04-20'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-04-20T01:20:00+00:00'
+  incident_to: '2026-04-20T01:50:00+00:00'
+  info_received: '2026-04-20T02:30:00+00:00'
+  latitude: '12.9279000'
+  longitude: '77.6271000'
+  brief_facts: House break-in; tools recovered match Koramangala series.
+  complainants:
+  - name: Lakshmi Devi
+    age_year: 52
+    gender_id: F
+    occupation: farmer
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Lakshmi Devi
+    age_year: 52
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Vikram T
+    age_year: 26
+    gender_id: M
+    person_id: RING3
+  - name: Naveen M
+    age_year: 29
+    gender_id: M
+    person_id: RING3B
+  - name: Unknown
+    person_id: U46
+  act_sections:
+  - act_id: IPC
+    section_id: '457'
+  - act_id: IPC
+    section_id: '380'
+  registering_officer: e_kor_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-04-20T01:20:00+00:00'
+    occurrence_to: '2026-04-20T01:50:00+00:00'
+    place_of_occurrence: 5th Block Koramangala residence
+    beat_number: B-11
+    distance_from_ps_km: 0.9
+    direction_from_ps: E
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-04-21'
+    accused_person_id: RING3B
+    io: e_kor_io
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 444
+  police_station_id: 13
+  year: 2026
+  serial: 47
+  registered_date: '2026-05-02'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: cheating
+  incident_from: '2026-04-28T09:00:00+00:00'
+  incident_to: '2026-05-01T17:00:00+00:00'
+  info_received: '2026-05-02T10:00:00+00:00'
+  latitude: '12.2958000'
+  longitude: '76.6394000'
+  brief_facts: UPI mule account fraud; FBR2 caller reused Mysuru numbers.
+  complainants:
+  - name: Suma Hegde
+    age_year: 39
+    gender_id: F
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Suma Hegde
+    age_year: 39
+    gender_id: F
+    victim_police: '0'
+  accused:
+  - name: Caller X
+    age_year: 24
+    gender_id: M
+    person_id: FBR2
+  - name: Fraud Ring Lead
+    age_year: 35
+    gender_id: M
+    person_id: FBR1
+  act_sections:
+  - act_id: IPC
+    section_id: '420'
+  registering_officer: e_mys_sho
+  court: jmfc_mys
+  occurrence:
+    occurrence_from: '2026-04-28T09:00:00+00:00'
+    occurrence_to: '2026-05-01T17:00:00+00:00'
+    place_of_occurrence: Online / Mysuru South
+    beat_number: M-08
+    distance_from_ps_km: 0.0
+    direction_from_ps: N
+    village_or_city: Mysuru
+  arrests:
+  - type_id: 2
+    date: '2026-05-03'
+    accused_person_id: FBR2
+    io: e_mys_sho
+    court: jmfc_mys
+    is_accused: true
+- category_code: '1'
+  district_id: 445
+  police_station_id: 21
+  year: 2026
+  serial: 48
+  registered_date: '2026-05-09'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-09T04:00:00+00:00'
+  incident_to: '2026-05-09T04:45:00+00:00'
+  info_received: '2026-05-09T06:00:00+00:00'
+  latitude: '15.8621000'
+  longitude: '74.5122000'
+  brief_facts: Cattle theft; RING3B spotted near Belagavi Rural highway.
+  complainants:
+  - name: Basavaraj K
+    age_year: 48
+    gender_id: M
+    occupation: farmer
+    religion: hindu
+    caste: obc
+  victims:
+  - name: Basavaraj K
+    age_year: 48
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Naveen M
+    age_year: 29
+    gender_id: M
+    person_id: RING3B
+  - name: Local Aid
+    age_year: 33
+    gender_id: M
+    person_id: BLRURAL1
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_bel_io
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-05-09T04:00:00+00:00'
+    occurrence_to: '2026-05-09T04:45:00+00:00'
+    place_of_occurrence: Belagavi Rural highway shed
+    beat_number: BR-03
+    distance_from_ps_km: 3.5
+    direction_from_ps: W
+    village_or_city: Belagavi
+  arrests:
+  - type_id: 2
+    date: '2026-05-10'
+    accused_person_id: RING3B
+    io: e_bel_io
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
+  district_id: 443
+  police_station_id: 6
+  year: 2026
+  serial: 49
+  registered_date: '2026-05-16'
+  status: ui
+  gravity: non_heinous
+  major_head: property
+  minor_head: theft
+  incident_from: '2026-05-16T18:40:00+00:00'
+  incident_to: '2026-05-16T19:00:00+00:00'
+  info_received: '2026-05-16T19:25:00+00:00'
+  latitude: '12.9744000'
+  longitude: '77.6012000'
+  brief_facts: Laptop bag theft at Cubbon Park; Helper B again on CCTV.
+  complainants:
+  - name: Nikhil Rao
+    age_year: 30
+    gender_id: M
+    occupation: employee
+    religion: hindu
+    caste: general
+  victims:
+  - name: Nikhil Rao
+    age_year: 30
+    gender_id: M
+    victim_police: '0'
+  accused:
+  - name: Helper B
+    age_year: 22
+    gender_id: M
+    person_id: H2
+  - name: Ramesh K
+    age_year: 28
+    gender_id: M
+    person_id: P100
+  act_sections:
+  - act_id: IPC
+    section_id: '379'
+  registering_officer: e_mg_sho
+  court: cmm_blr
+  occurrence:
+    occurrence_from: '2026-05-16T18:40:00+00:00'
+    occurrence_to: '2026-05-16T19:00:00+00:00'
+    place_of_occurrence: Cubbon Park east gate
+    beat_number: B-12
+    distance_from_ps_km: 1.1
+    direction_from_ps: W
+    village_or_city: Bengaluru
+  arrests:
+  - type_id: 2
+    date: '2026-05-17'
+    accused_person_id: H2
+    io: e_mg_sho
+    court: cmm_blr
+    is_accused: true
+- category_code: '1'
   district_id: 1028
   police_station_id: 2005
   year: 2025
@@ -2347,8 +2943,8 @@ cases:
   info_received: '2025-06-28T00:00:00'
   latitude: 12.934
   longitude: 77.542
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 1. Head: Theft/Armed
-    Robbery. Severity: Medium. RiskScore: 73. Source FIR: FIR-1001.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 1. Head: Theft/Armed Robbery. Severity: Medium. RiskScore:
+    73. Source FIR: FIR-1001.'
   complainants:
   - name: Complainant 80
     age_year: null
@@ -2401,8 +2997,8 @@ cases:
   info_received: '2025-06-13T00:00:00'
   latitude: 12.912
   longitude: 77.52
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 2. Head: Robbery/Physical
-    Assault. Severity: Medium. RiskScore: 63. Source FIR: FIR-1002.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 2. Head: Robbery/Physical Assault. Severity: Medium.
+    RiskScore: 63. Source FIR: FIR-1002.'
   complainants:
   - name: Complainant 9
     age_year: null
@@ -2423,7 +3019,7 @@ cases:
   - name: Accused 123
     age_year: 38
     gender_id: M
-    person_id: KR08
+    person_id: KR24
   - name: Accused 180
     age_year: 45
     gender_id: M
@@ -2431,7 +3027,7 @@ cases:
   - name: Accused 196
     age_year: 49
     gender_id: F
-    person_id: KR06
+    person_id: KR17
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -2448,7 +3044,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR24
     io: ksp_off_39
     court: ksp_court_1
     is_accused: true
@@ -2460,7 +3056,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR17
     io: ksp_off_39
     court: ksp_court_1
     is_accused: true
@@ -2479,8 +3075,8 @@ cases:
   info_received: '2025-12-27T00:00:00'
   latitude: 12.95
   longitude: 77.558
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 3. Head: Cyber
-    Crime/Phishing. Severity: Medium. RiskScore: 83. Source FIR: FIR-1003.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 3. Head: Cyber Crime/Phishing. Severity: Medium. RiskScore:
+    83. Source FIR: FIR-1003.'
   complainants:
   - name: Complainant 43
     age_year: null
@@ -2507,7 +3103,7 @@ cases:
   - name: Accused 204
     age_year: 38
     gender_id: M
-    person_id: KR07
+    person_id: KR15
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -2530,7 +3126,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR15
     io: ksp_off_61
     court: ksp_court_2
     is_accused: true
@@ -2549,8 +3145,8 @@ cases:
   info_received: '2025-04-21T00:00:00'
   latitude: 12.918
   longitude: 77.526
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 4. Head: Fraud/Vehicle
-    Theft. Severity: Low. RiskScore: 84. Source FIR: FIR-1004.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 4. Head: Fraud/Vehicle Theft. Severity: Low. RiskScore:
+    84. Source FIR: FIR-1004.'
   complainants:
   - name: Complainant 36
     age_year: null
@@ -2575,19 +3171,19 @@ cases:
   - name: Accused 43
     age_year: 50
     gender_id: M
-    person_id: KR08
+    person_id: KR01
   - name: Accused 56
     age_year: 25
     gender_id: F
-    person_id: KR06
+    person_id: KR24
   - name: Accused 67
     age_year: 24
     gender_id: F
-    person_id: KR09
+    person_id: KR35
   - name: Accused 211
     age_year: 18
     gender_id: F
-    person_id: KR08
+    person_id: KR00
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -2610,25 +3206,25 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR01
     io: ksp_off_35
     court: ksp_court_6
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR24
     io: ksp_off_35
     court: ksp_court_6
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR35
     io: ksp_off_35
     court: ksp_court_6
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR01
     io: ksp_off_35
     court: ksp_court_6
     is_accused: true
@@ -2647,8 +3243,8 @@ cases:
   info_received: '2025-08-30T00:00:00'
   latitude: 12.946
   longitude: 77.514
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 5. Head: Assault/Phishing.
-    Severity: High. RiskScore: 71. Source FIR: FIR-1005.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 5. Head: Assault/Phishing. Severity: High. RiskScore:
+    71. Source FIR: FIR-1005.'
   complainants:
   - name: Complainant 62
     age_year: null
@@ -2697,8 +3293,8 @@ cases:
   info_received: '2025-05-11T00:00:00'
   latitude: 12.994
   longitude: 77.562
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 6. Head: Theft/Phishing.
-    Severity: Medium. RiskScore: 12. Source FIR: FIR-1006.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 6. Head: Theft/Phishing. Severity: Medium. RiskScore:
+    12. Source FIR: FIR-1006.'
   complainants:
   - name: Complainant
     age_year: null
@@ -2715,11 +3311,11 @@ cases:
   - name: Accused 1
     age_year: 36
     gender_id: F
-    person_id: KR09
+    person_id: KR15
   - name: Accused 128
     age_year: 39
     gender_id: M
-    person_id: KR11
+    person_id: KR32
   - name: Accused 146
     age_year: 20
     gender_id: M
@@ -2740,13 +3336,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR15
     io: ksp_off_22
     court: ksp_court_3
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR32
     io: ksp_off_22
     court: ksp_court_3
     is_accused: true
@@ -2771,8 +3367,8 @@ cases:
   info_received: '2025-04-07T00:00:00'
   latitude: 12.886
   longitude: 77.51
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 7. Head: Robbery/Armed
-    Robbery. Severity: Medium. RiskScore: 72. Source FIR: FIR-1007.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 7. Head: Robbery/Armed Robbery. Severity: Medium. RiskScore:
+    72. Source FIR: FIR-1007.'
   complainants:
   - name: Complainant
     age_year: null
@@ -2829,8 +3425,8 @@ cases:
   info_received: '2025-08-02T00:00:00'
   latitude: 12.904
   longitude: 77.528
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 8. Head: Robbery/Physical
-    Assault. Severity: Medium. RiskScore: 53. Source FIR: FIR-1008.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 8. Head: Robbery/Physical Assault. Severity: Medium.
+    RiskScore: 53. Source FIR: FIR-1008.'
   complainants:
   - name: Complainant 17
     age_year: null
@@ -2857,7 +3453,7 @@ cases:
   - name: Accused 100
     age_year: 51
     gender_id: F
-    person_id: KR04
+    person_id: KR11
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -2880,7 +3476,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR11
     io: ksp_off_16
     court: ksp_court_1
     is_accused: true
@@ -2899,8 +3495,8 @@ cases:
   info_received: '2025-10-11T00:00:00'
   latitude: 12.952
   longitude: 77.576
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 9. Head: Assault/Armed
-    Robbery. Severity: Medium. RiskScore: 6. Source FIR: FIR-1009.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 9. Head: Assault/Armed Robbery. Severity: Medium. RiskScore:
+    6. Source FIR: FIR-1009.'
   complainants:
   - name: Complainant
     age_year: null
@@ -2925,7 +3521,7 @@ cases:
   - name: Accused 173
     age_year: 39
     gender_id: M
-    person_id: KR04
+    person_id: KR10
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -2948,7 +3544,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR10
     io: ksp_off_40
     court: ksp_court_7
     is_accused: true
@@ -2967,8 +3563,8 @@ cases:
   info_received: '2025-03-12T00:00:00'
   latitude: 12.91
   longitude: 77.494
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 10. Head: Fraud/Vehicle
-    Theft. Severity: High. RiskScore: 73. Source FIR: FIR-1010.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 10. Head: Fraud/Vehicle Theft. Severity: High. RiskScore:
+    73. Source FIR: FIR-1010.'
   complainants:
   - name: Complainant
     age_year: null
@@ -3019,8 +3615,8 @@ cases:
   info_received: '2025-11-12T00:00:00'
   latitude: 12.968
   longitude: 77.552
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 11. Head: Fraud/Vehicle
-    Theft. Severity: Medium. RiskScore: 79. Source FIR: FIR-1011.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 11. Head: Fraud/Vehicle Theft. Severity: Medium. RiskScore:
+    79. Source FIR: FIR-1011.'
   complainants:
   - name: Complainant
     age_year: null
@@ -3045,7 +3641,7 @@ cases:
   - name: Accused 143
     age_year: 41
     gender_id: M
-    person_id: KR11
+    person_id: KR06
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -3068,7 +3664,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR06
     io: ksp_off_67
     court: ksp_court_9
     is_accused: true
@@ -3087,8 +3683,8 @@ cases:
   info_received: '2025-06-13T00:00:00'
   latitude: 13.016
   longitude: 77.6
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 12. Head: Fraud/Phishing.
-    Severity: Low. RiskScore: 24. Source FIR: FIR-1012.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 12. Head: Fraud/Phishing. Severity: Low. RiskScore: 24.
+    Source FIR: FIR-1012.'
   complainants:
   - name: Complainant
     age_year: null
@@ -3151,8 +3747,8 @@ cases:
   info_received: '2025-11-01T00:00:00'
   latitude: 12.944
   longitude: 77.528
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 13. Head: Assault/Vehicle
-    Theft. Severity: Medium. RiskScore: 73. Source FIR: FIR-1013.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 13. Head: Assault/Vehicle Theft. Severity: Medium. RiskScore:
+    73. Source FIR: FIR-1013.'
   complainants:
   - name: Complainant
     age_year: null
@@ -3173,11 +3769,11 @@ cases:
   - name: Accused 41
     age_year: 24
     gender_id: M
-    person_id: KR06
+    person_id: KR31
   - name: Accused 152
     age_year: 31
     gender_id: F
-    person_id: KR11
+    person_id: KR12
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -3194,13 +3790,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR31
     io: ksp_off_68
     court: ksp_court_2
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR12
     io: ksp_off_68
     court: ksp_court_2
     is_accused: true
@@ -3219,8 +3815,8 @@ cases:
   info_received: '2025-03-21T00:00:00'
   latitude: 12.886
   longitude: 77.526
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 14. Head: Assault/Physical
-    Assault. Severity: High. RiskScore: 2. Source FIR: FIR-1014.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 14. Head: Assault/Physical Assault. Severity: High. RiskScore:
+    2. Source FIR: FIR-1014.'
   complainants:
   - name: Complainant 22
     age_year: null
@@ -3243,7 +3839,7 @@ cases:
   - name: Accused 147
     age_year: 40
     gender_id: F
-    person_id: KR07
+    person_id: KR22
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -3260,7 +3856,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR22
     io: ksp_off_11
     court: ksp_court_8
     is_accused: true
@@ -3279,8 +3875,8 @@ cases:
   info_received: '2025-06-30T00:00:00'
   latitude: 12.944
   longitude: 77.544
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 15. Head: Robbery/Armed
-    Robbery. Severity: High. RiskScore: 27. Source FIR: FIR-1015.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 15. Head: Robbery/Armed Robbery. Severity: High. RiskScore:
+    27. Source FIR: FIR-1015.'
   complainants:
   - name: Complainant
     age_year: null
@@ -3297,7 +3893,7 @@ cases:
   - name: Accused 45
     age_year: 28
     gender_id: F
-    person_id: KR09
+    person_id: KR15
   - name: Accused 46
     age_year: 51
     gender_id: M
@@ -3305,15 +3901,15 @@ cases:
   - name: Accused 97
     age_year: 20
     gender_id: F
-    person_id: KR04
+    person_id: KR35
   - name: Accused 132
     age_year: 59
     gender_id: M
-    person_id: KR07
+    person_id: KR05
   - name: Accused 139
     age_year: 40
     gender_id: F
-    person_id: KR03
+    person_id: KR12
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -3330,7 +3926,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR15
     io: ksp_off_69
     court: ksp_court_3
     is_accused: true
@@ -3342,19 +3938,19 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR35
     io: ksp_off_69
     court: ksp_court_3
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR05
     io: ksp_off_69
     court: ksp_court_3
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR12
     io: ksp_off_69
     court: ksp_court_3
     is_accused: true
@@ -3373,8 +3969,8 @@ cases:
   info_received: '2025-08-18T00:00:00'
   latitude: 12.942
   longitude: 77.542
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 16. Head: Robbery/House
-    Break. Severity: Low. RiskScore: 50. Source FIR: FIR-1016.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 16. Head: Robbery/House Break. Severity: Low. RiskScore:
+    50. Source FIR: FIR-1016.'
   complainants:
   - name: Complainant 7
     age_year: null
@@ -3397,11 +3993,11 @@ cases:
   - name: Accused 59
     age_year: 35
     gender_id: M
-    person_id: KR04
+    person_id: KR29
   - name: Accused 134
     age_year: 29
     gender_id: M
-    person_id: KR11
+    person_id: KR00
   - name: Accused 187
     age_year: 49
     gender_id: F
@@ -3426,13 +4022,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR29
     io: ksp_off_5
     court: ksp_court_10
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR00
     io: ksp_off_5
     court: ksp_court_10
     is_accused: true
@@ -3463,8 +4059,8 @@ cases:
   info_received: '2025-11-04T00:00:00'
   latitude: 12.91
   longitude: 77.51
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 17. Head: Cyber
-    Crime/Physical Assault. Severity: Low. RiskScore: 50. Source FIR: FIR-1017.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 17. Head: Cyber Crime/Physical Assault. Severity: Low.
+    RiskScore: 50. Source FIR: FIR-1017.'
   complainants:
   - name: Complainant
     age_year: null
@@ -3489,15 +4085,15 @@ cases:
   - name: Accused 137
     age_year: 45
     gender_id: M
-    person_id: KR05
+    person_id: KR16
   - name: Accused 168
     age_year: 39
     gender_id: F
-    person_id: KR11
+    person_id: KR18
   - name: Accused 185
     age_year: 55
     gender_id: F
-    person_id: KR09
+    person_id: KR28
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -3526,19 +4122,19 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR16
     io: ksp_off_46
     court: ksp_court_4
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR18
     io: ksp_off_46
     court: ksp_court_4
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR28
     io: ksp_off_46
     court: ksp_court_4
     is_accused: true
@@ -3557,8 +4153,8 @@ cases:
   info_received: '2025-01-25T00:00:00'
   latitude: 13.008
   longitude: 77.608
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 18. Head: Assault/UPI
-    Fraud. Severity: Low. RiskScore: 94. Source FIR: FIR-1018.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 18. Head: Assault/UPI Fraud. Severity: Low. RiskScore:
+    94. Source FIR: FIR-1018.'
   complainants:
   - name: Complainant 94
     age_year: null
@@ -3611,8 +4207,8 @@ cases:
   info_received: '2025-05-07T00:00:00'
   latitude: 13.016
   longitude: 77.616
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 19. Head: Theft/Physical
-    Assault. Severity: High. RiskScore: 54. Source FIR: FIR-1019.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 19. Head: Theft/Physical Assault. Severity: High. RiskScore:
+    54. Source FIR: FIR-1019.'
   complainants:
   - name: Complainant 88
     age_year: null
@@ -3655,8 +4251,8 @@ cases:
   info_received: '2025-11-10T00:00:00'
   latitude: 13.004
   longitude: 77.564
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 20. Head: Robbery/Armed
-    Robbery. Severity: High. RiskScore: 96. Source FIR: FIR-1020.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 20. Head: Robbery/Armed Robbery. Severity: High. RiskScore:
+    96. Source FIR: FIR-1020.'
   complainants:
   - name: Complainant 6
     age_year: null
@@ -3691,11 +4287,11 @@ cases:
   - name: Accused 81
     age_year: 29
     gender_id: M
-    person_id: KR06
+    person_id: KR24
   - name: Accused 102
     age_year: 30
     gender_id: M
-    person_id: KR09
+    person_id: KR06
   - name: Accused 118
     age_year: 53
     gender_id: M
@@ -3716,13 +4312,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR24
     io: ksp_off_75
     court: ksp_court_10
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR06
     io: ksp_off_75
     court: ksp_court_10
     is_accused: true
@@ -3747,8 +4343,8 @@ cases:
   info_received: '2025-03-16T00:00:00'
   latitude: 12.946
   longitude: 77.562
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 21. Head: Cyber
-    Crime/Physical Assault. Severity: Low. RiskScore: 7. Source FIR: FIR-1021.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 21. Head: Cyber Crime/Physical Assault. Severity: Low.
+    RiskScore: 7. Source FIR: FIR-1021.'
   complainants:
   - name: Complainant 4
     age_year: null
@@ -3801,8 +4397,8 @@ cases:
   info_received: '2025-09-22T00:00:00'
   latitude: 12.984
   longitude: 77.6
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 22. Head: Robbery/Physical
-    Assault. Severity: High. RiskScore: 53. Source FIR: FIR-1022.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 22. Head: Robbery/Physical Assault. Severity: High. RiskScore:
+    53. Source FIR: FIR-1022.'
   complainants:
   - name: Complainant 30
     age_year: null
@@ -3825,15 +4421,15 @@ cases:
   - name: Accused 176
     age_year: 21
     gender_id: M
-    person_id: KR08
+    person_id: KR34
   - name: Accused 208
     age_year: 38
     gender_id: M
-    person_id: KR09
+    person_id: KR23
   - name: Accused 215
     age_year: 19
     gender_id: F
-    person_id: KR07
+    person_id: KR12
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -3850,19 +4446,19 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR34
     io: ksp_off_2
     court: ksp_court_9
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR23
     io: ksp_off_2
     court: ksp_court_9
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR12
     io: ksp_off_2
     court: ksp_court_9
     is_accused: true
@@ -3881,8 +4477,8 @@ cases:
   info_received: '2025-05-28T00:00:00'
   latitude: 12.972
   longitude: 77.588
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 23. Head: Theft/House
-    Break. Severity: Low. RiskScore: 25. Source FIR: FIR-1023.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 23. Head: Theft/House Break. Severity: Low. RiskScore:
+    25. Source FIR: FIR-1023.'
   complainants:
   - name: Complainant 61
     age_year: null
@@ -3963,8 +4559,8 @@ cases:
   info_received: '2025-03-30T00:00:00'
   latitude: 12.92
   longitude: 77.536
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 24. Head: Fraud/House
-    Break. Severity: Low. RiskScore: 25. Source FIR: FIR-1024.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 24. Head: Fraud/House Break. Severity: Low. RiskScore:
+    25. Source FIR: FIR-1024.'
   complainants:
   - name: Complainant 14
     age_year: null
@@ -3985,7 +4581,7 @@ cases:
   - name: Accused 93
     age_year: 56
     gender_id: M
-    person_id: KR09
+    person_id: KR08
   - name: Accused 218
     age_year: 57
     gender_id: F
@@ -4012,7 +4608,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR08
     io: ksp_off_7
     court: ksp_court_8
     is_accused: true
@@ -4037,8 +4633,8 @@ cases:
   info_received: '2025-08-31T00:00:00'
   latitude: 12.958
   longitude: 77.534
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 25. Head: Robbery/Armed
-    Robbery. Severity: Low. RiskScore: 95. Source FIR: FIR-1025.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 25. Head: Robbery/Armed Robbery. Severity: Low. RiskScore:
+    95. Source FIR: FIR-1025.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4059,7 +4655,7 @@ cases:
   - name: Accused 38
     age_year: 32
     gender_id: M
-    person_id: KR11
+    person_id: KR30
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -4076,7 +4672,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR30
     io: ksp_off_62
     court: ksp_court_5
     is_accused: true
@@ -4095,8 +4691,8 @@ cases:
   info_received: '2025-08-26T00:00:00'
   latitude: 12.986
   longitude: 77.562
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 26. Head: Theft/Vehicle
-    Theft. Severity: High. RiskScore: 42. Source FIR: FIR-1026.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 26. Head: Theft/Vehicle Theft. Severity: High. RiskScore:
+    42. Source FIR: FIR-1026.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4113,7 +4709,7 @@ cases:
   - name: Accused 207
     age_year: 55
     gender_id: M
-    person_id: KR04
+    person_id: KR17
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -4130,7 +4726,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR17
     io: ksp_off_65
     court: ksp_court_6
     is_accused: true
@@ -4149,8 +4745,8 @@ cases:
   info_received: '2025-11-15T00:00:00'
   latitude: 12.934
   longitude: 77.51
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 27. Head: Cyber
-    Crime/UPI Fraud. Severity: High. RiskScore: 72. Source FIR: FIR-1027.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 27. Head: Cyber Crime/UPI Fraud. Severity: High. RiskScore:
+    72. Source FIR: FIR-1027.'
   complainants:
   - name: Complainant 25
     age_year: null
@@ -4179,7 +4775,7 @@ cases:
   - name: Accused 106
     age_year: 43
     gender_id: M
-    person_id: KR05
+    person_id: KR26
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -4196,7 +4792,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR26
     io: ksp_off_65
     court: ksp_court_1
     is_accused: true
@@ -4215,8 +4811,8 @@ cases:
   info_received: '2025-05-29T00:00:00'
   latitude: 12.976
   longitude: 77.608
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 28. Head: Robbery/Physical
-    Assault. Severity: Low. RiskScore: 67. Source FIR: FIR-1028.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 28. Head: Robbery/Physical Assault. Severity: Low. RiskScore:
+    67. Source FIR: FIR-1028.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4241,11 +4837,11 @@ cases:
   - name: Accused 89
     age_year: 35
     gender_id: M
-    person_id: KR09
+    person_id: KR26
   - name: Accused 115
     age_year: 43
     gender_id: F
-    person_id: KR06
+    person_id: KR34
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -4268,13 +4864,13 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR26
     io: ksp_off_22
     court: ksp_court_8
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR34
     io: ksp_off_22
     court: ksp_court_8
     is_accused: true
@@ -4293,8 +4889,8 @@ cases:
   info_received: '2025-09-17T00:00:00'
   latitude: 12.904
   longitude: 77.536
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 29. Head: Theft/House
-    Break. Severity: Medium. RiskScore: 49. Source FIR: FIR-1029.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 29. Head: Theft/House Break. Severity: Medium. RiskScore:
+    49. Source FIR: FIR-1029.'
   complainants:
   - name: Complainant 19
     age_year: null
@@ -4369,8 +4965,8 @@ cases:
   info_received: '2025-11-23T00:00:00'
   latitude: 12.912
   longitude: 77.504
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 30. Head: Theft/UPI
-    Fraud. Severity: High. RiskScore: 25. Source FIR: FIR-1030.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 30. Head: Theft/UPI Fraud. Severity: High. RiskScore:
+    25. Source FIR: FIR-1030.'
   complainants:
   - name: Complainant 95
     age_year: null
@@ -4391,7 +4987,7 @@ cases:
   - name: Accused 133
     age_year: 27
     gender_id: M
-    person_id: KR09
+    person_id: KR03
   - name: Accused 148
     age_year: 30
     gender_id: F
@@ -4418,7 +5014,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR03
     io: ksp_off_43
     court: ksp_court_10
     is_accused: true
@@ -4443,8 +5039,8 @@ cases:
   info_received: '2025-12-09T00:00:00'
   latitude: 12.93
   longitude: 77.522
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 31. Head: Theft/Physical
-    Assault. Severity: High. RiskScore: 84. Source FIR: FIR-1031.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 31. Head: Theft/Physical Assault. Severity: High. RiskScore:
+    84. Source FIR: FIR-1031.'
   complainants:
   - name: Complainant 40
     age_year: null
@@ -4497,8 +5093,8 @@ cases:
   info_received: '2025-09-06T00:00:00'
   latitude: 13.008
   longitude: 77.6
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 32. Head: Cyber
-    Crime/House Break. Severity: Low. RiskScore: 12. Source FIR: FIR-1032.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 32. Head: Cyber Crime/House Break. Severity: Low. RiskScore:
+    12. Source FIR: FIR-1032.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4555,8 +5151,8 @@ cases:
   info_received: '2025-03-26T00:00:00'
   latitude: 13.016
   longitude: 77.608
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 33. Head: Assault/Physical
-    Assault. Severity: High. RiskScore: 1. Source FIR: FIR-1033.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 33. Head: Assault/Physical Assault. Severity: High. RiskScore:
+    1. Source FIR: FIR-1033.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4573,11 +5169,11 @@ cases:
   - name: Accused 18
     age_year: 40
     gender_id: F
-    person_id: KR06
+    person_id: KR16
   - name: Accused 109
     age_year: 50
     gender_id: M
-    person_id: KR08
+    person_id: KR06
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -4594,13 +5190,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR16
     io: ksp_off_54
     court: ksp_court_9
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR06
     io: ksp_off_54
     court: ksp_court_9
     is_accused: true
@@ -4619,8 +5215,8 @@ cases:
   info_received: '2025-01-08T00:00:00'
   latitude: 12.964
   longitude: 77.556
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 34. Head: Assault/Armed
-    Robbery. Severity: High. RiskScore: 73. Source FIR: FIR-1034.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 34. Head: Assault/Armed Robbery. Severity: High. RiskScore:
+    73. Source FIR: FIR-1034.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4673,8 +5269,8 @@ cases:
   info_received: '2025-08-08T00:00:00'
   latitude: 12.896
   longitude: 77.504
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 35. Head: Fraud/House
-    Break. Severity: Medium. RiskScore: 93. Source FIR: FIR-1035.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 35. Head: Fraud/House Break. Severity: Medium. RiskScore:
+    93. Source FIR: FIR-1035.'
   complainants:
   - name: Complainant 46
     age_year: null
@@ -4701,11 +5297,11 @@ cases:
   - name: Accused 157
     age_year: 50
     gender_id: F
-    person_id: KR06
+    person_id: KR32
   - name: Accused 217
     age_year: 41
     gender_id: M
-    person_id: KR09
+    person_id: KR31
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -4728,13 +5324,13 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR32
     io: ksp_off_13
     court: ksp_court_6
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR31
     io: ksp_off_13
     court: ksp_court_6
     is_accused: true
@@ -4753,8 +5349,8 @@ cases:
   info_received: '2025-10-16T00:00:00'
   latitude: 12.904
   longitude: 77.512
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 36. Head: Cyber
-    Crime/Phishing. Severity: High. RiskScore: 58. Source FIR: FIR-1036.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 36. Head: Cyber Crime/Phishing. Severity: High. RiskScore:
+    58. Source FIR: FIR-1036.'
   complainants:
   - name: Complainant 23
     age_year: null
@@ -4797,8 +5393,8 @@ cases:
   info_received: '2025-02-21T00:00:00'
   latitude: 12.902
   longitude: 77.51
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 37. Head: Assault/Physical
-    Assault. Severity: Medium. RiskScore: 42. Source FIR: FIR-1037.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 37. Head: Assault/Physical Assault. Severity: Medium.
+    RiskScore: 42. Source FIR: FIR-1037.'
   complainants:
   - name: Complainant 29
     age_year: null
@@ -4829,11 +5425,11 @@ cases:
   - name: Accused 142
     age_year: 38
     gender_id: F
-    person_id: KR03
+    person_id: KR13
   - name: Accused 191
     age_year: 48
     gender_id: F
-    person_id: KR06
+    person_id: KR00
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -4856,13 +5452,13 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR13
     io: ksp_off_35
     court: ksp_court_5
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR00
     io: ksp_off_35
     court: ksp_court_5
     is_accused: true
@@ -4881,8 +5477,8 @@ cases:
   info_received: '2025-05-27T00:00:00'
   latitude: 12.91
   longitude: 77.518
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 38. Head: Theft/UPI
-    Fraud. Severity: Low. RiskScore: 54. Source FIR: FIR-1038.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 38. Head: Theft/UPI Fraud. Severity: Low. RiskScore:
+    54. Source FIR: FIR-1038.'
   complainants:
   - name: Complainant
     age_year: null
@@ -4899,7 +5495,7 @@ cases:
   - name: Accused 66
     age_year: 38
     gender_id: M
-    person_id: KR11
+    person_id: KR23
   - name: Accused 99
     age_year: 41
     gender_id: M
@@ -4920,7 +5516,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR23
     io: ksp_off_50
     court: ksp_court_1
     is_accused: true
@@ -4945,8 +5541,8 @@ cases:
   info_received: '2025-04-13T00:00:00'
   latitude: 13.008
   longitude: 77.616
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 39. Head: Cyber
-    Crime/Physical Assault. Severity: High. RiskScore: 87. Source FIR: FIR-1039.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 39. Head: Cyber Crime/Physical Assault. Severity: High.
+    RiskScore: 87. Source FIR: FIR-1039.'
   complainants:
   - name: Complainant 21
     age_year: null
@@ -5015,8 +5611,8 @@ cases:
   info_received: '2025-04-26T00:00:00'
   latitude: 12.946
   longitude: 77.514
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 40. Head: Robbery/House
-    Break. Severity: Medium. RiskScore: 46. Source FIR: FIR-1040.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 40. Head: Robbery/House Break. Severity: Medium. RiskScore:
+    46. Source FIR: FIR-1040.'
   complainants:
   - name: Complainant 64
     age_year: null
@@ -5033,7 +5629,7 @@ cases:
   - name: Accused 11
     age_year: 51
     gender_id: M
-    person_id: KR09
+    person_id: KR34
   - name: Accused 31
     age_year: 27
     gender_id: M
@@ -5045,7 +5641,7 @@ cases:
   - name: Accused 95
     age_year: 36
     gender_id: F
-    person_id: KR09
+    person_id: KR32
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -5062,7 +5658,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR34
     io: ksp_off_8
     court: ksp_court_9
     is_accused: true
@@ -5080,7 +5676,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR34
     io: ksp_off_8
     court: ksp_court_9
     is_accused: true
@@ -5099,8 +5695,8 @@ cases:
   info_received: '2025-06-28T00:00:00'
   latitude: 13.014
   longitude: 77.582
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 41. Head: Theft/House
-    Break. Severity: Low. RiskScore: 96. Source FIR: FIR-1041.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 41. Head: Theft/House Break. Severity: Low. RiskScore:
+    96. Source FIR: FIR-1041.'
   complainants:
   - name: Complainant
     age_year: null
@@ -5121,7 +5717,7 @@ cases:
   - name: Accused 216
     age_year: 27
     gender_id: M
-    person_id: KR03
+    person_id: KR04
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -5144,7 +5740,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR04
     io: ksp_off_7
     court: ksp_court_5
     is_accused: true
@@ -5163,8 +5759,8 @@ cases:
   info_received: '2025-07-27T00:00:00'
   latitude: 12.966
   longitude: 77.59
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 42. Head: Robbery/UPI
-    Fraud. Severity: Low. RiskScore: 6. Source FIR: FIR-1042.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 42. Head: Robbery/UPI Fraud. Severity: Low. RiskScore:
+    6. Source FIR: FIR-1042.'
   complainants:
   - name: Complainant
     age_year: null
@@ -5215,8 +5811,8 @@ cases:
   info_received: '2025-02-27T00:00:00'
   latitude: 12.924
   longitude: 77.548
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 43. Head: Theft/Phishing.
-    Severity: High. RiskScore: 96. Source FIR: FIR-1043.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 43. Head: Theft/Phishing. Severity: High. RiskScore:
+    96. Source FIR: FIR-1043.'
   complainants:
   - name: Complainant 44
     age_year: null
@@ -5247,7 +5843,7 @@ cases:
   - name: Accused 184
     age_year: 39
     gender_id: F
-    person_id: KR08
+    person_id: KR04
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -5276,7 +5872,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR04
     io: ksp_off_74
     court: ksp_court_9
     is_accused: true
@@ -5295,8 +5891,8 @@ cases:
   info_received: '2025-04-29T00:00:00'
   latitude: 12.912
   longitude: 77.536
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 44. Head: Robbery/Armed
-    Robbery. Severity: High. RiskScore: 97. Source FIR: FIR-1044.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 44. Head: Robbery/Armed Robbery. Severity: High. RiskScore:
+    97. Source FIR: FIR-1044.'
   complainants:
   - name: Complainant
     age_year: null
@@ -5325,7 +5921,7 @@ cases:
   - name: Accused 49
     age_year: 56
     gender_id: F
-    person_id: KR11
+    person_id: KR08
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -5342,7 +5938,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR08
     io: ksp_off_62
     court: ksp_court_7
     is_accused: true
@@ -5361,8 +5957,8 @@ cases:
   info_received: '2025-02-13T00:00:00'
   latitude: 12.96
   longitude: 77.544
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 45. Head: Cyber
-    Crime/UPI Fraud. Severity: Low. RiskScore: 74. Source FIR: FIR-1045.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 45. Head: Cyber Crime/UPI Fraud. Severity: Low. RiskScore:
+    74. Source FIR: FIR-1045.'
   complainants:
   - name: Complainant
     age_year: null
@@ -5391,7 +5987,7 @@ cases:
   - name: Accused 190
     age_year: 43
     gender_id: F
-    person_id: KR08
+    person_id: KR27
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -5420,7 +6016,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR27
     io: ksp_off_53
     court: ksp_court_10
     is_accused: true
@@ -5439,8 +6035,8 @@ cases:
   info_received: '2025-12-19T00:00:00'
   latitude: 12.918
   longitude: 77.502
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 46. Head: Robbery/Vehicle
-    Theft. Severity: High. RiskScore: 53. Source FIR: FIR-1046.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 46. Head: Robbery/Vehicle Theft. Severity: High. RiskScore:
+    53. Source FIR: FIR-1046.'
   complainants:
   - name: Complainant
     age_year: null
@@ -5465,15 +6061,15 @@ cases:
   - name: Accused 98
     age_year: 18
     gender_id: M
-    person_id: KR05
+    person_id: KR11
   - name: Accused 122
     age_year: 44
     gender_id: F
-    person_id: KR11
+    person_id: KR12
   - name: Accused 212
     age_year: 40
     gender_id: M
-    person_id: KR06
+    person_id: KR20
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -5502,19 +6098,19 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR12
     io: ksp_off_30
     court: ksp_court_5
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR12
     io: ksp_off_30
     court: ksp_court_5
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR20
     io: ksp_off_30
     court: ksp_court_5
     is_accused: true
@@ -5533,8 +6129,8 @@ cases:
   info_received: '2025-08-03T00:00:00'
   latitude: 12.946
   longitude: 77.53
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 47. Head: Assault/House
-    Break. Severity: High. RiskScore: 97. Source FIR: FIR-1047.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 47. Head: Assault/House Break. Severity: High. RiskScore:
+    97. Source FIR: FIR-1047.'
   complainants:
   - name: Complainant 28
     age_year: null
@@ -5569,7 +6165,7 @@ cases:
   - name: Accused 214
     age_year: 60
     gender_id: F
-    person_id: KR05
+    person_id: KR26
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -5586,7 +6182,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR26
     io: ksp_off_77
     court: ksp_court_7
     is_accused: true
@@ -5605,8 +6201,8 @@ cases:
   info_received: '2025-05-22T00:00:00'
   latitude: 12.994
   longitude: 77.578
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 48. Head: Robbery/Vehicle
-    Theft. Severity: Medium. RiskScore: 21. Source FIR: FIR-1048.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 48. Head: Robbery/Vehicle Theft. Severity: Medium. RiskScore:
+    21. Source FIR: FIR-1048.'
   complainants:
   - name: Complainant 16
     age_year: null
@@ -5635,7 +6231,7 @@ cases:
   - name: Accused 200
     age_year: 55
     gender_id: F
-    person_id: KR08
+    person_id: KR17
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -5658,7 +6254,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR17
     io: ksp_off_20
     court: ksp_court_2
     is_accused: true
@@ -5677,8 +6273,8 @@ cases:
   info_received: '2025-11-12T00:00:00'
   latitude: 12.926
   longitude: 77.566
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 49. Head: Theft/Armed
-    Robbery. Severity: Medium. RiskScore: 28. Source FIR: FIR-1049.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 49. Head: Theft/Armed Robbery. Severity: Medium. RiskScore:
+    28. Source FIR: FIR-1049.'
   complainants:
   - name: Complainant 53
     age_year: null
@@ -5695,7 +6291,7 @@ cases:
   - name: Accused 172
     age_year: 32
     gender_id: F
-    person_id: KR03
+    person_id: KR32
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -5712,7 +6308,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR32
     io: ksp_off_76
     court: ksp_court_1
     is_accused: true
@@ -5731,8 +6327,8 @@ cases:
   info_received: '2025-06-22T00:00:00'
   latitude: 12.914
   longitude: 77.514
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 50. Head: Theft/Vehicle
-    Theft. Severity: High. RiskScore: 20. Source FIR: FIR-1050.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 50. Head: Theft/Vehicle Theft. Severity: High. RiskScore:
+    20. Source FIR: FIR-1050.'
   complainants:
   - name: Complainant 42
     age_year: null
@@ -5753,11 +6349,11 @@ cases:
   - name: Accused 120
     age_year: 40
     gender_id: M
-    person_id: KR11
+    person_id: KR12
   - name: Accused 199
     age_year: 26
     gender_id: M
-    person_id: KR07
+    person_id: KR10
   - name: Accused 219
     age_year: 35
     gender_id: M
@@ -5778,13 +6374,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR12
     io: ksp_off_25
     court: ksp_court_10
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR10
     io: ksp_off_25
     court: ksp_court_10
     is_accused: true
@@ -5809,8 +6405,8 @@ cases:
   info_received: '2025-07-12T00:00:00'
   latitude: 12.962
   longitude: 77.562
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 51. Head: Theft/House
-    Break. Severity: Low. RiskScore: 10. Source FIR: FIR-1051.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 51. Head: Theft/House Break. Severity: Low. RiskScore:
+    10. Source FIR: FIR-1051.'
   complainants:
   - name: Complainant 27
     age_year: null
@@ -5859,8 +6455,8 @@ cases:
   info_received: '2025-05-16T00:00:00'
   latitude: 12.94
   longitude: 77.54
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 52. Head: Assault/Physical
-    Assault. Severity: High. RiskScore: 100. Source FIR: FIR-1052.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 52. Head: Assault/Physical Assault. Severity: High. RiskScore:
+    100. Source FIR: FIR-1052.'
   complainants:
   - name: Complainant 65
     age_year: null
@@ -5901,7 +6497,7 @@ cases:
   - name: Accused 7
     age_year: 47
     gender_id: M
-    person_id: KR07
+    person_id: KR31
   - name: Accused 52
     age_year: 36
     gender_id: M
@@ -5909,7 +6505,7 @@ cases:
   - name: Accused 131
     age_year: 33
     gender_id: M
-    person_id: KR03
+    person_id: KR19
   - name: Accused 153
     age_year: 38
     gender_id: F
@@ -5917,7 +6513,7 @@ cases:
   - name: Accused 167
     age_year: 51
     gender_id: F
-    person_id: KR06
+    person_id: KR27
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -5940,7 +6536,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR31
     io: ksp_off_18
     court: ksp_court_4
     is_accused: true
@@ -5952,7 +6548,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR19
     io: ksp_off_18
     court: ksp_court_4
     is_accused: true
@@ -5964,7 +6560,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR27
     io: ksp_off_18
     court: ksp_court_4
     is_accused: true
@@ -5983,8 +6579,8 @@ cases:
   info_received: '2025-07-31T00:00:00'
   latitude: 12.948
   longitude: 77.548
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 53. Head: Theft/Armed
-    Robbery. Severity: High. RiskScore: 22. Source FIR: FIR-1053.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 53. Head: Theft/Armed Robbery. Severity: High. RiskScore:
+    22. Source FIR: FIR-1053.'
   complainants:
   - name: Complainant 49
     age_year: null
@@ -6017,7 +6613,7 @@ cases:
   - name: Accused 161
     age_year: 40
     gender_id: F
-    person_id: KR06
+    person_id: KR04
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -6046,7 +6642,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR04
     io: ksp_off_45
     court: ksp_court_4
     is_accused: true
@@ -6065,8 +6661,8 @@ cases:
   info_received: '2025-04-21T00:00:00'
   latitude: 12.936
   longitude: 77.536
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 54. Head: Cyber
-    Crime/Armed Robbery. Severity: Low. RiskScore: 36. Source FIR: FIR-1054.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 54. Head: Cyber Crime/Armed Robbery. Severity: Low. RiskScore:
+    36. Source FIR: FIR-1054.'
   complainants:
   - name: Complainant
     age_year: null
@@ -6083,11 +6679,11 @@ cases:
   - name: Accused 3
     age_year: 55
     gender_id: F
-    person_id: KR03
+    person_id: KR17
   - name: Accused 12
     age_year: 36
     gender_id: M
-    person_id: KR05
+    person_id: KR04
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -6104,13 +6700,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR17
     io: ksp_off_64
     court: ksp_court_5
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR04
     io: ksp_off_64
     court: ksp_court_5
     is_accused: true
@@ -6129,8 +6725,8 @@ cases:
   info_received: '2026-01-01T00:00:00'
   latitude: 13.024
   longitude: 77.584
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 55. Head: Robbery/Vehicle
-    Theft. Severity: High. RiskScore: 97. Source FIR: FIR-1055.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 55. Head: Robbery/Vehicle Theft. Severity: High. RiskScore:
+    97. Source FIR: FIR-1055.'
   complainants:
   - name: Complainant 11
     age_year: null
@@ -6193,8 +6789,8 @@ cases:
   info_received: '2025-07-17T00:00:00'
   latitude: 12.956
   longitude: 77.572
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 56. Head: Fraud/UPI
-    Fraud. Severity: Medium. RiskScore: 82. Source FIR: FIR-1056.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 56. Head: Fraud/UPI Fraud. Severity: Medium. RiskScore:
+    82. Source FIR: FIR-1056.'
   complainants:
   - name: Complainant 26
     age_year: null
@@ -6247,8 +6843,8 @@ cases:
   info_received: '2025-09-14T00:00:00'
   latitude: 12.984
   longitude: 77.6
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 57. Head: Theft/Phishing.
-    Severity: Low. RiskScore: 67. Source FIR: FIR-1057.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 57. Head: Theft/Phishing. Severity: Low. RiskScore: 67.
+    Source FIR: FIR-1057.'
   complainants:
   - name: Complainant
     age_year: null
@@ -6269,11 +6865,11 @@ cases:
   - name: Accused 16
     age_year: 31
     gender_id: M
-    person_id: KR03
+    person_id: KR16
   - name: Accused 53
     age_year: 55
     gender_id: F
-    person_id: KR06
+    person_id: KR14
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -6290,13 +6886,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR16
     io: ksp_off_37
     court: ksp_court_2
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR14
     io: ksp_off_37
     court: ksp_court_2
     is_accused: true
@@ -6315,8 +6911,8 @@ cases:
   info_received: '2025-02-28T00:00:00'
   latitude: 12.962
   longitude: 77.578
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 58. Head: Cyber
-    Crime/Phishing. Severity: Medium. RiskScore: 83. Source FIR: FIR-1058.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 58. Head: Cyber Crime/Phishing. Severity: Medium. RiskScore:
+    83. Source FIR: FIR-1058.'
   complainants:
   - name: Complainant 69
     age_year: null
@@ -6341,7 +6937,7 @@ cases:
   - name: Accused 193
     age_year: 32
     gender_id: M
-    person_id: KR03
+    person_id: KR24
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -6364,7 +6960,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR24
     io: ksp_off_72
     court: ksp_court_8
     is_accused: true
@@ -6383,8 +6979,8 @@ cases:
   info_received: '2025-05-20T00:00:00'
   latitude: 12.93
   longitude: 77.546
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 59. Head: Assault/House
-    Break. Severity: Low. RiskScore: 13. Source FIR: FIR-1059.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 59. Head: Assault/House Break. Severity: Low. RiskScore:
+    13. Source FIR: FIR-1059.'
   complainants:
   - name: Complainant 13
     age_year: null
@@ -6407,11 +7003,11 @@ cases:
   - name: Accused 33
     age_year: 37
     gender_id: F
-    person_id: KR05
+    person_id: KR02
   - name: Accused 58
     age_year: 28
     gender_id: F
-    person_id: KR03
+    person_id: KR16
   - name: Accused 65
     age_year: 54
     gender_id: F
@@ -6432,13 +7028,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR02
     io: ksp_off_18
     court: ksp_court_4
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR16
     io: ksp_off_18
     court: ksp_court_4
     is_accused: true
@@ -6463,8 +7059,8 @@ cases:
   info_received: '2025-05-26T00:00:00'
   latitude: 12.968
   longitude: 77.544
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 60. Head: Assault/Physical
-    Assault. Severity: Medium. RiskScore: 25. Source FIR: FIR-1060.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 60. Head: Assault/Physical Assault. Severity: Medium.
+    RiskScore: 25. Source FIR: FIR-1060.'
   complainants:
   - name: Complainant 1
     age_year: null
@@ -6511,8 +7107,8 @@ cases:
   info_received: '2025-03-12T00:00:00'
   latitude: 13.006
   longitude: 77.582
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 61. Head: Fraud/Vehicle
-    Theft. Severity: High. RiskScore: 65. Source FIR: FIR-1061.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 61. Head: Fraud/Vehicle Theft. Severity: High. RiskScore:
+    65. Source FIR: FIR-1061.'
   complainants:
   - name: Complainant
     age_year: null
@@ -6537,7 +7133,7 @@ cases:
   - name: Accused 220
     age_year: 23
     gender_id: M
-    person_id: KR03
+    person_id: KR24
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -6566,7 +7162,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR24
     io: ksp_off_56
     court: ksp_court_4
     is_accused: true
@@ -6585,8 +7181,8 @@ cases:
   info_received: '2025-04-30T00:00:00'
   latitude: 12.954
   longitude: 77.53
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 62. Head: Assault/Phishing.
-    Severity: Low. RiskScore: 18. Source FIR: FIR-1062.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 62. Head: Assault/Phishing. Severity: Low. RiskScore:
+    18. Source FIR: FIR-1062.'
   complainants:
   - name: Complainant 84
     age_year: null
@@ -6611,7 +7207,7 @@ cases:
   - name: Accused 195
     age_year: 47
     gender_id: M
-    person_id: KR09
+    person_id: KR14
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -6640,7 +7236,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR14
     io: ksp_off_45
     court: ksp_court_4
     is_accused: true
@@ -6659,8 +7255,8 @@ cases:
   info_received: '2025-10-18T00:00:00'
   latitude: 12.896
   longitude: 77.528
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 63. Head: Cyber
-    Crime/Vehicle Theft. Severity: Low. RiskScore: 22. Source FIR: FIR-1063.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 63. Head: Cyber Crime/Vehicle Theft. Severity: Low. RiskScore:
+    22. Source FIR: FIR-1063.'
   complainants:
   - name: Complainant
     age_year: null
@@ -6689,7 +7285,7 @@ cases:
   - name: Accused 194
     age_year: 55
     gender_id: F
-    person_id: KR09
+    person_id: KR12
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -6712,7 +7308,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR12
     io: ksp_off_9
     court: ksp_court_1
     is_accused: true
@@ -6731,8 +7327,8 @@ cases:
   info_received: '2025-05-07T00:00:00'
   latitude: 12.964
   longitude: 77.596
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 64. Head: Fraud/Armed
-    Robbery. Severity: Medium. RiskScore: 18. Source FIR: FIR-1064.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 64. Head: Fraud/Armed Robbery. Severity: Medium. RiskScore:
+    18. Source FIR: FIR-1064.'
   complainants:
   - name: Complainant 15
     age_year: null
@@ -6755,7 +7351,7 @@ cases:
   - name: Accused 76
     age_year: 40
     gender_id: F
-    person_id: KR06
+    person_id: KR20
   - name: Accused 159
     age_year: 38
     gender_id: M
@@ -6763,7 +7359,7 @@ cases:
   - name: Accused 202
     age_year: 34
     gender_id: M
-    person_id: KR08
+    person_id: KR16
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -6780,7 +7376,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR20
     io: ksp_off_64
     court: ksp_court_5
     is_accused: true
@@ -6792,7 +7388,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR16
     io: ksp_off_64
     court: ksp_court_5
     is_accused: true
@@ -6811,8 +7407,8 @@ cases:
   info_received: '2025-06-06T00:00:00'
   latitude: 12.962
   longitude: 77.554
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 65. Head: Robbery/Phishing.
-    Severity: Low. RiskScore: 21. Source FIR: FIR-1065.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 65. Head: Robbery/Phishing. Severity: Low. RiskScore:
+    21. Source FIR: FIR-1065.'
   complainants:
   - name: Complainant 96
     age_year: null
@@ -6829,7 +7425,7 @@ cases:
   - name: Accused 108
     age_year: 48
     gender_id: M
-    person_id: KR06
+    person_id: KR10
   - name: Accused 114
     age_year: 28
     gender_id: M
@@ -6837,7 +7433,7 @@ cases:
   - name: Accused 156
     age_year: 44
     gender_id: F
-    person_id: KR09
+    person_id: KR07
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -6854,7 +7450,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR10
     io: ksp_off_60
     court: ksp_court_7
     is_accused: true
@@ -6866,7 +7462,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR07
     io: ksp_off_60
     court: ksp_court_7
     is_accused: true
@@ -6885,8 +7481,8 @@ cases:
   info_received: '2025-11-22T00:00:00'
   latitude: 12.98
   longitude: 77.572
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 66. Head: Assault/Vehicle
-    Theft. Severity: Low. RiskScore: 83. Source FIR: FIR-1066.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 66. Head: Assault/Vehicle Theft. Severity: Low. RiskScore:
+    83. Source FIR: FIR-1066.'
   complainants:
   - name: Complainant 50
     age_year: null
@@ -6939,8 +7535,8 @@ cases:
   info_received: '2025-07-28T00:00:00'
   latitude: 12.948
   longitude: 77.54
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 67. Head: Assault/Armed
-    Robbery. Severity: Low. RiskScore: 68. Source FIR: FIR-1067.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 67. Head: Assault/Armed Robbery. Severity: Low. RiskScore:
+    68. Source FIR: FIR-1067.'
   complainants:
   - name: Complainant
     age_year: null
@@ -6965,11 +7561,11 @@ cases:
   - name: Accused 110
     age_year: 20
     gender_id: M
-    person_id: KR05
+    person_id: KR19
   - name: Accused 117
     age_year: 46
     gender_id: F
-    person_id: KR11
+    person_id: KR00
   - name: Accused 149
     age_year: 30
     gender_id: F
@@ -6996,13 +7592,13 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR19
     io: ksp_off_29
     court: ksp_court_5
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR00
     io: ksp_off_29
     court: ksp_court_5
     is_accused: true
@@ -7027,8 +7623,8 @@ cases:
   info_received: '2025-10-07T00:00:00'
   latitude: 12.996
   longitude: 77.588
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 68. Head: Robbery/Armed
-    Robbery. Severity: Medium. RiskScore: 28. Source FIR: FIR-1068.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 68. Head: Robbery/Armed Robbery. Severity: Medium. RiskScore:
+    28. Source FIR: FIR-1068.'
   complainants:
   - name: Complainant 51
     age_year: null
@@ -7057,7 +7653,7 @@ cases:
   - name: Accused 192
     age_year: 41
     gender_id: M
-    person_id: KR05
+    person_id: KR31
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -7086,7 +7682,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR31
     io: ksp_off_45
     court: ksp_court_4
     is_accused: true
@@ -7105,8 +7701,8 @@ cases:
   info_received: '2025-01-23T00:00:00'
   latitude: 12.994
   longitude: 77.586
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 69. Head: Robbery/Physical
-    Assault. Severity: Low. RiskScore: 86. Source FIR: FIR-1069.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 69. Head: Robbery/Physical Assault. Severity: Low. RiskScore:
+    86. Source FIR: FIR-1069.'
   complainants:
   - name: Complainant
     age_year: null
@@ -7135,11 +7731,11 @@ cases:
   - name: Accused 37
     age_year: 56
     gender_id: M
-    person_id: KR05
+    person_id: KR30
   - name: Accused 68
     age_year: 30
     gender_id: M
-    person_id: KR08
+    person_id: KR00
   act_sections:
   - act_id: BNS
     section_id: '309'
@@ -7156,13 +7752,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR30
     io: ksp_off_7
     court: ksp_court_7
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR00
     io: ksp_off_7
     court: ksp_court_7
     is_accused: true
@@ -7181,8 +7777,8 @@ cases:
   info_received: '2025-01-27T00:00:00'
   latitude: 12.896
   longitude: 77.504
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 70. Head: Assault/Phishing.
-    Severity: High. RiskScore: 91. Source FIR: FIR-1070.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 70. Head: Assault/Phishing. Severity: High. RiskScore:
+    91. Source FIR: FIR-1070.'
   complainants:
   - name: Complainant 37
     age_year: null
@@ -7205,7 +7801,7 @@ cases:
   - name: Accused 181
     age_year: 43
     gender_id: F
-    person_id: KR05
+    person_id: KR32
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -7222,7 +7818,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR32
     io: ksp_off_10
     court: ksp_court_3
     is_accused: true
@@ -7241,8 +7837,8 @@ cases:
   info_received: '2025-09-20T00:00:00'
   latitude: 12.964
   longitude: 77.572
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 71. Head: Robbery/Physical
-    Assault. Severity: High. RiskScore: 23. Source FIR: FIR-1071.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 71. Head: Robbery/Physical Assault. Severity: High. RiskScore:
+    23. Source FIR: FIR-1071.'
   complainants:
   - name: Complainant
     age_year: null
@@ -7325,8 +7921,8 @@ cases:
   info_received: '2025-08-26T00:00:00'
   latitude: 12.932
   longitude: 77.54
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 72. Head: Cyber
-    Crime/House Break. Severity: Low. RiskScore: 47. Source FIR: FIR-1072.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 72. Head: Cyber Crime/House Break. Severity: Low. RiskScore:
+    47. Source FIR: FIR-1072.'
   complainants:
   - name: Complainant
     age_year: null
@@ -7347,7 +7943,7 @@ cases:
   - name: Accused 104
     age_year: 36
     gender_id: M
-    person_id: KR03
+    person_id: KR09
   - name: Accused 136
     age_year: 54
     gender_id: M
@@ -7374,7 +7970,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR09
     io: ksp_off_38
     court: ksp_court_3
     is_accused: true
@@ -7399,8 +7995,8 @@ cases:
   info_received: '2025-04-19T00:00:00'
   latitude: 12.96
   longitude: 77.568
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 73. Head: Assault/Vehicle
-    Theft. Severity: Low. RiskScore: 74. Source FIR: FIR-1073.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 73. Head: Assault/Vehicle Theft. Severity: Low. RiskScore:
+    74. Source FIR: FIR-1073.'
   complainants:
   - name: Complainant
     age_year: null
@@ -7417,11 +8013,11 @@ cases:
   - name: Accused 113
     age_year: 56
     gender_id: M
-    person_id: KR04
+    person_id: KR06
   - name: Accused 178
     age_year: 28
     gender_id: F
-    person_id: KR08
+    person_id: KR02
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -7438,13 +8034,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR06
     io: ksp_off_18
     court: ksp_court_8
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR02
     io: ksp_off_18
     court: ksp_court_8
     is_accused: true
@@ -7463,8 +8059,8 @@ cases:
   info_received: '2025-10-13T00:00:00'
   latitude: 12.988
   longitude: 77.596
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 74. Head: Fraud/Vehicle
-    Theft. Severity: High. RiskScore: 62. Source FIR: FIR-1074.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 74. Head: Fraud/Vehicle Theft. Severity: High. RiskScore:
+    62. Source FIR: FIR-1074.'
   complainants:
   - name: Complainant 59
     age_year: null
@@ -7491,7 +8087,7 @@ cases:
   - name: Accused 79
     age_year: 39
     gender_id: M
-    person_id: KR07
+    person_id: KR01
   - name: Accused 163
     age_year: 30
     gender_id: M
@@ -7512,7 +8108,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR01
     io: ksp_off_66
     court: ksp_court_4
     is_accused: true
@@ -7537,8 +8133,8 @@ cases:
   info_received: '2025-03-19T00:00:00'
   latitude: 12.956
   longitude: 77.524
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 75. Head: Cyber
-    Crime/Physical Assault. Severity: High. RiskScore: 66. Source FIR: FIR-1075.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 75. Head: Cyber Crime/Physical Assault. Severity: High.
+    RiskScore: 66. Source FIR: FIR-1075.'
   complainants:
   - name: Complainant 18
     age_year: null
@@ -7567,7 +8163,7 @@ cases:
   - name: Accused 21
     age_year: 34
     gender_id: M
-    person_id: KR09
+    person_id: KR11
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -7590,7 +8186,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR11
     io: ksp_off_41
     court: ksp_court_3
     is_accused: true
@@ -7609,8 +8205,8 @@ cases:
   info_received: '2025-03-27T00:00:00'
   latitude: 12.954
   longitude: 77.522
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 76. Head: Assault/Armed
-    Robbery. Severity: High. RiskScore: 68. Source FIR: FIR-1076.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 76. Head: Assault/Armed Robbery. Severity: High. RiskScore:
+    68. Source FIR: FIR-1076.'
   complainants:
   - name: Complainant 10
     age_year: null
@@ -7643,7 +8239,7 @@ cases:
   - name: Accused 60
     age_year: 48
     gender_id: M
-    person_id: KR03
+    person_id: KR25
   - name: Accused 85
     age_year: 58
     gender_id: F
@@ -7682,7 +8278,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR25
     io: ksp_off_26
     court: ksp_court_2
     is_accused: true
@@ -7725,8 +8321,8 @@ cases:
   info_received: '2025-01-24T00:00:00'
   latitude: 12.966
   longitude: 77.59
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 77. Head: Cyber
-    Crime/House Break. Severity: High. RiskScore: 74. Source FIR: FIR-1077.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 77. Head: Cyber Crime/House Break. Severity: High. RiskScore:
+    74. Source FIR: FIR-1077.'
   complainants:
   - name: Complainant
     age_year: null
@@ -7769,8 +8365,8 @@ cases:
   info_received: '2025-04-11T00:00:00'
   latitude: 12.934
   longitude: 77.558
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 78. Head: Fraud/Vehicle
-    Theft. Severity: Low. RiskScore: 9. Source FIR: FIR-1078.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 78. Head: Fraud/Vehicle Theft. Severity: Low. RiskScore:
+    9. Source FIR: FIR-1078.'
   complainants:
   - name: Complainant 20
     age_year: null
@@ -7801,15 +8397,15 @@ cases:
   - name: Accused 20
     age_year: 19
     gender_id: F
-    person_id: KR06
+    person_id: KR32
   - name: Accused 183
     age_year: 52
     gender_id: M
-    person_id: KR07
+    person_id: KR09
   - name: Accused 188
     age_year: 47
     gender_id: M
-    person_id: KR09
+    person_id: KR05
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -7826,19 +8422,19 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR32
     io: ksp_off_27
     court: ksp_court_3
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR07
+    accused_person_id: KR05
     io: ksp_off_27
     court: ksp_court_3
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR05
     io: ksp_off_27
     court: ksp_court_3
     is_accused: true
@@ -7857,8 +8453,8 @@ cases:
   info_received: '2025-08-19T00:00:00'
   latitude: 12.982
   longitude: 77.606
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 79. Head: Assault/Armed
-    Robbery. Severity: High. RiskScore: 71. Source FIR: FIR-1079.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 79. Head: Assault/Armed Robbery. Severity: High. RiskScore:
+    71. Source FIR: FIR-1079.'
   complainants:
   - name: Complainant 72
     age_year: null
@@ -7885,7 +8481,7 @@ cases:
   - name: Accused 22
     age_year: 56
     gender_id: M
-    person_id: KR09
+    person_id: KR28
   - name: Accused 44
     age_year: 28
     gender_id: M
@@ -7910,7 +8506,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR28
     io: ksp_off_72
     court: ksp_court_6
     is_accused: true
@@ -7941,8 +8537,8 @@ cases:
   info_received: '2025-04-11T00:00:00'
   latitude: 12.93
   longitude: 77.514
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 80. Head: Assault/UPI
-    Fraud. Severity: Medium. RiskScore: 8. Source FIR: FIR-1080.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 80. Head: Assault/UPI Fraud. Severity: Medium. RiskScore:
+    8. Source FIR: FIR-1080.'
   complainants:
   - name: Complainant
     age_year: null
@@ -8009,8 +8605,8 @@ cases:
   info_received: '2025-01-25T00:00:00'
   latitude: 12.918
   longitude: 77.502
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 81. Head: Assault/Physical
-    Assault. Severity: Medium. RiskScore: 6. Source FIR: FIR-1081.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 81. Head: Assault/Physical Assault. Severity: Medium.
+    RiskScore: 6. Source FIR: FIR-1081.'
   complainants:
   - name: Complainant 3
     age_year: null
@@ -8063,8 +8659,8 @@ cases:
   info_received: '2025-07-14T00:00:00'
   latitude: 12.966
   longitude: 77.55
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 82. Head: Fraud/House
-    Break. Severity: High. RiskScore: 98. Source FIR: FIR-1082.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 82. Head: Fraud/House Break. Severity: High. RiskScore:
+    98. Source FIR: FIR-1082.'
   complainants:
   - name: Complainant 8
     age_year: null
@@ -8099,11 +8695,11 @@ cases:
   - name: Accused 40
     age_year: 21
     gender_id: M
-    person_id: KR03
+    person_id: KR24
   - name: Accused 165
     age_year: 33
     gender_id: M
-    person_id: KR08
+    person_id: KR10
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -8126,13 +8722,13 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR24
     io: ksp_off_6
     court: ksp_court_6
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR10
     io: ksp_off_6
     court: ksp_court_6
     is_accused: true
@@ -8151,8 +8747,8 @@ cases:
   info_received: '2025-12-25T00:00:00'
   latitude: 12.974
   longitude: 77.558
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 83. Head: Fraud/Armed
-    Robbery. Severity: Medium. RiskScore: 60. Source FIR: FIR-1083.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 83. Head: Fraud/Armed Robbery. Severity: Medium. RiskScore:
+    60. Source FIR: FIR-1083.'
   complainants:
   - name: Complainant
     age_year: null
@@ -8169,7 +8765,7 @@ cases:
   - name: Accused 14
     age_year: 33
     gender_id: M
-    person_id: KR04
+    person_id: KR08
   - name: Accused 27
     age_year: 49
     gender_id: M
@@ -8177,7 +8773,7 @@ cases:
   - name: Accused 50
     age_year: 48
     gender_id: M
-    person_id: KR06
+    person_id: KR08
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -8194,7 +8790,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR08
     io: ksp_off_32
     court: ksp_court_9
     is_accused: true
@@ -8206,7 +8802,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR08
     io: ksp_off_32
     court: ksp_court_9
     is_accused: true
@@ -8225,8 +8821,8 @@ cases:
   info_received: '2025-08-23T00:00:00'
   latitude: 12.966
   longitude: 77.606
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 84. Head: Cyber
-    Crime/UPI Fraud. Severity: Low. RiskScore: 66. Source FIR: FIR-1084.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 84. Head: Cyber Crime/UPI Fraud. Severity: Low. RiskScore:
+    66. Source FIR: FIR-1084.'
   complainants:
   - name: Complainant 67
     age_year: null
@@ -8265,11 +8861,11 @@ cases:
   - name: Accused 105
     age_year: 46
     gender_id: F
-    person_id: KR08
+    person_id: KR13
   - name: Accused 179
     age_year: 60
     gender_id: M
-    person_id: KR08
+    person_id: KR13
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -8286,13 +8882,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR13
     io: ksp_off_22
     court: ksp_court_6
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR13
     io: ksp_off_22
     court: ksp_court_6
     is_accused: true
@@ -8311,8 +8907,8 @@ cases:
   info_received: '2025-07-11T00:00:00'
   latitude: 12.914
   longitude: 77.514
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 85. Head: Cyber
-    Crime/UPI Fraud. Severity: Medium. RiskScore: 2. Source FIR: FIR-1085.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 85. Head: Cyber Crime/UPI Fraud. Severity: Medium. RiskScore:
+    2. Source FIR: FIR-1085.'
   complainants:
   - name: Complainant 2
     age_year: null
@@ -8381,8 +8977,8 @@ cases:
   info_received: '2025-02-11T00:00:00'
   latitude: 12.942
   longitude: 77.542
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 86. Head: Robbery/Vehicle
-    Theft. Severity: Low. RiskScore: 40. Source FIR: FIR-1086.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 86. Head: Robbery/Vehicle Theft. Severity: Low. RiskScore:
+    40. Source FIR: FIR-1086.'
   complainants:
   - name: Complainant 24
     age_year: null
@@ -8411,7 +9007,7 @@ cases:
   - name: Accused 32
     age_year: 57
     gender_id: M
-    person_id: KR11
+    person_id: KR28
   - name: Accused 189
     age_year: 20
     gender_id: F
@@ -8432,13 +9028,13 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR28
     io: ksp_off_4
     court: ksp_court_4
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR28
     io: ksp_off_4
     court: ksp_court_4
     is_accused: true
@@ -8457,8 +9053,8 @@ cases:
   info_received: '2025-08-17T00:00:00'
   latitude: 12.92
   longitude: 77.52
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 87. Head: Theft/House
-    Break. Severity: High. RiskScore: 24. Source FIR: FIR-1087.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 87. Head: Theft/House Break. Severity: High. RiskScore:
+    24. Source FIR: FIR-1087.'
   complainants:
   - name: Complainant
     age_year: null
@@ -8515,8 +9111,8 @@ cases:
   info_received: '2025-02-23T00:00:00'
   latitude: 12.938
   longitude: 77.538
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 88. Head: Assault/Vehicle
-    Theft. Severity: Medium. RiskScore: 49. Source FIR: FIR-1088.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 88. Head: Assault/Vehicle Theft. Severity: Medium. RiskScore:
+    49. Source FIR: FIR-1088.'
   complainants:
   - name: Complainant 32
     age_year: null
@@ -8541,7 +9137,7 @@ cases:
   - name: Accused 150
     age_year: 40
     gender_id: F
-    person_id: KR11
+    person_id: KR31
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -8558,7 +9154,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR31
     io: ksp_off_7
     court: ksp_court_9
     is_accused: true
@@ -8577,8 +9173,8 @@ cases:
   info_received: '2025-02-13T00:00:00'
   latitude: 13.016
   longitude: 77.616
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 89. Head: Fraud/Physical
-    Assault. Severity: Medium. RiskScore: 50. Source FIR: FIR-1089.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 89. Head: Fraud/Physical Assault. Severity: Medium. RiskScore:
+    50. Source FIR: FIR-1089.'
   complainants:
   - name: Complainant
     age_year: null
@@ -8595,7 +9191,7 @@ cases:
   - name: Accused 174
     age_year: 29
     gender_id: M
-    person_id: KR08
+    person_id: KR35
   - name: Accused 203
     age_year: 26
     gender_id: M
@@ -8616,7 +9212,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR35
     io: ksp_off_36
     court: ksp_court_5
     is_accused: true
@@ -8641,8 +9237,8 @@ cases:
   info_received: '2025-01-23T00:00:00'
   latitude: 13.014
   longitude: 77.574
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 90. Head: Robbery/Vehicle
-    Theft. Severity: Medium. RiskScore: 29. Source FIR: FIR-1090.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 90. Head: Robbery/Vehicle Theft. Severity: Medium. RiskScore:
+    29. Source FIR: FIR-1090.'
   complainants:
   - name: Complainant
     age_year: null
@@ -8663,7 +9259,7 @@ cases:
   - name: Accused 63
     age_year: 47
     gender_id: F
-    person_id: KR06
+    person_id: KR01
   - name: Accused 83
     age_year: 27
     gender_id: M
@@ -8694,7 +9290,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR01
     io: ksp_off_59
     court: ksp_court_7
     is_accused: true
@@ -8725,8 +9321,8 @@ cases:
   info_received: '2025-06-17T00:00:00'
   latitude: 12.966
   longitude: 77.582
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 91. Head: Cyber
-    Crime/UPI Fraud. Severity: Medium. RiskScore: 87. Source FIR: FIR-1091.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 91. Head: Cyber Crime/UPI Fraud. Severity: Medium. RiskScore:
+    87. Source FIR: FIR-1091.'
   complainants:
   - name: Complainant
     age_year: null
@@ -8747,7 +9343,7 @@ cases:
   - name: Accused 101
     age_year: 45
     gender_id: M
-    person_id: KR05
+    person_id: KR20
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -8770,7 +9366,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR20
     io: ksp_off_22
     court: ksp_court_1
     is_accused: true
@@ -8789,8 +9385,8 @@ cases:
   info_received: '2025-11-16T00:00:00'
   latitude: 12.984
   longitude: 77.6
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 92. Head: Theft/Vehicle
-    Theft. Severity: Low. RiskScore: 30. Source FIR: FIR-1092.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 92. Head: Theft/Vehicle Theft. Severity: Low. RiskScore:
+    30. Source FIR: FIR-1092.'
   complainants:
   - name: Complainant 60
     age_year: null
@@ -8807,7 +9403,7 @@ cases:
   - name: Accused 72
     age_year: 36
     gender_id: F
-    person_id: KR08
+    person_id: KR15
   act_sections:
   - act_id: BNS
     section_id: '303'
@@ -8824,7 +9420,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR08
+    accused_person_id: KR15
     io: ksp_off_68
     court: ksp_court_2
     is_accused: true
@@ -8843,8 +9439,8 @@ cases:
   info_received: '2025-10-03T00:00:00'
   latitude: 12.942
   longitude: 77.558
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 93. Head: Robbery/UPI
-    Fraud. Severity: Medium. RiskScore: 21. Source FIR: FIR-1093.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 93. Head: Robbery/UPI Fraud. Severity: Medium. RiskScore:
+    21. Source FIR: FIR-1093.'
   complainants:
   - name: Complainant 97
     age_year: null
@@ -8881,7 +9477,7 @@ cases:
   - name: Accused 69
     age_year: 18
     gender_id: F
-    person_id: KR11
+    person_id: KR12
   - name: Accused 169
     age_year: 32
     gender_id: F
@@ -8912,7 +9508,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR12
     io: ksp_off_76
     court: ksp_court_9
     is_accused: true
@@ -8943,8 +9539,8 @@ cases:
   info_received: '2025-01-13T00:00:00'
   latitude: 12.95
   longitude: 77.566
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 94. Head: Cyber
-    Crime/Physical Assault. Severity: High. RiskScore: 21. Source FIR: FIR-1094.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 94. Head: Cyber Crime/Physical Assault. Severity: High.
+    RiskScore: 21. Source FIR: FIR-1094.'
   complainants:
   - name: Complainant 47
     age_year: null
@@ -8971,7 +9567,7 @@ cases:
   - name: Accused 145
     age_year: 46
     gender_id: F
-    person_id: KR11
+    person_id: KR07
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -8988,7 +9584,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR07
     io: ksp_off_66
     court: ksp_court_9
     is_accused: true
@@ -9007,8 +9603,8 @@ cases:
   info_received: '2025-05-12T00:00:00'
   latitude: 12.958
   longitude: 77.534
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 95. Head: Fraud/UPI
-    Fraud. Severity: High. RiskScore: 78. Source FIR: FIR-1095.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 95. Head: Fraud/UPI Fraud. Severity: High. RiskScore:
+    78. Source FIR: FIR-1095.'
   complainants:
   - name: Complainant 92
     age_year: null
@@ -9069,8 +9665,8 @@ cases:
   info_received: '2025-12-09T00:00:00'
   latitude: 13.016
   longitude: 77.592
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 96. Head: Cyber
-    Crime/UPI Fraud. Severity: High. RiskScore: 26. Source FIR: FIR-1096.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 96. Head: Cyber Crime/UPI Fraud. Severity: High. RiskScore:
+    26. Source FIR: FIR-1096.'
   complainants:
   - name: Complainant
     age_year: null
@@ -9091,11 +9687,11 @@ cases:
   - name: Accused 182
     age_year: 29
     gender_id: M
-    person_id: KR09
+    person_id: KR32
   - name: Accused 210
     age_year: 48
     gender_id: M
-    person_id: KR03
+    person_id: KR05
   act_sections:
   - act_id: IT
     section_id: '66'
@@ -9118,13 +9714,13 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR09
+    accused_person_id: KR32
     io: ksp_off_23
     court: ksp_court_3
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR05
     io: ksp_off_23
     court: ksp_court_3
     is_accused: true
@@ -9143,8 +9739,8 @@ cases:
   info_received: '2025-12-01T00:00:00'
   latitude: 12.934
   longitude: 77.51
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 97. Head: Assault/Physical
-    Assault. Severity: Medium. RiskScore: 54. Source FIR: FIR-1097.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 97. Head: Assault/Physical Assault. Severity: Medium.
+    RiskScore: 54. Source FIR: FIR-1097.'
   complainants:
   - name: Complainant 56
     age_year: null
@@ -9169,7 +9765,7 @@ cases:
   - name: Accused 88
     age_year: 40
     gender_id: F
-    person_id: KR04
+    person_id: KR07
   act_sections:
   - act_id: BNS
     section_id: '115'
@@ -9198,7 +9794,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR04
+    accused_person_id: KR07
     io: ksp_off_7
     court: ksp_court_1
     is_accused: true
@@ -9217,8 +9813,8 @@ cases:
   info_received: '2025-11-13T00:00:00'
   latitude: 12.956
   longitude: 77.588
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 98. Head: Fraud/Phishing.
-    Severity: High. RiskScore: 70. Source FIR: FIR-1098.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 98. Head: Fraud/Phishing. Severity: High. RiskScore:
+    70. Source FIR: FIR-1098.'
   complainants:
   - name: Complainant
     age_year: null
@@ -9239,15 +9835,15 @@ cases:
   - name: Accused 144
     age_year: 18
     gender_id: M
-    person_id: KR06
+    person_id: KR11
   - name: Accused 158
     age_year: 48
     gender_id: M
-    person_id: KR03
+    person_id: KR27
   - name: Accused 170
     age_year: 20
     gender_id: F
-    person_id: KR05
+    person_id: KR25
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -9264,19 +9860,19 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR11
     io: ksp_off_3
     court: ksp_court_1
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR03
+    accused_person_id: KR27
     io: ksp_off_3
     court: ksp_court_1
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR25
     io: ksp_off_3
     court: ksp_court_1
     is_accused: true
@@ -9295,8 +9891,8 @@ cases:
   info_received: '2025-08-26T00:00:00'
   latitude: 12.954
   longitude: 77.586
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 99. Head: Robbery/Physical
-    Assault. Severity: Low. RiskScore: 20. Source FIR: FIR-1099.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 99. Head: Robbery/Physical Assault. Severity: Low. RiskScore:
+    20. Source FIR: FIR-1099.'
   complainants:
   - name: Complainant 5
     age_year: null
@@ -9335,7 +9931,7 @@ cases:
   - name: Accused 94
     age_year: 49
     gender_id: M
-    person_id: KR05
+    person_id: KR12
   - name: Accused 205
     age_year: 51
     gender_id: M
@@ -9362,7 +9958,7 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR05
+    accused_person_id: KR12
     io: ksp_off_65
     court: ksp_court_9
     is_accused: true
@@ -9387,8 +9983,8 @@ cases:
   info_received: '2025-09-17T00:00:00'
   latitude: 12.902
   longitude: 77.494
-  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 100. Head: Fraud/Armed
-    Robbery. Severity: High. RiskScore: 55. Source FIR: FIR-1100.'
+  brief_facts: 'Synthetic summary. MO: Forced Entry. Place: Location 100. Head: Fraud/Armed Robbery. Severity: High. RiskScore:
+    55. Source FIR: FIR-1100.'
   complainants:
   - name: Complainant 70
     age_year: null
@@ -9409,7 +10005,7 @@ cases:
   - name: Accused 30
     age_year: 41
     gender_id: F
-    person_id: KR06
+    person_id: KR17
   - name: Accused 34
     age_year: 20
     gender_id: M
@@ -9425,7 +10021,7 @@ cases:
   - name: Accused 213
     age_year: 50
     gender_id: F
-    person_id: KR11
+    person_id: KR34
   act_sections:
   - act_id: BNS
     section_id: '318'
@@ -9442,7 +10038,7 @@ cases:
   arrests:
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR06
+    accused_person_id: KR17
     io: ksp_off_12
     court: ksp_court_8
     is_accused: true
@@ -9466,13 +10062,14 @@ cases:
     is_accused: true
   - type_id: 1
     date: '2025-02-01'
-    accused_person_id: KR11
+    accused_person_id: KR34
     io: ksp_off_12
     court: ksp_court_8
     is_accused: true
+_ai_features: []
 _meta:
   merged_from:
   - fir_demo_dataset.yaml
   - ksp_relational_dataset.yaml
-  curated_cases: 18
+  curated_cases: 28
   ksp_cases: 100

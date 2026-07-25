@@ -28,6 +28,8 @@ ROOT = Path(__file__).resolve().parents[2]
 BACKEND = ROOT / "backend"
 DATASET_PATH = Path(__file__).resolve().parent / "fir_demo_dataset.yaml"
 FULL_DATASET_PATH = Path(__file__).resolve().parent / "fir_full_dataset.yaml"
+NETWORK_EXTRA_PATH = Path(__file__).resolve().parent / "fir_network_extra_cases.yaml"
+STATEWIDE_PATH = Path(__file__).resolve().parent / "fir_statewide_karnataka.yaml"
 APPSAIL_MOCK_PATH = Path(__file__).resolve().parent / "appsail_datastore.json"
 RAG_DOCS_PATH = Path(__file__).resolve().parent / "fir_rag_documents.json"
 AI_FEATURES_PATH = Path(__file__).resolve().parent / "ai_case_features.json"
@@ -40,11 +42,104 @@ if str(BACKEND) not in sys.path:
 from app.utils.crime_no import build_crime_no, parse_crime_no  # noqa: E402
 
 
+def _case_key(case: dict[str, Any]) -> tuple:
+    return (
+        str(case.get("category_code")),
+        int(case["district_id"]),
+        int(case["police_station_id"]),
+        int(case["year"]),
+        int(case["serial"]),
+    )
+
+
+def _merge_by_id(
+    existing: list[dict[str, Any]], extra: list[dict[str, Any]], id_key: str = "id"
+) -> list[dict[str, Any]]:
+    seen = {int(row[id_key]) for row in existing if id_key in row}
+    out = list(existing)
+    for row in extra:
+        rid = int(row[id_key])
+        if rid not in seen:
+            out.append(row)
+            seen.add(rid)
+    return out
+
+
+def _merge_by_key(
+    existing: list[dict[str, Any]], extra: list[dict[str, Any]], key_field: str = "key"
+) -> list[dict[str, Any]]:
+    seen = {str(row.get(key_field)) for row in existing}
+    out = list(existing)
+    for row in extra:
+        k = str(row.get(key_field))
+        if k not in seen:
+            out.append(row)
+            seen.add(k)
+    return out
+
+
+def _fold_overlay(raw: dict[str, Any], overlay: dict[str, Any]) -> None:
+    """Merge overlay geography / personnel / cases into the base dataset in-place."""
+    if not overlay:
+        return
+    geo = raw.setdefault("geography", {})
+    ogeo = overlay.get("geography") or {}
+    if ogeo.get("districts"):
+        geo["districts"] = _merge_by_id(
+            list(geo.get("districts") or []), list(ogeo["districts"])
+        )
+    if ogeo.get("units"):
+        geo["units"] = _merge_by_id(list(geo.get("units") or []), list(ogeo["units"]))
+    if ogeo.get("courts"):
+        geo["courts"] = _merge_by_key(
+            list(geo.get("courts") or []), list(ogeo["courts"])
+        )
+
+    personnel = raw.setdefault("personnel", {})
+    opers = overlay.get("personnel") or {}
+    if opers.get("employees"):
+        personnel["employees"] = _merge_by_key(
+            list(personnel.get("employees") or []),
+            list(opers["employees"]),
+        )
+
+    extra_cases = overlay.get("cases") or []
+    if extra_cases:
+        cases = list(raw.get("cases") or [])
+        seen = {_case_key(c) for c in cases}
+        for case in extra_cases:
+            key = _case_key(case)
+            if key not in seen:
+                cases.append(case)
+                seen.add(key)
+        raw["cases"] = cases
+
+
 def load_dataset(path: Path = DATASET_PATH) -> dict[str, Any]:
     raw = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict):
         raise ValueError(f"Invalid dataset: {path}")
+    # Always fold interlocking network demo FIRs into whatever base dataset is loaded.
+    if NETWORK_EXTRA_PATH.exists():
+        extra = yaml.safe_load(NETWORK_EXTRA_PATH.read_text(encoding="utf-8")) or {}
+        _fold_overlay(raw, {"cases": extra.get("cases") or []})
+    # Statewide Karnataka cover (all 31 districts + stations/FIRs).
+    if STATEWIDE_PATH.exists():
+        statewide = yaml.safe_load(STATEWIDE_PATH.read_text(encoding="utf-8")) or {}
+        _fold_overlay(raw, statewide)
     return raw
+
+
+def _normalize_act_id(act_id: str) -> str:
+    """Map common act labels to cip_act.act_code primary keys."""
+    raw = (act_id or "").strip()
+    aliases = {
+        "IT Act": "IT",
+        "IT ACT": "IT",
+        "Information Technology Act": "IT",
+        "Indian Penal Code": "IPC",
+    }
+    return aliases.get(raw, raw)
 
 
 def _parse_date(value: str | None) -> date | None:
@@ -295,7 +390,7 @@ def export_catalyst_mock(
                 "cip_act_section_association",
                 {
                     "case_master_id": case_id,
-                    "act_id": s["act_id"],
+                    "act_id": _normalize_act_id(str(s["act_id"])),
                     "section_id": str(s["section_id"]),
                     "act_order_id": int(s.get("act_order_id") or 1),
                     "section_order_id": int(s.get("section_order_id") or 1),
@@ -881,7 +976,8 @@ def seed_postgres(data: dict[str, Any], *, force: bool = False) -> None:
                 ],
                 act_sections=[
                     ActSectionAssociation(
-                        act_id=s["act_id"],
+                        # act_id must match cip_act.act_code (e.g. IT, not "IT Act")
+                        act_id=_normalize_act_id(str(s["act_id"])),
                         section_id=str(s["section_id"]),
                         act_order_id=int(s.get("act_order_id") or 1),
                         section_order_id=int(s.get("section_order_id") or 1),
