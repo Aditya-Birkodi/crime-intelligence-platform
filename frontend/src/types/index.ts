@@ -8,6 +8,11 @@ export type HealthResponse = {
 export type ApiStatusResponse = {
   api: string;
   status: string;
+  persistence?: string;
+  datastore_mock?: string;
+  cases_source?: string;
+  lookups_source?: string;
+  analytics_source?: string;
 };
 
 export type IdName = {

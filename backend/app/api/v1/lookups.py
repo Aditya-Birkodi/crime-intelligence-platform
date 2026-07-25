@@ -1,7 +1,8 @@
 """Lookups read APIs for FE dropdowns (B1 support).
 
-Uses Postgres when PERSISTENCE_BACKEND=postgres; otherwise appsail_lookups.json
-(so AppSail works without a database).
+Postgres when PERSISTENCE_BACKEND=postgres.
+On Catalyst AppSail: Data Store master tables (district/unit/status) with
+appsail_lookups.json fallback for the rest.
 """
 
 from __future__ import annotations

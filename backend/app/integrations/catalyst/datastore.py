@@ -74,13 +74,14 @@ class CatalystDataStoreClient:
         if self._mock:
             return self._mock_insert(self.table_name(table), row)
         table_svc = self._table_service(table)
-        return dict(table_svc.insert_row(row))
+        result = table_svc.insert_row(row)
+        return dict(result) if isinstance(result, dict) else {"ROWID": result}
 
     def get_row(self, table: str, row_id: int | str) -> dict[str, Any] | None:
         if self._mock:
             return self._mock_get(self.table_name(table), int(row_id))
-        table_svc = self._table_service(table)
         try:
+            table_svc = self._table_service(table)
             return dict(table_svc.get_row(int(row_id)))
         except Exception:
             self._logger.exception(
@@ -93,22 +94,62 @@ class CatalystDataStoreClient:
     ) -> list[dict[str, Any]]:
         if self._mock:
             return self._mock_all(self.table_name(table))[:max_rows]
-        table_svc = self._table_service(table)
+        try:
+            table_svc = self._table_service(table)
+        except Exception:
+            self._logger.exception(
+                "datastore_table_unavailable table=%s — returning empty", table
+            )
+            return []
         rows: list[dict[str, Any]] = []
         next_token = None
-        more = True
-        while more and len(rows) < max_rows:
-            page = table_svc.get_paged_rows(
-                next_token, max_rows=min(100, max_rows - len(rows))
+        try:
+            while len(rows) < max_rows:
+                page = table_svc.get_paged_rows(
+                    next_token, max_rows=min(100, max_rows - len(rows))
+                )
+                if not isinstance(page, dict):
+                    break
+                batch = (
+                    page.get("data") or page.get("content") or page.get("rows") or []
+                )
+                if isinstance(batch, list):
+                    rows.extend(dict(r) for r in batch if isinstance(r, dict))
+                next_token = page.get("next_token")
+                if not next_token:
+                    break
+        except Exception:
+            self._logger.exception(
+                "datastore_get_paged_rows failed table=%s — returning partial/empty",
+                table,
             )
-            batch = page.get("content") or page.get("data") or page.get("rows") or []
-            if isinstance(batch, list):
-                rows.extend(dict(r) for r in batch)
-            more = bool(page.get("more_records"))
-            next_token = page.get("next_token")
-            if not more:
-                break
         return rows
+
+    def delete_row(self, table: str, row_id: int | str) -> bool:
+        if self._mock:
+            return self._mock_delete(self.table_name(table), int(row_id))
+        table_svc = self._table_service(table)
+        return bool(table_svc.delete_row(int(row_id)))
+
+    def delete_all_rows(self, table: str, *, batch_size: int = 100) -> int:
+        """Delete all rows (for re-seed). Returns count deleted."""
+        deleted = 0
+        while True:
+            rows = self.get_paged_rows(table, max_rows=batch_size)
+            if not rows:
+                break
+            ids = [r.get("ROWID") for r in rows if r.get("ROWID") is not None]
+            if not ids:
+                break
+            if self._mock:
+                for rid in ids:
+                    self._mock_delete(self.table_name(table), int(str(rid)))
+                deleted += len(ids)
+                continue
+            table_svc = self._table_service(table)
+            table_svc.delete_rows(ids)
+            deleted += len(ids)
+        return deleted
 
     def zcql(self, query: str) -> list[dict[str, Any]]:
         """Execute ZCQL. Returns flattened row dicts when possible."""
@@ -162,6 +203,17 @@ class CatalystDataStoreClient:
         with self._lock:
             data = self._mock_load()
             return [dict(r) for r in data.get("tables", {}).get(table, [])]
+
+    def _mock_delete(self, table: str, row_id: int) -> bool:
+        with self._lock:
+            data = self._mock_load()
+            rows = data.get("tables", {}).get(table, [])
+            kept = [r for r in rows if int(r.get("ROWID", -1)) != row_id]
+            if len(kept) == len(rows):
+                return False
+            data.setdefault("tables", {})[table] = kept
+            self._mock_save(data)
+            return True
 
     def _mock_zcql_unsupported(self, query: str) -> list[dict[str, Any]]:
         self._logger.debug("mock_zcql ignored: %s", query[:120])

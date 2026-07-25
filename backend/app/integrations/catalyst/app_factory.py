@@ -95,9 +95,47 @@ def _init_third_party(settings: Settings) -> Any:
     return app
 
 
-def get_catalyst_app(settings: Settings | None = None) -> Any:
-    """Return a Catalyst app instance for Data Store / ZCQL / other components."""
+def get_catalyst_app(settings: Settings | None = None, *, req: Any = None) -> Any:
+    """Return a Catalyst app instance for Data Store / ZCQL / other components.
+
+    On AppSail, pass (or context-bind) the HTTP request so
+    ``initialize(req=request)`` can read Catalyst gateway headers.
+    """
     cfg = settings or get_settings()
+    from app.integrations.catalyst.request_context import get_catalyst_request
+
+    request = req if req is not None else get_catalyst_request()
+
+    # Prefer per-request init when a web request is available (AppSail).
+    if request is not None and not (
+        cfg.catalyst.refresh_token
+        and cfg.catalyst.client_id
+        and cfg.catalyst.client_secret
+        and cfg.catalyst.zaid
+        and cfg.catalyst.init_mode == "third_party"
+    ):
+        # Cache on request.state to avoid re-init within the same request.
+        state = getattr(request, "state", None)
+        if state is not None and getattr(state, "zc_app", None) is not None:
+            return state.zc_app
+        try:
+            import zcatalyst_sdk
+
+            scope = (cfg.catalyst.sdk_scope or "admin").lower()
+            if scope not in {"admin", "user"}:
+                scope = "admin"
+            app = zcatalyst_sdk.initialize(req=request, scope=scope)
+            if state is not None:
+                state.zc_app = app
+            get_application_logger().info(
+                "Catalyst SDK initialize(req=...) scope=%s", scope
+            )
+            return app
+        except Exception:
+            get_application_logger().exception(
+                "Catalyst initialize(req=...) failed; falling back to cached init"
+            )
+
     return _cached_catalyst_app(
         cfg.catalyst.init_mode,
         cfg.catalyst.sdk_scope,

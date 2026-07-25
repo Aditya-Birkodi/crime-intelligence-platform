@@ -114,6 +114,14 @@ a {
   border-color: rgba(13, 107, 124, 0.45);
 }
 
+.cip-stat-amber::after {
+  background: radial-gradient(circle, rgba(196, 120, 42, 0.12), transparent 65%);
+}
+
+.cip-stat-ink {
+  background: linear-gradient(145deg, rgba(6, 69, 82, 0.08), rgba(247, 250, 249, 0.7));
+}
+
 .cip-stat::after {
   content: "";
   position: absolute;
@@ -123,6 +131,56 @@ a {
   height: 120%;
   background: radial-gradient(circle, rgba(13, 107, 124, 0.07), transparent 65%);
   pointer-events: none;
+}
+
+@keyframes cip-bar-grow {
+  from {
+    transform: scaleY(0);
+    opacity: 0.4;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.cip-bar-grow {
+  transform-origin: bottom;
+  animation: cip-bar-grow 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cip-slice-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cip-slice-in {
+  transform-origin: 50px 50px;
+  animation: cip-slice-in 0.5s ease both;
+}
+
+@keyframes cip-line-draw {
+  from {
+    stroke-dashoffset: 280;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cip-line-draw {
+  stroke-dasharray: 280;
+  animation: cip-line-draw 1.1s ease both;
+}
+
+.cip-area-in {
+  animation: cip-rise 0.7s ease both;
 }
 
 .cip-btn {

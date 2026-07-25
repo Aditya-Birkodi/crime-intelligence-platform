@@ -30,6 +30,12 @@ os.chdir(ROOT)
 def main() -> None:
     import uvicorn
 
+    # Hosted on Catalyst AppSail → always use live Data Store unless explicitly mocked.
+    if os.getenv("X_ZOHO_CATALYST_LISTEN_PORT"):
+        os.environ.setdefault("PERSISTENCE_BACKEND", "catalyst")
+        os.environ.setdefault("DATASTORE_MOCK", "false")
+        os.environ.setdefault("CATALYST_DATASTORE_MOCK", "false")
+
     port = int(
         os.getenv("X_ZOHO_CATALYST_LISTEN_PORT") or os.getenv("APP_PORT") or "8000"
     )

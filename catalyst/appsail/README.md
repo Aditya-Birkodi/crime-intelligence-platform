@@ -12,8 +12,11 @@ Paired with **Slate** frontend `cip-web` → `./frontend`.
 ## Deploy
 
 ```bash
+# Development environment (default)
 catalyst deploy --only appsail:cip-api
-# or full:
+catalyst deploy --only slate:cip-web
+
+# Full project
 catalyst deploy
 ```
 
@@ -25,13 +28,39 @@ AppSail kills instances that do not bind the listen port within ~10 seconds.
 
 `python3 -u app.py` — binds `0.0.0.0:$X_ZOHO_CATALYST_LISTEN_PORT`.
 
-## Env vars
+## Env vars (live Data Store)
+
+`app-config.json` is configured for **live Catalyst Data Store**:
+
+| Key | Value | Meaning |
+|-----|-------|---------|
+| `PERSISTENCE_BACKEND` | `catalyst` | Cases / analytics / network via Data Store |
+| `DATASTORE_MOCK` | `false` | No JSON mock — real tables |
+| `LOOKUPS_PATH` | `database/seed/appsail_lookups.json` | Fallback for crime heads etc.; districts/units/statuses prefer DS |
+| `RAG_DOCS_PATH` / `AI_FEATURES_PATH` | seed JSON | Ask-AI citations until NoSQL KB is wired |
+| `QUICKML_MOCK` | `true` | Set `false` + OAuth when enabling live GLM |
 
 Do **not** put reserved Catalyst keys in `app-config.json` `env_variables`
 (e.g. `CATALYST_ENV`, `CATALYST_*`, `X_ZOHO_*`). Set those in the AppSail console instead.
 
-Safe examples in `app-config.json`: `APP_RELOAD`, `PERSISTENCE_BACKEND`,
-`DATASTORE_MOCK`, `DATASTORE_MOCK_PATH`, `CORS_ORIGINS`, `DEBUG`, `LOG_DIR`.
+### Seed
 
-For hackathon demo, AppSail uses the seeded mock JSON at
-`database/seed/appsail_datastore.json` until real Data Store tables + OAuth are wired.
+Tables: see `database/seed/catalyst_tables_checklist.md` (**Big Int** for all ROWID FKs).
+
+```bash
+# Cases already live (221). Children:
+python3 database/seed/seed_catalyst_via_cli.py --skip-masters --children-only
+
+# Master lookups (district / unit / status):
+python3 database/seed/seed_catalyst_via_cli.py --masters-only
+```
+
+### Verify
+
+```bash
+curl -sS https://cip-api-50044183252.development.catalystappsail.in/api/v1/status
+# expect: persistence=catalyst, datastore_mock=false, cases_source=catalyst_datastore
+```
+
+Slate (`cip-web`) is built with `VITE_API_BASE_URL` pointing at this AppSail URL
+(`frontend/.env.production`).

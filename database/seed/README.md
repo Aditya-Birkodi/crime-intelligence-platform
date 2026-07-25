@@ -36,10 +36,68 @@ PYTHONPATH=backend python database/seed/seed_b1.py --force
 PYTHONPATH=backend python database/seed/seed_catalyst_cases.py
 ```
 
-## AppSail
+## AppSail (JSON mock bundle)
 
 After regenerating `appsail_datastore.json`:
 
 ```bash
 catalyst deploy --only appsail:cip-api
 ```
+
+## Live Catalyst Data Store
+
+Console create steps + column list: [`catalyst_tables_checklist.md`](catalyst_tables_checklist.md)
+(also [`../docs/database/catalyst_datastore_plan.md`](../../docs/database/catalyst_datastore_plan.md)).
+
+### 1. Create tables in console
+
+Cloud Scale → Data Store → create `cip_case_master`, `cip_victim`, `cip_accused`,
+`cip_act_section_association`. Optional: paste Table IDs into `.env`:
+
+```bash
+CATALYST_TABLE_CASE_MASTER=
+CATALYST_TABLE_VICTIM=
+CATALYST_TABLE_ACCUSED=
+CATALYST_TABLE_ACT_SECTION=
+```
+
+### 2. Seed (local Self Client OAuth)
+
+```bash
+# India DC + third-party SDK
+export CATALYST_PROJECT_DOMAIN=https://api.catalyst.zoho.in
+export CATALYST_INIT_MODE=third_party
+export PERSISTENCE_BACKEND=catalyst
+export DATASTORE_MOCK=false
+
+# Required: PROJECT_ID, ZAID, CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN in .env
+
+PYTHONPATH=backend python database/seed/seed_catalyst_datastore_live.py --dry-run
+PYTHONPATH=backend python database/seed/seed_catalyst_datastore_live.py --limit 5
+PYTHONPATH=backend python database/seed/seed_catalyst_datastore_live.py --force   # full ~221 FIRs
+```
+
+Probe a table ID:
+
+```bash
+PYTHONPATH=backend python scripts/probe_catalyst_table.py <TABLE_ID>
+PYTHONPATH=backend python scripts/list_catalyst_tables.py
+```
+
+### 3. Seed from AppSail (function-scope)
+
+After tables exist and AppSail has `DATASTORE_MOCK=false`, set `CIP_SEED_TOKEN`
+in AppSail env, then:
+
+```bash
+curl -sS -X POST \
+  'https://cip-api-50044183252.development.catalystappsail.in/api/v1/admin/seed-datastore?limit=5' \
+  -H 'X-CIP-SEED-TOKEN: <your-token>'
+
+# full re-seed
+curl -sS -X POST \
+  'https://cip-api-50044183252.development.catalystappsail.in/api/v1/admin/seed-datastore?force=true' \
+  -H 'X-CIP-SEED-TOKEN: <your-token>'
+```
+
+Or run the script locally with Self Client OAuth (`CATALYST_INIT_MODE=third_party`).

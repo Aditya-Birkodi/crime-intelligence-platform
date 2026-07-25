@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute } from "vue-router";
-import { baseUrl } from "@/services/api";
 
 const route = useRoute();
 
@@ -29,61 +28,42 @@ function isOn(to: string, exact?: boolean) {
         "
       />
       <div
-        class="pointer-events-none absolute inset-0 opacity-[0.12]"
+        class="pointer-events-none absolute inset-0 opacity-[0.1]"
         style="
           background-image:
-            linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-          background-size: 28px 28px;
+            linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+          background-size: 32px 32px;
         "
       />
       <div
-        class="pointer-events-none absolute -right-16 top-0 h-full w-1/2 opacity-30"
+        class="pointer-events-none absolute -right-20 top-0 h-full w-[55%] opacity-25"
         style="
-          background: radial-gradient(ellipse at 70% 30%, rgba(196, 120, 42, 0.55), transparent 55%);
+          background: radial-gradient(ellipse at 65% 20%, rgba(196, 120, 42, 0.5), transparent 58%);
         "
       />
 
-      <div class="relative mx-auto max-w-7xl px-6 pt-6 pb-5">
-        <div class="flex flex-wrap items-start justify-between gap-6">
-          <div class="cip-rise max-w-xl">
-            <p class="cip-kicker !text-[rgba(243,228,208,0.85)]">
+      <div class="relative mx-auto max-w-7xl px-6 pt-5 pb-4">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <RouterLink to="/" class="cip-rise block min-w-0">
+            <p class="cip-kicker !text-[rgba(243,228,208,0.8)]">
               Karnataka State Police · SCRB
             </p>
-            <RouterLink to="/" class="mt-2 block">
-              <span
-                class="cip-display block text-[clamp(1.85rem,4vw,2.75rem)] font-medium leading-[1.05] text-white"
-              >
-                Crime Intelligence
-              </span>
-              <span
-                class="cip-display mt-0.5 block text-[clamp(1.35rem,3vw,2rem)] font-medium leading-none text-[rgba(243,228,208,0.92)]"
-              >
-                Platform
-              </span>
-            </RouterLink>
-            <p class="mt-3 max-w-md text-sm font-light leading-relaxed text-[rgba(244,250,249,0.68)]">
-              Operational desk for FIR analytics, geospatial heat, link graphs, and Graph RAG.
-            </p>
-          </div>
-
-          <div
-            class="cip-rise cip-rise-delay-1 flex items-center gap-3 rounded-sm border border-white/15 bg-white/5 px-3.5 py-2.5 backdrop-blur-sm"
+            <span
+              class="cip-display mt-1 block text-[clamp(1.45rem,3vw,1.95rem)] font-medium leading-tight text-white"
+            >
+              Crime Intelligence Platform
+            </span>
+          </RouterLink>
+          <p
+            class="cip-rise cip-rise-delay-1 hidden max-w-xs text-right text-xs font-light leading-relaxed text-[rgba(244,250,249,0.55)] sm:block"
           >
-            <span class="cip-live-dot" aria-hidden="true" />
-            <div class="min-w-0">
-              <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-[rgba(244,250,249,0.55)]">
-                Live API
-              </p>
-              <p class="max-w-[14rem] truncate font-mono text-[11px] text-[rgba(243,228,208,0.9)] sm:max-w-xs">
-                {{ baseUrl.replace(/^https?:\/\//, "") }}
-              </p>
-            </div>
-          </div>
+            FIR analytics · geospatial heat · link graphs · Graph RAG
+          </p>
         </div>
 
         <nav
-          class="cip-rise cip-rise-delay-2 mt-7 flex flex-wrap gap-1 border-t border-white/10 pt-4"
+          class="cip-rise cip-rise-delay-2 mt-5 flex flex-wrap gap-1 border-t border-white/10 pt-3.5"
           aria-label="Primary"
         >
           <RouterLink
@@ -101,7 +81,7 @@ function isOn(to: string, exact?: boolean) {
       </div>
     </header>
 
-    <main class="mx-auto max-w-7xl px-6 py-9">
+    <main class="mx-auto max-w-7xl px-6 py-8">
       <RouterView v-slot="{ Component }">
         <Transition name="route-fade" mode="out-in">
           <component :is="Component" />
@@ -110,7 +90,7 @@ function isOn(to: string, exact?: boolean) {
     </main>
 
     <footer class="border-t border-[var(--cip-line)]/70 py-5 text-center text-xs text-[var(--cip-muted)]">
-      CIP · field intelligence shell · not for public dissemination
+      CIP · restricted operational use · not for public dissemination
     </footer>
   </div>
 </template>

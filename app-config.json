@@ -2,11 +2,11 @@
   "command": "python3 -u app.py",
   "build_path": "./",
   "stack": "python_3_12",
-    "env_variables": {
+  "env_variables": {
     "APP_RELOAD": "false",
+    "APP_ENV": "catalyst",
     "PERSISTENCE_BACKEND": "catalyst",
-    "DATASTORE_MOCK": "true",
-    "DATASTORE_MOCK_PATH": "database/seed/appsail_datastore.json",
+    "DATASTORE_MOCK": "false",
     "QUICKML_MOCK": "true",
     "QUICKML_ENDPOINT": "https://api.catalyst.zoho.in/quickml/v1/project/50116000000022364/glm/chat",
     "QUICKML_MODEL_ID": "crm-di-glm47b_30b_it",
@@ -15,8 +15,9 @@
     "AI_FEATURES_PATH": "database/seed/ai_case_features.json",
     "LOOKUPS_PATH": "database/seed/appsail_lookups.json",
     "CORS_ORIGINS": "*",
-    "DEBUG": "true",
-    "LOG_DIR": "/tmp/cip-logs"
+    "DEBUG": "false",
+    "LOG_DIR": "/tmp/cip-logs",
+    "CIP_SEED_TOKEN": "cip-seed-change-me"
   },
   "memory": 1024,
   "scripts": {

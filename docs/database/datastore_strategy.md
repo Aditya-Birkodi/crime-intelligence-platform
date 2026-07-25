@@ -2,11 +2,18 @@
 
 **Decision:** Cases (`/api/v1/cases`) select persistence via `PERSISTENCE_BACKEND`.
 
-| Environment | Relational store | Cache | Why |
-|-------------|------------------|-------|-----|
-| Local / CI | Docker Postgres (`PERSISTENCE_BACKEND=postgres`) | Docker Redis | Fast Alembic, pytest |
-| Local Catalyst dry-run | JSON mock (`PERSISTENCE_BACKEND=catalyst` + `CATALYST_DATASTORE_MOCK=true`) | — | FE/API without OAuth |
-| Catalyst staging/prod | **Catalyst Data Store** (`PERSISTENCE_BACKEND=catalyst`) | **Catalyst Cache** | Mandatory per `catalyst.txt` |
+| Environment | Cases / analytics | Lookups | Notes |
+|-------------|-------------------|---------|-------|
+| Local / CI | Docker Postgres (`PERSISTENCE_BACKEND=postgres`) | Postgres | Fast Alembic, pytest |
+| Local Catalyst dry-run | JSON mock (`catalyst` + `DATASTORE_MOCK=true`) | `appsail_lookups.json` | FE/API without OAuth |
+| **Catalyst AppSail (Dev + Prod)** | **Live Data Store** (`catalyst` + `DATASTORE_MOCK=false`) | DS masters + JSON fallback | Mandatory for hosted CIP |
+
+AppSail `app-config.json` ships with live Data Store enabled. On AppSail boot,
+`app.py` also defaults `PERSISTENCE_BACKEND=catalyst` and `DATASTORE_MOCK=false`
+when `X_ZOHO_CATALYST_LISTEN_PORT` is set.
+
+Slate production builds call AppSail via `frontend/.env.production`
+(`VITE_API_BASE_URL`).
 
 ## Switch cases to Catalyst Data Store
 
@@ -50,7 +57,22 @@ Canonical YAML: [`../../database/seed/fir_demo_dataset.yaml`](../../database/see
 
 Create console tables named `cip_case_master`, `cip_victim`, `cip_accused`,
 `cip_act_section_association` (prefix from `CATALYST_DATASTORE_TABLE_PREFIX`)
-per [`catalyst_datastore_plan.md`](catalyst_datastore_plan.md).
+per [`catalyst_datastore_plan.md`](catalyst_datastore_plan.md) and
+[`../../database/seed/catalyst_tables_checklist.md`](../../database/seed/catalyst_tables_checklist.md).
+
+### Live seed from `appsail_datastore.json`
+
+```bash
+export CATALYST_PROJECT_DOMAIN=https://api.catalyst.zoho.in   # India DC
+export CATALYST_INIT_MODE=third_party   # local; use function on AppSail
+export DATASTORE_MOCK=false
+PYTHONPATH=backend python database/seed/seed_catalyst_datastore_live.py --limit 5
+PYTHONPATH=backend python database/seed/seed_catalyst_datastore_live.py --force
+```
+
+AppSail production: set `DATASTORE_MOCK=false` in [`../../app-config.json`](../../app-config.json)
+(table names resolve without IDs; optional `CATALYST_TABLE_*` in console AppSail env).
+Lookups/RAG remain on JSON paths in the same config.
 
 ## Rules
 
@@ -67,6 +89,8 @@ per [`catalyst_datastore_plan.md`](catalyst_datastore_plan.md).
 
 - [x] Decision recorded (this file)
 - [x] CaseStore port + Postgres / Catalyst adapters for `/api/v1/cases`
-- [ ] Create Data Store tables in Catalyst console per plan
-- [ ] Document table IDs / names in `.env` notes when available
-- [ ] Optional: migrate seed → live Data Store for demo
+- [x] Data Store Wave-2 table checklist (`database/seed/catalyst_tables_checklist.md`)
+- [x] Live seed script (`database/seed/seed_catalyst_datastore_live.py`)
+- [ ] Create Data Store tables in Catalyst console (manual)
+- [ ] Paste Table IDs into `.env` / AppSail env when available
+- [ ] Run live seed + set `DATASTORE_MOCK=false` on AppSail

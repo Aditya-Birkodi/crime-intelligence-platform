@@ -1,4 +1,4 @@
-"""Analytics over Catalyst Data Store mock / rows (AppSail without Postgres)."""
+"""Analytics over Catalyst Data Store rows (live or JSON mock)."""
 
 from __future__ import annotations
 
@@ -59,7 +59,7 @@ def _parse_dt(value: Any) -> datetime | None:
 
 
 class MockAnalyticsService:
-    """B2 analytics from Data Store mock + appsail_lookups.json."""
+    """B2 analytics from Catalyst Data Store (+ lookups for display names)."""
 
     def __init__(self, client: CatalystDataStoreClient | None = None) -> None:
         self._ds = client or CatalystDataStoreClient()

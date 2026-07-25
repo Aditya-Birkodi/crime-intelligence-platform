@@ -29,11 +29,14 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const url = `${baseUrl}${path}`;
   let response: Response;
   try {
+    // Use text/plain for JSON bodies so browsers skip CORS preflight.
+    // AppSail's edge returns OPTIONS without Access-Control-* headers, which
+    // breaks application/json POSTs from Slate (Failed to fetch).
     response = await fetch(url, {
       ...init,
       headers: {
         Accept: "application/json",
-        ...(init?.body ? { "Content-Type": "application/json" } : {}),
+        ...(init?.body ? { "Content-Type": "text/plain;charset=UTF-8" } : {}),
         ...init?.headers,
       },
     });
@@ -41,7 +44,8 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     const detail = err instanceof Error ? err.message : String(err);
     throw new Error(
       `Network error calling ${url} (${detail}). ` +
-        "Confirm VITE_API_BASE_URL points at AppSail — never call api.catalyst.zoho.in from the browser.",
+        "If this is a CORS/preflight failure from Slate→AppSail, redeploy both " +
+        "and whitelist the Slate domain under Catalyst Authentication → Whitelisting (CORS).",
     );
   }
   if (!response.ok) {

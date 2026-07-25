@@ -16,6 +16,8 @@ from app.api.v1.router import api_router
 from app.core.config import get_settings
 from app.core.logging import setup_logging
 from app.exceptions.handlers import register_exception_handlers
+from app.middleware.catalyst_request_context import CatalystRequestContextMiddleware
+from app.middleware.text_plain_json import TextPlainJsonContentTypeMiddleware
 
 
 @asynccontextmanager
@@ -64,6 +66,8 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+    application.add_middleware(TextPlainJsonContentTypeMiddleware)
+    application.add_middleware(CatalystRequestContextMiddleware)
 
     register_exception_handlers(application)
     application.include_router(api_router, prefix=settings.api_v1_prefix)
