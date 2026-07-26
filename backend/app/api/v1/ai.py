@@ -55,8 +55,8 @@ def ai_graph_context(
     depth: Annotated[int, Query(ge=1, le=3)] = 2,
 ) -> GraphRagContext:
     """NetworkX ego-graph summary for a case or accused (Graph RAG input)."""
-    if (case_id is None) == (accused_id is None):
-        raise ValidationError("Provide exactly one of case_id or accused_id")
+    if case_id is None and accused_id is None:
+        raise ValidationError("Provide case_id and/or accused_id")
     return service.context(case_id=case_id, accused_id=accused_id, depth=depth)
 
 

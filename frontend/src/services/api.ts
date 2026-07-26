@@ -57,7 +57,15 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   }
   if (!response.ok) {
     const text = await response.text();
-    throw new Error(`API ${response.status}: ${text || response.statusText}`);
+    let detail = text || response.statusText;
+    try {
+      const parsed = JSON.parse(text) as { message?: string; detail?: string };
+      if (parsed.message) detail = parsed.message;
+      else if (typeof parsed.detail === "string") detail = parsed.detail;
+    } catch {
+      /* keep raw text */
+    }
+    throw new Error(`API ${response.status}: ${detail}`);
   }
   return response.json() as Promise<T>;
 }
@@ -76,6 +84,38 @@ function toQuery(params: Record<string, string | number | undefined>): string {
 export const api = {
   getHealth: () => request<HealthResponse>("/health"),
   getStatus: () => request<ApiStatusResponse>("/api/v1/status"),
+  login: (body: { username: string; password: string }) =>
+    request<{
+      access_token: string;
+      token_type: string;
+      expires_in: number;
+      user: {
+        username: string;
+        display_name: string;
+        role: string;
+        unit: string;
+      };
+    }>("/api/v1/auth/login", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  me: (token: string) =>
+    request<{
+      user: {
+        username: string;
+        display_name: string;
+        role: string;
+        unit: string;
+      };
+      authenticated: boolean;
+    }>("/api/v1/auth/me", {
+      headers: { Authorization: `Bearer ${token}` },
+    }),
+  logout: () =>
+    request<{ status: string }>("/api/v1/auth/logout", {
+      method: "POST",
+      body: JSON.stringify({}),
+    }),
   listCases: (params: CaseListParams = {}) =>
     request<CaseMasterListResponse>(
       `/api/v1/cases${toQuery(params as Record<string, string | number | undefined>)}`,

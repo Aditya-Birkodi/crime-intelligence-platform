@@ -7,6 +7,7 @@ from fastapi import APIRouter
 from app.api.v1.admin import router as admin_router
 from app.api.v1.ai import router as ai_router
 from app.api.v1.analytics import router as analytics_router
+from app.api.v1.auth import router as auth_router
 from app.api.v1.cases import router as cases_router
 from app.api.v1.lookups import router as lookups_router
 from app.api.v1.media import router as media_router
@@ -14,6 +15,7 @@ from app.api.v1.network import router as network_router
 from app.api.v1.search import router as search_router
 
 api_router = APIRouter()
+api_router.include_router(auth_router)
 api_router.include_router(cases_router)
 api_router.include_router(lookups_router)
 api_router.include_router(analytics_router)

@@ -67,8 +67,8 @@ class NetworkService:
         accused_id: int | None = None,
         depth: int = 1,
     ) -> NetworkGraphResponse:
-        if (case_id is None) == (accused_id is None):
-            raise ValidationError("Provide exactly one of case_id or accused_id")
+        if case_id is None and accused_id is None:
+            raise ValidationError("Provide case_id and/or accused_id")
         if depth < 1 or depth > 3:
             raise ValidationError("depth must be between 1 and 3")
 
@@ -76,12 +76,15 @@ class NetworkService:
         # (Catalyst Data Store: that exceeds AppSail execution time).
         all_accused = self._store.list_accused(limit=5000)
 
+        # Prefer case seed when both are supplied (UI often passes both from query).
         if case_id is not None:
             seed = _case_node_id(case_id)
             seed_case_ids = {case_id}
             seed_accused_ids = {
                 a.accused_master_id for a in all_accused if a.case_master_id == case_id
             }
+            if accused_id is not None:
+                seed_accused_ids.add(accused_id)
         else:
             assert accused_id is not None
             seed = _accused_node_id(accused_id)

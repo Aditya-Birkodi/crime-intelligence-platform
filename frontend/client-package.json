@@ -1,0 +1,7 @@
+{
+  "name": "crime-intelligence-platform",
+  "version": "1.0.0",
+  "description": "CIP SCRB desk — Catalyst Hosted Auth redirect target when using Web Client Hosting",
+  "homepage": "index.html",
+  "login_redirect": "index.html"
+}

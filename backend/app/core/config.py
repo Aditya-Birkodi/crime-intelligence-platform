@@ -210,6 +210,9 @@ class Settings(BaseSettings):
         default="postgres",
         alias="PERSISTENCE_BACKEND",
     )
+    auth_demo_password: str = Field(default="ksp2026", alias="AUTH_DEMO_PASSWORD")
+    auth_token_ttl_seconds: int = Field(default=86400, alias="AUTH_TOKEN_TTL_SECONDS")
+    auth_secret: str = Field(default="", alias="AUTH_SECRET")
 
     database: DatabaseSettings = Field(default_factory=DatabaseSettings)
     catalyst: CatalystSettings = Field(default_factory=CatalystSettings)

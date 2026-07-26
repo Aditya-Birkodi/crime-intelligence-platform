@@ -18,6 +18,8 @@
     "STRATUS_BUCKET": "aditya",
     "ZIA_MOCK": "false",
     "MEDIA_PATH": "/tmp/cip-media",
+    "AUTH_DEMO_PASSWORD": "ksp2026",
+    "AUTH_SECRET": "cip-scrb-desk-auth-v1",
     "CORS_ORIGINS": "*",
     "DEBUG": "false",
     "LOG_DIR": "/tmp/cip-logs",

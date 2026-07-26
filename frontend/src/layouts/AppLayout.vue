@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { RouterLink, RouterView, useRoute } from "vue-router";
+import { loadSession, signOutCatalyst } from "@/services/auth";
 
 const route = useRoute();
+const session = computed(() => loadSession());
 
 const links = [
   { to: "/", label: "Dashboard", exact: true },
@@ -15,6 +18,10 @@ const links = [
 function isOn(to: string, exact?: boolean) {
   if (exact) return route.path === to;
   return route.path === to || route.path.startsWith(`${to}/`);
+}
+
+function signOut() {
+  signOutCatalyst();
 }
 </script>
 
@@ -56,11 +63,26 @@ function isOn(to: string, exact?: boolean) {
               Crime Intelligence Platform
             </span>
           </RouterLink>
-          <p
-            class="cip-rise cip-rise-delay-1 hidden max-w-xs text-right text-xs font-light leading-relaxed text-[rgba(244,250,249,0.55)] sm:block"
+          <div
+            class="cip-rise cip-rise-delay-1 flex flex-wrap items-center gap-3 text-right"
           >
-            FIR analytics · geospatial heat · link graphs · MO clusters · Graph RAG
-          </p>
+            <div
+              v-if="session"
+              class="hidden text-xs font-light leading-relaxed text-[rgba(244,250,249,0.7)] sm:block"
+            >
+              <p class="font-medium text-white">{{ session.user.display_name }}</p>
+              <p class="text-[rgba(244,250,249,0.5)]">
+                {{ session.user.role }} · {{ session.user.unit }}
+              </p>
+            </div>
+            <button
+              type="button"
+              class="rounded-sm border border-white/20 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[rgba(244,250,249,0.85)] transition hover:border-white/40 hover:bg-white/5"
+              @click="signOut"
+            >
+              Sign out
+            </button>
+          </div>
         </div>
 
         <nav

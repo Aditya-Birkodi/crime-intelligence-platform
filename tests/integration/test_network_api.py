@@ -154,6 +154,17 @@ def test_network_graph_requires_seed(client: TestClient) -> None:
     assert response.status_code == 422
 
 
+def test_network_graph_accepts_both_seeds(client: TestClient) -> None:
+    """UI often passes case_id + accused_id together; prefer case seed."""
+    response = client.get(
+        "/api/v1/network/graph",
+        params={"case_id": 1, "accused_id": 1, "depth": 1},
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["seed"] == "case:1"
+
+
 def test_offender_profile_repeat(client: TestClient) -> None:
     response = client.get("/api/v1/network/offenders/1")
     assert response.status_code == 200
